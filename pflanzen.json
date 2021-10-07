@@ -1,0 +1,60 @@
+{
+    "plant genus": "Gemüse || Früchte || Beeren || Kräuter", 
+    "family": "Knöterichgewächse || Nachtschattengewächse || Kreuzblühtler || Zwiebelgewächs || Korbblühtler || Doldenblühtler || Kürbisgewächse || Liliengewächse || Fuchsschwanzgewächse || Hülsenfrüchtler || Rosengewächse || Baldriangewächse",// Nachtschattengewäche, Zwiebelgewächse, Kreuzblühlter
+    "name": "name",
+    "botanical name": "botanical name",
+    "variety": "variety", // Sorte eg Buschtomate vs Stabtomate
+    "variety designation": "variety designation", // Sorten Bezeichnung/name
+    "lifespan":"einjährig || zweijährig || mehrjährig", 
+    "seed origin": {
+        "brand": "brand name", // bought from
+        "handed down": "person/place"
+    },
+    "location": "Freiland || geschützt || Gewächshaus"
+    "needs": {
+      "location requirement": "sonnig || sonnig bis halbschattig || halbschattig || halbschattig bis schattig || schattig",
+      "soil texture": "sandig || lehmig || humos ", //dropdown + other  >> leicht/schwer sauer/alkalisch
+      "water requirement": "hoch || durchschnittlich || niedrig", //dropdown
+      "fertilization": "every XX days"
+    },
+    "sowing": {
+      "sowing time": {
+        "pre-cultivation": "jan || && feb ||&& ...", // from to
+        "direct sowing": "jan || && feb"
+      },
+      "sowing depth": "XX cm" //dropdown ?
+    },
+    "germination": {
+      "germination temperature": "XX °C", // von bis
+      "germination duration": "XX days"
+    },
+    "planting": {
+      "row spacing": "XX cm", //dropdown ?
+      "plant spacing": "XX cm" //dropdown ?
+    },
+    "plant hight": "XX cm",
+    "plant evolution": "XX weeks", // Entwicklungszeit bis zur Ernte RENAME
+    "tips": {
+      "info": "text", // generel short info 
+      "tip": "text", // 
+      "care": "text", // special form of taking care >> beschneiden, auslichten, ausgeizen
+      "notes": "string" // user fill in 
+  },
+  "spacing": "super big || big || medium || small || extra small"
+  },
+  "pests & diseases": {
+    "pest": "Schägling",
+    "disease": "Krankheit"
+  },
+  // Plant List for database > 20 to start
+  {
+      "vegetables":["tomato", "salad", "cucumber", "zucchini", "radish", "pumpkin", "beans", "carrot","spinach", "potato"],
+      "herbs":["parsley","chives", "basil", "dill", "rosemary" ],
+      "berries": ["blackberry", "blueberry", "gooseberry", "raspberry", "strawberry"],
+      "fruits": ["Rhabarber", ]
+  }
+  
+  // NOTIFICATIONs :)
+  
+  //stays logged in > tap into Schlüsselbund (apple)...
+  

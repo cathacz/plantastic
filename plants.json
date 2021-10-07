@@ -1,0 +1,53 @@
+{
+  "plant genus": "vegetable || fruit || berry || herb", // flowers?  Pflanzengattung
+  "family": "solanum || cruciferous plant || bulbous plant || etc",// Nachtschattengewäche, Zwiebelgewächse, Kreuzblühlter
+  "name": "name",
+  "botanical name": "botanical name",
+  "variety": "variety", // Sorte eg Buschtomate vs Stabtomate
+  "variety designation": "variety designation", // Sorten Bezeichnung/name
+  "lifespan":"annual || biennial || perennial", // einjährig/zweijährig/mehrjährig
+  "seed origin": {
+    "brand": "brand name", // bought from
+    "handed down": "person/place"
+},
+  "needs": {
+    "location": "sunny || partially shaded || shady", //dropdown sunny-partially shaded
+    "soil texture": "sandy || clay || silt (schlamm) || peat (Torf) || chalk || loam (lehmig) ", //dropdown + other  >> SOIL condition?
+    "water requirement": "high || average || low", //dropdown
+    "fertilization": "every XX days"
+  },
+  "sowing": {
+    "sowing time": {
+      "pre-cultivation": "jan || && feb ||&& ...", // from to
+      "direct sowing": "jan || && feb"
+    },
+    "sowing depth": "XX cm" //dropdown ?
+  },
+  "germination": {
+    "germination temperature": "XX °C", // von bis
+    "germination duration": "XX days"
+  },
+  "planting": {
+    "row spacing": "XX cm", //dropdown ?
+    "plant spacing": "XX cm" //dropdown ?
+  },
+  "plant hight": "XX cm",
+  "plant evolution": "XX weeks", // Entwicklungszeit bis zur Ernte RENAME
+  "tips": {
+    "info": "text", // generel short info 
+    "tip": "text", // 
+    "care": "text", // special form of taking care >> beschneiden, auslichten, ausgeizen
+    "notes": "string" // user fill in 
+},
+"spacing": "super big || big || medium || small || extra small"
+},
+// Plant List for database > 20 to start
+{
+    "vegetables":["tomato", "salad", "cucumber", "zucchini", "radish", "pumpkin", "beans", "carrot","spinach", "potato"],
+    "herbs":["parsley","chives", "basil", "dill", "rosemary" ],
+    "fruits & berries": ["blackberry", "blueberry", "gooseberry", "raspberry", "strawberry"]
+}
+
+// NOTIFICATIONs :)
+
+//stays logged in > tap into Schlüsselbund (apple)...
