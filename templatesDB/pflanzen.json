@@ -1,5 +1,5 @@
 {
-    "plant genus": "Gemüse || Obst || Beeren || Kräuter || Blümchen || Bäume", 
+    "plant genus": "Gemüse || Obst || Beeren || Kräuter || Blümchen || Bäume || Sträucher || Halbsträucher", 
     "family": "Knöterichgewächse || Nachtschattengewächse || Kreuzblühtler || Zwiebelgewächs || Korbblühtler || Doldenblühtler || Kürbisgewächse || Liliengewächse || Fuchsschwanzgewächse || Hülsenfrüchtler || Rosengewächse || Baldriangewächse || Gänsefußgewächse",
     "name": "name",
     "botanical name": "botanical name",
@@ -40,12 +40,14 @@
       "care": "text", // special form of taking care >> beschneiden, auslichten, ausgeizen
       "notes": "string" // user fill in 
   },
-  "spacing": "super big || big || medium || small || extra small"
-  },
+  "spacing": "super big || big || medium || small || extra small",
+ 
+  
   "pests & diseases": {
     "pest": "Schägling",
     "disease": "Krankheit"
-  },
+  },"tag": "string" 
+},
   // Plant List for database > 20 to start
   {
       "vegetables":["tomato", "salad", "cucumber", "zucchini", "radish", "pumpkin", "beans", "carrot","spinach", "potato"],
