@@ -6,6 +6,8 @@ app.use(morgan("dev"));
 const cookieParser = require("cookie-parser");
 const expressSession = require("express-session");
 
+const connectDB = require("./db/dbConnect");
+
 // to process the data
 app.use(express.json());
 // Let Express understand  Content-Type: application/x-www-form-urlencoded aka form data
@@ -16,6 +18,9 @@ app.use(
   })
 );
 
+// 404 page
+
+app.use(notFound);
 // cookies
 app.use(cookieParser());
 // Session
@@ -35,4 +40,5 @@ app.use("/uploads", express.static("uploads"));
 app.get("/", (req, res) => {
   res.status(200).send("Wellcome to Plantastic");
 });
+
 module.exports = app;
