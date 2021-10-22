@@ -20,17 +20,17 @@ app.use(
 
 // 404 page
 
-app.use(notFound);
-// cookies
-app.use(cookieParser());
-// Session
-app.use(
-  expressSession({
-    secret: "somethingSecret",
-    saveUninitialized: false,
-    resave: false,
-  })
-);
+// app.use(notFound);
+// // cookies
+// app.use(cookieParser());
+// // Session
+// app.use(
+//   expressSession({
+//     secret: "somethingSecret",
+//     saveUninitialized: false,
+//     resave: false,
+//   })
+// );
 
 // Alow uploads
 app.use("/uploads", express.static("uploads"));
