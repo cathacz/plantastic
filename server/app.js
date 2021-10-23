@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-const routes = require("./routes/taskRoutes");
+// const routes = require("./routes/taskRoutes");
 const taskRoute = require("./routes/taskRoutes");
+const userRoute = require("./routes/userRoutes");
 require("dotenv").config();
 /* const notFound = require("./middleware/not-found"); */
 
@@ -79,5 +80,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/tasks", taskRoute);
+app.use("/users", userRoute);
+
+console.log("From app.js");
 
 module.exports = app;
