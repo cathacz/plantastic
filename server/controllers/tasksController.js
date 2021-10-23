@@ -7,14 +7,10 @@ const getAllTasks = asyncWrapper(async (req, res) => {
 });
 
 // Create new task
-const createTask = async (req, res) => {
-  try {
-    const task = await Task.create(req.body);
-    res.status(201).json({ task });
-  } catch (err) {
-    res.status(500).json({ msg: err });
-  }
-};
+const createTask = asyncWrapper(async (req, res) => {
+  const task = await Task.create(req.body);
+  res.status(201).json({ task });
+});
 
 // Get one task
 const getTask = async (req, res) => {

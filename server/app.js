@@ -5,6 +5,7 @@ const morgan = require("morgan");
 app.use(morgan("dev"));
 const routes = require("./routes/taskRoutes");
 const taskRoute = require("./routes/taskRoutes");
+require("dotenv").config();
 /* const notFound = require("./middleware/not-found"); */
 
 // cookie, session
@@ -19,7 +20,7 @@ const connectDB = require("./db/dbConnect");
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
-    app.listen(port, console.log(`Server is listening on port ${port}`));
+    console.log("DB is connected 😎");
   } catch (err) {
     console.log(err);
   }
@@ -27,6 +28,18 @@ const start = async () => {
 
 start();
 
+// mongoDB
+/* const mongoose = require("mongoose");
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(console.log("DB is connected 😎"))
+  .catch((error) => {
+    console.log(`There was a problem ${error.message}`);
+  });
+ */
 // to process the data
 
 app.use(express.json());
