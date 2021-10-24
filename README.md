@@ -141,11 +141,9 @@ Don't share the ".expo" folder. It does not contain any information that is rele
 
 The "packager-info.json" file contains port numbers and process PIDs that are used to serve the application to the mobile device/simulator.
 
-> settings.json" file contain?
+> settings.json file contain?
 
 The "settings.json" file contains the server configuration that is used to serve the application manifest.
-
-> Should I commit the ".expo" folder?
 
 Scripts:
 
