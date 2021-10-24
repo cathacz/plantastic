@@ -79,7 +79,58 @@ In order to merge changes from the other branch to the main, make sure that thos
     git commit -m "update from the newbranch"
     ```
 
+## Setup
+
+1. Environmnt setup
+   NODEJS, npm, Expo CLI, emulator (android or OS)
+
+2. Assets
+   (data, images, icons)
+
+3. Requirements:
+
+You need Node version 12 or higher, kvm and virtual technology enabled (in BIOS).
+
+### VS Extensions:
+
+To make life easier:
+
+React Native Tools
+React-Native/React/Redux snippets
+Material Icon Theme
+
 ### Expo
+
+Expo is a framework and a platform for universal React applications. It is a set of tools and services built around React Native and native platforms that help you develop, build, deploy, and quickly iterate on iOS, Android, and web apps from the same JavaScript/TypeScript codebase.
+
+## Dependencies:
+
+### Emulator
+
+Run instructions for Android:
+• Have an Android emulator running (quickest way to get started), or a device connected.
+• cd native && npx react-native run-android
+
+    After initializing the project structure, 'expo start' opens metro bundler in browser automatically.
+    ```
+    expo start
+    ```
+
+    If you download 'expo go' app on your smartphone you will be able to see your app, live onyour mobile device. Start a simulator > go to metro bundler in browser and click "run on android device/emulator" > go to simulated phone, wait for app to open. Make sure that both devices on which you started the expo app, are connected to the same wi-fi.
+
+#### Initialize expo project
+
+```
+expo init my-app
+<!-- expo start or npm start -->
+npm -g expo-cli
+<!-- to install expo globally -->
+npm i react-native
+npm i axios
+npm i react-router-native
+npx react-native run-android
+<!-- or go to home/android-studio/bin and run ./studio.sh -->
+```
 
 > .expo folder
 
@@ -95,3 +146,78 @@ The "packager-info.json" file contains port numbers and process PIDs that are us
 The "settings.json" file contains the server configuration that is used to serve the application manifest.
 
 > Should I commit the ".expo" folder?
+
+Scripts:
+
+<!-- expo scripts -->
+
+## Basic Express setup:
+
+To start new express project
+
+```
+npm init -y
+echo "PORT=5000\nDB_URL=mongodb://localhost:27017/users" > .env
+echo "node_modules/" > .gitignore
+npm i express
+npm i dotenv
+npm i morgan
+npm i mongoose
+npm i bcrypt
+npm i uuid
+npm i multer
+npm i nodemon --save-dev
+touch server.js app.js
+<!-- or server.js -->
+npm i concurrently
+npm i cors
+mkdir models controllers routes uploads
+<!-- and client? -->
+touch models/userModel.js
+touch models/sessionModel.js
+touch controllers/userController.js
+touch controllers/authController.js
+touch routes/auth.js routes/user.js routes/users.js routes/plants.js
+<!-- touch/middleware/... -->
+```
+
+Hint: You may change the link for the mongoDB database, by creating account on Mongo Atlas, and store your data in the cloud.
+
+- json script to start project on npm run dev, without the need of starting Backend and Frontend seperately, which you achieve by installing 'concurrently' package:
+
+```javascript
+"scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix  client",
+    "dev": " concurrently  \"npm run server\" \"npm run client\" "
+  },
+"dependencies": {
+    "concurrently": "^6.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0"
+  },
+```
+
+- script for global start of the server app:
+  "start": "nodemon server.js"
+- create new DB in mongo shell
+  ```
+  use users
+  use plants
+  ```
+  Plants database was filled out directly from MongoDB Compass, and then stored on the Atlas by creating a link.
+
+## Additional packages for more advanced backend work:
+
+```
+npm i bcrypt
+npm i cookie-parser
+npm i express-session
+npm i express-validator
+npm i uuid
+npm i multer
+```
