@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, StyleSheet, SafeAreaView } from "react-native";
 
-const Overview = () => (
+const Home = () => (
   <SafeAreaView>
-    <Text style={styles.mainText}>Son of a gun</Text>
+    <Text style={styles.mainText}>You are home</Text>
   </SafeAreaView>
 );
 
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
     left: 21,
   },
 });
-export default Overview;
+export default Home;
