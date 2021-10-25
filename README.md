@@ -219,3 +219,9 @@ npm i express-validator
 npm i uuid
 npm i multer
 ```
+
+## Fetching APIs with APIsauce
+
+Inside the app create a api folder, with all the code taht is talking with the apis.
+
+Install axios wrapper with standardized errors and req/res transformers. We will use the create function from apisauce.
