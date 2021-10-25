@@ -9,12 +9,17 @@ const Today = () => (
 
 const styles = StyleSheet.create({
   mainText: {
-    marginTop: 30,
+    marginTop: 80,
+    height: 150,
+    width: "100%",
+    backgroundColor: "rgba(109, 153, 130, 0.5)",
     color: "black",
     fontSize: 40,
     fontFamily: "Arial",
     position: "absolute",
-    left: 21,
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 export default Today;

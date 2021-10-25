@@ -9,7 +9,7 @@ const Overview = () => (
 
 const styles = StyleSheet.create({
   mainText: {
-    marginTop: 30,
+    marginTop: 100,
     color: "black",
     fontSize: 40,
     fontFamily: "Arial",
