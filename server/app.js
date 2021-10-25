@@ -2,11 +2,10 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-// const routes = require("./routes/taskRoutes");
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
+const plantRoute = require("./routes/plantRoute");
 require("dotenv").config();
-/* const notFound = require("./middleware/not-found"); */
 
 // cookie, session
 
@@ -28,18 +27,6 @@ const start = async () => {
 
 start();
 
-// mongoDB
-/* const mongoose = require("mongoose");
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(console.log("DB is connected 😎"))
-  .catch((error) => {
-    console.log(`There was a problem ${error.message}`);
-  });
- */
 // to process the data
 
 app.use(express.json());
@@ -51,10 +38,6 @@ app.use(
     extended: true,
   })
 );
-
-// 404 page
-
-/* app.use(notFound); */
 
 // Cookies
 
@@ -71,6 +54,7 @@ app.use(
 );
 
 // Alow uploads
+
 app.use("/uploads", express.static("uploads"));
 
 // API Endpoints
@@ -81,7 +65,20 @@ app.get("/", (req, res) => {
 
 app.use("/tasks", taskRoute);
 app.use("/users", userRoute);
+app.use("/plants", plantRoute);
 
 console.log("From app.js");
+
+// Error handler -- where to place in code?
+
+app.use((req, res, next) => {
+  const error = new Error("Not Found!!!");
+  error.status = 404;
+  next(error);
+});
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.json({ error: { message: error.message } });
+});
 
 module.exports = app;
