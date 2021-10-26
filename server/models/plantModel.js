@@ -34,7 +34,7 @@ images: [
     image_license_type: {type:String},
     image_licence_information: {type:String},
     image_keywords: [{type:String}],
-    image_first_post_date_plantastic: Datum,
+    image_first_post_date_plantastic: {type:Date},
     image_notes: [{type:String}]
   }
 ],
@@ -50,31 +50,31 @@ plant_data: {
       soil_notes: [{type:String}],
       mulch: {
         mulch_type: [{type:String}],
-        mulch_thickness: 10,
+        mulch_thickness: {type:Number},
         mulch:thickness_unit: {type:String},
-        mulch_every: 3,
+        mulch_every: {type:Number},
         mulch_every_unit: {type:String},
         mulch_notes: [{type:String}]
       }
     },
     water: {
-      water_needs_average: 4,
-      water_reminder_min_temperature_celsius: 35,
-      water_reminder_min_temperature_fahrenheit: 95,
-      water_reminder_min_days: 7,
+      water_needs_average:{type:Number},
+      water_reminder_min_temperature_celsius: {type:Number},
+      water_reminder_min_temperature_fahrenheit: {type:Number},
+      water_reminder_min_days: {type:Number},
       watering_notes: [{type:String}]
     },
     fertilizer: {
-      fertilizer_needs_average: 3,
+      fertilizer_needs_average: {type:Number},
       fertilizer_notes: [{type:String}],
-      fertilizer_reminder_min_days: 15,
+      fertilizer_reminder_min_days: {type:Number},
       fertilizer_chemical_requirements: [{type:String}],
       fertilizer_type: {type:String}
     },
     planting_distance: {
-      row_distance_min: 20,
+      row_distance_min: {type:Number},
       row_distance_min_unit: {type:String},
-      plant_distance_min: 25,
+      plant_distance_min: {type:Number},
       plant_distance_min_unit: {type:String},
       separate_plants: true,
       separate_plants_space: {type:String},
@@ -82,22 +82,22 @@ plant_data: {
       separate_notes: [{type:String}]
     },
     seeding_germination: {
-      seed_depth: 4,
+      seed_depth: {type:Number},
       seed_depth_unit: {type:String},
       seeding_notes: [{type:String}],
       seeding_time: {
-        preculture_start_month_index: 2,
-        preculture_end_month_index: 4,
-        direct_seeding_start_month_index: 3,
-        direct_seeding_end_month_index: 5
+        preculture_start_month_index: {type:Number},
+        preculture_end_month_index: {type:Number},
+        direct_seeding_start_month_index: {type:Number},
+        direct_seeding_end_month_index: {type:Number}
       },
       germination: {
-        germination_temperature_min_celsius: 17,
-        germination_temperature_max_celsius: 30,
-        germination_temperature_min_fahrenheit: 0,
-        germination_temperature_max_fahrenheit: 0,
-        sprouting_time_estimate_min: 10,
-        sprouting_time_estimate_max: 14,
+        germination_temperature_min_celsius: {type:Number},
+        germination_temperature_max_celsius: {type:Number},
+        germination_temperature_min_fahrenheit: {type:Number},
+        germination_temperature_max_fahrenheit: {type:Number},
+        sprouting_time_estimate_min: {type:Number},
+        sprouting_time_estimate_max: {type:Number},
         sprouting_time_estimate_unit: {type:String},
         seed_requires_light: true,
         germination_notes: [{type:String}]
@@ -105,10 +105,10 @@ plant_data: {
     }
   },
   harvest: {
-    preculture_harvest_start_month_index: 7,
-    preculture_harvest_end_month_index: 9,
-    direct_seed_harvest_start_month_index: 8,
-    direct_seed_harvest_ende_month_index: 10,
+    preculture_harvest_start_month_index: {type:Number},
+    preculture_harvest_end_month_index: {type:Number},
+    direct_seed_harvest_start_month_index: {type:Number},
+    direct_seed_harvest_ende_month_index: {type:Number},
     ready_for_harvest: {type:String}
   },
   care: {
@@ -119,9 +119,9 @@ plant_data: {
   variety_specific_characteristics_notes: [{type:String}],
   origin: {type:String},
   hybrid_type: {type:String},
-  growth_time_teenager: 4,
+  growth_time_teenager: {type:Number},
   growth_time_unit_teenager: {type:String},
-  growth_time_adult: 8,
+  growth_time_adult: {type:Number},
   growth_time_unit_adult: {type:String},
   growth: {type:String},
   requires_high_nutrition: true,
@@ -129,9 +129,9 @@ plant_data: {
   winter-hardy: false,
   propagation_methods: [{type:String}],
   propagation_notes: [{type:String}],
-  plant_height: 40,
+  plant_height: {type:Number},
   plant_height_unit: {type:String},
-  plant_width: 40,
+  plant_width: {type:Number},
   plant_width_unit: {type:String},
   can_be_houseplant: true,
   plant_has_fruit: true,
@@ -151,7 +151,7 @@ plant_data: {
   other_information: {type:String},
   repotting: {
     plant_needs_repotting_replanting: true,
-    repot_after_time: 2,
+    repot_after_time: {type:Number},
     repot_after_time_unit: {type:String}
   },
   possible_diseases_and_pests: {
@@ -161,11 +161,11 @@ plant_data: {
     notes: [{type:String}]
   },
   poisonousness: {
-    degree_of_poisonousness_fruit: 0,
-    degree_of_poisonousness_flower: 0,
-    degree_of_poisonousness_leaves_bulb: 0,
-    degree_of_poisonousness_stem: 0,
-    degree_of_poisonousness_roots: 0,
+    degree_of_poisonousness_fruit: {type:Number},
+    degree_of_poisonousness_flower: {type:Number},
+    degree_of_poisonousness_leaves_bulb:{type:Number},
+    degree_of_poisonousness_stem:{type:Number},
+    degree_of_poisonousness_roots:{type:Number},
     inedible_and_poisonous_parts: [{type:String}],
     poisonousness_notes: [{type:String}]
   },
@@ -178,7 +178,7 @@ plant_data: {
   root_tuber: {
     edible_roots: false,
     edible_tubers: false,
-    root_depth_average: 30,
+    root_depth_average: {type:Number},
     root_depth_average_unit: {type:String},
     root_shape: {type:String},
     tuber_shape: {type:String},
@@ -200,7 +200,7 @@ plant_data: {
   },
   foliage_leaves: {
     edible_leaves: false,
-    leaf_size: 10,
+    leaf_size: {type:Number},
     leaf_size_unit: {type:String},
     leaf_color: {type:String},
     leaf_shape: {type:String},
@@ -208,8 +208,8 @@ plant_data: {
     notes: [{type:String}]
   },
   flower: {
-    flowering_start_month_index: 5,
-    flowering_end_month_index: 9,
+    flowering_start_month_index: {type:Number},
+    flowering_end_month_index: {type:Number},
     beefriendly: false,
     petal_color: [{type:String}],
     self-pollinating: true,
@@ -217,8 +217,8 @@ plant_data: {
   },
   fruit: {
     edible_fruit: true,
-    fruit_start_month_index: 5,
-    fruit_end_month_index: 9,
+    fruit_start_month_index: {type:Number},
+    fruit_end_month_index:{type:Number},
     fruit_color: [{type:String}],
     fruit_non-poisonous: true,
     fruit_edible: true,
@@ -228,36 +228,36 @@ plant_data: {
 links: {
   articles: [
     {
-      article_title: Titel 1,
+      article_title: {type:String},
       article_topic: {type:String},
       aritcle_link: {type:String}
     },
     {
-      article_title: Titel 2,
+      article_title: {type:String},
       article_topic: {type:String},
       aritcle_link: {type:String}
     }
   ],
   related_shop_products: [
     {
-      shop_product_title: Titel 1,
+      shop_product_title: {type:String},
       shop_product_note: {type:String},
       shop_product_link: {type:String}
     },
     {
-      shop_product_title: Titel 2,
+      shop_product_title: {type:String},
       shop_product_note: {type:String},
       shop_product_link: {type:String}
     }
   ],
   recipes: [
     {
-      recipe_title: Titel 1,
+      recipe_title: {type:String},
       recipe_topic: {type:String},
       recipe_link: {type:String}
     },
     {
-      recipe_title: Titel 2,
+      recipe_title: {type:String},
       recipe_topic: {type:String},
       recipe_link: {type:String}
     }
