@@ -6,114 +6,55 @@ const plantSchema = Schema({
   specific_variety_name: String,
   botanical_name: String,
   category: [
-    "Gemüse",
-    "Gemuese",
-    "Obst",
-    "Frucht",
-    "Früchte",
-    "Fruechte",
-    "Beere",
-    "Beeren",
-    "etc."
+    String
   ],
-  plant_genus: ["Tomate", "Tomaten", "", "", ""],
-  plant_type: "Buschtomate/Stabtomate/etc.",
-  plant_family: [
-    "könnten auch einfach Schlagwörter werden",
-    "Knöterichgewächse",
-    "Nachtschattengewächse",
-    "Kreuzblütler",
-    "Zwiebelgewächs",
-    "Korbblütler",
-    "Doldenblütler",
-    "Kürbisgewächse",
-    "Liliengewächse",
-    "Fuchsschwanzgewächse",
-    "Hülsenfrüchtler",
-    "Rosengewächse",
-    "Baldriangewächse",
-    "Gänsefußgewächse"
-  ],
-  other_names: [
-    "italienische Stabtomate",
-    "Tomato",
-    "Eiertomaten",
-    "Flaschentomaten",
-    ""
-  ],
-  subcategory: ["Supermarkttomate", "Nutzpflanze", "", "", "", ""],
+  plant_genus: [String],
+  plant_type: [String],
+  plant_family: [String],
+  other_names: [String],
+  subcategory: [String],
   keywords: [
-    "rot",
-    "lecker",
-    "essbar",
-    "ungiftig",
-    "eiförmig",
-    "für Salat",
-    "für Ketchup",
-    "all the special plurals, ß > ss, äöü > ae oe ue"
+   String
   ],
-  tags_from_users: ["Gewächshaus", "", "", "", ""]
+  tags_from_users: [String]
 },
 images: [
   {
-    _id: "################",
-    image_title: "Bunch_of_tomatoes_2020",
-    image_link: "https:// oder Route zum Foto aus unserer Datenbank",
-    image_size_pixel: 1500x3000,
-    image_file_format: png,
-    image_description: Romatomaten Ernte von 2020./3 rote reife Tomaten der Sorte Roma.,
-    image_owner: John Smith,
-    photographer-artist-origin: John Smith,
-    image_source: RoyaltyFreeImages.com,
-    image_source_information: keine Lizenz nötig für commercial use,
+    _id: Schema.Types.ObjectId,
+    image_title: {type:String},
+    image_link: {type:String},
+    image_size_pixel: {type:String},
+    image_file_format: {type:String},
+    image_description: [{type:String}],
+    image_owner: {type:String},
+    photographer-artist-origin: {type:String},
+    image_source: {type:String},
+    image_source_information: {type:String},
     image_license_given: true,
-    image_license_type: commercial license,
-    image_licence_information: Lizenznummer, etc.,
-    image_keywords: [Romatomaten, Tomaten, ...],
+    image_license_type: {type:String},
+    image_licence_information: {type:String},
+    image_keywords: [{type:String}],
     image_first_post_date_plantastic: Datum,
-    image_notes: [
-      paragraph 1,
-      paragraph 2,
-      paragraph 3,
-      Alles andere wichtige zum Foto.
-    ]
+    image_notes: [{type:String}]
   }
 ],
 plant_data: {
   planting_conditions: {
-    sun: [
-      sonnig,
-      sonnig bis halbschattig,
-      halbschattig,
-      halbschattig bis schattig,
-      schattig
-    ],
+    sun: [{type:String}],
     soil: {
-      soil_characteristics: [
-        sandig,
-        lehmig,
-        humos,
-        leicht,
-        schwer,
-        sauer,
-        alkalisch
-      ],
-      soil_types: [Sand, Humus],
-      adult_plant_soil_amount: 30 l,
+      soil_characteristics: [{type:String}],
+      soil_types: [{type:String}],
+      adult_plant_soil_amount: {type:String},
+      adult_plant_soil_amount_unit: {type:String},
       requires_mulching: true,
-      soil_notes: [],
+      soil_notes: [{type:String}],
       mulch: {
-        mulch_type: [Rindermulch, pine wood chips, wood chips],
+        mulch_type: [{type:String}],
         mulch_thickness: 10,
-        mulch:thickness_unit: cm,
+        mulch:thickness_unit: {type:String},
         mulch_every: 3,
-        mulch_every_unit: months,
-        mulch_notes: [
-          paragraph 1,
-          paragraph 2,
-          paragraph 3,
-          Regelmäßiges Mulchen ist wichtig.
-        ]
+        mulch_every_unit: {type:String},
+        mulch_notes: [{type:String}]
       }
     },
     water: {
@@ -121,53 +62,29 @@ plant_data: {
       water_reminder_min_temperature_celsius: 35,
       water_reminder_min_temperature_fahrenheit: 95,
       water_reminder_min_days: 7,
-      watering_notes: [
-        paragraph 1,
-        paragraph 2,
-        paragraph 3,
-        water every time the soil feels dry (stick finger in soil method)
-      ]
+      watering_notes: [{type:String}]
     },
     fertilizer: {
       fertilizer_needs_average: 3,
-      fertilizer_notes: [
-        paragraph 1,
-        paragraph 2,
-        paragraph 3,
-        needs fertilizer every 2 months, less in winter, keep in mind that fertilizer needs depend on soil conditions and season
-      ],
+      fertilizer_notes: [{type:String}],
       fertilizer_reminder_min_days: 15,
-      fertilizer_chemical_requirements: [
-        80% Phosphat,
-        12% Magnesium,
-        etc.
-      ],
-      fertilizer_type: long-term/short-term/liquid/dry
+      fertilizer_chemical_requirements: [{type:String}],
+      fertilizer_type: {type:String}
     },
     planting_distance: {
       row_distance_min: 20,
-      row_distance_min_unit: cm,
+      row_distance_min_unit: {type:String},
       plant_distance_min: 25,
-      plant_distance_min_unit: cm,
+      plant_distance_min_unit: {type:String},
       separate_plants: true,
-      separate_plants_space: 15x10,
-      separate_plants_space_unit: cm,
-      separate_notes: [
-        paragraph 1,
-        paragraph 2,
-        paragraph 3,
-        Als Jungpflanze pikieren und bei Bedarf vereinzeln.
-      ]
+      separate_plants_space: {type:String},
+      separate_plants_space_unit: {type:String},
+      separate_notes: [{type:String}]
     },
     seeding_germination: {
       seed_depth: 4,
-      seed_depth_unit: cm,
-      seeding_notes: [
-        paragraph 1,
-        paragraph 2,
-        paragraph 3,
-        im warmen Zimmer in Gefäße in spezielle Aussaaterde säen.
-      ],
+      seed_depth_unit: {type:String},
+      seeding_notes: [{type:String}],
       seeding_time: {
         preculture_start_month_index: 2,
         preculture_end_month_index: 4,
@@ -181,11 +98,9 @@ plant_data: {
         germination_temperature_max_fahrenheit: 0,
         sprouting_time_estimate_min: 10,
         sprouting_time_estimate_max: 14,
-        sprouting_time_estimate_unit: Tage,
+        sprouting_time_estimate_unit: {type:String},
         seed_requires_light: true,
-        germination_notes: [
-          1 cm, andrücken und mit Erde bedecken, Lichtkeimer.
-        ]
+        germination_notes: [{type:String}]
       }
     }
   },
@@ -194,38 +109,30 @@ plant_data: {
     preculture_harvest_end_month_index: 9,
     direct_seed_harvest_start_month_index: 8,
     direct_seed_harvest_ende_month_index: 10,
-    ready_for_harvest: Abhängig von der Sorte sind die Tomaten rot, wenn sie reif sind./Nach ca. 2 Jahren bilden sich die ersten Früchte.
+    ready_for_harvest: {type:String}
   },
   care: {
-    care_keypoints: [ausgeizen der Triebe, umtopfen],
-    care_information: [paragraph 1, paragraph 2, paragraph 3]
+    care_keypoints: [{type:String}],
+    care_information: [{type:String}]
   },
-  variety_specific_characteristics_list: [
-    especially fruitful,
-    tomatoes have good flavor,
-    fleshy tomatoes
-  ],
-  variety_specific_characteristics_notes: [
-    paragraph 1,
-    paragraph 2,
-    paragraph 3
-  ],
-  origin: country/area,
-  hybrid_type: show if length over 0, F1 amerikanisch,
+  variety_specific_characteristics_list: [{type:String}],
+  variety_specific_characteristics_notes: [{type:String}],
+  origin: {type:String},
+  hybrid_type: {type:String},
   growth_time_teenager: 4,
-  growth_time_unit_teenager: Wochen,
+  growth_time_unit_teenager: {type:String},
   growth_time_adult: 8,
-  growth_time_unit_adult: Wochen,
-  growth: Strauch,
+  growth_time_unit_adult: {type:String},
+  growth: {type:String},
   requires_high_nutrition: true,
-  lifetime: [einjährig, zweijährig, mehrjährig],
+  lifetime: [{type:String}],
   winter-hardy: false,
-  propagation_methods: [Samen, Setzlinge],
-  propagation_notes: [vermehrbar durch Samen und Setzlinge],
+  propagation_methods: [{type:String}],
+  propagation_notes: [{type:String}],
   plant_height: 40,
-  plant_height_unit: cm,
+  plant_height_unit: {type:String},
   plant_width: 40,
-  plant_width_unit: cm,
+  plant_width_unit: {type:String},
   can_be_houseplant: true,
   plant_has_fruit: true,
   plant_has_seed_pit: true,
@@ -237,21 +144,21 @@ plant_data: {
   plant_has_medicinal_purpose: false,
   plant_has_poisonous_part: true,
   grafting: true,
-  grafting_notes: [],
-  plant_description: [paragraph 1, paragraph 2, paragraph 3],
-  plant_information: [paragraph 1, paragraph 2, paragraph 3],
-  plant_description_keywords: [ertragreich, widerstandsfähig],
-  other_information: Text...,
+  grafting_notes: [{type:String}],
+  plant_description: [{type:String}],
+  plant_information: [{type:String}],
+  plant_description_keywords: [{type:String}],
+  other_information: {type:String},
   repotting: {
     plant_needs_repotting_replanting: true,
     repot_after_time: 2,
-    repot_after_time_unit: year(s)
+    repot_after_time_unit: {type:String}
   },
   possible_diseases_and_pests: {
-    pests: [Schnecken, Blattläuse, Kartoffelkäfer],
-    diseases: [Sonnenbleiche],
-    mold: [Mehltau],
-    notes: [Diese Sorte ist relativ resistent.]
+    pests: [{type:String}],
+    diseases: [{type:String}],
+    mold: [{type:String}],
+    notes: [{type:String}]
   },
   poisonousness: {
     degree_of_poisonousness_fruit: 0,
@@ -259,120 +166,118 @@ plant_data: {
     degree_of_poisonousness_leaves_bulb: 0,
     degree_of_poisonousness_stem: 0,
     degree_of_poisonousness_roots: 0,
-    inedible_and_poisonous_parts: [leaves, stem],
-    poisonousness_notes: [can be eaten after cooking]
+    inedible_and_poisonous_parts: [{type:String}],
+    poisonousness_notes: [{type:String}]
   },
   medicinal_purpose_information: {
-    common_medical_use: [coughs, flu],
-    medicinal_plant_part: [leaves, flowers, stem],
-    medication_form: [powdered leaves, tea],
-    notes: [p1, p2]
+    common_medical_use: [{type:String}],
+    medicinal_plant_part: [{type:String}],
+    medication_form: [{type:String}],
+    notes: [{type:String}]
   },
   root_tuber: {
     edible_roots: false,
     edible_tubers: false,
     root_depth_average: 30,
-    root_depth_average_unit: cm,
-    root_shape: ,
-    tuber_shape: ,
-    characteristics: [p1, p2],
-    notes: [p1, p2]
+    root_depth_average_unit: {type:String},
+    root_shape: {type:String},
+    tuber_shape: {type:String},
+    characteristics: [{type:String}],
+    notes: [{type:String}]
   },
   bulb_cloves: {
-    bulb_shape: ,
-    cloves_shape: ,
+    bulb_shape: {type:String},
+    cloves_shape: {type:String},
     propagation_through_cloves: true,
-    notes: [
-      The bulb stores energy of the plant and outer shell dries out with time
-    ]
+    notes: [{type:String}]
   },
   stem: {
     edible_stem: false,
-    stem-shape: ,
-    color: ,
-    stem_characteristics: ,
-    notes: [p1, p2]
+    stem-shape: {type:String},
+    color: [{type:String}],
+    stem_characteristics: [{type:String}],
+    notes: [{type:String}]
   },
   foliage_leaves: {
     edible_leaves: false,
     leaf_size: 10,
-    leaf_size_unit: cm,
-    leaf_color: ,
-    leaf_shape: ,
+    leaf_size_unit: {type:String},
+    leaf_color: {type:String},
+    leaf_shape: {type:String},
     : ,
-    notes: [p1, p2]
+    notes: [{type:String}]
   },
   flower: {
     flowering_start_month_index: 5,
     flowering_end_month_index: 9,
     beefriendly: false,
-    petal_color: [rot, gelb, blau, weiß, gemischt],
+    petal_color: [{type:String}],
     self-pollinating: true,
-    notes: [p1, p2]
+    notes: [{type:String}]
   },
   fruit: {
     edible_fruit: true,
     fruit_start_month_index: 5,
     fruit_end_month_index: 9,
-    fruit_color: [rot, gelb, blau, weiß, gemischt],
+    fruit_color: [{type:String}],
     fruit_non-poisonous: true,
     fruit_edible: true,
-    notes: [p1, p2]
+    notes: [{type:String}]
   }
 },
 links: {
   articles: [
     {
       article_title: Titel 1,
-      article_topic: tomatoes,
-      aritcle_link: Link1
+      article_topic: {type:String},
+      aritcle_link: {type:String}
     },
     {
       article_title: Titel 2,
-      article_topic: tomatoes,
-      aritcle_link: Link1
+      article_topic: {type:String},
+      aritcle_link: {type:String}
     }
   ],
   related_shop_products: [
     {
       shop_product_title: Titel 1,
-      shop_product_note: tomatoes,
-      shop_product_link: Link1
+      shop_product_note: {type:String},
+      shop_product_link: {type:String}
     },
     {
       shop_product_title: Titel 2,
-      shop_product_note: tomatoes,
-      shop_product_link: Link1
+      shop_product_note: {type:String},
+      shop_product_link: {type:String}
     }
   ],
   recipes: [
     {
       recipe_title: Titel 1,
-      recipe_topic: tomatoes,
-      recipe_link: Link1
+      recipe_topic: {type:String},
+      recipe_link: {type:String}
     },
     {
       recipe_title: Titel 2,
-      recipe_topic: tomatoes,
-      recipe_link: Link1
+      recipe_topic: {type:String},
+      recipe_link: {type:String}
     }
   ]
 },
 this_entry: {
   editors: [
-    { editor_name: full name 1, edit_date: default is today's date }
+    { editor_name: {type:String}, edit_date: {type:Date} }
   ]
 },
 sources_for_our_information: [
   {
-    topic: tomatoes description text,
+    topic: [{type:String}],
     sources: [
       {
-        source_link: https://...,
-        source_title: book title,
-        source_author: John Smith,
-        source_specifics: chapter, page, article title,
-        source_notes: [p1, p2, any more information]
+        source_link: {type:String},
+        source_title: {type:String},
+        source_author: {type:String},
+        source_specifics: {type:String},
+        source_notes: [{type:String}]
       }
     ]
   }
