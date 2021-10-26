@@ -1,25 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const plantSchema = Schema({
-  _id: Schema.Types.ObjectId,
-  specific_variety_name: String,
-  botanical_name: String,
-  category: [
-    String
-  ],
-  plant_genus: [String],
-  plant_type: [String],
-  plant_family: [String],
-  other_names: [String],
-  subcategory: [String],
-  keywords: [
-   String
-  ],
-  tags_from_users: [String]
-},
-images: [
-  {
+const imageSchema = Schema({
     _id: Schema.Types.ObjectId,
     image_title: {type:String},
     image_link: {type:String},
@@ -36,8 +18,22 @@ images: [
     image_keywords: [{type:String}],
     image_first_post_date_plantastic: {type:Date},
     image_notes: [{type:String}]
-  }
-],
+  })
+
+const plantSchema = Schema({
+  _id: Schema.Types.ObjectId,
+  specific_variety_name: String,
+  botanical_name: String,
+  category: [String],
+  plant_genus: [String],
+  plant_type: [String],
+  plant_family: [String],
+  other_names: [String],
+  subcategory: [String],
+  keywords: [String],
+  tags_from_users: [String]
+},
+images: [{type:imageSchema}],
 plant_data: {
   planting_conditions: {
     sun: [{type:String}],
