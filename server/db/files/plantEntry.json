@@ -319,9 +319,47 @@
     }
   },
   "links": {
-    "article_links": ["Link1", "Link2", "..."],
-    "related_shop_links": ["Link1", "Link2", "..."],
-    "recipe_links": ["Link1", "Link2", "..."]
+    "articles": [
+      {
+        "article_title": "Titel 1",
+        "article_topic": "tomatoes",
+        "aritcle_link": "Link1"
+      },
+      {
+        "article_title": "Titel 2",
+        "article_topic": "tomatoes",
+        "aritcle_link": "Link1"
+      }
+    ],
+    "related_shop_products": [
+      {
+        "shop_product_title": "Titel 1",
+        "shop_product_note": "seed",
+        "shop_product_link": "Link1"
+      },
+      {
+        "shop_product_title": "Titel 2",
+        "shop_product_note": "teenage plant",
+        "shop_product_link": "Link1"
+      }
+    ],
+    "recipes": [
+      {
+        "recipe_title": "Titel 1",
+        "recipe_topic": "tomato soup",
+        "recipe_link": "Link1"
+      },
+      {
+        "recipe_title": "Titel 2",
+        "recipe_topic": "lunch",
+        "recipe_link": "Link1"
+      }
+    ]
+  },
+  "this_entry": {
+    "editors": [
+      { "editor_name": "full name 1", "edit_date": "default is today's date" }
+    ]
   },
   "sources_for_our_information": [
     {
