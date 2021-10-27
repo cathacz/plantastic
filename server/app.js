@@ -2,15 +2,14 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
+
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
 const plantRoute = require("./routes/plantRoute");
 require("dotenv").config();
-
-// cookie, session
-
-const cookieParser = require("cookie-parser");
-const expressSession = require("express-session");
 
 // DB
 
@@ -39,20 +38,6 @@ app.use(
   })
 );
 
-// Cookies
-
-app.use(cookieParser());
-
-// Session
-
-app.use(
-  expressSession({
-    secret: "somethingSecret",
-    saveUninitialized: false,
-    resave: false,
-  })
-);
-
 // Alow uploads
 
 app.use("/uploads", express.static("uploads"));
@@ -70,13 +55,13 @@ app.use("/plants", plantRoute);
 console.log("From app.js");
 
 // Error handler -- where to place in code?
-
 app.use((req, res, next) => {
   const error = new Error("Not Found!!!");
   error.status = 404;
   next(error);
 });
 app.use((error, req, res, next) => {
+  console.log(error);
   res.status(error.status || 500);
   res.json({ error: { message: error.message } });
 });
