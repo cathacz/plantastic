@@ -7,6 +7,7 @@ const plantSchema = Schema({
     specific_variety_name: {
       type: String,
       required: "Please enter the specific variety name.",
+      trim: true,
     },
     botanical_name: { type: String },
     category: [{ type: String }],
