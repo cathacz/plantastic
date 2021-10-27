@@ -1,144 +1,66 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
-import Home from "./app/screens/Home";
+import { NativeRouter, Route, Link, BackButton } from "react-router-native";
+import colors from "./app/config/colors";
+// import Home from "./app/screens/Home";
 import Today from "./app/screens/Today";
 import Overview from "./app/screens/Overview";
 import MyGarden from "./app/screens/MyGarden";
 import Community from "./app/screens/Community";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import NavMainBottom from "./app/components/NavMainBottom";
+import NavMainTop from "./app/components/NavMainTop";
 
 export default function App() {
   return (
-    <NativeRouter>
-      {/* TOP Nav */}
-      <SafeAreaView style={styles.navMainTop}>
-        <Link to="/today" style={styles.navTopItem}>
-          <View style={styles.navTopElements}>
+    <SafeAreaView style={styles.router}>
+      {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
+          <View style={styles.elements}>
             <Image
               source={require("./assets/icons/png/plantastic.png")}
-              style={{ height: 50, width: 50, alignItems: "center", margin: 5 }}
+              style={{
+                height: 100,
+                width: 100,
+                margin: 5,
+                justifyContent: "center",
+              }}
             />
-            <Text style={styles.navTopText}>Plantastic</Text>
+            <Text style={styles.textLogo}>Plantastic</Text>
+            <Text style={styles.text}>Let's get started</Text>
           </View>
-        </Link>
-      </SafeAreaView>
-      {/* Content */}
-      {/* <SafeAreaView>
-        <Text style={styles.mainText}>You are @ App.js</Text>
-      </SafeAreaView> */}
-
-      {/* BOTTOM Nav */}
-      <SafeAreaView style={styles.navMainBottom}>
-        <Link
-          to="/today"
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
-        >
-          <View style={styles.navElements}>
-            <Image
-              source={require("./assets/icons/png/shed.png")}
-              style={{ height: 50, width: 50, alignItems: "center" }}
-            />
-            <Text style={styles.navText}>Heute</Text>
-          </View>
-        </Link>
-
-        <Link
-          to="/overview"
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
-        >
-          <View style={styles.navElements}>
-            <Image
-              source={require("./assets/icons/png/calendarView.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={styles.navText}>Übersicht</Text>
-          </View>
-        </Link>
-
-        <Link
-          to="/myGarden"
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
-        >
-          <View style={styles.navElements}>
-            <Image
-              source={require("./assets/icons/png/meinGarten.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={styles.navText}>Mein Garten</Text>
-          </View>
-        </Link>
-
-        <Link
-          to="/community"
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
-        >
-          <View style={styles.navElements}>
-            <Image
-              source={require("./assets/icons/png/reihenAbstand.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={styles.navText}>Community</Text>
-          </View>
-        </Link>
-      </SafeAreaView>
-
-      <Route exact path="/" component={Home} />
-      <Route path="/today" component={Today} />
-      <Route path="/overview" component={Overview} />
-      <Route path="/myGarden" component={MyGarden} />
-      <Route path="/community" component={Community} />
-    </NativeRouter>
+        </Link> */}
+      <Today />
+    </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
-  container: {
+  router: {
+    backgroundColor: "white",
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  // TOP Nav
-  navMainTop: {
-    position: "absolute",
-  },
-  navTopItem: {},
-  navTopElements: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    justifyContent: "center",
-  },
-  navTopText: {
-    fontSize: 30,
-  },
-  // BOTTOM Nav
-  navMainBottom: {
-    borderColor: "white",
-    borderTopColor: "rgba(109, 153, 130, 0.25)",
-    borderWidth: 1,
-    borderStyle: "solid",
-    alignItems: "center",
-    justifyContent: "space-around",
-    flexDirection: "row",
-    height: 100,
-    position: "absolute",
-    bottom: 0,
-  },
-  navItem: {
-    width: "25%",
+    width: "100%",
     height: "100%",
-    alignItems: "center",
+    alignContent: "center",
     justifyContent: "center",
   },
-  navElements: {
-    alignItems: "center",
+  item: {
+    width: "100%",
+    height: "100%",
+    alignContent: "center",
+    justifyContent: "center",
+    borderColor: colors.sage75,
+    borderStyle: "solid",
+    borderWidth: 23,
+  },
+  elements: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    borderColor: colors.sage5,
+    borderStyle: "solid",
+    borderWidth: 30,
+    alignContent: "center",
     justifyContent: "center",
   },
-  navText: {
-    marginTop: 5,
-  },
+  textLogo: { fontSize: 40, textAlign: "center" },
+  text: { fontSize: 22.5, textAlign: "center" },
 });

@@ -1,20 +1,16 @@
 import React from "react";
-import { Text, StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import colors from "../config/colors";
+import BanderoleDressy from "../components/BanderoleDressy";
 
-const Home = () => (
-  <SafeAreaView>
-    <Text style={styles.mainText}>You are home</Text>
-  </SafeAreaView>
-);
+function Home({ title, onPress, color = "primary" }) {
+  return (
+    <BanderoleDressy>
+      <Text style={styles.mainText}>you are at home</Text>
+    </BanderoleDressy>
+  );
+}
 
-const styles = StyleSheet.create({
-  mainText: {
-    marginTop: 30,
-    color: "black",
-    fontSize: 40,
-    fontFamily: "Arial",
-    position: "absolute",
-    left: 21,
-  },
-});
+const styles = StyleSheet.create({});
+
 export default Home;
