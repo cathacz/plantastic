@@ -103,7 +103,7 @@
         "mulch": {
           "mulch_type": ["Rindermulch", "pine wood chips", "wood chips"],
           "mulch_thickness": 10,
-          "mulch:thickness_unit": "cm",
+          "mulch_thickness_unit": "cm",
           "mulch_every": 3,
           "mulch_every_unit": "months",
           "mulch_notes": [
@@ -297,7 +297,6 @@
       "leaf_size_unit": "cm",
       "leaf_color": "",
       "leaf_shape": "",
-      "": "",
       "notes": ["p1", "p2"]
     },
     "flower": {
