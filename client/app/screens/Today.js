@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Text, StyleSheet, SafeAreaView, View, Image } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  View,
+  Image,
+  TouchableOpacity,
+  Keyboard,
+  KeyboardAvoidingView,
+  ScrollView,
+  TextInput,
+} from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../config/colors";
 // import Home from "../screens/Home";
@@ -8,6 +19,8 @@ import Overview from "../screens/Overview";
 import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import Task from "../components/Task";
+import StyleMain from "../styles/StyleMain";
 
 const Today = () => {
   const [currentDate, setCurrentDate] = useState("");
@@ -24,16 +37,12 @@ const Today = () => {
     );
   }, []);
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={StyleMain.container}>
       <NativeRouter>
-        {/* Navigation Main Top */}
-        <SafeAreaView style={styles.navMainTop}>
-          <Link
-            to="/today"
-            style={{ backgroundColor: colors.sage5 }}
-            style={styles.navTopItem}
-          >
-            <View style={styles.navTopElements}>
+        {/* ----------------------------------------------------- Navigation Main Top */}
+        <SafeAreaView style={StyleMain.navMainTop}>
+          <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>
+            <View style={StyleMain.navTopElements}>
               <Image
                 source={require("../../assets/icons/png/plantastic.png")}
                 style={{
@@ -43,72 +52,97 @@ const Today = () => {
                   margin: 5,
                 }}
               />
-              <Text style={styles.navTopText}>Plantastic</Text>
+              <Text style={StyleMain.navTopText}>Plantastic</Text>
             </View>
           </Link>
+          {/* ------------- SearchMenu */}
+          <View style={StyleMain.searchMenuWrapperRight}>
+            <Link to="/today" underlayColor="white">
+              <SafeAreaView style={StyleMain.searchMenuWrapper}>
+                <View style={StyleMain.searchMenuWrapperFirstRow}>
+                  <View style={StyleMain.searchMenuItem}></View>
+                  <View style={StyleMain.searchMenuItem}></View>
+                </View>
+
+                <View style={StyleMain.searchMenuWrapperSecondRow}>
+                  <View style={StyleMain.searchMenuItem}></View>
+                  <View style={StyleMain.searchMenuItem}></View>
+                </View>
+              </SafeAreaView>
+            </Link>
+            {/* ------------- Add Task */}
+            <TouchableOpacity>
+              {/*onPress={() => handleAddTask()}*/}
+              <View style={StyleMain.addWrapper}>
+                <Text style={StyleMain.addText}>+</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </SafeAreaView>
-        {/* Banderole */}
-        <SafeAreaView style={styles.banderole}>
-          <Text style={styles.mainText}>
+        {/* --------------------------------------------------------------- Banderole */}
+        <SafeAreaView style={StyleMain.banderole}>
+          <Text style={StyleMain.mainText}>
             This is today {"\n"}
             {currentDate}
           </Text>
         </SafeAreaView>
-        {/* Navigation Main Bottom */}
-        <SafeAreaView style={styles.navMainBottom}>
+        {/* ----------------------------------------------------- Main Part */}
+
+        {/* ---------------------------------------- Navigation Main Bottom */}
+        <SafeAreaView style={StyleMain.navMainBottom}>
           <Link
             to="/today"
             underlayColor={colors.sage25}
-            style={styles.navItem}
+            style={StyleMain.navItem}
           >
-            <View style={styles.navElements}>
+            <View style={StyleMain.navElements}>
               <Image
                 source={require("../../assets/icons/png/shed.png")}
                 style={{ height: 50, width: 50, alignItems: "center" }}
               />
-              <Text style={styles.navText}>Heute</Text>
+              <Text style={StyleMain.navText}>Heute</Text>
             </View>
           </Link>
 
           <Link
             to="/overview"
             underlayColor={colors.sage25}
-            style={styles.navItem}
+            style={StyleMain.navItem}
           >
-            <View style={styles.navElements}>
+            <View style={StyleMain.navElements}>
               <Image
                 source={require("../../assets/icons/png/calendarView.png")}
                 style={{ height: 50, width: 50 }}
               />
-              <Text style={styles.navText}>Übersicht</Text>
+              <Text style={StyleMain.navText}>Übersicht</Text>
             </View>
           </Link>
 
           <Link
             to="/myGarden"
             underlayColor={colors.sage25}
-            style={styles.navItem}
+            style={StyleMain.navItem}
           >
-            <View style={styles.navElements}>
+            <View style={StyleMain.navElements}>
               <Image
                 source={require("../../assets/icons/png/meinGarten.png")}
                 style={{ height: 50, width: 50 }}
               />
-              <Text style={styles.navText}>Mein Garten</Text>
+              <Text style={StyleMain.navText}>Mein Garten</Text>
             </View>
           </Link>
 
           <Link
             to="/community"
             underlayColor={colors.sage25}
-            style={styles.navItem}
+            style={StyleMain.navItem}
           >
-            <View style={styles.navElements}>
+            <View style={StyleMain.navElements}>
               <Image
                 source={require("../../assets/icons/png/reihenAbstand.png")}
                 style={{ height: 50, width: 50 }}
               />
-              <Text style={styles.navText}>Community</Text>
+              <Text style={StyleMain.navText}>Community</Text>
             </View>
           </Link>
         </SafeAreaView>
@@ -122,76 +156,5 @@ const Today = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // position: "absolute",
-    // top: 0,
-    backgroundColor: "white",
-  },
-  mainText: {
-    marginTop: 100,
-    color: "black",
-    fontSize: 40,
-    fontFamily: "Arial",
-    position: "absolute",
-    textAlign: "center",
-  },
-  // Navigation Main Top
-  navMainTop: {
-    position: "absolute",
-  },
-  navTopItem: {},
-  navTopElements: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    justifyContent: "center",
-  },
-  navTopText: {
-    fontSize: 30,
-  },
-  //   Banderole
-  banderole: {
-    marginTop: 80,
-    height: 150,
-    width: "100%",
-    backgroundColor: colors.sage5,
-
-    position: "absolute",
-    textAlign: "center",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  //  Navigation Main Bottom
-  navMainBottom: {
-    backgroundColor: "white",
-    borderColor: "white",
-    borderTopColor: colors.sage25,
-    borderWidth: 1,
-    borderStyle: "solid",
-    alignItems: "center",
-    justifyContent: "space-around",
-    flexDirection: "row",
-    height: 90,
-    position: "absolute",
-    bottom: 0,
-  },
-  navItem: {
-    width: "25%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  active: {
-    backgroundColor: colors.sage5,
-  },
-  navElements: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  navText: {
-    marginTop: 5,
-  },
-});
+const styles = StyleSheet.create({});
 export default Today;
