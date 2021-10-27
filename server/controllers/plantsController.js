@@ -1,5 +1,7 @@
 const Plant = require("../models/plantModel");
 
+// Get all plants
+
 const getAllPlants = async (req, res) => {
   try {
     const plants = await Plant.find({});
@@ -11,4 +13,36 @@ const getAllPlants = async (req, res) => {
 
 module.exports = {
   getAllPlants,
+};
+
+// Create plant
+
+const createPlant = async (req, res) => {
+  try {
+    const plant = await Plant.create(req.body);
+    res.status(201).json({ plant });
+  } catch (err) {
+    res.status(500).json({ msg: err });
+  }
+};
+
+// Get one plant
+const getPlant = async (req, res) => {
+  try {
+    const { id: plantID } = req.params;
+    const plant = await Plant.findOne({ _id: plantID });
+    if (!plant) {
+      return res.status(404).json({ msg: `No plant with id: ${plantID}` });
+    }
+
+    res.status(200).json({ plant });
+  } catch (err) {
+    res.status(500).json({ msg: err });
+  }
+};
+
+module.exports = {
+  getAllPlants,
+  createPlant,
+  getPlant,
 };
