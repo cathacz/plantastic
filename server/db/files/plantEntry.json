@@ -61,7 +61,7 @@
       "image_file_format": "png",
       "image_description": "Romatomaten Ernte von 2020./3 rote reife Tomaten der Sorte Roma.",
       "image_owner": "John Smith",
-      "photographer-artist-origin": "John Smith",
+      "photographer_artist_origin": "John Smith",
       "image_source": "RoyaltyFreeImages.com",
       "image_source_information": "keine Lizenz nötig für commercial use",
       "image_license_given": true,
@@ -217,7 +217,7 @@
     "growth": "Strauch",
     "requires_high_nutrition": true,
     "lifetime": ["einjährig", "zweijährig", "mehrjährig"],
-    "winter-hardy": false,
+    "winterhardy": false,
     "propagation_methods": ["Samen", "Setzlinge"],
     "propagation_notes": ["vermehrbar durch Samen und Setzlinge"],
     "plant_height": 40,
@@ -286,7 +286,7 @@
     },
     "stem": {
       "edible_stem": false,
-      "stem-shape": "",
+      "stem_shape": "",
       "color": "",
       "stem_characteristics": "",
       "notes": ["p1", "p2"]
@@ -304,7 +304,7 @@
       "flowering_end_month_index": 9,
       "beefriendly": false,
       "petal_color": ["rot", "gelb", "blau", "weiß", "gemischt"],
-      "self-pollinating": true,
+      "self_pollinating": true,
       "notes": ["p1", "p2"]
     },
     "fruit": {
@@ -312,7 +312,7 @@
       "fruit_start_month_index": 5,
       "fruit_end_month_index": 9,
       "fruit_color": ["rot", "gelb", "blau", "weiß", "gemischt"],
-      "fruit_non-poisonous": true,
+      "fruit_non_poisonous": true,
       "fruit_edible": true,
       "notes": ["p1", "p2"]
     }
