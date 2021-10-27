@@ -1,0 +1,15 @@
+{
+  "_id": "###########",
+  "username": "camilla96",
+  "user_image": "cammy1.png",
+  "firstname": "Camilla",
+  "lastname": "Tilia",
+  "email_address": ["prioritized email", "email2", "email3"],
+  "password": "***********",
+  "home_address_road": "Street",
+  "home_address_housenumber": 9,
+  "home_address_extra": "apartment number or floor",
+  "home_address_postal_code": "12345",
+  "home_address_city": "city name",
+  "home_address_country": "country name"
+}
