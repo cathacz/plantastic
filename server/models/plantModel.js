@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 const plantSchema = Schema({
   labels: {
     _id: Schema.Types.ObjectId,
-    specific_variety_name: { type: String },
+    specific_variety_name: {
+      type: String,
+      required: "Please enter the specific variety name.",
+    },
     botanical_name: { type: String },
     category: [{ type: String }],
     plant_genus: [{ type: String }],
