@@ -2,15 +2,14 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-const routes = require("./routes/taskRoutes");
+
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 const taskRoute = require("./routes/taskRoutes");
+const userRoute = require("./routes/userRoutes");
+const plantRoute = require("./routes/plantRoute");
 require("dotenv").config();
-/* const notFound = require("./middleware/not-found"); */
-
-// cookie, session
-
-const cookieParser = require("cookie-parser");
-const expressSession = require("express-session");
 
 // DB
 
@@ -27,18 +26,6 @@ const start = async () => {
 
 start();
 
-// mongoDB
-/* const mongoose = require("mongoose");
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(console.log("DB is connected 😎"))
-  .catch((error) => {
-    console.log(`There was a problem ${error.message}`);
-  });
- */
 // to process the data
 
 app.use(express.json());
@@ -51,25 +38,8 @@ app.use(
   })
 );
 
-// 404 page
-
-/* app.use(notFound); */
-
-// Cookies
-
-app.use(cookieParser());
-
-// Session
-
-app.use(
-  expressSession({
-    secret: "somethingSecret",
-    saveUninitialized: false,
-    resave: false,
-  })
-);
-
 // Alow uploads
+
 app.use("/uploads", express.static("uploads"));
 
 // API Endpoints
@@ -79,5 +49,21 @@ app.get("/", (req, res) => {
 });
 
 app.use("/tasks", taskRoute);
+app.use("/users", userRoute);
+app.use("/plants", plantRoute);
+
+console.log("From app.js");
+
+// Error handler -- where to place in code?
+app.use((req, res, next) => {
+  const error = new Error("Not Found!!!");
+  error.status = 404;
+  next(error);
+});
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.status(error.status || 500);
+  res.json({ error: { message: error.message } });
+});
 
 module.exports = app;
