@@ -1,18 +1,50 @@
 {
   "_id": "###########",
-  "username": "camilla96",
-  "password": "***********",
-  "user_image": "cammy1.png",
-  "contact_information": {
-    "firstname": "Camilla",
-    "lastname": "Tilia",
-    "email_address": ["prioritized email", "email2", "email3"],
-    "home_address_road": "Street",
-    "home_address_housenumber": 9,
-    "home_address_extra": "apartment number or floor",
-    "home_address_postal_code": "12345",
-    "home_address_city": "city name",
-    "home_address_country": "country name"
+  "user_account": {
+    "username": "camilla96 (needs to be unique)",
+    "password": "***********hashed password",
+    "user_image": "cammy1.png",
+    "user_contact_information": {
+      "firstname": "Camilla",
+      "lastname": "Tilia",
+      "email_address": ["prioritized email", "email2", "email3"],
+      "users_landline": 123456789,
+      "users_mobile_number": 123456789,
+      "home_address_road": "Street",
+      "home_address_housenumber": 9,
+      "home_address_extra": "apartment number or floor",
+      "home_address_postal_code": "12345",
+      "home_address_city": "city name",
+      "home_address_country": "country name",
+      "home_address_is_also_mailing_address": true,
+      "mailing_addresses": [{}]
+    },
+    "other_user_information": {
+      "user_is_part_of_community": true,
+      "users_communities": [
+        {
+          "community_name": "community1",
+          "community_id": "shared id among common communities",
+          "community_company_contact_information": {
+            "community_address_road": "Street",
+            "community_address_housenumber": 9,
+            "community_address_extra": "apartment number or floor",
+            "community_address_postal_code": "12345",
+            "community_address_city": "city name",
+            "community_address_country": "country name"
+          },
+          "users_community_garden_address": {
+            "community_garden_address_road": "Street",
+            "community_garden_address_housenumber": 9,
+            "community_garden_address_extra": "how to recognize the garden, e.g. nummber of garden",
+            "community_garden_address_postal_code": "12345",
+            "community_garden_address_city": "city name",
+            "community_garden_address_country": "country name"
+          }
+        },
+        { "community_name": "community2" }
+      ]
+    }
   },
   "users_garden": {
     "users_gardens": ["backyard", "community garden"],
@@ -45,7 +77,23 @@
         ],
         "plant_id_reference": "plant ID or userPlant ID?",
         "plant_variety_reference": "Roma",
-        "other_plant_references": ["tomato", "Gemüse", "anything not "]
+        "other_plant_references": [
+          "other plants from same family?",
+          "Gemüse",
+          "anything not from lexicon?"
+        ]
+      }
+    ]
+  },
+  "user_shopping_data": {
+    "user_shopping_history": [
+      {
+        "product_item_id": "########",
+        "product_item_title": "",
+        "product_item_additional_information": "",
+        "purchase_date": "date of click 'buy'",
+        "payment_received": true,
+        "payment_receive_date": "date"
       }
     ]
   }
