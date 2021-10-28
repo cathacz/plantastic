@@ -3,9 +3,6 @@ const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
 
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
 const plantRoute = require("./routes/plantRoute");
