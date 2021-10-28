@@ -37,7 +37,7 @@ const SearchMenu = () => {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity style={styles.backButton}>
-        <Text style={styles.text}>Click Back button!</Text>
+        <Text style={styles.text}>Go Back</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
