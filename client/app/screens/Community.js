@@ -21,6 +21,7 @@ import MyGarden from "../screens/MyGarden";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
 import StyleMain from "../styles/StyleMain";
+import SearchMenu from "./SearchMenu";
 
 const Community = () => {
   return (
@@ -44,7 +45,7 @@ const Community = () => {
           </Link>
           {/* ------------- SearchMenu */}
           <View style={StyleMain.searchMenuWrapperRight}>
-            <Link to="/today" underlayColor="white">
+            <Link to="/searchMenu" underlayColor="white">
               <SafeAreaView style={StyleMain.searchMenuWrapper}>
                 <View style={StyleMain.searchMenuWrapperFirstRow}>
                   <View style={StyleMain.searchMenuItem}></View>
@@ -119,7 +120,7 @@ const Community = () => {
           <Link
             to="/community"
             underlayColor={colors.sage25}
-            style={StyleMain.navItem}
+            style={[StyleMain.navItem, StyleMain.active]}
           >
             <View style={StyleMain.navElements}>
               <Image
@@ -131,6 +132,7 @@ const Community = () => {
           </Link>
         </SafeAreaView>
         {/* <Route exact path="/" component={Home} /> */}
+        <Route path="/searchMenu" component={SearchMenu} />
         <Route path="/today" component={Today} />
         <Route path="/overview" component={Overview} />
         <Route path="/myGarden" component={MyGarden} />
