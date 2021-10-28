@@ -3,6 +3,7 @@ const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
 
+const authRoutes = require("./routes/authRoutes");
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
 const plantRoute = require("./routes/plantRoute");
@@ -45,6 +46,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to Plantastic");
 });
 
+app.use("/", authRoutes);
 app.use("/tasks", taskRoute);
 app.use("/users", userRoute);
 app.use("/plants", plantRoute);

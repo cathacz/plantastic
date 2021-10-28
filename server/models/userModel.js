@@ -46,3 +46,7 @@ UserSchema.methods.comparePassword = async function (canditatePassword) {
 };
 
 module.exports = mongoose.model("User", UserSchema);
+
+// vlad@igal.com
+
+// 123456
