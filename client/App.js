@@ -3,13 +3,15 @@ import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 import { NativeRouter, Route, Link, BackButton } from "react-router-native";
 import colors from "./app/config/colors";
 // import Home from "./app/screens/Home";
-import Today from "./app/screens/Today";
+// import Today from "./app/screens/Today";
 import Overview from "./app/screens/Overview";
 import MyGarden from "./app/screens/MyGarden";
 import Community from "./app/screens/Community";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import NavMainBottom from "./app/components/NavMainBottom";
-import NavMainTop from "./app/components/NavMainTop";
+// import NavMainBottom from "./app/components/MainComponents/NavMainBottom";
+// import NavMainTop from "./app/components/MainComponents/NavMainTop";
+
+import Today from "./app/screens/ComponentsTest/Today";
 
 export default function App() {
   return (
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: "100%",
+    position: "absolute",
     alignContent: "center",
     justifyContent: "center",
   },

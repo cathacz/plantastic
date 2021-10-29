@@ -8,7 +8,6 @@ const StylePlants = StyleSheet.create({
     height: "100%",
     position: "absolute",
     backgroundColor: "white",
-    paddingTop: 20,
   },
   mainText: {
     marginTop: 100,

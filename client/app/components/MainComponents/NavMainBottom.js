@@ -1,75 +1,74 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 import { NativeRouter, Route, Link, Switch } from "react-router-native";
-import colors from "../config/colors";
-// import Home from "../screens/Home";
-import Today from "../screens/Today";
-import Overview from "../screens/Overview";
-import MyGarden from "../screens/MyGarden";
-import Community from "../screens/Community";
+import colors from "../../config/colors";
+import Today from "../../screens/ComponentsTest/Today";
+import Overview from "../../screens/ComponentsTest/Overview";
+import MyGarden from "../../screens/ComponentsTest/MyGarden";
+import Community from "../../screens/ComponentsTest/Community";
+import StyleMain from "../../styles/StyleMain";
 
 function NavMainBottom() {
   return (
     <NativeRouter>
-      <SafeAreaView style={styles.navMainBottom}>
+      <SafeAreaView style={StyleMain.navMainBottom}>
         <Link
           to="/today"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
+          style={[StyleMain.navItem, styles.itemOne]}
         >
-          <View style={styles.navElements}>
+          <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/shed.png")}
+              source={require("../../../assets/icons/png/shed.png")}
               style={{ height: 50, width: 50, alignItems: "center" }}
             />
-            <Text style={styles.navText}>Heute</Text>
+            <Text style={StyleMain.navText}>Heute</Text>
           </View>
         </Link>
 
         <Link
           to="/overview"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
+          style={[StyleMain.navItem, StyleMain.itemTwo]}
         >
-          <View style={styles.navElements}>
+          <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/calendarView.png")}
+              source={require("../../../assets/icons/png/calendarView.png")}
               style={{ height: 50, width: 50 }}
             />
-            <Text style={styles.navText}>Übersicht</Text>
+            <Text style={StyleMain.navText}>Übersicht</Text>
           </View>
         </Link>
 
         <Link
           to="/myGarden"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
+          style={[StyleMain.navItem, StyleMain.itemThree]}
         >
-          <View style={styles.navElements}>
+          <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/meinGarten.png")}
+              source={require("../../../assets/icons/png/meinGarten.png")}
               style={{ height: 50, width: 50 }}
             />
-            <Text style={styles.navText}>Mein Garten</Text>
+            <Text style={StyleMain.navText}>Mein Garten</Text>
           </View>
         </Link>
 
         <Link
           to="/community"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={styles.navItem}
+          style={[StyleMain.navItem, StyleMain.itemFour]}
         >
-          <View style={styles.navElements}>
+          <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/reihenAbstand.png")}
+              source={require("../../../assets/icons/png/reihenAbstand.png")}
               style={{ height: 50, width: 50 }}
             />
-            <Text style={styles.navText}>Community</Text>
+            <Text style={StyleMain.navText}>Community</Text>
           </View>
         </Link>
       </SafeAreaView>
 
-      {/* <Route exact path="/" component={Home} /> */}
       <Route path="/today" component={Today} />
       <Route path="/overview" component={Overview} />
       <Route path="/myGarden" component={MyGarden} />
