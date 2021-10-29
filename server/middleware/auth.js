@@ -1,9 +1,23 @@
-const express = require("express");
-const router = express.Router();
+const User = require("../models/userModel");
+const jwt = require("jsonwebtoken");
+const { UnauthenticatedError } = require("../errors");
 
-const { login, register } = require("../controllers/userController");
+const auth = async (req, res, next) => {
+  // check header
 
-router.post("/register", register);
-router.post("/login", login);
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer")) {
+    throw new UnauthenticatedError("Authentication invalid");
+  }
+  const token = authHeader.split(" ")[1];
 
-module.exports = router;
+  try {
+    const payload = jwt.verify(token, process.env.JWT_SECRET);
+    // attach the user to the task routes
+    req.user = { userId: payload.userId, name: payload.name };
+  } catch (err) {
+    throw new UnauthenticatedError("Authentication invalid");
+  }
+};
+
+module.exports = auth;

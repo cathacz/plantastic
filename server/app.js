@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
-
+const authenticateUser = require("./middleware/auth");
 const authRoutes = require("./routes/authRoutes");
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
@@ -46,8 +46,8 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to Plantastic");
 });
 
-app.use("/", authRoutes);
-app.use("/tasks", taskRoute);
+app.use("/auth", authRoutes);
+app.use("/tasks", authenticateUser, taskRoute);
 app.use("/users", userRoute);
 app.use("/plants", plantRoute);
 
