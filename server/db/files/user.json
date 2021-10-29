@@ -10,14 +10,22 @@
       "email_address": ["prioritized email", "email2", "email3"],
       "users_landline": "0123456789",
       "users_mobile_number": "0123456789",
-      "home_address_road": "Street",
-      "home_address_housenumber": 9,
-      "home_address_extra": "apartment number or floor",
-      "home_address_postal_code": "12345",
-      "home_address_city": "city name",
-      "home_address_country": "country name",
-      "home_address_is_also_mailing_address": true,
-      "mailing_addresses": [{}]
+      "home_address": {
+        "home_address_road": "Street",
+        "home_address_housenumber": 9,
+        "home_address_extra": "apartment number or floor",
+        "home_address_postal_code": "12345",
+        "home_address_city": "city name",
+        "home_address_country": "country name",
+        "home_address_is_also_mailing_address": true
+      },
+      "mailing_addresses": [
+        {
+          "current_mailing_address": true,
+          "recipient": "full name",
+          "delete_this_later": "user can use checkmark, if mail address and home address are the same, if no, then open mail address section"
+        }
+      ]
     },
     "other_user_information": {
       "user_is_part_of_community": true,
@@ -78,8 +86,7 @@
             "community_garden_address_city": "city name",
             "community_garden_address_country": "country name"
           }
-        },
-        { "community_name": "community2" }
+        }
       ]
     }
   },
