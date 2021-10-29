@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { NativeRouter, Route, Link, BackButton } from "react-router-native";
+import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "./app/config/colors";
 // import Home from "./app/screens/Home";
 import Today from "./app/screens/Today";
