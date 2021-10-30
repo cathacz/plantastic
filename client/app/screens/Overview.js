@@ -6,6 +6,8 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Platform,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -25,7 +27,7 @@ import StyleMain from "../styles/StyleMain";
 // imports Alina
 // import Calendar from "../components/OverviewCalendar";
 import NumberToMonth from "../components/NumberToMonth";
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 
 const Overview = () => {
   // const [currentDate, setCurrentDate] = useState("");
@@ -40,7 +42,7 @@ const Overview = () => {
   // }, []);
 
   return (
-    <SafeAreaView style={StyleMain.container}>
+    <SafeAreaView style={styles.platformContainer} backgroundColor="white">
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -158,5 +160,10 @@ const Overview = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  platformContainer: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+});
 export default Overview;
