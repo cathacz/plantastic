@@ -94,7 +94,16 @@
     "users_gardens": ["backyard", "community garden"],
     "users_plants": [
       {
-        "plant-variety": "Roma"
+        "copied_from_plant_lexicon": "...",
+        "number_of_plants": 10,
+        "plants_seeded": 4,
+        "seeded": [{}],
+        "plant_health": 5,
+        "disease": ["Mehltau", "Blattläuse"],
+        "number_of_diseased_plants": 1,
+        "dates_of_realization": "date",
+        "dates_added": "date with time",
+        "dates_seeded": "date and time"
       }
     ]
   },
