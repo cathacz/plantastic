@@ -11,9 +11,9 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 // import NavMainBottom from "./app/components/MainComponents/NavMainBottom";
 // import NavMainTop from "./app/components/MainComponents/NavMainTop";
 
-import Today from "./app/screens/ComponentsTest/Today";
+import Today from "./app/screens/Today";
 
-export default function App() {
+const App = () => {
   return (
     <SafeAreaView style={styles.router}>
       {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
@@ -34,7 +34,7 @@ export default function App() {
       <Today />
     </SafeAreaView>
   );
-}
+};
 const styles = StyleSheet.create({
   router: {
     backgroundColor: "white",
@@ -67,3 +67,4 @@ const styles = StyleSheet.create({
   textLogo: { fontSize: 40, textAlign: "center" },
   text: { fontSize: 22.5, textAlign: "center" },
 });
+export default App;

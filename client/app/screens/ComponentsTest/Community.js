@@ -40,6 +40,6 @@ const Community = () => {
 };
 
 const styles = StyleSheet.create({
-  itemOne: { backgroundColor: colors.sage25 },
+  itemThree: { backgroundColor: colors.sage25 },
 });
 export default Community;

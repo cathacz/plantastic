@@ -38,7 +38,7 @@ const Today = () => {
     );
   }, []);
   return (
-    <SafeAreaView style={StyleMain.container}>
+    <SafeAreaView style={[StyleMain.container]} ro>
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>

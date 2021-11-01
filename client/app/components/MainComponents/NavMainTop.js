@@ -17,6 +17,7 @@ function NavMainTop() {
   return (
     <SafeAreaView style={StyleMain.navMainTop}>
       <NativeRouter>
+        {/* ---------------------------------------------------------------Logo */}
         <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>
           <View style={StyleMain.navTopElements}>
             <Image
@@ -31,7 +32,7 @@ function NavMainTop() {
             <Text style={StyleMain.navTopText}>Plantastic</Text>
           </View>
         </Link>
-        {/* ------------- SearchMenu */}
+        {/* --------------------------------------------------------------- SearchMenu */}
         <View style={StyleMain.searchMenuWrapperRight}>
           <Link to="/searchMenu" underlayColor="white">
             <SafeAreaView style={StyleMain.searchMenuWrapper}>
@@ -46,7 +47,7 @@ function NavMainTop() {
               </View>
             </SafeAreaView>
           </Link>
-          {/* ------------- Add Task */}
+          {/* ----------------------------------------------------- Add Task */}
           <TouchableOpacity>
             {/*onPress={() => handleAddTask()}*/}
             <View style={StyleMain.addWrapper}>

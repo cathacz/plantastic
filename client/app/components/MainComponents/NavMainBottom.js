@@ -43,7 +43,7 @@ function NavMainBottom() {
         <Link
           to="/myGarden"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navItem, StyleMain.itemThree]}
+          style={[StyleMain.navItem, styles.itemThree]}
         >
           <View style={StyleMain.navElements}>
             <Image
@@ -78,32 +78,36 @@ function NavMainBottom() {
 }
 
 const styles = StyleSheet.create({
-  navMainBottom: {
-    backgroundColor: "white",
-    borderColor: "white",
-    borderTopColor: colors.sage25,
-    borderWidth: 1,
-    borderStyle: "solid",
-    alignItems: "center",
-    justifyContent: "space-around",
-    flexDirection: "row",
-    height: 100,
-    position: "absolute",
-    bottom: 0,
-  },
-  navItem: {
-    width: "25%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  navElements: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  navText: {
-    marginTop: 5,
-  },
+  itemOne: { backgroundColor: "white" },
+  itemTwo: { backgroundColor: "white" },
+  itemThree: { backgroundColor: "red" },
+  itemFour: { backgroundColor: "white" },
+  // navMainBottom: {
+  //   backgroundColor: "white",
+  //   borderColor: "white",
+  //   borderTopColor: colors.sage25,
+  //   borderWidth: 1,
+  //   borderStyle: "solid",
+  //   alignItems: "center",
+  //   justifyContent: "space-around",
+  //   flexDirection: "row",
+  //   height: 100,
+  //   position: "absolute",
+  //   bottom: 0,
+  // },
+  // navItem: {
+  //   width: "25%",
+  //   height: "100%",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
+  // navElements: {
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
+  // navText: {
+  //   marginTop: 5,
+  // },
 });
 
 export default NavMainBottom;

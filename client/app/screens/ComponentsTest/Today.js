@@ -34,6 +34,7 @@ const Today = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
       <NavMainTop />
+
       <NavMainBottom />
     </SafeAreaView>
   );
