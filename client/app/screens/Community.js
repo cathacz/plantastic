@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -158,6 +159,7 @@ const Community = () => {
         <Route path="/community" component={Community} />
         <Route path="/quickView" component={QuickView} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };

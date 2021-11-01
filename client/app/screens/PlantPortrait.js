@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   View,
   Image,
+  StatusBar,
   TouchableOpacity,
   Keyboard,
   KeyboardAvoidingView,
@@ -102,6 +103,7 @@ const PlantPortrait = () => {
         <Route path="/myGarden" component={MyGarden} />
         {/* <Route path="/community" component={Community} /> */}
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };

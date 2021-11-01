@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  StatusBar,
   SafeAreaView,
   View,
   Image,
@@ -60,6 +61,7 @@ const SearchMenu = () => {
         <Route path="/today" component={Today} />
         <Route path="/terms" component={Terms} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };

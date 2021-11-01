@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -152,6 +153,7 @@ const MyGarden = () => {
         <Route path="/community" component={Community} />
         <Route path="/quickView" component={QuickView} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };

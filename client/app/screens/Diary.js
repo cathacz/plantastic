@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -102,6 +103,7 @@ const Diary = () => {
         <Route path="/myGarden" component={MyGarden} />
         {/* <Route path="/community" component={Community} /> */}
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
