@@ -6,6 +6,8 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Platform,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -22,21 +24,25 @@ import SearchMenu from "./SearchMenu";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
 import StyleMain from "../styles/StyleMain";
+// imports Alina
+// import Calendar from "../components/OverviewCalendar";
+import NumberToMonth from "../components/NumberToMonth";
+// import { StatusBar } from "expo-status-bar";
 
 const Overview = () => {
-  const [currentDate, setCurrentDate] = useState("");
+  // const [currentDate, setCurrentDate] = useState("");
 
-  useEffect(() => {
-    var month = new Date().getMonth() + 1; //Current Month
-    var year = new Date().getFullYear(); //Current Year
+  // useEffect(() => {
+  //   var month = new Date().getMonth() + 1; //Current Month
+  //   var year = new Date().getFullYear(); //Current Year
 
-    setCurrentDate(
-      month + " " + year //+ " " + hours + ":" + min + ":" + sec
-    );
-  }, []);
+  //   setCurrentDate(
+  //     month + " " + year //+ " " + hours + ":" + min + ":" + sec
+  //   );
+  // }, []);
 
   return (
-    <SafeAreaView style={StyleMain.container}>
+    <SafeAreaView style={styles.platformContainer} backgroundColor="white">
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -79,9 +85,9 @@ const Overview = () => {
           </View>
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
-        <SafeAreaView style={StyleMain.banderole}>
-          <Text style={StyleMain.mainText}>{currentDate}</Text>
-        </SafeAreaView>
+        <View style={StyleMain.banderole}>
+          <NumberToMonth />
+        </View>
         {/* ----------------------------------------------------- Main Part */}
 
         {/* ---------------------------------------- Navigation Main Bottom */}
@@ -149,9 +155,15 @@ const Overview = () => {
         <Route path="/myGarden" component={MyGarden} />
         <Route path="/community" component={Community} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  platformContainer: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+});
 export default Overview;
