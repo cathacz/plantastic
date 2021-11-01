@@ -5,7 +5,6 @@ const StyleMain = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    paddingTop: 20,
   },
   mainText: {
     marginTop: 100,
@@ -21,6 +20,7 @@ const StyleMain = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+    marginTop: 20,
   },
   navTopItem: {},
   navTopElements: {
@@ -73,11 +73,11 @@ const StyleMain = StyleSheet.create({
     alignItems: "center",
   },
   addText: {
-    fontSize: 40,
+    fontSize: 30,
   },
   // -------------------------------------- Banderole
   banderole: {
-    marginTop: 70,
+    marginTop: 90,
     height: 150,
     width: "100%",
     backgroundColor: colors.sage5,
@@ -108,9 +108,7 @@ const StyleMain = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  active: {
-    backgroundColor: colors.sage5,
-  },
+
   navElements: {
     alignItems: "center",
     justifyContent: "center",
@@ -118,7 +116,14 @@ const StyleMain = StyleSheet.create({
   navText: {
     marginTop: 5,
   },
+  quick: {
+    alignItems: "center",
+    justifyContent: "center",
+    top: 400,
+  },
+
   // -------------------------------------------------- active Tap (where am I?)
   active: { backgroundColor: colors.sage25 },
 });
+
 export default StyleMain;

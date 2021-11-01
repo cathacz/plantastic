@@ -8,7 +8,6 @@ const StylePlants = StyleSheet.create({
     height: "100%",
     position: "absolute",
     backgroundColor: "white",
-    paddingTop: 20,
   },
   mainText: {
     marginTop: 100,
@@ -25,6 +24,7 @@ const StylePlants = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     backgroundColor: "white",
+    marginTop: 20,
   },
   navTopItem: {},
   navTopElements: {
@@ -38,7 +38,7 @@ const StylePlants = StyleSheet.create({
 
   // -------------------------------------- Banderole
   banderole: {
-    marginTop: 70,
+    marginTop: 90,
     height: 150,
     width: "100%",
     borderColor: "white",
