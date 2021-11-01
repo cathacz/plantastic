@@ -1,5 +1,7 @@
 const Task = require("../models/taskModel");
 const asyncWrapper = require("../middleware/async");
+const { StatusCodes } = require("http-status-codes");
+const { BadRequestError, NotFoundError } = require("../errors");
 
 // Get all tasks
 const getAllTasks = asyncWrapper(async (req, res) => {
@@ -8,10 +10,16 @@ const getAllTasks = asyncWrapper(async (req, res) => {
 });
 
 // Create new task
-const createTask = asyncWrapper(async (req, res) => {
+// const createTask = asyncWrapper(async (req, res) => {
+//   const task = await Task.create(req.body);
+//   res.status(201).json({ task });
+// });
+
+const createTask = async (req, res) => {
+  req.body.createdBy = req.user.userId;
   const task = await Task.create(req.body);
-  res.status(201).json({ task });
-});
+  res.status(StatusCodes.CREATED).json({ task });
+};
 
 // Get one task
 const getTask = async (req, res) => {
