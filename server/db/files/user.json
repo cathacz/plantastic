@@ -105,6 +105,22 @@
         "dates_added": "date with time",
         "dates_seeded": "date and time"
       }
+    ],
+    "users_plant_areas": [
+      {
+        "plant_area_name": "garden bed name or part of garden bed",
+        "plant_area_image": "gardenbed.png",
+        "location_description": "user defines for himself",
+        "plant_area_plants": [
+          {
+            "name": "can be any identifiyng name (variety name, botanical name, "
+          }
+        ],
+        "size": 3,
+        "size_unit": "sqm",
+        "shape_description": "user defined"
+      },
+      {}
     ]
   },
   "tasks": {
