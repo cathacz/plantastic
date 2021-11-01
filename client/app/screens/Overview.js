@@ -21,8 +21,7 @@ import Today from "../screens/Today";
 import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import SearchMenu from "./SearchMenu";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../components/Task";
+
 import StyleMain from "../styles/StyleMain";
 // imports Alina
 // import Calendar from "../components/OverviewCalendar";
@@ -30,19 +29,47 @@ import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
 const Overview = () => {
-  // const [currentDate, setCurrentDate] = useState("");
+  // const NumberToMonth = () => {
+  //   const [currentDate, setCurrentDate] = useState("");
 
-  // useEffect(() => {
-  //   var month = new Date().getMonth() + 1; //Current Month
-  //   var year = new Date().getFullYear(); //Current Year
+  //   useEffect(() => {
+  //     let year = new Date().getFullYear(); //Current Year
+  //     let d = new Date().getMonth(); // current Month ! starting index 0 !
+  //     console.log(d);
+  //     let monthNames = [
+  //       "Januar",
+  //       "Februar",
+  //       "März",
+  //       "April",
+  //       "Mai",
+  //       "Juni",
+  //       "Juli",
+  //       "August",
+  //       "September",
+  //       "Oktober",
+  //       "November",
+  //       "Dezember",
+  //     ];
 
-  //   setCurrentDate(
-  //     month + " " + year //+ " " + hours + ":" + min + ":" + sec
+  //     const monthName = monthNames[d];
+
+  //     setCurrentDate(
+  //       monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
+  //     );
+  //   }, []);
+
+  //   return (
+  //     <View>
+  //       <Text>{currentDate}</Text>
+  //     </View>
   //   );
-  // }, []);
+  // };
 
   return (
-    <SafeAreaView style={styles.platformContainer} backgroundColor="white">
+    <SafeAreaView
+      style={[StyleMain.container, styles.platformContainer]}
+      backgroundColor="white"
+    >
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -86,7 +113,9 @@ const Overview = () => {
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
         <View style={StyleMain.banderole}>
-          <NumberToMonth />
+          <Text>
+            <NumberToMonth />
+          </Text>
         </View>
         {/* ----------------------------------------------------- Main Part */}
 
@@ -161,9 +190,9 @@ const Overview = () => {
 };
 
 const styles = StyleSheet.create({
-  platformContainer: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
 });
 export default Overview;

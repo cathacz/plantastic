@@ -40,7 +40,7 @@ const Today = () => {
     );
   }, []);
   return (
-    <SafeAreaView style={[StyleMain.container]} ro>
+    <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -162,9 +162,9 @@ const Today = () => {
 };
 
 const styles = StyleSheet.create({
-  platformContainer: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
 });
 export default Today;

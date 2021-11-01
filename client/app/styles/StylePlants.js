@@ -24,7 +24,6 @@ const StylePlants = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     backgroundColor: "white",
-    marginTop: 20,
   },
   navTopItem: {},
   navTopElements: {

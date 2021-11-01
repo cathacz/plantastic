@@ -20,7 +20,6 @@ const StyleMain = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginTop: 20,
   },
   navTopItem: {},
   navTopElements: {
