@@ -1,9 +1,12 @@
 import { StyleSheet } from "react-native";
 import colors from "../config/colors";
 
-const StyleMain = StyleSheet.create({
+const StylePlants = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
+    height: "100%",
+    position: "absolute",
     backgroundColor: "white",
     paddingTop: 20,
   },
@@ -21,6 +24,7 @@ const StyleMain = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+    backgroundColor: "white",
   },
   navTopItem: {},
   navTopElements: {
@@ -31,56 +35,17 @@ const StyleMain = StyleSheet.create({
   navTopText: {
     fontSize: 30,
   },
-  searchMenuWrapperRight: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  },
-  // SearchMenu
-  searchMenuWrapper: {
-    flexDirection: "column",
-    height: 50,
-    width: 50,
-    justifyContent: "space-between",
-    alignContent: "space-between",
-  },
-  searchMenuWrapperFirstRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  searchMenuWrapperSecondRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  searchMenuItem: {
-    height: 23,
-    width: 23,
-    backgroundColor: colors.sage5,
-    borderTopLeftRadius: 14,
-    borderBottomRightRadius: 14,
-    borderBottomColor: colors.sage75,
-    borderStyle: "solid",
-  },
-  // Add Button
-  addWrapper: {
-    margin: 10,
-    width: 50,
-    height: 50,
-    backgroundColor: colors.sage5,
-    borderTopLeftRadius: 25,
-    borderBottomRightRadius: 25,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  addText: {
-    fontSize: 40,
-  },
+
   // -------------------------------------- Banderole
   banderole: {
     marginTop: 70,
     height: 150,
     width: "100%",
-    backgroundColor: colors.sage5,
+    borderColor: "white",
+    borderBottomColor: colors.sage75,
+    borderTopColor: colors.sage75,
+    borderStyle: "solid",
+    borderWidth: 2,
 
     position: "absolute",
     textAlign: "center",
@@ -90,6 +55,7 @@ const StyleMain = StyleSheet.create({
 
   // -------------------------------------- Navigation Main Bottom
   navMainBottom: {
+    // width: "100%",
     backgroundColor: "white",
     borderColor: "white",
     borderTopColor: colors.sage25,
@@ -103,7 +69,7 @@ const StyleMain = StyleSheet.create({
     bottom: 0,
   },
   navItem: {
-    width: "25%",
+    width: "33.3%",
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
@@ -121,4 +87,4 @@ const StyleMain = StyleSheet.create({
   // -------------------------------------------------- active Tap (where am I?)
   active: { backgroundColor: colors.sage25 },
 });
-export default StyleMain;
+export default StylePlants;
