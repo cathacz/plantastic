@@ -7,23 +7,24 @@ const NumberToMonth = () => {
 
   useEffect(() => {
     let year = new Date().getFullYear(); //Current Year
-    let d = new Date();
+    let d = new Date().getMonth(); // current Month ! starting index 0 !
+
     let monthNames = [
-      "January",
-      "February",
-      "March",
+      "Januar",
+      "Februar",
+      "März",
       "April",
-      "May",
-      "June",
-      "July",
+      "Mai",
+      "Juni",
+      "Juli",
       "August",
       "September",
-      "October",
+      "Oktober",
       "November",
-      "December",
+      "Dezember",
     ];
 
-    const monthName = d.toLocaleString("default", { month: "long" });
+    const monthName = monthNames[d];
 
     setCurrentDate(
       monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
