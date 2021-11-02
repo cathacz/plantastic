@@ -229,6 +229,11 @@ Install axios wrapper with standardized errors and req/res transformers. We will
 npm i apisauce
 ```
 
-## React navigator
+## Calendar
 
-npm install @react-navigation/native-stack
+```
+npm install --save moment react-moment
+expo install expo-calendar
+expo install expo-localization
+npm install react-native-calendar-strip
+```
