@@ -107,19 +107,15 @@
         "fertilizer_type": "Flüssigdünger oder organische Düngemittel"
       },
       "planting_distance": {
-        "row_distance_min": 20,
+        "row_distance_min": 25,
         "row_distance_min_unit": "cm",
-        "plant_distance_min": 25,
+        "plant_distance_min": 30,
         "plant_distance_min_unit": "cm",
         "separate_plants": true,
-        "separate_plants_space": "15x10",
+        "separate_start_month_index": 4,
+        "separate_plants_space": "40x50",
         "separate_plants_space_unit": "cm",
-        "separate_notes": [
-          "paragraph 1",
-          "paragraph 2",
-          "paragraph 3",
-          "Als Jungpflanze pikieren und bei Bedarf vereinzeln."
-        ]
+        "separate_notes": ["Ab Mai pikieren"]
       },
       "seeding_germination": {
         "seed_depth": 1,
