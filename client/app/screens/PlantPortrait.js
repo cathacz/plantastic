@@ -25,6 +25,7 @@ import detailedPlantPortraitStyles from "../styles/detailedPlantPortraitStyle";
 
 // import image (temporary solution)
 import tomatoPlant from "../../assets/images/roma_tomatoes.jpg";
+import StyleMain from "../styles/StyleMain";
 
 // import json for tomato plant (temporary solution)
 
@@ -53,10 +54,11 @@ const PlantPortrait = () => {
           </Link>
         </View>
         {/* --------------------------------------------------------------- Banderole */}
-        <View style={StylePlants.banderole}>
+        <View style={[StylePlants.banderole]}>
           <Text style={StylePlants.mainText}>Name Pflanzensorte</Text>
           <Text style={StylePlants.mainText}>Sortenname spezifisch</Text>
           <Text style={StylePlants.mainText}>botanischer Name</Text>
+          <View></View>
         </View>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={detailedPlantPortraitStyles.mainContent}>
