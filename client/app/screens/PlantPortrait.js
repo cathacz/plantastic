@@ -19,10 +19,12 @@ import QuickView from "./QuickView.js";
 import Diary from "./Diary";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
+
 import StylePlants from "../styles/StylePlants";
+import detailedPlantPortraitStyles from "../styles/detailedPlantPortraitStyle";
 
 // import image (temporary solution)
-// import tomatoPlant from "../../assets/images/";
+import tomatoPlant from "../../assets/images/roma_tomatoes.jpg";
 
 // import json for tomato plant (temporary solution)
 
@@ -56,9 +58,8 @@ const PlantPortrait = () => {
         </SafeAreaView>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={styles.scrollView}>
-          <Text style={styles.text}></Text>
+          <Text style={styles.text}>CAN YOU SEE ME?</Text>
         </ScrollView>
-
         {/* ---------------------------------------- Navigation Main Bottom */}
         <SafeAreaView style={StylePlants.navMainBottom}>
           <Link
