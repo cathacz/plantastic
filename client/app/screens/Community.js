@@ -22,6 +22,7 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
 import StyleMain from "../styles/StyleMain";
 import SearchMenu from "./SearchMenu";
+import QuickView from "./QuickView";
 
 const Community = () => {
   return (
@@ -72,7 +73,25 @@ const Community = () => {
           <Text style={StyleMain.mainText}>Community</Text>
         </SafeAreaView>
         {/* ----------------------------------------------------- Main Part */}
-
+        <View style={StyleMain.quick}>
+          <Text style={StyleMain.mainText}>
+            <View style={StyleMain.quick}>
+              <Link
+                to="/quickView"
+                underlayColor={colors.sage25}
+                style={styles.quickLink}
+              >
+                <View style={styles.quicky}>
+                  <Image
+                    source={require("../../assets/icons/png/berries.png")}
+                    style={{ height: 50, width: 50, alignItems: "center" }}
+                  />
+                  <Text style={styles.quickyText}>Beeren</Text>
+                </View>
+              </Link>
+            </View>
+          </Text>
+        </View>
         {/* ---------------------------------------- Navigation Main Bottom */}
         <SafeAreaView style={StyleMain.navMainBottom}>
           <Link
@@ -137,6 +156,7 @@ const Community = () => {
         <Route path="/overview" component={Overview} />
         <Route path="/myGarden" component={MyGarden} />
         <Route path="/community" component={Community} />
+        <Route path="/quickView" component={QuickView} />
       </NativeRouter>
     </SafeAreaView>
   );

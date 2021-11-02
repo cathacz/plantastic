@@ -13,14 +13,10 @@ import {
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../config/colors";
-// import Home from "../screens/Home";
 import Today from "../screens/Today";
 import Overview from "../screens/Overview";
-// import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import SearchMenu from "./SearchMenu";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../components/Task";
 import StyleMain from "../styles/StyleMain";
 import QuickView from "./QuickView.js";
 
@@ -69,25 +65,27 @@ const MyGarden = () => {
           </View>
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
-        <SafeAreaView style={StyleMain.banderole}>
-          <Text style={StyleMain.mainText}>My hardcore beautiful Garden</Text>
-        </SafeAreaView>
-        {/* ----------------------------------------------------- Main Part */}
-        <SafeAreaView style={styles.quick}>
-          <Link
-            to="/quickView"
-            underlayColor={colors.sage25}
-            style={styles.quickLink}
-          >
-            <View style={styles.quicky}>
-              <Image
-                source={require("../../assets/icons/png/berries.png")}
-                style={{ height: 50, width: 50, alignItems: "center" }}
-              />
-              <Text style={styles.quickyText}>Beeren</Text>
+        <View style={StyleMain.banderole}>
+          <Text style={StyleMain.mainText}>
+            <View style={StyleMain.quick}>
+              <Link
+                to="/quickView"
+                underlayColor={colors.sage25}
+                style={styles.quickLink}
+              >
+                <View style={styles.quicky}>
+                  <Image
+                    source={require("../../assets/icons/png/berries.png")}
+                    style={{ height: 50, width: 50, alignItems: "center" }}
+                  />
+                  <Text style={styles.quickyText}>Beeren</Text>
+                </View>
+              </Link>
             </View>
-          </Link>
-        </SafeAreaView>
+          </Text>
+        </View>
+        {/* ----------------------------------------------------- Main Part */}
+
         {/* ---------------------------------------- Navigation Main Bottom */}
         <SafeAreaView style={StyleMain.navMainBottom}>
           <Link
@@ -158,15 +156,5 @@ const MyGarden = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  quick: {
-    height: "100%",
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  quickLink: { alignItems: "center", justifyContent: "center" },
-  quicky: { alignContent: "center", justifyContent: "center" },
-  quickyText: { alignContent: "center", justifyContent: "center" },
-});
+const styles = StyleSheet.create({});
 export default MyGarden;

@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -22,6 +23,7 @@ import SearchMenu from "./SearchMenu";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
 import StyleMain from "../styles/StyleMain";
+// import { StatusBar } from "expo-status-bar";
 
 const Today = () => {
   const [currentDate, setCurrentDate] = useState("");
@@ -38,7 +40,7 @@ const Today = () => {
     );
   }, []);
   return (
-    <SafeAreaView style={StyleMain.container}>
+    <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -154,9 +156,15 @@ const Today = () => {
         <Route path="/myGarden" component={MyGarden} />
         <Route path="/community" component={Community} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
+});
 export default Today;
