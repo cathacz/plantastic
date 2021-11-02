@@ -53,11 +53,11 @@ const PlantPortrait = () => {
           </Link>
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
-        <SafeAreaView style={StylePlants.banderole}>
+        <View style={StylePlants.banderole}>
           <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
-        </SafeAreaView>
+        </View>
         {/* ----------------------------------------------------- Main Part */}
-        <ScrollView style={styles.scrollView}>
+        <ScrollView style={detailedPlantPortraitStyles.mainContent}>
           <Text style={styles.text}>CAN YOU SEE ME?</Text>
           <Text style={styles.text}>
             The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum

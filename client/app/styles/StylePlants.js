@@ -46,7 +46,7 @@ const StylePlants = StyleSheet.create({
     borderStyle: "solid",
     borderWidth: 2,
 
-    position: "absolute",
+    // position: "absolute",
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",

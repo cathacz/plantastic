@@ -3,7 +3,7 @@ import colors from "../config/colors";
 
 const detailedPlantPortraitStyles = StyleSheet.create({
   banderoleArea: {},
-  mainContent: {},
+  mainContent: { marginBottom: 90 },
 });
 
 export default detailedPlantPortraitStyles;
