@@ -98,20 +98,13 @@
         "watering_notes": ["regelmäßig gießen", "Staunässe vermeiden"]
       },
       "fertilizer": {
-        "fertilizer_needs_average": 3,
-        "fertilizer_notes": [
-          "paragraph 1",
-          "paragraph 2",
-          "paragraph 3",
-          "needs fertilizer every 2 months, less in winter, keep in mind that fertilizer needs depend on soil conditions and season"
-        ],
-        "fertilizer_reminder_min_days": 15,
-        "fertilizer_chemical_requirements": [
-          "80% Phosphat",
-          "12% Magnesium",
-          "etc."
-        ],
-        "fertilizer_type": "long-term/short-term/liquid/dry"
+        "fertilizer_amount_needs_average": 4,
+        "fertilizer_regularity_needs_average": 4,
+        "fertilizer_notes": ["regelmäßig düngen"],
+        "fertilizer_reminder_min_days": 20,
+        "fertilizer_stop_after_days": 60,
+        "fertilizer_chemical_requirements": ["n/a"],
+        "fertilizer_type": "Flüssigdünger oder organische Düngemittel"
       },
       "planting_distance": {
         "row_distance_min": 20,
@@ -129,18 +122,16 @@
         ]
       },
       "seeding_germination": {
-        "seed_depth": 4,
+        "seed_depth": 1,
         "seed_depth_unit": "cm",
         "seeding_notes": [
-          "paragraph 1",
-          "paragraph 2",
-          "paragraph 3",
-          "im warmen Zimmer in Gefäße in spezielle Aussaaterde säen."
+          "Nur wenig mit Erde bedecken",
+          "Für Vorkultur im warmen Zimmer in Gefäße in spezielle Aussaaterde säen."
         ],
         "seeding_time": {
-          "preculture_start_month_index": 2,
-          "preculture_end_month_index": 4,
-          "direct_seeding_start_month_index": 3,
+          "preculture_start_month_index": 1,
+          "preculture_end_month_index": 3,
+          "direct_seeding_start_month_index": 2,
           "direct_seeding_end_month_index": 5
         },
         "germination": {
