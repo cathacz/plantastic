@@ -75,36 +75,27 @@
       },
       "soil": {
         "soil_characteristics": ["humos", "nährstoffreich"],
-        "soil_types": ["Sand", "Humus"],
-        "adult_plant_soil_amount": "30 l",
-        "requires_mulching": true,
+        "soil_types": ["Humus"],
+        "adult_plant_soil_amount": "n/a",
         "soil_notes": [""],
         "allow_drainage": true,
+        "requires_mulching": true,
         "mulch": {
-          "mulch_type": ["Rindermulch", "pine wood chips", "wood chips"],
+          "mulch_type": ["Rindermulch", "Sonstiger Mulch"],
           "mulch_thickness": 10,
           "mulch_thickness_unit": "cm",
           "mulch_every": 3,
-          "mulch_every_unit": "months",
-          "mulch_notes": [
-            "paragraph 1",
-            "paragraph 2",
-            "paragraph 3",
-            "Regelmäßiges Mulchen ist wichtig."
-          ]
+          "mulch_every_unit": "Monate",
+          "mulch_notes": ["Mulchen kann man, muss man aber nicht."]
         }
       },
       "water": {
-        "water_needs_average": 4,
-        "water_reminder_min_temperature_celsius": 35,
-        "water_reminder_min_temperature_fahrenheit": 95,
-        "water_reminder_min_days": 7,
-        "watering_notes": [
-          "paragraph 1",
-          "paragraph 2",
-          "paragraph 3",
-          "water every time the soil feels dry (stick finger in soil method)"
-        ]
+        "water_amount_needs_average": 5,
+        "water_regularity_needs_average": 5,
+        "water_reminder_min_temperature_celsius": 30,
+        "water_reminder_min_temperature_fahrenheit": 85,
+        "water_reminder_min_days": 2,
+        "watering_notes": ["regelmäßig gießen", "Staunässe vermeiden"]
       },
       "fertilizer": {
         "fertilizer_needs_average": 3,
@@ -165,6 +156,9 @@
             "1 cm, andrücken und mit Erde bedecken, Lichtkeimer."
           ]
         }
+      },
+      "other_needs": {
+        "variety_specific": [""]
       }
     },
     "harvest": {
