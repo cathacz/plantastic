@@ -1,8 +1,8 @@
 {
   "labels": {
     "_id": "#################",
-    "specific_variety_name": "Romatomate",
-    "botanical_name": "latin name",
+    "specific_variety_name": "Romatomate Ravello F1",
+    "botanical_name": "lateinischer Name von Ravello F1",
     "category": [
       "Gemüse",
       "Gemuese",
@@ -13,63 +13,52 @@
       "Beere",
       "Beeren"
     ],
-    "plant_genus": ["Tomate", "Tomaten", "", "", ""],
+    "plant_genus": ["Tomate", "Tomaten"],
     "plant_type": ["Stabtomate", "buschige Stabtomate"],
-    "plant_family": [
-      "könnten auch einfach Schlagwörter werden",
-      "Knöterichgewächse",
-      "Nachtschattengewächse",
-      "Kreuzblütler",
-      "Zwiebelgewächs",
-      "Korbblütler",
-      "Doldenblütler",
-      "Kürbisgewächse",
-      "Liliengewächse",
-      "Fuchsschwanzgewächse",
-      "Hülsenfrüchtler",
-      "Rosengewächse",
-      "Baldriangewächse",
-      "Gänsefußgewächse"
-    ],
+    "plant_family": ["Nachtschattengewächs"],
     "other_names": [
       "italienische Stabtomate",
-      "Tomato",
-      "Eiertomaten",
-      "Flaschentomaten",
+      "Tomate",
+      "Eiertomate",
+      "Flaschentomate",
       "Pflaumentomate",
       "Pomodoritomate",
       "Eiertomate"
     ],
-    "subcategory": ["Supermarkttomate", "Nutzpflanze", "", "", "", ""],
+    "subcategory": ["Supermarkttomate", "Nutzpflanze", "gut zum Kochen"],
     "keywords": [
       "rot",
       "lecker",
       "essbar",
-      "ungiftig",
       "eiförmig",
       "für Salat",
       "für Ketchup",
-      "all the special plurals, ß > ss, äöü > ae oe ue"
+      "Eiertomaten",
+      "Flaschentomaten",
+      "Pflaumentomaten",
+      "Pomodoritomaten",
+      "Nachtschattengewächse"
     ],
-    "tags_from_users": ["Gewächshaus", "", "", "", ""]
+    "tags_from_users": ["Gewächshaus", "Tomatenbeet"]
   },
   "images": [
     {
       "_id": "################",
-      "image_title": "Bunch_of_tomatoes_2020",
-      "image_link": "https:// oder Route zum Foto aus unserer Datenbank",
-      "image_size_pixel": "1500x3000",
-      "image_file_format": "png",
-      "image_description": "Romatomaten Ernte von 2020./3 rote reife Tomaten der Sorte Roma.",
-      "image_owner": "John Smith",
-      "photographer_artist_origin": "John Smith",
-      "image_source": "RoyaltyFreeImages.com",
+      "image_title": "bunch_of_roma_tomatoes_unsplash",
+      "image_link": "roma_tomatoes.jpg",
+      "image_height_pixel": "3456",
+      "image_width_pixel": "5184",
+      "image_file_format": "jpg",
+      "image_description": "viele Romatomaten",
+      "image_owner": "unsplash",
+      "photographer_artist_origin": "someone from unsplash",
+      "image_source": "unsplash.com",
       "image_source_information": "keine Lizenz nötig für commercial use",
       "image_license_given": true,
       "image_license_type": "commercial license",
-      "image_licence_information": "Lizenznummer, etc.",
+      "image_licence_information": "not needed",
       "image_keywords": ["Romatomaten", "Tomaten", "..."],
-      "image_first_post_date_plantastic": "Datum",
+      "image_first_post_date_plantastic": "01.11.2021",
       "image_notes": [
         "paragraph 1",
         "paragraph 2",
@@ -80,27 +69,17 @@
   ],
   "plant_data": {
     "planting_conditions": {
-      "sun": [
-        "sonnig",
-        "sonnig bis halbschattig",
-        "halbschattig",
-        "halbschattig bis schattig",
-        "schattig"
-      ],
+      "location": {
+        "sun": "sonnig und hell",
+        "location_requirements": ["geschützt vor Regen", "geschützt vor Wind"]
+      },
       "soil": {
-        "soil_characteristics": [
-          "sandig",
-          "lehmig",
-          "humos",
-          "leicht",
-          "schwer",
-          "sauer",
-          "alkalisch"
-        ],
+        "soil_characteristics": ["humos", "nährstoffreich"],
         "soil_types": ["Sand", "Humus"],
         "adult_plant_soil_amount": "30 l",
         "requires_mulching": true,
         "soil_notes": [""],
+        "allow_drainage": true,
         "mulch": {
           "mulch_type": ["Rindermulch", "pine wood chips", "wood chips"],
           "mulch_thickness": 10,
@@ -205,8 +184,8 @@
       "fleshy tomatoes"
     ],
     "variety_specific_characteristics_notes": [
-      "paragraph 1",
-      "paragraph 2",
+      "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
+      "Sie ist sehr aromatisch",
       "paragraph 3"
     ],
     "origin": "country/area",
