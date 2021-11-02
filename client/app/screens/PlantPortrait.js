@@ -58,8 +58,8 @@ const PlantPortrait = () => {
         </View>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={detailedPlantPortraitStyles.mainContent}>
-          <Text style={styles.text}>CAN YOU SEE ME?</Text>
-          <Text style={styles.text}>
+          <Text style={detailedPlantPortraitStyles}>CAN YOU SEE ME?</Text>
+          <Text style={detailedPlantPortraitStyles}>
             The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
