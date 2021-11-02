@@ -23,6 +23,7 @@ const UserSchema = new mongoose.Schema({
     required: [true, "Please provide password"],
     minlength: 4,
   },
+  tasks: [],
 });
 
 UserSchema.pre("save", async function () {

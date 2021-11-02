@@ -4,10 +4,19 @@ const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, NotFoundError } = require("../errors");
 
 // Get all tasks
-const getAllTasks = asyncWrapper(async (req, res) => {
+/* const getAllTasks = asyncWrapper(async (req, res) => {
   const tasks = await Task.find({});
   res.status(200).json({ tasks });
 });
+ */
+// Get all tasks
+
+const getAllTasks = async (req, res) => {
+  const tasks = await Task.find({ createdBy: req.user.userId }).sort(
+    "createdAt"
+  );
+  res.status(StatusCodes.OK).json({ tasks, count: tasks.length });
+};
 
 // Create new task
 // const createTask = asyncWrapper(async (req, res) => {
@@ -22,7 +31,7 @@ const createTask = async (req, res) => {
 };
 
 // Get one task
-const getTask = async (req, res) => {
+/* const getTask = async (req, res) => {
   try {
     const { id: taskID } = req.params;
     const task = await Task.findOne({ id: taskID });
@@ -34,6 +43,23 @@ const getTask = async (req, res) => {
   } catch (err) {
     res.status(500).json({ msg: err });
   }
+}; */
+
+const getTask = async (req, res) => {
+  const {
+    user: { userId },
+    params: { id: taskId },
+  } = req;
+  const task = await Task.findOne({
+    _id: taskId,
+    createdBy: userId,
+  });
+
+  if (!task) {
+    throw new NotFoundError("No taks with this id");
+  }
+
+  res.status(StatusCodes.OK).json({ task });
 };
 
 // Delete one task
