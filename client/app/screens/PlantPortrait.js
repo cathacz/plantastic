@@ -33,7 +33,7 @@ const PlantPortrait = () => {
     <SafeAreaView style={StylePlants.container}>
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
-        <SafeAreaView style={StylePlants.navMainTop}>
+        <View style={StylePlants.navMainTop}>
           <Link
             to="/myGarden"
             underlayColor="white"
@@ -51,10 +51,12 @@ const PlantPortrait = () => {
               />
             </View>
           </Link>
-        </SafeAreaView>
+        </View>
         {/* --------------------------------------------------------------- Banderole */}
         <View style={StylePlants.banderole}>
-          <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
+          <Text style={StylePlants.mainText}>Name Pflanzensorte</Text>
+          <Text style={StylePlants.mainText}>Sortenname spezifisch</Text>
+          <Text style={StylePlants.mainText}>botanischer Name</Text>
         </View>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={detailedPlantPortraitStyles.mainContent}>
@@ -130,7 +132,7 @@ const PlantPortrait = () => {
           </Text>
         </ScrollView>
         {/* ---------------------------------------- Navigation Main Bottom */}
-        <SafeAreaView style={StylePlants.navMainBottom}>
+        <View style={StylePlants.navMainBottom}>
           <Link
             to="/quickView"
             underlayColor={colors.sage25}
@@ -172,7 +174,7 @@ const PlantPortrait = () => {
               <Text style={StylePlants.navText}>Tagebuch</Text>
             </View>
           </Link>
-        </SafeAreaView>
+        </View>
         {/* <Route exact path="/" component={Home} /> */}
         <Route path="/quickView" component={QuickView} />
         {/* <Route path="/plantPortrait" component={PlantPortrait} /> */}
