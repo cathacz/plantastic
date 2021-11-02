@@ -16,10 +16,8 @@ async function weather() {
   };
   try {
     const { data } = await axios.get(
-      // `https://api.openweathermap.org/data/2.5/${endpoint}/${language_code}/${city}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${args}&units=metric&APPID=${API_KEY}`
       // { headers }
-      `https://api.openweathermap.org/data/2.5/weather?q=${args}&units=metric&APPID=bd8f9e0cb505371a3d94a11109b08394`,
-      { headers }
     );
     console.log(city);
     console.log(data.sys.country[0]);
