@@ -21,6 +21,11 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../components/Task";
 import StylePlants from "../styles/StylePlants";
 
+// import image (temporary solution)
+// import tomatoPlant from "../../assets/images/";
+
+// import json for tomato plant (temporary solution)
+
 const PlantPortrait = () => {
   return (
     <SafeAreaView style={StylePlants.container}>
@@ -50,6 +55,9 @@ const PlantPortrait = () => {
           <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
         </SafeAreaView>
         {/* ----------------------------------------------------- Main Part */}
+        <ScrollView style={styles.scrollView}>
+          <Text style={styles.text}></Text>
+        </ScrollView>
 
         {/* ---------------------------------------- Navigation Main Bottom */}
         <SafeAreaView style={StylePlants.navMainBottom}>
