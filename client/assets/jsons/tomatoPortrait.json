@@ -131,16 +131,17 @@
           "direct_seeding_end_month_index": 5
         },
         "germination": {
-          "germination_temperature_min_celsius": 17,
-          "germination_temperature_max_celsius": 30,
+          "germination_temperature_min_celsius": 15,
+          "germination_temperature_max_celsius": 35,
           "germination_temperature_min_fahrenheit": 0,
           "germination_temperature_max_fahrenheit": 0,
-          "sprouting_time_estimate_min": 10,
+          "sprouting_time_estimate_min": 7,
           "sprouting_time_estimate_max": 14,
           "sprouting_time_estimate_unit": "Tage",
           "seed_requires_light": true,
           "germination_notes": [
-            "1 cm, andrücken und mit Erde bedecken, Lichtkeimer."
+            "Andrücken und 1 cm mit Erde bedecken",
+            "Lichtkeimer."
           ]
         }
       },
@@ -175,16 +176,16 @@
     "growth_time_unit_teenager": "Wochen",
     "growth_time_adult": 8,
     "growth_time_unit_adult": "Wochen",
-    "growth": "Strauch",
+    "growth": "buschige Stabtomate",
     "requires_high_nutrition": true,
     "lifetime": ["einjährig", "zweijährig", "mehrjährig"],
     "winterhardy": false,
     "propagation_methods": ["Samen", "Setzlinge"],
     "propagation_notes": ["vermehrbar durch Samen und Setzlinge"],
-    "plant_height": 40,
-    "plant_height_unit": "cm",
-    "plant_width": 40,
-    "plant_width_unit": "cm",
+    "plant_height_max": 200,
+    "plant_height_max_unit": "cm",
+    "plant_width_min": 40,
+    "plant_width_min_unit": "cm",
     "can_be_houseplant": true,
     "plant_has_fruit": true,
     "plant_has_seed_pit": true,
@@ -192,13 +193,21 @@
     "plant_has_leaves": true,
     "plant_has_stem": true,
     "plant_has_bulb_cloves": false,
-    "plant_has_root_tuber": true,
+    "plant_has_root_tuber": false,
     "plant_has_medicinal_purpose": false,
     "plant_has_poisonous_part": true,
     "grafting": true,
-    "grafting_notes": [""],
-    "plant_description": ["paragraph 1", "paragraph 2", "paragraph 3"],
-    "plant_information": ["paragraph 1", "paragraph 2", "paragraph 3"],
+    "grafting_notes": ["Veredeln ist möglich aber unnötig"],
+    "plant_description": [
+      "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen.",
+      "paragraph 2",
+      "paragraph 3"
+    ],
+    "plant_information": [
+      "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen.",
+      "paragraph 2",
+      "paragraph 3"
+    ],
     "plant_description_keywords": ["ertragreich", "widerstandsfähig"],
     "other_information": "Text...",
     "repotting": {
@@ -230,11 +239,11 @@
     "root_tuber": {
       "edible_roots": false,
       "edible_tubers": false,
-      "root_depth_average": 30,
+      "root_depth_average": 40,
       "root_depth_average_unit": "cm",
       "root_shape": "",
       "tuber_shape": "",
-      "characteristics": ["p1", "p2"],
+      "characteristics": ["root flavor?", "p2"],
       "notes": ["p1", "p2"]
     },
     "bulb_cloves": {
@@ -270,12 +279,16 @@
     },
     "fruit": {
       "edible_fruit": true,
-      "fruit_start_month_index": 5,
+      "fruit_start_month_index": 6,
       "fruit_end_month_index": 9,
-      "fruit_color": ["rot", "gelb", "blau", "weiß", "gemischt"],
+      "fruit_color": ["rot", "gelb gemischt", "grün"],
+      "fruit_size": ["mittelgroß"],
       "fruit_non_poisonous": true,
       "fruit_edible": true,
-      "notes": ["p1", "p2"]
+      "fruit_flavor": ["aromatisch"],
+      "notes": [
+        "Grüne Früchte nicht genießbar, erst wenn sie rot sind schmecken sie"
+      ]
     }
   },
   "links": {
@@ -326,11 +339,22 @@
       "topic": "tomatoes description text",
       "sources": [
         {
-          "source_link": "https://...",
-          "source_title": "book title",
-          "source_author": "John Smith",
-          "source_specifics": "chapter, page, article title",
-          "source_notes": ["p1", "p2", "any more information"]
+          "source_link": "https://www.tomaten.de/romatomaten/",
+          "source_title": "n/a",
+          "source_author": "n/a",
+          "source_specifics": "n/a",
+          "source_notes": [
+            "is about roma tomatoes in general, not much specifically"
+          ]
+        },
+        {
+          "source_link": "https://www.plantura.garden/sortenvielfalt/tomatensorten/romatomate",
+          "source_title": "n/a",
+          "source_author": "Regina",
+          "source_specifics": "Regina: Ich habe Gartenbauwissenschaften am WZW in Freising studiert und pflanze in meiner Freizeit auf einem Stück Acker alles an, was Wurzeln hat. Das Thema Selbstversorgung und saisonale Ernährung liegt mir dabei besonders am Herzen. Lieblingsobst: Quitte, Kornelkirsche und Heidelbeere, Lieblingsgemüse: Erbsen, Tomaten und Knoblauch",
+          "source_notes": [
+            "is about roma tomatoes in general, not much specifically"
+          ]
         }
       ]
     }
