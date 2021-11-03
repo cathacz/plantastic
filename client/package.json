@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "apisauce": "^2.1.2",
     "expo": "~43.0.0",
@@ -20,6 +21,8 @@
     "react-moment": "^1.1.1",
     "react-native": "0.64.2",
     "react-native-calendar-strip": "^2.2.5",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
     "react-native-svg": "12.1.1",
     "react-native-web": "^0.17.1",
     "react-router-native": "^5.2.1"
