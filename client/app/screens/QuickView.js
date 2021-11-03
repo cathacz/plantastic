@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -102,9 +103,15 @@ const QuickView = () => {
         <Route path="/myGarden" component={MyGarden} />
         {/* <Route path="/community" component={Community} /> */}
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
+});
 export default QuickView;
