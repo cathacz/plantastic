@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
+// import { NativeRouter, Route, Link } from "react-router-native";
+import { NavigationContainer } from "@react-navigation/native";
+
 import colors from "./app/config/colors";
 // import Home from "./app/screens/Home";
 // import Today from "./app/screens/Today";
@@ -15,8 +17,9 @@ import Today from "./app/screens/Today";
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.router}>
-      {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
+    <NavigationContainer>
+      <SafeAreaView style={styles.app}>
+        {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
           <View style={styles.elements}>
             <Image
               source={require("./assets/icons/png/plantastic.png")}
@@ -31,12 +34,13 @@ const App = () => {
             <Text style={styles.text}>Let's get started</Text>
           </View>
         </Link> */}
-      <Today />
-    </SafeAreaView>
+        <Today />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 const styles = StyleSheet.create({
-  router: {
+  app: {
     backgroundColor: "white",
     flex: 1,
     width: "100%",
