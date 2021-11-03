@@ -77,7 +77,7 @@ const deleteTask = async (req, res) => {
 };
 
 // Update one task
-const updateTask = async (req, res) => {
+/* const updateTask = async (req, res) => {
   try {
     const { id: taskID } = req.params;
 
@@ -93,6 +93,27 @@ const updateTask = async (req, res) => {
   } catch (err) {
     res.status(500).json({ msg: err });
   }
+}; */
+
+const updateTask = async (req, res) => {
+  const {
+    body: { name },
+    user: { userId },
+    params: { id: taskId },
+  } = req;
+
+  if (name === "") {
+    throw new BadRequestError("Task name field can not be empty");
+  }
+  const task = await Task.findByIdAndUpdate(
+    { _id: taskId, createdBy: userId },
+    req.body,
+    { new: true, runValidators: true }
+  );
+  if (!task) {
+    throw new NotFoundError(`No task with id ${taskId}`);
+  }
+  res.status(StatusCodes.OK).json({ task });
 };
 
 module.exports = {

@@ -27,6 +27,7 @@ start();
 // to process the data
 
 app.use(express.json());
+/* app.use(express.static("./public")); */
 
 // Let Express understand  Content-Type: application/x-www-form-urlencoded aka form data
 
