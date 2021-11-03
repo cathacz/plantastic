@@ -56,10 +56,19 @@ const PlantPortrait = () => {
         </View>
         {/* --------------------------------------------------------------- Banderole */}
         <View style={[StylePlants.banderole]}>
-          <Text style={StylePlants.mainText}>Name Pflanzensorte</Text>
-          <Text style={StylePlants.mainText}>Sortenname spezifisch</Text>
-          <Text style={StylePlants.mainText}>botanischer Name</Text>
-          <View name="seeding_time_container"></View>
+          <Text style={detailedPlantPortraitStyles.plantTitle}>
+            Name Pflanzensorte
+          </Text>
+          <Text style={detailedPlantPortraitStyles.plantVarietyName}>
+            "Sortenname spezifisch"
+          </Text>
+          <Text style={detailedPlantPortraitStyles.botanicalName}>
+            botanischer Name
+          </Text>
+          <View
+            name="seeding_time_container"
+            style={detailedPlantPortraitStyles.banderoleArea}
+          ></View>
         </View>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={detailedPlantPortraitStyles.mainContent}>
