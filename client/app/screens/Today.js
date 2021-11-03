@@ -64,7 +64,7 @@ const Today = () => {
             </View>
           {/* </Link> */}
       {/* ------------- SearchMenu */}
-      <View style={StyleMain.searchMenuWrapperRight}>
+      {/* <View style={StyleMain.searchMenuWrapperRight}> */}
            {/*  <Link to="/searchMenu" underlayColor="white">*/}
               <SafeAreaView style={StyleMain.searchMenuWrapper}>
                 <View style={StyleMain.searchMenuWrapperFirstRow}>
