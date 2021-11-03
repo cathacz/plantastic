@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  StatusBar,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -158,9 +159,15 @@ const Community = () => {
         <Route path="/community" component={Community} />
         <Route path="/quickView" component={QuickView} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
+});
 export default Community;

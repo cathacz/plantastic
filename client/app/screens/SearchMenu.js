@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  StatusBar,
   SafeAreaView,
   View,
   Image,
@@ -60,11 +61,16 @@ const SearchMenu = () => {
         <Route path="/today" component={Today} />
         <Route path="/terms" component={Terms} />
       </NativeRouter>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
   text: {
     alignItems: "center",
     justifyContent: "center",
