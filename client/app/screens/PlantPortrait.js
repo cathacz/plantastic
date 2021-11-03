@@ -58,7 +58,7 @@ const PlantPortrait = () => {
           <Text style={StylePlants.mainText}>Name Pflanzensorte</Text>
           <Text style={StylePlants.mainText}>Sortenname spezifisch</Text>
           <Text style={StylePlants.mainText}>botanischer Name</Text>
-          <View></View>
+          <View name="seeding_time_container"></View>
         </View>
         {/* ----------------------------------------------------- Main Part */}
         <ScrollView style={detailedPlantPortraitStyles.mainContent}>
