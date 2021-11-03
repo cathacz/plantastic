@@ -17,54 +17,17 @@ import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../config/colors";
 // import Home from "../screens/Home";
 import Today from "../screens/Today";
-// import Overview from "../screens/Overview";
 import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import SearchMenu from "./SearchMenu";
 
 import StyleMain from "../styles/StyleMain";
 // imports Alina
-// import Calendar from "../components/OverviewCalendar";
-import NumberToMonth from "../components/NumberToMonth";
+import Calendar from "../components/OverviewCalendar";
+// import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
 const Overview = () => {
-  // const NumberToMonth = () => {
-  //   const [currentDate, setCurrentDate] = useState("");
-
-  //   useEffect(() => {
-  //     let year = new Date().getFullYear(); //Current Year
-  //     let d = new Date().getMonth(); // current Month ! starting index 0 !
-  //     console.log(d);
-  //     let monthNames = [
-  //       "Januar",
-  //       "Februar",
-  //       "März",
-  //       "April",
-  //       "Mai",
-  //       "Juni",
-  //       "Juli",
-  //       "August",
-  //       "September",
-  //       "Oktober",
-  //       "November",
-  //       "Dezember",
-  //     ];
-
-  //     const monthName = monthNames[d];
-
-  //     setCurrentDate(
-  //       monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
-  //     );
-  //   }, []);
-
-  //   return (
-  //     <View>
-  //       <Text>{currentDate}</Text>
-  //     </View>
-  //   );
-  // };
-
   return (
     <SafeAreaView
       style={[StyleMain.container, styles.platformContainer]}
@@ -112,10 +75,26 @@ const Overview = () => {
           </View>
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
-        <View style={StyleMain.banderole}>
-          <Text>
-            <NumberToMonth />
-          </Text>
+        <View
+          style={{
+            width: "100%",
+            marginTop: 70,
+            height: 150,
+            backgroundColor: colors.sage5,
+            position: "absolute",
+            textAlign: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              width: "100%",
+            }}
+          >
+            <Calendar />
+          </View>
         </View>
         {/* ----------------------------------------------------- Main Part */}
 
