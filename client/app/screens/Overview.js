@@ -13,7 +13,7 @@ import {
   ScrollView,
   TextInput,
 } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
+// import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../config/colors";
 // import Home from "../screens/Home";
 import Today from "../screens/Today";

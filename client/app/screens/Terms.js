@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 import colors from "../config/colors";
-import { NativeRouter, Route, Link } from "react-router-native";
+// import { NativeRouter, Route, Link } from "react-router-native";
 import Today from "./Today";
 import StyleMain from "../styles/StyleMain";
 import StylePlants from "../styles/StylePlants";
@@ -16,7 +16,7 @@ import StylePlants from "../styles/StylePlants";
 const Terms = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
-      <NativeRouter>
+      {/* <NativeRouter>
         <SafeAreaView style={StylePlants.navMainTop}>
           <Link
             to="/today"
@@ -38,7 +38,7 @@ const Terms = () => {
           <Text style={styles.text}>Terms</Text>
         </SafeAreaView>
         <Route path="/today" component={Today} />
-      </NativeRouter>
+      </NativeRouter> */}
     </SafeAreaView>
   );
 };

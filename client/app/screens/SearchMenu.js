@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 import colors from "../config/colors";
-import { NativeRouter, Route, Link } from "react-router-native";
+// import { NativeRouter, Route, Link } from "react-router-native";
 import Today from "./Today";
 import Terms from "./Terms";
 import StyleMain from "../styles/StyleMain";
@@ -18,7 +18,7 @@ import StylePlants from "../styles/StylePlants";
 const SearchMenu = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
-      <NativeRouter>
+      {/* <NativeRouter>
         <SafeAreaView style={StylePlants.navMainTop}>
           <Link
             to="/today"
@@ -60,7 +60,7 @@ const SearchMenu = () => {
         </SafeAreaView>
         <Route path="/today" component={Today} />
         <Route path="/terms" component={Terms} />
-      </NativeRouter>
+      </NativeRouter> */}
       <StatusBar style="auto" />
     </SafeAreaView>
   );

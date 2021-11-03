@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 // import { NativeRouter, Route, Link } from "react-router-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import colors from "./app/config/colors";
 // import Home from "./app/screens/Home";
@@ -13,29 +14,23 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 // import NavMainBottom from "./app/components/MainComponents/NavMainBottom";
 // import NavMainTop from "./app/components/MainComponents/NavMainTop";
 
+import HomeTest from "./app/screens/HomeTest";
 import Today from "./app/screens/Today";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <SafeAreaView style={styles.app}>
-        {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
-          <View style={styles.elements}>
-            <Image
-              source={require("./assets/icons/png/plantastic.png")}
-              style={{
-                height: 100,
-                width: 100,
-                margin: 5,
-                justifyContent: "center",
-              }}
-            />
-            <Text style={styles.textLogo}>Plantastic</Text>
-            <Text style={styles.text}>Let's get started</Text>
-          </View>
-        </Link> */}
-        <Today />
-      </SafeAreaView>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeTest}
+          options={{ title: "Welcome" }}
+        />
+        {/* <Stack.Screen name="Today" component={Today} /> */}
+      </Stack.Navigator>
+      {/* <SafeAreaView style={styles.app}></SafeAreaView> */}
     </NavigationContainer>
   );
 };
