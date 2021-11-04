@@ -1,5 +1,5 @@
 const Plant = require("../models/plantModel");
-
+const asyncWrapper = require("../middleware/async");
 // Get all plants
 
 const getAllPlants = async (req, res) => {
