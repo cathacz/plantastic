@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
+
 // import { NativeRouter, Route, Link } from "react-router-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -7,15 +8,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import colors from "./app/config/colors";
 // import Home from "./app/screens/Home";
 // import Today from "./app/screens/Today";
-import Overview from "./app/screens/Overview";
-import MyGarden from "./app/screens/MyGarden";
-import Community from "./app/screens/Community";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+// import Overview from "./app/screens/Overview";
+// import MyGarden from "./app/screens/MyGarden";
+// import Community from "./app/screens/Community";
+// import { Colors } from "react-native/Libraries/NewAppScreen";
 // import NavMainBottom from "./app/components/MainComponents/NavMainBottom";
 // import NavMainTop from "./app/components/MainComponents/NavMainTop";
 
-import HomeTest from "./app/screens/HomeTest";
-import Today from "./app/screens/Today";
+import HomeTest from "./app/screens/trash/HomeTest";
+// import Today from "./app/screens/Today";
 
 const Stack = createNativeStackNavigator();
 
