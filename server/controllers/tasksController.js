@@ -56,14 +56,14 @@ const getTask = async (req, res) => {
   });
 
   if (!task) {
-    throw new NotFoundError("No taks with this id");
+    throw new NotFoundError("No task with this id");
   }
 
   res.status(StatusCodes.OK).json({ task });
 };
 
 // Delete one task
-const deleteTask = async (req, res) => {
+/* const deleteTask = async (req, res) => {
   try {
     const { id: taskID } = req.params;
     const task = await Task.findByIdAndDelete({ _id: taskID });
@@ -74,6 +74,21 @@ const deleteTask = async (req, res) => {
   } catch (err) {
     res.status(500).json({ msg: err });
   }
+}; */
+
+const deleteTask = async (req, res) => {
+  const {
+    user: { userId },
+    params: { id: taskId },
+  } = req;
+  const task = await Task.findByIdAndRemove({
+    _id: taskId,
+    createdBy: userId,
+  });
+  if (!task) {
+    throw new NotFoundError(`No task with id ${taskId}`);
+  }
+  res.status(StatusCodes.OK).send();
 };
 
 // Update one task
