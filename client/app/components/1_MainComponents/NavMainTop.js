@@ -7,6 +7,9 @@ import {
   View,
   Image,
 } from "react-native";
+
+import { Link } from "react-router-native";
+
 import colors from "../../config/colors";
 import Today from "../../screens/ComponentsTest/Today";
 import SearchMenu from "../../screens/SearchMenu";
