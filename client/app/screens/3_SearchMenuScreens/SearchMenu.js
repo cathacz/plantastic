@@ -8,12 +8,12 @@ import {
   View,
   Image,
 } from "react-native";
-import colors from "../config/colors";
+import colors from "../../config/colors";
 // import { NativeRouter, Route, Link } from "react-router-native";
-import Today from "./Today";
+import Today from "../1_MainScreens/Today";
 import Terms from "./Terms";
-import StyleMain from "../styles/StyleMain";
-import StylePlants from "../styles/StylePlants";
+import StyleMain from "../../styles/StyleMain";
+import StylePlants from "../../styles/StylePlants";
 
 const SearchMenu = () => {
   return (

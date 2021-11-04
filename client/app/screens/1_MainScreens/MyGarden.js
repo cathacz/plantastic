@@ -13,13 +13,13 @@ import {
   TextInput,
 } from "react-native";
 // import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
-import Today from "../screens/Today";
-import Overview from "../screens/Overview";
+import colors from "../../config/colors";
+import Today from "./Today";
+import Overview from "./Overview";
 import Community from "../screens/Community";
-import SearchMenu from "./SearchMenu";
-import StyleMain from "../styles/StyleMain";
-import QuickView from "./QuickView.js";
+import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import StyleMain from "../../styles/StyleMain";
+import QuickView from "../2_PlantScreens/QuickView.js";
 
 const MyGarden = () => {
   return (

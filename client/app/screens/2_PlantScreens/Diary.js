@@ -13,14 +13,14 @@ import {
   TextInput,
 } from "react-native";
 // import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
-import MyGarden from "../screens/MyGarden";
+import colors from "../../config/colors";
+import MyGarden from "../1_MainScreens/MyGarden";
 import QuickView from "./QuickView.js";
 import PlantPortrait from "./PlantPortrait";
 // import Diary from "./Diary";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../components/Task";
-import StylePlants from "../styles/StylePlants";
+import Task from "../../components/Task";
+import StylePlants from "../../styles/StylePlants";
 
 const Diary = () => {
   return (

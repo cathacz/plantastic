@@ -14,17 +14,17 @@ import {
   TextInput,
 } from "react-native";
 
-import colors from "../config/colors";
+import colors from "../../config/colors";
 
 // import Home from "../screens/Home";
 // import Today from "../screens/Today";
-import Overview from "../screens/Overview";
-import MyGarden from "../screens/MyGarden";
+import Overview from "./Overview";
+import MyGarden from "./MyGarden";
 import Community from "../screens/Community";
-import SearchMenu from "./SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../components/Task";
-import StyleMain from "../styles/StyleMain";
+import Task from "../../components/Task";
+import StyleMain from "../../styles/StyleMain";
 
 // import { StatusBar } from "expo-status-bar";
 
