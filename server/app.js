@@ -7,6 +7,8 @@ const authRoutes = require("./routes/authRoutes");
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
 const plantRoute = require("./routes/plantRoute");
+const notFoundMiddleware = require("./middleware/not-found");
+const errorHandlerMiddleware = require("./middleware/error-handler");
 require("dotenv").config();
 
 // DB
@@ -53,6 +55,9 @@ app.use("/auth", authRoutes);
 app.use("/tasks", authenticateUser, taskRoute);
 app.use("/users", userRoute);
 app.use("/plants", plantRoute);
+
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
 console.log("From app.js");
 
