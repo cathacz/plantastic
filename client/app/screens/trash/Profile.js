@@ -12,11 +12,13 @@ function Profile({ navigation, route }) {
         onPress={() =>
           navigation.navigate("Home", { title: "new title does not work?" })
         }
-      ></TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Welcome", { userName: "userName" })}
       >
-        <Text>Go back again</Text>
+        <Text>Go back Home</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("newTest", { userName: "userName" })}
+      >
+        <Text>Go back to test2/newTest</Text>
       </TouchableOpacity>
     </View>
   );

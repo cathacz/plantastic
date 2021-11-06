@@ -4,18 +4,20 @@ import { View, SafeAreaView, Text, TouchableOpacity } from "react-native";
 function HomeTest({ navigation, route }) {
   return (
     <SafeAreaView>
-      <Text>Hello, I am a Testing Page.</Text>
-      {/* <Text>This is {route.params.name}'s profile</Text> */}
+      <Text>Hello, I am a Testing Home Page.</Text>
       <TouchableOpacity
         onPress={() =>
-          navigation.navigate("newTest", { title: "new title does not work?" })
+          navigation.navigate("newTest", {
+            title:
+              "title's cannot be changed like this, only in App.js, need state manager?",
+          })
         }
-      ></TouchableOpacity>
-      {/* <TouchableOpacity
-        onPress={() => navigation.navigate("Welcome", { userName: "userName" })}
       >
-        <Text>Go back again</Text>
-      </TouchableOpacity> */}
+        <Text>Go to newTest</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("ComponentName")}>
+        <Text>Dummies click here.</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }

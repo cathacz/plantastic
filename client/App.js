@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeTest from "./app/screens/trash/HomeTest";
 import newTest from "./app/screens/trash/newTest";
+import profile from "./app/screens/trash/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,9 +24,9 @@ function App() {
           options={{ title: "test2" }}
         />
         <Stack.Screen
-          name="profile"
+          name="Profile"
           component={profile}
-          options={{ title: "profile" }}
+          options={{ title: "Profile" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
