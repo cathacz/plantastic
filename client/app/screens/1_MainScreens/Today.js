@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-const Stack = createNativeStackNavigator();
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// const Stack = createNativeStackNavigator();
 
 import {
   Text,
@@ -24,6 +24,7 @@ import {
 import Overview from "./Overview";
 import MyGarden from "./MyGarden";
 import Community from "./Community";
+
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
 // import Task from "../../components/Task";
@@ -150,7 +151,8 @@ const Today = () => {
             </View>
           </Link>
         </SafeAreaView> */}
-      <NavigationContainer>
+
+      {/* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             name="Today"
@@ -173,7 +175,8 @@ const Today = () => {
             options={{ title: "Mein Gartenverein" }}
           />
         </Stack.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> */}
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );

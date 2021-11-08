@@ -3,11 +3,11 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// For navigator
 import Today from "./app/screens/1_MainScreens/Today";
-
-import HomeTest from "./app/screens/trash/HomeTest";
-import newTest from "./app/screens/trash/newTest";
-import profile from "./app/screens/trash/Profile";
+import Overview from "./app/screens/1_MainScreens/Overview";
+import MyGarden from "./app/screens/1_MainScreens/MyGarden";
+import Community from "./app/screens/1_MainScreens/Community";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,26 +15,34 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {/* Main Screens ---------------------------------- */}
         <Stack.Screen
           name="Today"
           component={Today}
           options={{ title: "Welcome, username", prop: "props" }}
         />
         <Stack.Screen
-          name="Home"
-          component={HomeTest}
-          options={{ title: "Welcome", name: "Mica" }}
+          name="Monthly overview"
+          component={Overview}
+          options={{ title: "Monatsübersicht" }}
         />
         <Stack.Screen
-          name="newTest"
-          component={newTest}
-          options={{ title: "test2" }}
+          name="My Garden"
+          component={MyGarden}
+          options={{ title: "Mein Garten" }}
         />
         <Stack.Screen
-          name="Profile"
-          component={profile}
-          options={{ title: "Profile" }}
+          name="My Community"
+          component={Community}
+          options={{ title: "Mein Gartenverein" }}
         />
+        {/* Screens accessible from Today---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ---------------------------------- */}
       </Stack.Navigator>
     </NavigationContainer>
   );
