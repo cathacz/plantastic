@@ -2,10 +2,10 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 
 // navigation components
-import Today from "../../screens/1_MainScreens/Today";
-import Overview from "../../screens/1_MainScreens/Overview";
-import MyGarden from "../../screens/1_MainScreens/MyGarden";
-import Community from "../../screens/1_MainScreens/Community";
+import Today from "../../screens/1_MainScreens/1_Today";
+import Overview from "../../screens/1_MainScreens/2_Overview";
+import MyGarden from "../../screens/1_MainScreens/3_MyGarden";
+import Community from "../../screens/1_MainScreens/4_Community";
 
 // for styling
 import colors from "../../config/colors";

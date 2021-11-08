@@ -13,9 +13,9 @@ import {
   TextInput,
 } from "react-native";
 
-import Today from "./Today";
-import Overview from "./Overview";
-import MyGarden from "./MyGarden";
+import Today from "./1_Today";
+import Overview from "./2_Overview";
+import MyGarden from "./3_MyGarden";
 // import Community from "./Community";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";

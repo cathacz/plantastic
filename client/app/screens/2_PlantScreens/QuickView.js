@@ -15,7 +15,7 @@ import {
 
 import colors from "../../config/colors";
 
-import MyGarden from "../1_MainScreens/MyGarden";
+import MyGarden from "../1_MainScreens/3_MyGarden";
 // import QuickView from "./QuickView.js";
 import PlantPortrait from "./PlantPortrait";
 import Diary from "./Diary";

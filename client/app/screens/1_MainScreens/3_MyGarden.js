@@ -15,9 +15,9 @@ import {
 
 import colors from "../../config/colors";
 
-import Today from "./Today";
-import Overview from "./Overview";
-import Community from "./Community";
+import Today from "./1_Today";
+import Overview from "./2_Overview";
+import Community from "./4_Community";
 
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import StyleMain from "../../styles/StyleMain";

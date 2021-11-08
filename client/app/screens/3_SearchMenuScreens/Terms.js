@@ -10,7 +10,7 @@ import {
 
 import colors from "../../config/colors";
 
-import Today from "../1_MainScreens/Today";
+import Today from "../1_MainScreens/1_Today";
 
 import StyleMain from "../../styles/StyleMain";
 import StylePlants from "../../styles/StylePlants";

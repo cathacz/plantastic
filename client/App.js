@@ -5,10 +5,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Screen components for navigator >>
-import Today from "./app/screens/1_MainScreens/Today";
-import Overview from "./app/screens/1_MainScreens/Overview";
-import MyGarden from "./app/screens/1_MainScreens/MyGarden";
-import Community from "./app/screens/1_MainScreens/Community";
+import Today from "./app/screens/1_MainScreens/1_Today";
+import Overview from "./app/screens/1_MainScreens/2_Overview";
+import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
+import Community from "./app/screens/1_MainScreens/4_Community";
 
 const Stack = createNativeStackNavigator();
 
