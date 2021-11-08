@@ -1,17 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { Link } from "react-router-native";
-import colors from "../../config/colors";
+
+// navigation components
 import Today from "../../screens/ComponentsTest/Today";
 import Overview from "../../screens/ComponentsTest/Overview";
 import MyGarden from "../../screens/ComponentsTest/MyGarden";
 import Community from "../../screens/ComponentsTest/Community";
+
+// for styling
+import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
 function NavMainBottom() {
   return (
     <SafeAreaView style={StyleMain.navMainBottom}>
-      <Link
+      <View
         to="/today"
         underlayColor="rgba(109, 153, 130, 0.25)"
         style={[StyleMain.navItem, styles.itemOne]}
@@ -23,9 +26,9 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Heute</Text>
         </View>
-      </Link>
+      </View>
 
-      <Link
+      <View
         to="/overview"
         underlayColor="rgba(109, 153, 130, 0.25)"
         style={[StyleMain.navItem, StyleMain.itemTwo]}
@@ -37,9 +40,9 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Übersicht</Text>
         </View>
-      </Link>
+      </View>
 
-      <Link
+      <View
         to="/myGarden"
         underlayColor="rgba(109, 153, 130, 0.25)"
         style={[StyleMain.navItem, styles.itemThree]}
@@ -51,9 +54,9 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Mein Garten</Text>
         </View>
-      </Link>
+      </View>
 
-      <Link
+      <View
         to="/community"
         underlayColor="rgba(109, 153, 130, 0.25)"
         style={[StyleMain.navItem, StyleMain.itemFour]}
@@ -65,7 +68,7 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Community</Text>
         </View>
-      </Link>
+      </View>
       {/* <Route path="/today" component={Today} /> */}
       {/* <Route path="/overview" component={Overview} /> */}
       {/* <Route path="/myGarden" component={MyGarden} /> */}

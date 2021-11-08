@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// const Stack = createNativeStackNavigator();
-
 import {
   Text,
   StyleSheet,
@@ -19,11 +15,6 @@ import {
 } from "react-native";
 
 // import colors from "../../config/colors";
-
-// import Today from "../screens/Today";
-import Overview from "./Overview";
-import MyGarden from "./MyGarden";
-import Community from "./Community";
 
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
@@ -49,17 +40,17 @@ const Today = () => {
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
-      {/* ------------------------------------------- Navigation Main Top */}
+      {/* ---------------------------- Navigation Main Top */}
 
-      {/* ---------------------------------------------------- SearchMenu */}
+      {/* ------------------------------------- SearchMenu */}
 
-      {/* ------------------------------------------------------ Add Task */}
+      {/*---------------------------------------- Add Task */}
 
-      {/* ------------------------------------------------------ Banderole*/}
+      {/* --------------------------------------- Banderole*/}
 
-      {/* ----------------------------------------------------- Main Part */}
+      {/* -------------------------------------- Main Part */}
 
-      {/* ---------------------------------------- Navigation Main Bottom */}
+      {/* ------------------------- Navigation Main Bottom */}
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -74,6 +65,16 @@ const styles = StyleSheet.create({
 export default Today;
 
 // Unused parts for right now:
+
+// import Today from "../screens/Today";
+// import Overview from "./Overview";
+// import MyGarden from "./MyGarden";
+// import Community from "./Community";
+
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// const Stack = createNativeStackNavigator();
+
 {
   /* ------------------------------------------------ Navigation Main Top */
 }
