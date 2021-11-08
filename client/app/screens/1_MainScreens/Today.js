@@ -49,10 +49,40 @@ const Today = () => {
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
-      {/* ----------------------------------------------------- Navigation Main Top */}
-      <SafeAreaView style={StyleMain.navMainTop}>
-        {/*  <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>*/}
-        <View style={StyleMain.navTopElements}>
+      {/* ------------------------------------------- Navigation Main Top */}
+
+      {/* ---------------------------------------------------- SearchMenu */}
+
+      {/* ------------------------------------------------------ Add Task */}
+
+      {/* ------------------------------------------------------ Banderole*/}
+
+      {/* ----------------------------------------------------- Main Part */}
+
+      {/* ---------------------------------------- Navigation Main Bottom */}
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  // platformContainer: {
+  //   flex: 1,
+  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  // },
+});
+export default Today;
+
+// Unused parts for right now:
+{
+  /* ------------------------------------------------ Navigation Main Top */
+}
+// <SafeAreaView style={StyleMain.navMainTop}>
+{
+  /*  <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>*/
+}
+{
+  /* <View style={StyleMain.navTopElements}>
           <Image
             source={require("../../../assets/icons/png/plantastic.png")}
             style={{
@@ -63,12 +93,22 @@ const Today = () => {
             }}
           />
           <Text style={StyleMain.navTopText}>Plantastic</Text>
-        </View>
-        {/* </Link> */}
-        {/* ------------- SearchMenu */}
-        {/* <View style={StyleMain.searchMenuWrapperRight}> */}
-        {/*  <Link to="/searchMenu" underlayColor="white">*/}
-        <SafeAreaView style={StyleMain.searchMenuWrapper}>
+        </View> */
+}
+{
+  /* </Link> */
+}
+{
+  /* ------------- SearchMenu */
+}
+{
+  /* <View style={StyleMain.searchMenuWrapperRight}> */
+}
+{
+  /*  <Link to="/searchMenu" underlayColor="white">*/
+}
+{
+  /* <SafeAreaView style={StyleMain.searchMenuWrapper}>
           <View style={StyleMain.searchMenuWrapperFirstRow}>
             <View style={StyleMain.searchMenuItem}></View>
             <View style={StyleMain.searchMenuItem}></View>
@@ -78,23 +118,35 @@ const Today = () => {
             <View style={StyleMain.searchMenuItem}></View>
             <View style={StyleMain.searchMenuItem}></View>
           </View>
-        </SafeAreaView>
-        {/*  </Link> */}
-        {/* ------------- Add Task */}
-        {/* <TouchableOpacity> */}
-        {/*onPress={() => handleAddTask()}*/}
-        {/* <View style={StyleMain.addWrapper}>
+        </SafeAreaView> */
+}
+{
+  /*  </Link> */
+}
+{
+  /* ------------- Add Task */
+}
+{
+  /* <TouchableOpacity> */
+}
+{
+  /*onPress={() => handleAddTask()}*/
+}
+{
+  /* <View style={StyleMain.addWrapper}>
                 <Text style={StyleMain.addText}>+</Text>
               </View>
             </TouchableOpacity>
-          </View>*/}
-      </SafeAreaView>
-      {/* --------------------------------------------------------------- Banderole */}
-
-      {/* ----------------------------------------------------- Main Part */}
-
-      {/* ---------------------------------------- Navigation Main Bottom */}
-      {/* <SafeAreaView style={StyleMain.navMainBottom}>
+          </View>*/
+}
+{
+  /* </SafeAreaView> */
+}
+{
+  /* ---------------------------------------- Navigation Main Bottom */
+}
+{
+  /* <SafeAreaView style={StyleMain.navMainBottom}>
           <Link
             to="/today"
             underlayColor={colors.sage25}
@@ -150,9 +202,11 @@ const Today = () => {
               <Text style={StyleMain.navText}>Community</Text>
             </View>
           </Link>
-        </SafeAreaView> */}
+        </SafeAreaView> */
+}
 
-      {/* <NavigationContainer>
+{
+  /* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             name="Today"
@@ -175,17 +229,5 @@ const Today = () => {
             options={{ title: "Mein Gartenverein" }}
           />
         </Stack.Navigator>
-      </NavigationContainer> */}
-
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  // platformContainer: {
-  //   flex: 1,
-  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  // },
-});
-export default Today;
+      </NavigationContainer> */
+}
