@@ -229,6 +229,28 @@ Install axios wrapper with standardized errors and req/res transformers. We will
 npm i apisauce
 ```
 
+## React-Native-Dotenv
+
+Storing environmental variables in .env file
+
+```
+npm install react-native-dotenv
+```
+
+In babel.config.js add plugins:
+
+```javascript
+plugins: [
+      [
+        "module:react-native-dotenv",
+        {
+          moduleName: "@env",
+          path: ".env",
+        },
+      ],
+    ],
+```
+
 ## Calendar
 
 ```
