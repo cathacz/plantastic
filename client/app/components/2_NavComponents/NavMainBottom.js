@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableHighlight,
+  TouchableOpacity,
 } from "react-native";
 
 // navigation components
@@ -18,10 +19,12 @@ import Community from "../../screens/1_MainScreens/4_Community";
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
-function NavMainBottom() {
+function NavMainBottom({ navigation }) {
   return (
     <SafeAreaView style={StyleMain.navMainBottom}>
-      <TouchableHighlight>
+      <TouchableOpacity
+        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+      >
         <View
           underlayColor="rgba(109, 153, 130, 0.25)"
           style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
@@ -35,8 +38,10 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Heute</Text>
         </View>
-      </TouchableHighlight>
-      <TouchableHighlight>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+      >
         <View
           to="/overview"
           underlayColor="rgba(109, 153, 130, 0.25)"
@@ -51,7 +56,7 @@ function NavMainBottom() {
           />
           <Text style={StyleMain.navText}>Übersicht</Text>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
 
       <View
         to="/myGarden"
