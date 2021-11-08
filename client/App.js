@@ -1,9 +1,10 @@
 import React from "react";
 
+// navigator funktionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-// For navigator
+// Screen components for navigator >>
 import Today from "./app/screens/1_MainScreens/Today";
 import Overview from "./app/screens/1_MainScreens/Overview";
 import MyGarden from "./app/screens/1_MainScreens/MyGarden";
@@ -19,7 +20,7 @@ function App() {
         <Stack.Screen
           name="Today"
           component={Today}
-          options={{ title: "Welcome, username", prop: "props" }}
+          options={{ title: "Wilkommen, username", prop: "props" }}
         />
         <Stack.Screen
           name="Monthly overview"
@@ -37,9 +38,9 @@ function App() {
           options={{ title: "Mein Gartenverein" }}
         />
         {/* Screens accessible from Today---------------------------------- */}
-        {/* Screens accessible from ---------------------------------- */}
-        {/* Screens accessible from ---------------------------------- */}
-        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from Overview---------------------------------- */}
+        {/* Screens accessible from MyGarden---------------------------------- */}
+        {/* Screens accessible from MyCommunity---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}
