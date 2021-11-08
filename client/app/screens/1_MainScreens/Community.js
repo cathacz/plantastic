@@ -16,7 +16,7 @@ import {
 import Today from "./Today";
 import Overview from "./Overview";
 import MyGarden from "./MyGarden";
-// import Community from "../screens/Community";
+// import Community from "./Community";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
@@ -34,7 +34,7 @@ const Community = () => {
         <View to="/today" underlayColor="white" style={StyleMain.navTopItem}>
           <View style={StyleMain.navTopElements}>
             <Image
-              source={require("../../assets/icons/png/plantastic.png")}
+              source={require("../../../assets/icons/png/plantastic.png")}
               style={{
                 height: 50,
                 width: 50,
@@ -84,7 +84,7 @@ const Community = () => {
             >
               <View style={styles.quicky}>
                 <Image
-                  source={require("../../assets/icons/png/berries.png")}
+                  source={require("../../../assets/icons/png/berries.png")}
                   style={{ height: 50, width: 50, alignItems: "center" }}
                 />
                 <Text style={styles.quickyText}>Beeren</Text>
@@ -102,7 +102,7 @@ const Community = () => {
         >
           <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/shed.png")}
+              source={require("../../../assets/icons/png/shed.png")}
               style={{ height: 50, width: 50, alignItems: "center" }}
             />
             <Text style={StyleMain.navText}>Heute</Text>
@@ -116,7 +116,7 @@ const Community = () => {
         >
           <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/calendarView.png")}
+              source={require("../../../assets/icons/png/calendarView.png")}
               style={{ height: 50, width: 50 }}
             />
             <Text style={StyleMain.navText}>Übersicht</Text>
@@ -130,7 +130,7 @@ const Community = () => {
         >
           <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/meinGarten.png")}
+              source={require("../../../assets/icons/png/meinGarten.png")}
               style={{ height: 50, width: 50 }}
             />
             <Text style={StyleMain.navText}>Mein Garten</Text>
@@ -144,7 +144,7 @@ const Community = () => {
         >
           <View style={StyleMain.navElements}>
             <Image
-              source={require("../../assets/icons/png/reihenAbstand.png")}
+              source={require("../../../assets/icons/png/reihenAbstand.png")}
               style={{ height: 50, width: 50 }}
             />
             <Text style={StyleMain.navText}>Community</Text>
