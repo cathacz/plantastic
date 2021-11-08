@@ -3,6 +3,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import Today from "./app/screens/1_MainScreens/Today";
+
 import HomeTest from "./app/screens/trash/HomeTest";
 import newTest from "./app/screens/trash/newTest";
 import profile from "./app/screens/trash/Profile";
@@ -13,6 +15,11 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Today"
+          component={Today}
+          options={{ title: "Welcome, username", prop: "props" }}
+        />
         <Stack.Screen
           name="Home"
           component={HomeTest}
@@ -32,6 +39,8 @@ function App() {
     </NavigationContainer>
   );
 }
+
+// ----------------
 
 // import React from "react";
 // import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";

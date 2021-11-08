@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import {
   Text,
   StyleSheet,
@@ -14,16 +17,15 @@ import {
   TextInput,
 } from "react-native";
 
-import colors from "../../config/colors";
+// import colors from "../../config/colors";
 
-// import Home from "../screens/Home";
 // import Today from "../screens/Today";
 import Overview from "./Overview";
 import MyGarden from "./MyGarden";
-import Community from "../screens/Community";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../../components/Task";
+import Community from "./Community";
+// import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+// import { Colors } from "react-native/Libraries/NewAppScreen";
+// import Task from "../../components/Task";
 import StyleMain from "../../styles/StyleMain";
 
 // import { StatusBar } from "expo-status-bar";
@@ -50,7 +52,7 @@ const Today = () => {
         {/*  <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>*/}
         <View style={StyleMain.navTopElements}>
           <Image
-            source={require("../../assets/icons/png/plantastic.png")}
+            source={require("../../../assets/icons/png/plantastic.png")}
             style={{
               height: 50,
               width: 50,
@@ -86,12 +88,7 @@ const Today = () => {
           </View>*/}
       </SafeAreaView>
       {/* --------------------------------------------------------------- Banderole */}
-      {/* <SafeAreaView style={StyleMain.banderole}>
-          <Text style={StyleMain.mainText}>
-            This is today {"\n"}
-            {currentDate}
-          </Text>
-        </SafeAreaView> */}
+
       {/* ----------------------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Navigation Main Bottom */}
@@ -152,13 +149,30 @@ const Today = () => {
             </View>
           </Link>
         </SafeAreaView> */}
-      {/* <Route exact path="/" component={Home} /> */}
-      {/* <Route path="/searchMenu" component={SearchMenu} />
-        <Route path="/today" component={Today} />
-        <Route path="/overview" component={Overview} />
-        <Route path="/myGarden" component={MyGarden} />
-        <Route path="/community" component={Community} />
-*/}
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Today"
+            component={Today}
+            options={{ title: "Welcome, username", prop: "props" }}
+          />
+          <Stack.Screen
+            name="Monthly overview"
+            component={Overview}
+            options={{ title: "Monatsübersicht" }}
+          />
+          <Stack.Screen
+            name="My Garden"
+            component={MyGarden}
+            options={{ title: "Mein Garten" }}
+          />
+          <Stack.Screen
+            name="My Community"
+            component={Community}
+            options={{ title: "Mein Gartenverein" }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
