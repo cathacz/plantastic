@@ -53,7 +53,9 @@ const Today = () => {
       {/* --------------------------------------- Banderole*/}
 
       {/* -------------------------------------- Main Part */}
-
+      <View style={{ marginTop: 70 }}>
+        <Text>This is TODAY</Text>
+      </View>
       {/* ------------------------- Navigation Main Bottom */}
       <NavMainBottom />
       <StatusBar style="auto" />

@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  View,
+  Image,
+  TouchableHighlight,
+} from "react-native";
 
 // navigation components
 import Today from "../../screens/1_MainScreens/1_Today";
@@ -14,34 +21,37 @@ import StyleMain from "../../styles/StyleMain";
 function NavMainBottom() {
   return (
     <SafeAreaView style={StyleMain.navMainBottom}>
-      <View
-        underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
-        onPress={() =>
-          navigation.navigate("Today", { propOne: "propOne props" })
-        }
-      >
-        <Image
-          source={require("../../../assets/icons/png/shed.png")}
-          style={{ height: 50, width: 50, alignItems: "center" }}
-        />
-        <Text style={StyleMain.navText}>Heute</Text>
-      </View>
-
-      <View
-        to="/overview"
-        underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, StyleMain.itemTwo, StyleMain.navElements]}
-        onPress={() =>
-          navigation.navigate("Overview", { propOne: "propOne props" })
-        }
-      >
-        <Image
-          source={require("../../../assets/icons/png/calendarView.png")}
-          style={{ height: 50, width: 50 }}
-        />
-        <Text style={StyleMain.navText}>Übersicht</Text>
-      </View>
+      <TouchableHighlight>
+        <View
+          underlayColor="rgba(109, 153, 130, 0.25)"
+          style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+          onPress={() =>
+            navigation.navigate("Today", { propOne: "propOne props" })
+          }
+        >
+          <Image
+            source={require("../../../assets/icons/png/shed.png")}
+            style={{ height: 50, width: 50, alignItems: "center" }}
+          />
+          <Text style={StyleMain.navText}>Heute</Text>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight>
+        <View
+          to="/overview"
+          underlayColor="rgba(109, 153, 130, 0.25)"
+          style={[StyleMain.navItem, StyleMain.itemTwo, StyleMain.navElements]}
+          onPress={() =>
+            navigation.navigate("Overview", { propOne: "propOne props" })
+          }
+        >
+          <Image
+            source={require("../../../assets/icons/png/calendarView.png")}
+            style={{ height: 50, width: 50 }}
+          />
+          <Text style={StyleMain.navText}>Übersicht</Text>
+        </View>
+      </TouchableHighlight>
 
       <View
         to="/myGarden"
