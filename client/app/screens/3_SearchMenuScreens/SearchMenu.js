@@ -22,7 +22,7 @@ const SearchMenu = () => {
         <View to="/today" underlayColor="white" style={StylePlants.navTopItem}>
           <View style={StylePlants.navTopElements}>
             <Image
-              source={require("../../assets/icons/png/back-button.png")}
+              source={require("../../../assets/icons/png/back-button.png")}
               style={{
                 height: 50,
                 width: 50,
@@ -44,7 +44,7 @@ const SearchMenu = () => {
             >
               <View style={styles.quicky}>
                 <Image
-                  source={require("../../assets/icons/png/flower.png")}
+                  source={require("../../../assets/icons/png/flower.png")}
                   style={{ height: 50, width: 50, alignItems: "center" }}
                 />
                 <Text style={styles.quickyText}>Beeren</Text>

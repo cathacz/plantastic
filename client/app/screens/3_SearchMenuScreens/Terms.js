@@ -22,7 +22,7 @@ const Terms = () => {
         <View to="/today" underlayColor="white" style={StylePlants.navTopItem}>
           <View style={StylePlants.navTopElements}>
             <Image
-              source={require("../../assets/icons/png/back-button.png")}
+              source={require("../../../assets/icons/png/back-button.png")}
               style={{
                 height: 50,
                 width: 50,

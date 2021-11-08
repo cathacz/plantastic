@@ -36,7 +36,7 @@ const QuickView = () => {
         >
           <View style={StylePlants.navTopElements}>
             <Image
-              source={require("../../assets/icons/png/back-button.png")}
+              source={require("../../../assets/icons/png/back-button.png")}
               style={{
                 height: 50,
                 width: 50,
@@ -62,7 +62,7 @@ const QuickView = () => {
         >
           <View style={StylePlants.navElements}>
             <Image
-              source={require("../../assets/icons/png/fork.png")}
+              source={require("../../../assets/icons/png/fork.png")}
               style={{ height: 50, width: 50, alignItems: "center" }}
             />
             <Text style={StylePlants.navText}>Kurz {"&"} dreckig</Text>
@@ -76,7 +76,7 @@ const QuickView = () => {
         >
           <View style={StylePlants.navElements}>
             <Image
-              source={require("../../assets/icons/png/pflanzenPortrait.png")}
+              source={require("../../../assets/icons/png/pflanzenPortrait.png")}
               style={{ height: 50, width: 50 }}
             />
             <Text style={StylePlants.navText}>Pflanzenportrait</Text>
@@ -90,7 +90,7 @@ const QuickView = () => {
         >
           <View style={StylePlants.navElements}>
             <Image
-              source={require("../../assets/icons/png/tageBuch.png")}
+              source={require("../../../assets/icons/png/tageBuch.png")}
               style={{ height: 50, width: 50 }}
             />
             <Text style={StylePlants.navText}>Tagebuch</Text>
