@@ -14,12 +14,16 @@ import {
   TextInput,
 } from "react-native";
 
-// import colors from "../../config/colors";
-
+// piece components >>
+import NavMainTop from "../../components/2_NavComponents/NavMainTop";
+import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-// import { Colors } from "react-native/Libraries/NewAppScreen";
 // import Task from "../../components/Task";
+
+// For styling >>
 import StyleMain from "../../styles/StyleMain";
+// import { Colors } from "react-native/Libraries/NewAppScreen";
+// import colors from "../../config/colors";
 
 // import { StatusBar } from "expo-status-bar";
 
@@ -41,7 +45,7 @@ const Today = () => {
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* ---------------------------- Navigation Main Top */}
-
+      <NavMainTop />
       {/* ------------------------------------- SearchMenu */}
 
       {/*---------------------------------------- Add Task */}
@@ -51,6 +55,7 @@ const Today = () => {
       {/* -------------------------------------- Main Part */}
 
       {/* ------------------------- Navigation Main Bottom */}
+      <NavMainBottom />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -76,7 +81,7 @@ export default Today;
 // const Stack = createNativeStackNavigator();
 
 {
-  /* ------------------------------------------------ Navigation Main Top */
+  /* ------------------- Navigation Main Top */
 }
 // <SafeAreaView style={StyleMain.navMainTop}>
 {

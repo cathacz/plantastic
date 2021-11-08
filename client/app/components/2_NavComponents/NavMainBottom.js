@@ -2,10 +2,10 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 
 // navigation components
-import Today from "../../screens/ComponentsTest/Today";
-import Overview from "../../screens/ComponentsTest/Overview";
-import MyGarden from "../../screens/ComponentsTest/MyGarden";
-import Community from "../../screens/ComponentsTest/Community";
+import Today from "../../screens/1_MainScreens/Today";
+import Overview from "../../screens/1_MainScreens/Overview";
+import MyGarden from "../../screens/1_MainScreens/MyGarden";
+import Community from "../../screens/1_MainScreens/Community";
 
 // for styling
 import colors from "../../config/colors";
@@ -69,10 +69,6 @@ function NavMainBottom() {
           <Text style={StyleMain.navText}>Community</Text>
         </View>
       </View>
-      {/* <Route path="/today" component={Today} /> */}
-      {/* <Route path="/overview" component={Overview} /> */}
-      {/* <Route path="/myGarden" component={MyGarden} /> */}
-      {/* <Route path="/community" component={Community} /> */}
     </SafeAreaView>
   );
 }

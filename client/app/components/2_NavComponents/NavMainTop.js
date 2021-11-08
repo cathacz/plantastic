@@ -9,8 +9,9 @@ import {
 } from "react-native";
 
 import colors from "../../config/colors";
-import Today from "../../screens/ComponentsTest/Today";
-import SearchMenu from "../../screens/SearchMenu";
+// import Today from "../../screens/ComponentsTest/Today";
+// import SearchMenu from "../../screens/SearchMenu";
+
 import StyleMain from "../../styles/StyleMain";
 
 function NavMainTop() {
