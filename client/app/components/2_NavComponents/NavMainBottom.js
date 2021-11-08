@@ -15,59 +15,56 @@ function NavMainBottom() {
   return (
     <SafeAreaView style={StyleMain.navMainBottom}>
       <View
-        to="/today"
         underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, styles.itemOne]}
+        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+        onPress={() =>
+          navigation.navigate("Today", { propOne: "propOne props" })
+        }
       >
-        <View style={StyleMain.navElements}>
-          <Image
-            source={require("../../../assets/icons/png/shed.png")}
-            style={{ height: 50, width: 50, alignItems: "center" }}
-          />
-          <Text style={StyleMain.navText}>Heute</Text>
-        </View>
+        <Image
+          source={require("../../../assets/icons/png/shed.png")}
+          style={{ height: 50, width: 50, alignItems: "center" }}
+        />
+        <Text style={StyleMain.navText}>Heute</Text>
       </View>
 
       <View
         to="/overview"
         underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, StyleMain.itemTwo]}
+        style={[StyleMain.navItem, StyleMain.itemTwo, StyleMain.navElements]}
+        onPress={() =>
+          navigation.navigate("Overview", { propOne: "propOne props" })
+        }
       >
-        <View style={StyleMain.navElements}>
-          <Image
-            source={require("../../../assets/icons/png/calendarView.png")}
-            style={{ height: 50, width: 50 }}
-          />
-          <Text style={StyleMain.navText}>Übersicht</Text>
-        </View>
+        <Image
+          source={require("../../../assets/icons/png/calendarView.png")}
+          style={{ height: 50, width: 50 }}
+        />
+        <Text style={StyleMain.navText}>Übersicht</Text>
       </View>
 
       <View
         to="/myGarden"
         underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, styles.itemThree]}
+        style={[StyleMain.navItem, styles.itemThree, StyleMain.navElements]}
       >
-        <View style={StyleMain.navElements}>
-          <Image
-            source={require("../../../assets/icons/png/meinGarten.png")}
-            style={{ height: 50, width: 50 }}
-          />
-          <Text style={StyleMain.navText}>Mein Garten</Text>
-        </View>
+        <Image
+          source={require("../../../assets/icons/png/meinGarten.png")}
+          style={{ height: 50, width: 50 }}
+        />
+        <Text style={StyleMain.navText}>Mein Garten</Text>
       </View>
 
       <View
         to="/community"
         underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, StyleMain.itemFour]}
+        style={[StyleMain.navItem, StyleMain.itemFour, StyleMain.navElements]}
       >
-        <View style={StyleMain.navElements}>
-          <Image
-            source={require("../../../assets/icons/png/reihenAbstand.png")}
-            style={{ height: 50, width: 50 }}
-          />
-          <Text style={StyleMain.navText}>Community</Text>
-        </View>
+        <Image
+          source={require("../../../assets/icons/png/reihenAbstand.png")}
+          style={{ height: 50, width: 50 }}
+        />
+        <Text style={StyleMain.navText}>Community</Text>
       </View>
     </SafeAreaView>
   );
@@ -76,7 +73,7 @@ function NavMainBottom() {
 const styles = StyleSheet.create({
   itemOne: { backgroundColor: "white" },
   itemTwo: { backgroundColor: "white" },
-  itemThree: { backgroundColor: "red" },
+  itemThree: { backgroundColor: "white" },
   itemFour: { backgroundColor: "white" },
   // navMainBottom: {
   //   backgroundColor: "white",
