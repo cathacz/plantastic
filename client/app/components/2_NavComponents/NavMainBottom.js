@@ -7,6 +7,7 @@ import {
   Image,
   TouchableHighlight,
   TouchableOpacity,
+  Button,
 } from "react-native";
 
 // navigation components
@@ -20,6 +21,8 @@ import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
 function NavMainBottom({ navigation }) {
+  console.log("from navbottom: " + navigation);
+
   return (
     <SafeAreaView style={StyleMain.navMainBottom}>
       <TouchableOpacity
@@ -27,9 +30,11 @@ function NavMainBottom({ navigation }) {
       >
         <View
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+          style={[styles.itemOne, StyleMain.navElements]}
           onPress={() =>
-            navigation.navigate("Today", { propOne: "propOne props" })
+            navigation.navigate("Today", {
+              propOne: "propOne props",
+            })
           }
         >
           <Image
@@ -41,14 +46,16 @@ function NavMainBottom({ navigation }) {
       </TouchableOpacity>
       <TouchableOpacity
         style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+        onPress={() =>
+          navigation.navigate("Overview", {
+            propOne: "propOne props",
+          })
+        }
       >
         <View
           to="/overview"
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navItem, StyleMain.itemTwo, StyleMain.navElements]}
-          onPress={() =>
-            navigation.navigate("Overview", { propOne: "propOne props" })
-          }
+          style={[StyleMain.itemTwo, StyleMain.navElements]}
         >
           <Image
             source={require("../../../assets/icons/png/calendarView.png")}
@@ -67,7 +74,8 @@ function NavMainBottom({ navigation }) {
           source={require("../../../assets/icons/png/meinGarten.png")}
           style={{ height: 50, width: 50 }}
         />
-        <Text style={StyleMain.navText}>Mein Garten</Text>
+        {/* <Text style={StyleMain.navText}>Mein Garten</Text> */}
+        <Button title="Press" onPress={() => navigation.navigate("MyGarden")} />
       </View>
 
       <View

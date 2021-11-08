@@ -9,6 +9,9 @@ import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
+import HomeTest from "./app/screens/trash/HomeTest";
+import newTest from "./app/screens/trash/newTest";
+import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +20,16 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* Main Screens ---------------------------------- */}
+        {/* <Stack.Screen
+          name="HomeTest"
+          component={HomeTest}
+          options={{ title: "hometest", prop: "props" }}
+        />
+        <Stack.Screen
+          name="newTest"
+          component={newTest}
+          options={{ title: "newtest", prop: "props" }}
+        /> */}
         <Stack.Screen
           name="Today"
           component={Today}
@@ -36,6 +49,11 @@ function App() {
           name="My Community"
           component={Community}
           options={{ title: "Mein Gartenverein" }}
+        />
+        <Stack.Screen
+          name="bottom navigation"
+          component={NavMainBottom}
+          options={{ title: "navBottom", prop: "props" }}
         />
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}

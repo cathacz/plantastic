@@ -12,6 +12,7 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   TextInput,
+  Button,
 } from "react-native";
 
 // piece components >>
@@ -27,7 +28,7 @@ import StyleMain from "../../styles/StyleMain";
 
 // import { StatusBar } from "expo-status-bar";
 
-const Today = () => {
+const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -41,6 +42,9 @@ const Today = () => {
       date + "/" + month + "/" + year //+ " " + hours + ":" + min + ":" + sec
     );
   }, []);
+
+  // from Vivi
+  console.log("from Today: " + navigation);
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
@@ -57,7 +61,57 @@ const Today = () => {
         <Text>This is TODAY</Text>
       </View>
       {/* ------------------------- Navigation Main Bottom */}
-      <NavMainBottom />
+      <NavMainBottom navigation={navigation} />
+      {/* <TouchableOpacity style={[]}>
+        <View
+          underlayColor="rgba(109, 153, 130, 0.25)"
+          style={[]}
+          onPress={() =>
+            navigation.navigate("Today", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <Image
+            source={require("../../../assets/icons/png/shed.png")}
+            style={{ height: 50, width: 50, alignItems: "center" }}
+          />
+          <Text style={StyleMain.navText}>Heute</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[]}
+        onPress={() =>
+          navigation.navigate("Overview", {
+            propOne: "propOne props",
+          })
+        }
+      >
+        <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
+          <Image
+            source={require("../../../assets/icons/png/calendarView.png")}
+            style={{ height: 50, width: 50 }}
+          />
+          <Text style={StyleMain.navText}>Übersicht</Text>
+        </View>
+      </TouchableOpacity>
+
+      <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
+        <Image
+          source={require("../../../assets/icons/png/meinGarten.png")}
+          style={{ height: 50, width: 50 }}
+        /> */}
+      {/* <Text style={StyleMain.navText}>Mein Garten</Text> */}
+      {/* <Button title="Press" onPress={() => navigation.navigate("MyGarden")} />
+      </View>
+
+      <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
+        <Image
+          source={require("../../../assets/icons/png/reihenAbstand.png")}
+          style={{ height: 50, width: 50 }}
+        />
+        <Text style={StyleMain.navText}>Community</Text>
+      </View> */}
       <StatusBar style="auto" />
     </SafeAreaView>
   );
