@@ -14,6 +14,8 @@ import {
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
+// Note: Need to add active tab color prepared in >> StyleMain.active
+
 function NavMainBottom({ navigation }) {
   console.log("from navbottom: " + navigation);
 

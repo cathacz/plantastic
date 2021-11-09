@@ -52,6 +52,7 @@ const Overview = ({ navigation }) => {
       </View>
       {/* --------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
