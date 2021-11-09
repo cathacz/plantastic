@@ -17,8 +17,8 @@ import StyleMain from "../../styles/StyleMain";
 function NavMainTop() {
   return (
     <SafeAreaView style={StyleMain.navMainTop}>
-      {/* ---------------------------------------------------------------Logo */}
-      <View to="/today" underlayColor="white" style={StyleMain.navTopItem}>
+      {/* -------------------------------------------------------- Logo */}
+      <View underlayColor="white" style={StyleMain.navTopItem}>
         <View style={StyleMain.navTopElements}>
           <Image
             source={require("../../../assets/icons/png/plantastic.png")}
@@ -32,10 +32,10 @@ function NavMainTop() {
           <Text style={StyleMain.navTopText}>Plantastic</Text>
         </View>
       </View>
-      {/* --------------------------------------------------------------- SearchMenu */}
+      {/* -------------------------------------------------- SearchMenu */}
       <View style={StyleMain.searchMenuWrapperRight}>
-        <View to="/searchMenu" underlayColor="white">
-          <SafeAreaView style={StyleMain.searchMenuWrapper}>
+        <View underlayColor="white">
+          <View style={StyleMain.searchMenuWrapper}>
             <View style={StyleMain.searchMenuWrapperFirstRow}>
               <View style={StyleMain.searchMenuItem}></View>
               <View style={StyleMain.searchMenuItem}></View>
@@ -45,9 +45,9 @@ function NavMainTop() {
               <View style={StyleMain.searchMenuItem}></View>
               <View style={StyleMain.searchMenuItem}></View>
             </View>
-          </SafeAreaView>
+          </View>
         </View>
-        {/* ----------------------------------------------------- Add Task */}
+        {/* -------------------------------------------------- Add Task */}
         <TouchableOpacity>
           {/*onPress={() => handleAddTask()}*/}
           <View style={StyleMain.addWrapper}>
