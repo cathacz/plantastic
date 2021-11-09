@@ -65,51 +65,6 @@ const Today = ({ navigation, route }) => {
       </View>
       {/* ------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
-      {/* <TouchableOpacity style={[]}>
-        <View
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[]}
-          onPress={() => navigation.navigate("Today")}
-        >
-          <Image
-            source={require("../../../assets/icons/png/shed.png")}
-            style={{ height: 50, width: 50, alignItems: "center" }}
-          />
-          <Text style={StyleMain.navText}>Heute</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[]}
-        onPress={() => navigation.navigate("Overview")}
-      >
-        <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
-          <Image
-            source={require("../../../assets/icons/png/calendarView.png")}
-            style={{ height: 50, width: 50 }}
-          />
-          <Text style={StyleMain.navText}>Übersicht</Text>
-        </View>
-      </TouchableOpacity>
-
-      <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
-        <Image
-          source={require("../../../assets/icons/png/meinGarten.png")}
-          style={{ height: 50, width: 50 }}
-        />
-        <Text style={StyleMain.navText}>Mein Garten</Text>
-        <Button
-          title="Press"
-          onPress={() => navigation.navigate("My Garden")}
-        />
-      </View>
-
-      <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
-        <Image
-          source={require("../../../assets/icons/png/reihenAbstand.png")}
-          style={{ height: 50, width: 50 }}
-        />
-        <Text style={StyleMain.navText}>Community</Text>
-      </View> */}
 
       <StatusBar style="auto" />
     </SafeAreaView>

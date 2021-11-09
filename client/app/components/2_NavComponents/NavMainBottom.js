@@ -24,13 +24,16 @@ function NavMainBottom({ navigation }) {
   console.log("from navbottom: " + navigation);
 
   return (
-    <SafeAreaView style={StyleMain.navMainBottom}>
-      <TouchableOpacity
-        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
-      >
+    <SafeAreaView
+      name="navMainBottom-container"
+      style={StyleMain.navMainBottom}
+    >
+      {/* --------------- Today Button --------------- */}
+
+      <TouchableOpacity style={[StyleMain.navElements]}>
         <View
           underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[styles.itemOne, StyleMain.navElements]}
+          style={[StyleMain.navElements]}
           onPress={() =>
             navigation.navigate("Today", {
               propOne: "propOne props",
@@ -44,8 +47,11 @@ function NavMainBottom({ navigation }) {
           <Text style={StyleMain.navText}>Heute</Text>
         </View>
       </TouchableOpacity>
+
+      {/* --------------- Overview Button --------------- */}
+
       <TouchableOpacity
-        style={[StyleMain.navItem, styles.itemOne, StyleMain.navElements]}
+        style={[StyleMain.navItem, StyleMain.navElements]}
         onPress={() =>
           navigation.navigate("Overview", {
             propOne: "propOne props",
@@ -65,64 +71,84 @@ function NavMainBottom({ navigation }) {
         </View>
       </TouchableOpacity>
 
-      <View
-        underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, styles.itemThree, StyleMain.navElements]}
-      >
-        <Image
-          source={require("../../../assets/icons/png/meinGarten.png")}
-          style={{ height: 50, width: 50 }}
-        />
-        {/* <Text style={StyleMain.navText}>Mein Garten</Text> */}
-        <Button title="Press" onPress={() => navigation.navigate("MyGarden")} />
-      </View>
+      {/* --------------- MyGarden Button --------------- */}
 
-      <View
-        to="/community"
-        underlayColor="rgba(109, 153, 130, 0.25)"
-        style={[StyleMain.navItem, StyleMain.itemFour, StyleMain.navElements]}
+      <TouchableOpacity
+        style={[StyleMain.navItem, StyleMain.navElements]}
+        onPress={() =>
+          navigation.navigate("Overview", {
+            propOne: "propOne props",
+          })
+        }
       >
-        <Image
-          source={require("../../../assets/icons/png/reihenAbstand.png")}
-          style={{ height: 50, width: 50 }}
-        />
-        <Text style={StyleMain.navText}>Community</Text>
-      </View>
+        <View
+          underlayColor="rgba(109, 153, 130, 0.25)"
+          style={[StyleMain.navItem, StyleMain.navElements]}
+        >
+          <Image
+            source={require("../../../assets/icons/png/meinGarten.png")}
+            style={{ height: 50, width: 50 }}
+          />
+          <Text style={StyleMain.navText}>Mein Garten</Text>
+        </View>
+      </TouchableOpacity>
+
+      {/* --------------- Community Button --------------- */}
+
+      <TouchableOpacity
+        style={[StyleMain.navItem, StyleMain.navElements]}
+        onPress={() =>
+          navigation.navigate("Overview", {
+            propOne: "propOne props",
+          })
+        }
+      >
+        <View
+          underlayColor="rgba(109, 153, 130, 0.25)"
+          style={[StyleMain.navItem, StyleMain.navElements]}
+        >
+          <Image
+            source={require("../../../assets/icons/png/reihenAbstand.png")}
+            style={{ height: 50, width: 50 }}
+          />
+          <Text style={StyleMain.navText}>Community</Text>
+        </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  itemOne: { backgroundColor: "white" },
-  itemTwo: { backgroundColor: "white" },
-  itemThree: { backgroundColor: "white" },
-  itemFour: { backgroundColor: "white" },
-  // navMainBottom: {
-  //   backgroundColor: "white",
-  //   borderColor: "white",
-  //   borderTopColor: colors.sage25,
-  //   borderWidth: 1,
-  //   borderStyle: "solid",
-  //   alignItems: "center",
-  //   justifyContent: "space-around",
-  //   flexDirection: "row",
-  //   height: 100,
-  //   position: "absolute",
-  //   bottom: 0,
-  // },
-  // navItem: {
-  //   width: "25%",
-  //   height: "100%",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
-  // navElements: {
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
-  // navText: {
-  //   marginTop: 5,
-  // },
-});
+// const styles = StyleSheet.create({
+//   itemOne: { backgroundColor: "white" },
+//   itemTwo: { backgroundColor: "white" },
+//   itemThree: { backgroundColor: "white" },
+//   itemFour: { backgroundColor: "white" },
+//   // navMainBottom: {
+//   //   backgroundColor: "white",
+//   //   borderColor: "white",
+//   //   borderTopColor: colors.sage25,
+//   //   borderWidth: 1,
+//   //   borderStyle: "solid",
+//   //   alignItems: "center",
+//   //   justifyContent: "space-around",
+//   //   flexDirection: "row",
+//   //   height: 100,
+//   //   position: "absolute",
+//   //   bottom: 0,
+//   // },
+//   // navItem: {
+//   //   width: "25%",
+//   //   height: "100%",
+//   //   alignItems: "center",
+//   //   justifyContent: "center",
+//   // },
+//   // navElements: {
+//   //   alignItems: "center",
+//   //   justifyContent: "center",
+//   // },
+//   // navText: {
+//   //   marginTop: 5,
+//   // },
+// });
 
 export default NavMainBottom;
