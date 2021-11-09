@@ -19,11 +19,14 @@ import Today from "./1_Today";
 import Overview from "./2_Overview";
 import Community from "./4_Community";
 
+// piece components >>
+import NavMainTop from "../../components/2_NavComponents/NavMainTop";
+import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import StyleMain from "../../styles/StyleMain";
 import QuickView from "../2_PlantScreens/QuickView.js";
 
-const MyGarden = () => {
+const MyGarden = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
       {/* ----------------------------------------------------- Navigation Main Top */}
@@ -89,63 +92,7 @@ const MyGarden = () => {
       {/* ----------------------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Navigation Main Bottom */}
-      <SafeAreaView style={StyleMain.navMainBottom}>
-        <View
-          to="/today"
-          underlayColor={colors.sage25}
-          style={StyleMain.navItem}
-        >
-          <View style={StyleMain.navElements}>
-            <Image
-              source={require("../../../assets/icons/png/shed.png")}
-              style={{ height: 50, width: 50, alignItems: "center" }}
-            />
-            <Text style={StyleMain.navText}>Heute</Text>
-          </View>
-        </View>
-
-        <View
-          to="/overview"
-          underlayColor={colors.sage25}
-          style={StyleMain.navItem}
-        >
-          <View style={StyleMain.navElements}>
-            <Image
-              source={require("../../../assets/icons/png/calendarView.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={StyleMain.navText}>Übersicht</Text>
-          </View>
-        </View>
-
-        <View
-          to="/myGarden"
-          underlayColor={colors.sage25}
-          style={[StyleMain.navItem, StyleMain.active]}
-        >
-          <View style={StyleMain.navElements}>
-            <Image
-              source={require("../../../assets/icons/png/meinGarten.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={StyleMain.navText}>Mein Garten</Text>
-          </View>
-        </View>
-
-        <View
-          to="/community"
-          underlayColor={colors.sage25}
-          style={StyleMain.navItem}
-        >
-          <View style={StyleMain.navElements}>
-            <Image
-              source={require("../../../assets/icons/png/reihenAbstand.png")}
-              style={{ height: 50, width: 50 }}
-            />
-            <Text style={StyleMain.navText}>Community</Text>
-          </View>
-        </View>
-      </SafeAreaView>
+      <NavMainBottom navigation={navigation} />
 
       <StatusBar style="auto" />
     </SafeAreaView>
