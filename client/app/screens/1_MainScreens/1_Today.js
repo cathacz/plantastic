@@ -125,6 +125,7 @@ export default Today;
 }
 {
   /* <SafeAreaView style={StyleMain.searchMenuWrapper}>
+  
           <View style={StyleMain.searchMenuWrapperFirstRow}>
             <View style={StyleMain.searchMenuItem}></View>
             <View style={StyleMain.searchMenuItem}></View>
