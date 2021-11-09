@@ -113,10 +113,13 @@ const StyleMain = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
-  navElements: {
+  navElement: {
     alignItems: "center",
     justifyContent: "center",
+  },
+  navElementImage: {
+    height: 50,
+    width: 50,
   },
   navText: {
     marginTop: 5,
