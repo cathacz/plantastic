@@ -29,15 +29,13 @@ function NavMainBottom({ navigation }) {
       <TouchableHighlight
         underlayColor={colors.sage25}
         style={[StyleMain.navItem]}
+        onPress={() =>
+          navigation.navigate("Today", {
+            propOne: "propOne props",
+          })
+        }
       >
-        <View
-          style={[StyleMain.navElement]}
-          onPress={() =>
-            navigation.navigate("Today", {
-              propOne: "propOne props",
-            })
-          }
-        >
+        <View style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/shed.png")}
             style={StyleMain.navElementImage}
