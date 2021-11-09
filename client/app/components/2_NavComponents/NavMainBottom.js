@@ -24,7 +24,7 @@ function NavMainBottom({ navigation }) {
     >
       {/* --------------- Today Button --------------- */}
 
-      <TouchableOpacity style={[StyleMain.navItem]}>
+      <TouchableHighlight style={[StyleMain.navItem]}>
         <View
           underlayColor="rgba(109, 153, 130, 0.25)"
           style={[StyleMain.navElement]}
@@ -40,11 +40,11 @@ function NavMainBottom({ navigation }) {
           />
           <Text style={StyleMain.navText}>Heute</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableHighlight>
 
       {/* --------------- Overview Button --------------- */}
 
-      <TouchableOpacity
+      <TouchableHighlight
         style={[StyleMain.navItem]}
         onPress={() =>
           navigation.navigate("Overview", {
@@ -62,7 +62,7 @@ function NavMainBottom({ navigation }) {
           />
           <Text style={StyleMain.navText}>Übersicht</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableHighlight>
 
       {/* --------------- MyGarden Button --------------- */}
 
@@ -110,38 +110,5 @@ function NavMainBottom({ navigation }) {
     </SafeAreaView>
   );
 }
-
-// const styles = StyleSheet.create({
-//   itemOne: { backgroundColor: "white" },
-//   itemTwo: { backgroundColor: "white" },
-//   itemThree: { backgroundColor: "white" },
-//   itemFour: { backgroundColor: "white" },
-//   // navMainBottom: {
-//   //   backgroundColor: "white",
-//   //   borderColor: "white",
-//   //   borderTopColor: colors.sage25,
-//   //   borderWidth: 1,
-//   //   borderStyle: "solid",
-//   //   alignItems: "center",
-//   //   justifyContent: "space-around",
-//   //   flexDirection: "row",
-//   //   height: 100,
-//   //   position: "absolute",
-//   //   bottom: 0,
-//   // },
-//   // navItem: {
-//   //   width: "25%",
-//   //   height: "100%",
-//   //   alignItems: "center",
-//   //   justifyContent: "center",
-//   // },
-//   // navElement: {
-//   //   alignItems: "center",
-//   //   justifyContent: "center",
-//   // },
-//   // navText: {
-//   //   marginTop: 5,
-//   // },
-// });
 
 export default NavMainBottom;
