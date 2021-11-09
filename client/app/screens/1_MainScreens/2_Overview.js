@@ -21,6 +21,9 @@ import Today from "./1_Today";
 import MyGarden from "./3_MyGarden";
 import Community from "./4_Community";
 
+// piece components >>
+import NavMainTop from "../../components/2_NavComponents/NavMainTop";
+import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 
 import StyleMain from "../../styles/StyleMain";
@@ -29,7 +32,7 @@ import Calendar from "../../components/OverviewCalendar";
 // import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
-const Overview = () => {
+const Overview = ({ navigation }) => {
   return (
     <SafeAreaView
       style={[StyleMain.container, styles.platformContainer]}
@@ -48,7 +51,7 @@ const Overview = () => {
         <Text>This is Overview</Text>
       </View>
       {/* --------------------------- Navigation Main Bottom */}
-
+      <NavMainBottom navigation={navigation} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
