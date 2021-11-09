@@ -29,7 +29,6 @@ function NavMainBottom({ navigation }) {
         style={[StyleMain.navItem]}
       >
         <View
-          underlayColor={colors.sage25}
           style={[StyleMain.navElement]}
           onPress={() =>
             navigation.navigate("Today", {
@@ -56,7 +55,7 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
+        <View style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/calendarView.png")}
             style={StyleMain.navElementImage}
@@ -67,7 +66,8 @@ function NavMainBottom({ navigation }) {
 
       {/* --------------- MyGarden Button --------------- */}
 
-      <TouchableOpacity
+      <TouchableHighlight
+        underlayColor={colors.sage25}
         style={[StyleMain.navItem]}
         onPress={() =>
           navigation.navigate("MyGarden", {
@@ -75,18 +75,19 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
+        <View style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/meinGarten.png")}
             style={StyleMain.navElementImage}
           />
           <Text style={StyleMain.navText}>Mein Garten</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableHighlight>
 
       {/* --------------- Community Button --------------- */}
 
-      <TouchableOpacity
+      <TouchableHighlight
+        underlayColor={colors.sage25}
         style={[StyleMain.navItem]}
         onPress={() =>
           navigation.navigate("Community", {
@@ -94,14 +95,14 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
+        <View style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/reihenAbstand.png")}
             style={StyleMain.navElementImage}
           />
           <Text style={StyleMain.navText}>Community</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableHighlight>
     </SafeAreaView>
   );
 }
