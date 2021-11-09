@@ -24,9 +24,12 @@ function NavMainBottom({ navigation }) {
     >
       {/* --------------- Today Button --------------- */}
 
-      <TouchableHighlight style={[StyleMain.navItem]}>
+      <TouchableHighlight
+        underlayColor={colors.sage25}
+        style={[StyleMain.navItem]}
+      >
         <View
-          underlayColor="rgba(109, 153, 130, 0.25)"
+          underlayColor={colors.sage25}
           style={[StyleMain.navElement]}
           onPress={() =>
             navigation.navigate("Today", {
@@ -45,6 +48,7 @@ function NavMainBottom({ navigation }) {
       {/* --------------- Overview Button --------------- */}
 
       <TouchableHighlight
+        underlayColor={colors.sage25}
         style={[StyleMain.navItem]}
         onPress={() =>
           navigation.navigate("Overview", {
@@ -52,10 +56,7 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navElement]}
-        >
+        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/calendarView.png")}
             style={StyleMain.navElementImage}
@@ -74,10 +75,7 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navElement]}
-        >
+        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/meinGarten.png")}
             style={StyleMain.navElementImage}
@@ -96,10 +94,7 @@ function NavMainBottom({ navigation }) {
           })
         }
       >
-        <View
-          underlayColor="rgba(109, 153, 130, 0.25)"
-          style={[StyleMain.navElement]}
-        >
+        <View underlayColor={colors.sage25} style={[StyleMain.navElement]}>
           <Image
             source={require("../../../assets/icons/png/reihenAbstand.png")}
             style={StyleMain.navElementImage}
