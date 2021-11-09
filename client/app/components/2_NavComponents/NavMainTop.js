@@ -14,27 +14,22 @@ import colors from "../../config/colors";
 
 import StyleMain from "../../styles/StyleMain";
 
-function NavMainTop() {
+function NavMainTop({ navigation }) {
   return (
     <SafeAreaView style={StyleMain.navMainTop}>
       {/* -------------------------------------------------------- Logo */}
-      <View underlayColor="white" style={StyleMain.navTopItem}>
-        <View style={StyleMain.navTopElements}>
+      <View style={StyleMain.navTopItem}>
+        <View style={StyleMain.navTopElement}>
           <Image
             source={require("../../../assets/icons/png/plantastic.png")}
-            style={{
-              height: 50,
-              width: 50,
-              alignItems: "center",
-              margin: 5,
-            }}
+            style={StyleMain.navTopElementImage}
           />
           <Text style={StyleMain.navTopText}>Plantastic</Text>
         </View>
       </View>
-      {/* -------------------------------------------------- SearchMenu */}
+      {/* -------------------------------------------------- SearchMenu (search button) */}
       <View style={StyleMain.searchMenuWrapperRight}>
-        <View underlayColor="white">
+        <TouchableOpacity>
           <View style={StyleMain.searchMenuWrapper}>
             <View style={StyleMain.searchMenuWrapperFirstRow}>
               <View style={StyleMain.searchMenuItem}></View>
@@ -46,8 +41,8 @@ function NavMainTop() {
               <View style={StyleMain.searchMenuItem}></View>
             </View>
           </View>
-        </View>
-        {/* -------------------------------------------------- Add Task */}
+        </TouchableOpacity>
+        {/* -------------------------------------------------- Add Task (plus button) */}
         <TouchableOpacity>
           {/*onPress={() => handleAddTask()}*/}
           <View style={StyleMain.addWrapper}>
@@ -55,6 +50,7 @@ function NavMainTop() {
           </View>
         </TouchableOpacity>
       </View>
+
       {/* <Route exact path="/" component={Home} /> */}
       {/* <Route path="/searchMenu" component={SearchMenu} /> */}
       {/* <Route path="/today" component={Today} /> */}

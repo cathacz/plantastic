@@ -28,10 +28,16 @@ const StyleMain = StyleSheet.create({
     width: "100%",
   },
   navTopItem: {},
-  navTopElements: {
+  navTopElement: {
     flexDirection: "row",
     alignItems: "baseline",
     justifyContent: "center",
+  },
+  navTopElementImage: {
+    height: 50,
+    width: 50,
+    alignItems: "center",
+    margin: 5,
   },
   navTopText: {
     fontSize: 30,
