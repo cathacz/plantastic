@@ -21,6 +21,9 @@ import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
 
+// screen components >>
+import Overview from "./2_Overview";
+
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
@@ -66,11 +69,7 @@ const Today = ({ navigation, route }) => {
         <View
           underlayColor="rgba(109, 153, 130, 0.25)"
           style={[]}
-          onPress={() =>
-            navigation.navigate("Today", {
-              propOne: "propOne props",
-            })
-          }
+          onPress={() => navigation.navigate("Today")}
         >
           <Image
             source={require("../../../assets/icons/png/shed.png")}
@@ -81,11 +80,7 @@ const Today = ({ navigation, route }) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={[]}
-        onPress={() =>
-          navigation.navigate("Overview", {
-            propOne: "propOne props",
-          })
-        }
+        onPress={() => navigation.navigate("Overview")}
       >
         <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
           <Image
@@ -100,9 +95,12 @@ const Today = ({ navigation, route }) => {
         <Image
           source={require("../../../assets/icons/png/meinGarten.png")}
           style={{ height: 50, width: 50 }}
-        /> */}
-      {/* <Text style={StyleMain.navText}>Mein Garten</Text> */}
-      {/* <Button title="Press" onPress={() => navigation.navigate("MyGarden")} />
+        />
+        <Text style={StyleMain.navText}>Mein Garten</Text>
+        <Button
+          title="Press"
+          onPress={() => navigation.navigate("My Garden")}
+        />
       </View>
 
       <View underlayColor="rgba(109, 153, 130, 0.25)" style={[]}>
@@ -112,6 +110,7 @@ const Today = ({ navigation, route }) => {
         />
         <Text style={StyleMain.navText}>Community</Text>
       </View> */}
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );

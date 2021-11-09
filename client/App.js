@@ -36,24 +36,19 @@ function App() {
           options={{ title: "Wilkommen, username", prop: "props" }}
         />
         <Stack.Screen
-          name="Monthly overview"
+          name="Overview"
           component={Overview}
           options={{ title: "Monatsübersicht" }}
         />
         <Stack.Screen
-          name="My Garden"
+          name="MyGarden"
           component={MyGarden}
           options={{ title: "Mein Garten" }}
         />
         <Stack.Screen
-          name="My Community"
+          name="Community"
           component={Community}
           options={{ title: "Mein Gartenverein" }}
-        />
-        <Stack.Screen
-          name="bottom navigation"
-          component={NavMainBottom}
-          options={{ title: "navBottom", prop: "props" }}
         />
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}

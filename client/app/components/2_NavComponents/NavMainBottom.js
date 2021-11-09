@@ -66,7 +66,6 @@ function NavMainBottom({ navigation }) {
       </TouchableOpacity>
 
       <View
-        to="/myGarden"
         underlayColor="rgba(109, 153, 130, 0.25)"
         style={[StyleMain.navItem, styles.itemThree, StyleMain.navElements]}
       >
