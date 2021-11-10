@@ -19,25 +19,25 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
         {/* Main Screens ---------------------------------- */}
-        {/* <Stack.Screen
-          name="HomeTest"
-          component={HomeTest}
-          options={{ title: "hometest", prop: "props" }}
-        />
-        <Stack.Screen
-          name="newTest"
-          component={newTest}
-          options={{ title: "newtest", prop: "props" }}
-        /> */}
         <Stack.Screen
           name="Today"
           component={Today}
           options={{
             // title: "Wilkommen, username",
-            prop: "props",
+            // prop: "props",
             headerTitle: (props) => <NavMainTop {...props} />,
+            // headerTitleAlign: "left",
+            // headerStyle: {
+            //   backgroundColor: "#f4511e",
+            //   padding: 0,
+            //   margin: 0,
+            //   title: "left",
+            // },
+            // Screen: {
+            //   headerTitleAlign: "flex-start",
+            // },
           }}
         />
         <Stack.Screen

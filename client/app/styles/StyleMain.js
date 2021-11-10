@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from "../config/colors";
+import { Dimensions } from "react-native";
 
 const StyleMain = StyleSheet.create({
   container: {
@@ -24,13 +25,16 @@ const StyleMain = StyleSheet.create({
   navMainTop: {
     borderColor: "purple",
     borderWidth: 1,
-    padding: 5,
-    // position: "absolute",
+    // padding: 5,
     flexDirection: "row",
     justifyContent: "space-between",
-    // alignItems: "flex-end",
-    // alignContent: "flex-end",
+    // alignItems: "center",
     width: "100%",
+    // width: Dimensions.get("window").width,
+
+    // flex: 1,
+    // alignContent: "flex-end",
+    // position: "absolute",
     // height: "100%",
   },
   // navTopItem: { flexDirection: "row" },
@@ -64,7 +68,7 @@ const StyleMain = StyleSheet.create({
   searchMenuWrapper: {
     borderColor: "blue",
     borderWidth: 1,
-    flexDirection: "column",
+    // flexDirection: "column",
     height: 50,
     width: 50,
     // justifyContent: "space-between",
