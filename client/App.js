@@ -19,7 +19,12 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          headerTitleAlign: "center",
+        }}
+      >
         {/* Main Screens ---------------------------------- */}
         <Stack.Screen
           name="Today"
