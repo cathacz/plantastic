@@ -15,12 +15,12 @@ const StyleMain = StyleSheet.create({
     position: "absolute",
     textAlign: "center",
   },
-  flexOneCenterRow: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+  // flexOneCenterRow: {
+  //   flex: 1,
+  //   flexDirection: "row",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
   // ------------------------------ Navigation Main Top
   navMainTop: {
     borderColor: "purple",

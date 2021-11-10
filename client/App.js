@@ -34,33 +34,23 @@ function App() {
             name="Today"
             component={Today}
             options={{
-              headerTitle: (props) => <NavMainTop {...props} />,
-              // headerTitleAlign: "left",
-              // headerStyle: {
-              //   backgroundColor: "#f4511e",
-              //   padding: 0,
-              //   margin: 0,
-              //   title: "left",
-              // },
-              // Screen: {
-              //   headerTitleAlign: "flex-start",
-              // },
+              header: (props) => <NavMainTop {...props} />,
             }}
           />
           <Stack.Screen
             name="Overview"
             component={Overview}
-            // options={{ title: "Monatsübersicht" }}
+            options={{ header: (props) => <NavMainTop {...props} /> }}
           />
           <Stack.Screen
             name="MyGarden"
             component={MyGarden}
-            // options={{ title: "Mein Garten" }}
+            options={{ header: (props) => <NavMainTop {...props} /> }}
           />
           <Stack.Screen
             name="Community"
             component={Community}
-            // options={{ title: "Mein Gartenverein" }}
+            options={{ header: (props) => <NavMainTop {...props} /> }}
           />
         </Stack.Group>
 
