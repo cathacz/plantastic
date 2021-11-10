@@ -23,14 +23,11 @@ function App() {
       <Stack.Navigator screenOptions={{}}>
         {/* Main Screens ---------------------------------- */}
         <Stack.Group
-          screenOptions={{
-            // headerShown: false,
-            headerStyle: {
-              elevation: 1,
-              shadowOpacity: 1,
-              borderBottomWidth: 1,
-            },
-          }}
+          screenOptions={
+            {
+              // headerShown: false,
+            }
+          }
         >
           <Stack.Screen
             name="Today"
