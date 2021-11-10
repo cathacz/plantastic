@@ -23,29 +23,29 @@ function App() {
       <Stack.Navigator screenOptions={{}}>
         {/* Main Screens ---------------------------------- */}
         <Stack.Group
-          screenOptions={{
-            headerShown: false,
-            // headerTitleAlign: "center",
-          }}
+          screenOptions={
+            {
+              // headerShown: false,
+              // headerTitleAlign: "center",
+            }
+          }
         >
           <Stack.Screen
             name="Today"
             component={Today}
-            options={
-              {
-                // headerTitle: (props) => <NavMainTop {...props} />,
-                // headerTitleAlign: "left",
-                // headerStyle: {
-                //   backgroundColor: "#f4511e",
-                //   padding: 0,
-                //   margin: 0,
-                //   title: "left",
-                // },
-                // Screen: {
-                //   headerTitleAlign: "flex-start",
-                // },
-              }
-            }
+            options={{
+              headerTitle: (props) => <NavMainTop {...props} />,
+              // headerTitleAlign: "left",
+              // headerStyle: {
+              //   backgroundColor: "#f4511e",
+              //   padding: 0,
+              //   margin: 0,
+              //   title: "left",
+              // },
+              // Screen: {
+              //   headerTitleAlign: "flex-start",
+              // },
+            }}
           />
           <Stack.Screen
             name="Overview"
