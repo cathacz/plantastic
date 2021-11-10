@@ -36,16 +36,18 @@ const StyleMain = StyleSheet.create({
     flexDirection: "row",
     alignItems: "baseline",
   },
+  // Logo
   navTopElementImage: {
     borderColor: "red",
     borderWidth: 1,
     height: 50,
     width: 50,
   },
+  // Plantastic Title
   navTopText: {
     fontSize: 30,
   },
-  // // SearchMenu
+  // SearchMenu Button
   searchMenuWrapperRight: {
     borderColor: "black",
     borderWidth: 1,
@@ -70,7 +72,7 @@ const StyleMain = StyleSheet.create({
 
     borderBottomRightRadius: 14,
   },
-  // // Add Button
+  // Add Button
   addWrapper: {
     flexDirection: "row",
     marginLeft: 10,

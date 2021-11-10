@@ -9,8 +9,8 @@ import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
-import HomeTest from "./app/screens/trash/HomeTest";
-import newTest from "./app/screens/trash/newTest";
+// import HomeTest from "./app/screens/trash/HomeTest";
+// import newTest from "./app/screens/trash/newTest";
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
 import NavMainTop from "./app/components/2_NavComponents/NavMainTop";
 
@@ -22,43 +22,43 @@ function App() {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-          headerTitleAlign: "center",
+          // headerTitleAlign: "center",
         }}
       >
         {/* Main Screens ---------------------------------- */}
         <Stack.Screen
           name="Today"
           component={Today}
-          options={{
-            // title: "Wilkommen, username",
-            // prop: "props",
-            headerTitle: (props) => <NavMainTop {...props} />,
-            // headerTitleAlign: "left",
-            // headerStyle: {
-            //   backgroundColor: "#f4511e",
-            //   padding: 0,
-            //   margin: 0,
-            //   title: "left",
-            // },
-            // Screen: {
-            //   headerTitleAlign: "flex-start",
-            // },
-          }}
+          options={
+            {
+              // headerTitle: (props) => <NavMainTop {...props} />,
+              // headerTitleAlign: "left",
+              // headerStyle: {
+              //   backgroundColor: "#f4511e",
+              //   padding: 0,
+              //   margin: 0,
+              //   title: "left",
+              // },
+              // Screen: {
+              //   headerTitleAlign: "flex-start",
+              // },
+            }
+          }
         />
         <Stack.Screen
           name="Overview"
           component={Overview}
-          options={{ title: "Monatsübersicht" }}
+          // options={{ title: "Monatsübersicht" }}
         />
         <Stack.Screen
           name="MyGarden"
           component={MyGarden}
-          options={{ title: "Mein Garten" }}
+          // options={{ title: "Mein Garten" }}
         />
         <Stack.Screen
           name="Community"
           component={Community}
-          options={{ title: "Mein Gartenverein" }}
+          // options={{ title: "Mein Gartenverein" }}
         />
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
