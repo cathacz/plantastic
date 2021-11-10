@@ -25,11 +25,13 @@ import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import StyleMain from "../../styles/StyleMain";
 import QuickView from "../2_PlantScreens/QuickView.js";
+import Banderole from "../../components/3_Banderolen/BanderoleDressy";
 
 const MyGarden = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
       {/* --------------------------------------------------------------- Banderole */}
+      <Banderole />
       <View style={StyleMain.banderole}>
         <Text style={StyleMain.mainText}>
           <View style={StyleMain.quick}>

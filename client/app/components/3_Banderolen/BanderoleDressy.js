@@ -5,14 +5,14 @@ import colors from "../../config/colors";
 function BanderoleDressy() {
   return (
     <SafeAreaView style={styles.banderole}>
-      <Text style={styles.mainText}>Banderole Test</Text>
+      <Text style={styles.mainText}>Banderole Dressy</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   banderole: {
-    marginTop: 80,
+    marginTop: 0,
     height: 150,
     width: "100%",
     backgroundColor: colors.sage5,
