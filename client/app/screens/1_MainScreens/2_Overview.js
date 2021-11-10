@@ -38,18 +38,20 @@ const Overview = ({ navigation }) => {
       style={[StyleMain.container, styles.platformContainer]}
       backgroundColor="white"
     >
-      {/* ------------------------------ Navigation Main Top */}
-      <NavMainTop navigation={navigation} />
-      {/* --------------------------------------- SearchMenu */}
-
-      {/* ----------------------------------------- Add Task */}
-
       {/* ---------------------------------------- Banderole */}
 
       {/* ---------------------------------------- Main Part */}
+
+      {/* ---------------------------------------- Something */}
+
+      {/* ---------------------------------------- Something */}
+
+      {/* ---------------------------------------- Something */}
+
       <View style={{ marginTop: 70 }}>
         <Text>This is Overview</Text>
       </View>
+
       {/* --------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
 

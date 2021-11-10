@@ -33,12 +33,11 @@ import QuickView from "../2_PlantScreens/QuickView";
 const Community = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
-      {/* ----------------------------------------------------- Navigation Main Top */}
-      <NavMainTop navigation={navigation} />
-      {/* --------------------------------------------------------------- Banderole */}
+      {/* ----------------------------------------------------- Banderole */}
       <SafeAreaView style={StyleMain.banderole}>
         <Text style={StyleMain.mainText}>Community</Text>
       </SafeAreaView>
+
       {/* ----------------------------------------------------- Main Part */}
       <View style={StyleMain.quick}>
         <Text style={StyleMain.mainText}>

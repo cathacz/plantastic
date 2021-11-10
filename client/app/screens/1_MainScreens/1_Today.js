@@ -51,21 +51,20 @@ const Today = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
-      {/* ---------------------------- Navigation Main Top */}
-      <NavMainTop navigation={navigation} />
-      {/* ------------------------------------- SearchMenu */}
-
-      {/*---------------------------------------- Add Task */}
-
-      {/* --------------------------------------- Banderole*/}
+      {/* -------------------------------------- Banderole */}
 
       {/* -------------------------------------- Main Part */}
+
+      {/* -------------------------------------- Something */}
+
+      {/*--------------------------------------- Something */}
+
       <View style={{ marginTop: 70 }}>
         <Text>This is TODAY</Text>
       </View>
+
       {/* ------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
-
       <StatusBar style="auto" />
     </SafeAreaView>
   );

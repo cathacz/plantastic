@@ -29,8 +29,6 @@ import QuickView from "../2_PlantScreens/QuickView.js";
 const MyGarden = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
-      {/* ----------------------------------------------------- Navigation Main Top */}
-      <NavMainTop navigation={navigation} />
       {/* --------------------------------------------------------------- Banderole */}
       <View style={StyleMain.banderole}>
         <Text style={StyleMain.mainText}>
