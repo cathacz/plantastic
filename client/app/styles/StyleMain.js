@@ -22,37 +22,48 @@ const StyleMain = StyleSheet.create({
   },
   // ------------------------------ Navigation Main Top
   navMainTop: {
+    borderColor: "purple",
+    borderWidth: 1,
+    padding: 5,
     // position: "absolute",
     flexDirection: "row",
     justifyContent: "space-between",
-    // width: "100%",
+    // alignItems: "flex-end",
+    // alignContent: "flex-end",
+    width: "100%",
     // height: "100%",
   },
   // navTopItem: { flexDirection: "row" },
   navTopElement: {
+    borderColor: "green",
+    borderWidth: 1,
     flexDirection: "row",
     alignItems: "baseline",
     // justifyContent: "center",
   },
   navTopElementImage: {
+    borderColor: "red",
+    borderWidth: 1,
     height: 50,
     width: 50,
     // alignItems: "center",
-    margin: 5,
+    // margin: 5,
   },
   navTopText: {
     fontSize: 30,
   },
   // // SearchMenu
   searchMenuWrapperRight: {
-    flexDirection: "row",
     borderColor: "black",
     borderWidth: 1,
+    flexDirection: "row",
     // width: "100%",
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
   },
   searchMenuWrapper: {
+    borderColor: "blue",
+    borderWidth: 1,
     flexDirection: "column",
     height: 50,
     width: 50,
@@ -71,14 +82,16 @@ const StyleMain = StyleSheet.create({
   //   flexDirection: "row",
   //   justifyContent: "space-between",
   // },
-  searchMenuItem: {
+  searchMenuLeaf: {
+    // borderColor: "yellow",
+    // borderWidth: 1,
     height: 23,
     width: 23,
     backgroundColor: colors.sage5,
     borderTopLeftRadius: 14,
     borderBottomRightRadius: 14,
-    borderBottomColor: colors.sage75,
-    borderStyle: "solid",
+    // borderBottomColor: colors.sage75,
+    // borderStyle: "solid",
   },
   // // Add Button
   addWrapper: {
@@ -102,7 +115,7 @@ const StyleMain = StyleSheet.create({
     width: "100%",
     backgroundColor: colors.sage5,
 
-    position: "absolute",
+    // position: "absolute",
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",

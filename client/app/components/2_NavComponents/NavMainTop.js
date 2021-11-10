@@ -32,13 +32,13 @@ function NavMainTop({ navigation }) {
         <TouchableOpacity style={StyleMain.searchMenuButtonWrapper}>
           <View style={StyleMain.searchMenuWrapper}>
             <View style={StyleMain.rowSpaceBetween}>
-              <View style={StyleMain.searchMenuItem}></View>
-              <View style={StyleMain.searchMenuItem}></View>
+              <View style={StyleMain.searchMenuLeaf}></View>
+              <View style={StyleMain.searchMenuLeaf}></View>
             </View>
 
             <View style={StyleMain.rowSpaceBetween}>
-              <View style={StyleMain.searchMenuItem}></View>
-              <View style={StyleMain.searchMenuItem}></View>
+              <View style={StyleMain.searchMenuLeaf}></View>
+              <View style={StyleMain.searchMenuLeaf}></View>
             </View>
           </View>
         </TouchableOpacity>
