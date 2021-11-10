@@ -39,7 +39,7 @@ const Overview = ({ navigation }) => {
       backgroundColor="white"
     >
       {/* ------------------------------ Navigation Main Top */}
-
+      <NavMainTop />
       {/* --------------------------------------- SearchMenu */}
 
       {/* ----------------------------------------- Add Task */}
