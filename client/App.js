@@ -63,12 +63,14 @@ function App() {
             // options={{ title: "Mein Gartenverein" }}
           />
         </Stack.Group>
+
         {/* Screens accessible from top nav---------------------------------- */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
           options={{ title: "Menu" }}
         />
+
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
         {/* Screens accessible from MyGarden---------------------------------- */}
