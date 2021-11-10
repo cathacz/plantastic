@@ -20,15 +20,13 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          // headerTitleAlign: "center",
-        }}
-      >
+      <Stack.Navigator screenOptions={{}}>
         {/* Main Screens ---------------------------------- */}
         <Stack.Group
-          screenOptions={{ headerStyle: { backgroundColor: "papayawhip" } }}
+          screenOptions={{
+            headerShown: false,
+            // headerTitleAlign: "center",
+          }}
         >
           <Stack.Screen
             name="Today"
@@ -69,7 +67,7 @@ function App() {
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
-          // options={{ title: "Mein Gartenverein" }}
+          options={{ title: "Menu" }}
         />
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
