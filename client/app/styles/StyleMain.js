@@ -23,23 +23,23 @@ const StyleMain = StyleSheet.create({
   // },
   // ------------------------------ Navigation Main Top
   navMainTop: {
-    borderColor: "purple",
-    borderWidth: 1,
-    padding: 5,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    padding: 6,
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
   },
   navTopElement: {
-    borderColor: "green",
-    borderWidth: 1,
+    // borderColor: "green",
+    // borderWidth: 1,
     flexDirection: "row",
     alignItems: "baseline",
   },
   // Logo
   navTopElementImage: {
-    borderColor: "red",
-    borderWidth: 1,
+    // borderColor: "red",
+    // borderWidth: 1,
     height: 50,
     width: 50,
   },
@@ -49,14 +49,14 @@ const StyleMain = StyleSheet.create({
   },
   // SearchMenu Button
   searchMenuWrapperRight: {
-    borderColor: "black",
-    borderWidth: 1,
+    // borderColor: "black",
+    // borderWidth: 1,
     flexDirection: "row",
     alignItems: "center",
   },
   searchMenuWrapper: {
-    borderColor: "blue",
-    borderWidth: 1,
+    // borderColor: "blue",
+    // borderWidth: 1,
     height: 50,
     width: 50,
   },
