@@ -34,7 +34,7 @@ const Community = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
       {/* ----------------------------------------------------- Navigation Main Top */}
-      <NavMainTop />
+      <NavMainTop navigation={navigation} />
       {/* --------------------------------------------------------------- Banderole */}
       <SafeAreaView style={StyleMain.banderole}>
         <Text style={StyleMain.mainText}>Community</Text>

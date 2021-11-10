@@ -52,7 +52,7 @@ const Today = ({ navigation, route }) => {
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* ---------------------------- Navigation Main Top */}
-      <NavMainTop />
+      <NavMainTop navigation={navigation} />
       {/* ------------------------------------- SearchMenu */}
 
       {/*---------------------------------------- Add Task */}

@@ -32,7 +32,14 @@ function NavMainTop({ navigation }) {
         name="hamburgerMenu/searchButton"
         style={StyleMain.searchMenuWrapperRight}
       >
-        <TouchableOpacity style={StyleMain.searchMenuButtonWrapper}>
+        <TouchableOpacity
+          style={StyleMain.searchMenuButtonWrapper}
+          onPress={() =>
+            navigation.navigate("SearchMenu", {
+              propOne: "propOne props",
+            })
+          }
+        >
           <View style={StyleMain.searchMenuWrapper}>
             <View style={StyleMain.rowSpaceBetween}>
               <View style={StyleMain.searchMenuLeaf}></View>

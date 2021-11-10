@@ -30,7 +30,7 @@ const MyGarden = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
       {/* ----------------------------------------------------- Navigation Main Top */}
-      <NavMainTop />
+      <NavMainTop navigation={navigation} />
       {/* --------------------------------------------------------------- Banderole */}
       <View style={StyleMain.banderole}>
         <Text style={StyleMain.mainText}>
