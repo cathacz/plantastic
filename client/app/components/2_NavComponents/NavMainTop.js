@@ -27,8 +27,11 @@ function NavMainTop({ navigation }) {
         <Text style={StyleMain.navTopText}>Plantastic</Text>
       </View>
       {/* </View> */}
-      {/* -------------------------------------------------- SearchMenu (search button) */}
-      <View style={StyleMain.searchMenuWrapperRight}>
+      {/* ---------------------------------- SearchMenu (search button) */}
+      <View
+        name="hamburgerMenu/searchButton"
+        style={StyleMain.searchMenuWrapperRight}
+      >
         <TouchableOpacity style={StyleMain.searchMenuButtonWrapper}>
           <View style={StyleMain.searchMenuWrapper}>
             <View style={StyleMain.rowSpaceBetween}>
@@ -42,7 +45,7 @@ function NavMainTop({ navigation }) {
             </View>
           </View>
         </TouchableOpacity>
-        {/* -------------------------------------------------- Add Task (plus button) */}
+        {/* ------------------------------------ Add Task (plus button) */}
         <TouchableOpacity style={StyleMain.addWrapper}>
           {/*onPress={() => handleAddTask()}*/}
           <View style={StyleMain.addButtonLeaf}>
