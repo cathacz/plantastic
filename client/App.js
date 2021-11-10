@@ -26,7 +26,6 @@ function App() {
           screenOptions={
             {
               // headerShown: false,
-              // headerTitleAlign: "center",
             }
           }
         >
