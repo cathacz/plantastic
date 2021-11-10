@@ -33,7 +33,7 @@ function NavMainTop({ navigation }) {
         style={StyleMain.searchMenuWrapperRight}
       >
         <TouchableOpacity
-          style={StyleMain.searchMenuButtonWrapper}
+          style={StyleMain}
           onPress={() =>
             navigation.navigate("SearchMenu", {
               propOne: "propOne props",
@@ -55,7 +55,7 @@ function NavMainTop({ navigation }) {
         {/* ------------------------------------ Add Task (plus button) */}
         <TouchableOpacity style={StyleMain.addWrapper}>
           {/*onPress={() => handleAddTask()}*/}
-          <View style={StyleMain.addButtonLeaf}>
+          <View style={StyleMain}>
             <Text style={StyleMain.addText}>+</Text>
           </View>
         </TouchableOpacity>

@@ -57,20 +57,23 @@ const StyleMain = StyleSheet.create({
   searchMenuWrapper: {
     // borderColor: "blue",
     // borderWidth: 1,
-    height: 50,
-    width: 50,
+    height: 49,
+    width: 49,
+    justifyContent: "space-between",
   },
   rowSpaceBetween: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
   searchMenuLeaf: {
+    // margin: 2,
     height: 23,
     width: 23,
     backgroundColor: colors.sage5,
     borderTopLeftRadius: 14,
-
     borderBottomRightRadius: 14,
+    borderColor: colors.sage75,
+    borderWidth: 2,
   },
   // Add Button
   addWrapper: {
@@ -81,11 +84,14 @@ const StyleMain = StyleSheet.create({
     backgroundColor: colors.sage5,
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
+    borderColor: colors.sage75,
+    borderWidth: 2,
     justifyContent: "center",
     alignItems: "center",
   },
   addText: {
     fontSize: 30,
+    color: colors.sage,
   },
   // -------------------------------------- Banderole
   banderole: {

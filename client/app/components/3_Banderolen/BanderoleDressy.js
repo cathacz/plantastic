@@ -1,12 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import colors from "../../config/colors";
 
 function BanderoleDressy() {
   return (
-    <SafeAreaView style={styles.banderole}>
-      <Text style={styles.mainText}>Banderole Dressy</Text>
-    </SafeAreaView>
+    <View style={styles.banderole}>
+      <View style={styles.quicky}>
+        <Image
+          source={require("../../../assets/icons/png/berries.png")}
+          style={{ height: 50, width: 50, alignItems: "center" }}
+        />
+        <Text style={styles.quickyText}>Beeren</Text>
+      </View>
+    </View>
   );
 }
 
