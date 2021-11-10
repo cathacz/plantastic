@@ -12,6 +12,7 @@ import Community from "./app/screens/1_MainScreens/4_Community";
 import HomeTest from "./app/screens/trash/HomeTest";
 import newTest from "./app/screens/trash/newTest";
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
+import NavMainTop from "./app/components/2_NavComponents/NavMainTop";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +34,11 @@ function App() {
         <Stack.Screen
           name="Today"
           component={Today}
-          options={{ title: "Wilkommen, username", prop: "props" }}
+          options={{
+            // title: "Wilkommen, username",
+            prop: "props",
+            headerTitle: (props) => <NavMainTop {...props} />,
+          }}
         />
         <Stack.Screen
           name="Overview"

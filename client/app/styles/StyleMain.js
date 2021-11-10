@@ -22,47 +22,55 @@ const StyleMain = StyleSheet.create({
   },
   // ------------------------------ Navigation Main Top
   navMainTop: {
-    position: "absolute",
+    // position: "absolute",
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "100%",
+    // width: "100%",
+    // height: "100%",
   },
-  navTopItem: {},
+  // navTopItem: { flexDirection: "row" },
   navTopElement: {
     flexDirection: "row",
     alignItems: "baseline",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   navTopElementImage: {
     height: 50,
     width: 50,
-    alignItems: "center",
+    // alignItems: "center",
     margin: 5,
   },
   navTopText: {
     fontSize: 30,
   },
+  // // SearchMenu
   searchMenuWrapperRight: {
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    borderColor: "black",
+    borderWidth: 1,
+    // width: "100%",
+    justifyContent: "center",
     alignItems: "center",
   },
-  // SearchMenu
   searchMenuWrapper: {
     flexDirection: "column",
     height: 50,
     width: 50,
-    justifyContent: "space-between",
-    alignContent: "space-between",
+    // justifyContent: "space-between",
+    // alignContent: "space-between",
   },
-  searchMenuWrapperFirstRow: {
+  rowSpaceBetween: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  searchMenuWrapperSecondRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
+  // searchMenuWrapperFirstRow: {
+  //   flexDirection: "row",
+  //   justifyContent: "space-between",
+  // },
+  // searchMenuWrapperSecondRow: {
+  //   flexDirection: "row",
+  //   justifyContent: "space-between",
+  // },
   searchMenuItem: {
     height: 23,
     width: 23,
@@ -72,9 +80,10 @@ const StyleMain = StyleSheet.create({
     borderBottomColor: colors.sage75,
     borderStyle: "solid",
   },
-  // Add Button
+  // // Add Button
   addWrapper: {
-    margin: 10,
+    flexDirection: "row",
+    // margin: 10,
     width: 50,
     height: 50,
     backgroundColor: colors.sage5,

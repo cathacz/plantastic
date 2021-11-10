@@ -18,42 +18,38 @@ function NavMainTop({ navigation }) {
   return (
     <SafeAreaView style={StyleMain.navMainTop}>
       {/* -------------------------------------------------------- Logo */}
-      <View style={StyleMain.navTopItem}>
-        <View style={StyleMain.navTopElement}>
-          <Image
-            source={require("../../../assets/icons/png/plantastic.png")}
-            style={StyleMain.navTopElementImage}
-          />
-          <Text style={StyleMain.navTopText}>Plantastic</Text>
-        </View>
+      {/* <View style={StyleMain.navTopItem}> */}
+      <View style={StyleMain.navTopElement}>
+        <Image
+          source={require("../../../assets/icons/png/plantastic.png")}
+          style={StyleMain.navTopElementImage}
+        />
+        <Text style={StyleMain.navTopText}>Plantastic</Text>
       </View>
+      {/* </View> */}
       {/* -------------------------------------------------- SearchMenu (search button) */}
       <View style={StyleMain.searchMenuWrapperRight}>
-        <TouchableOpacity>
+        <TouchableOpacity style={StyleMain.searchMenuButtonWrapper}>
           <View style={StyleMain.searchMenuWrapper}>
-            <View style={StyleMain.searchMenuWrapperFirstRow}>
+            <View style={StyleMain.rowSpaceBetween}>
               <View style={StyleMain.searchMenuItem}></View>
               <View style={StyleMain.searchMenuItem}></View>
             </View>
 
-            <View style={StyleMain.searchMenuWrapperSecondRow}>
+            <View style={StyleMain.rowSpaceBetween}>
               <View style={StyleMain.searchMenuItem}></View>
               <View style={StyleMain.searchMenuItem}></View>
             </View>
           </View>
         </TouchableOpacity>
         {/* -------------------------------------------------- Add Task (plus button) */}
-        <TouchableOpacity>
+        <TouchableOpacity style={StyleMain.addWrapper}>
           {/*onPress={() => handleAddTask()}*/}
-          <View style={StyleMain.addWrapper}>
+          <View style={StyleMain.addButtonLeaf}>
             <Text style={StyleMain.addText}>+</Text>
           </View>
         </TouchableOpacity>
       </View>
-
-      {/* <Route exact path="/" component={Home} /> */}
-      {/* <Route path="/searchMenu" component={SearchMenu} /> */}
-      {/* <Route path="/today" component={Today} /> */}
     </SafeAreaView>
   );
 }
@@ -61,3 +57,13 @@ function NavMainTop({ navigation }) {
 const styles = StyleSheet.create({});
 
 export default NavMainTop;
+
+{
+  /* <Route exact path="/" component={Home} /> */
+}
+{
+  /* <Route path="/searchMenu" component={SearchMenu} /> */
+}
+{
+  /* <Route path="/today" component={Today} /> */
+}
