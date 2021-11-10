@@ -10,7 +10,6 @@ import {
 } from "react-native";
 import colors from "../../config/colors";
 
-import Today from "../1_MainScreens/1_Today";
 import Terms from "./Terms";
 import StyleMain from "../../styles/StyleMain";
 import StylePlants from "../../styles/StylePlants";
@@ -18,9 +17,10 @@ import StylePlants from "../../styles/StylePlants";
 const SearchMenu = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
-      <SafeAreaView style={StylePlants.navMainTop}>
-        <View to="/today" underlayColor="white" style={StylePlants.navTopItem}>
-          <View style={StylePlants.navTopElements}>
+      {/* back button */}
+      <View style={StylePlants}>
+        <View underlayColor="white" style={StylePlants}>
+          <View style={StylePlants}>
             <Image
               source={require("../../../assets/icons/png/back-button.png")}
               style={{
@@ -32,13 +32,14 @@ const SearchMenu = () => {
             />
           </View>
         </View>
+        {/* main content */}
         <Text style={styles.text}>
           Here will be a Searchbar and the MainMenu
         </Text>
         <Text>
           <View style={StyleMain.quick}>
             <View
-              to="/Terms"
+              name="Terms-link?"
               underlayColor={colors.sage25}
               style={styles.quickLink}
             >
@@ -52,7 +53,7 @@ const SearchMenu = () => {
             </View>
           </View>
         </Text>
-      </SafeAreaView>
+      </View>
 
       <StatusBar style="auto" />
     </SafeAreaView>
