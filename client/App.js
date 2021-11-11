@@ -11,7 +11,7 @@ import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
 import QuickView from "./app/screens/2_PlantScreens/QuickView";
-import SettingMenu from "./app/screens/4_SettingsScreens/SettingMenu";
+import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 // piece components >>
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
