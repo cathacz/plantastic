@@ -153,4 +153,5 @@ function App() {
 //   textLogo: { fontSize: 40, textAlign: "center" },
 //   text: { fontSize: 22.5, textAlign: "center" },
 // });
+
 export default App;

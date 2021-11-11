@@ -17,7 +17,7 @@ import NavMainTop from "../../../components/MainComponents/NavMainTop";
 import NavMainBottom from "../../../components/MainComponents/NavMainBottom";
 import StyleMain from "../../../styles/StyleMain";
 
-const Community = () => {
+const Overview = () => {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -34,13 +34,12 @@ const Community = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
       <NavMainTop />
-      <Text style={StyleMain.mainText}>Penis</Text>
       <NavMainBottom />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  itemThree: { backgroundColor: colors.sage25 },
+  itemOne: { backgroundColor: colors.sage25 },
 });
-export default Community;
+export default Overview;
