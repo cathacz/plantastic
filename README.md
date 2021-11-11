@@ -148,6 +148,15 @@ Scripts:
 
 <!-- expo scripts -->
 
+## Debugging
+
+In order to see your console.log's:
+
+```
+npm i react-native-android-log
+npm i react-native-log-ios
+```
+
 ## Basic Express setup:
 
 To start new express project
@@ -251,11 +260,36 @@ plugins: [
     ],
 ```
 
+## Open Weather Map API
+
+Generate API_KEY
+
+- Create an account at the [website](https://openweathermap.org/).
+- Get your API KEY by email.
+- Create `.env` file on the project root and insert yout key like this: `API_KEY=<open_weather_map_api_key>`
+
+Weather API app developed in react-native with use of:
+
+- geolocation,
+- OpenWeather API,
+- React-Native-Async-Storage - data of weather coming from API calling persisting in cache even if the gps, and internet connection connection goes down for a while.
+
+You need to install:
+
+```
+npm install date-fns --save
+npm install expo-localization
+expo install expo-localization
+npm install expo-location
+npm install @react-native-async-storage/async-storage
+```
+
+Usage of react-native-async-storage at the [website](https://react-native-async-storage.github.io/async-storage/)
+
 ## Calendar
 
 ```
 npm install --save moment react-moment
 expo install expo-calendar
-expo install expo-localization
 npm install react-native-calendar-strip
 ```
