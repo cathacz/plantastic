@@ -78,7 +78,7 @@ const Overview = () => {
         <View
           style={{
             width: "100%",
-            marginTop: 70,
+            marginTop: 90,
             height: 150,
             backgroundColor: colors.sage5,
             position: "absolute",
