@@ -11,6 +11,7 @@ import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
 import QuickView from "./app/screens/2_PlantScreens/QuickView";
+import SettingMenu from "./app/screens/4_SettingsScreens/SettingMenu";
 
 // piece components >>
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
@@ -58,7 +59,7 @@ function App() {
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
-          options={{ title: "Menu" }}
+          options={{ title: "Search Menu" }}
         />
 
         {/* Screens accessible from Today---------------------------------- */}
@@ -71,6 +72,11 @@ function App() {
         />
         {/* Screens accessible from MyCommunity---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}
+        <Stack.Screen
+          name="SettingsMenu"
+          component={SettingsMenu}
+          options={{ title: "Search Menu" }}
+        />
         {/* Screens accessible from ---------------------------------- */}
       </Stack.Navigator>
     </NavigationContainer>
