@@ -10,6 +10,7 @@ import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
+import QuickViewPlant from "./app/screens/2_PlantScreens/QuickView";
 
 // piece components >>
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
@@ -63,6 +64,11 @@ function App() {
         {/* Screens accessible from Today---------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
         {/* Screens accessible from MyGarden---------------------------------- */}
+        <Stack.Screen
+          name="QuickViewPlant"
+          component={QuickViewPlant}
+          options={{ header: (props) => <NavMainTop {...props} /> }}
+        />
         {/* Screens accessible from MyCommunity---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}
         {/* Screens accessible from ---------------------------------- */}

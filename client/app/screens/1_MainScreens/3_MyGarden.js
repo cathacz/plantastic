@@ -14,43 +14,21 @@ import {
 } from "react-native";
 
 import colors from "../../config/colors";
+import StyleMain from "../../styles/StyleMain";
 
-import Today from "./1_Today";
-import Overview from "./2_Overview";
-import Community from "./4_Community";
+import QuickView from "../2_PlantScreens/QuickView.js";
 
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-import StyleMain from "../../styles/StyleMain";
-import QuickView from "../2_PlantScreens/QuickView.js";
-import Banderole from "../../components/3_Banderolen/BanderoleDressy";
+import MyGardenBanderole from "../../components/3_Banderolen/MyGardenBanderole";
 
 const MyGarden = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleMain.container}>
       {/* --------------------------------------------------------------- Banderole */}
-      <Banderole />
-      <View style={StyleMain.banderole}>
-        <Text style={StyleMain.mainText}>
-          <View style={StyleMain.quick}>
-            <View
-              to="/quickView"
-              underlayColor={colors.sage25}
-              style={styles.quickLink}
-            >
-              <View style={styles.quicky}>
-                <Image
-                  source={require("../../../assets/icons/png/berries.png")}
-                  style={{ height: 50, width: 50, alignItems: "center" }}
-                />
-                <Text style={styles.quickyText}>Beeren</Text>
-              </View>
-            </View>
-          </View>
-        </Text>
-      </View>
+      <MyGardenBanderole navigation={navigation} />
       {/* ----------------------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Navigation Main Bottom */}

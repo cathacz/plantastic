@@ -95,12 +95,9 @@ const StyleMain = StyleSheet.create({
   },
   // -------------------------------------- Banderole
   banderole: {
-    marginTop: 90,
-    height: 150,
+    height: 200,
     width: "100%",
     backgroundColor: colors.sage5,
-
-    // position: "absolute",
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
