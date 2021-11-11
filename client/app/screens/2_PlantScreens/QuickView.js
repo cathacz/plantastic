@@ -24,16 +24,12 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import Task from "../../components/Task";
 import StylePlants from "../../styles/StylePlants";
 
-const QuickView = () => {
+const QuickView = ({ navigation }) => {
   return (
     <SafeAreaView style={StylePlants.container}>
       {/* ----------------------------------------------------- Navigation Main Top */}
       <SafeAreaView style={StylePlants.navMainTop}>
-        <View
-          to="/myGarden"
-          underlayColor="white"
-          style={StylePlants.navTopItem}
-        >
+        <View underlayColor="white" style={StylePlants.navTopItem}>
           <View style={StylePlants.navTopElements}>
             <Image
               source={require("../../../assets/icons/png/back-button.png")}

@@ -10,7 +10,7 @@ function MyGardenBanderole({ navigation }) {
     <TouchableOpacity
       style={StyleMain.banderole}
       onPress={() =>
-        navigation.navigate("QuickViewPLant", {
+        navigation.navigate("QuickView", {
           propOne: "propOne props",
         })
       }
