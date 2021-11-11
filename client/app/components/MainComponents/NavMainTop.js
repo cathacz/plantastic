@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../../config/colors";
-import Today from "../../screens/ComponentsTest/Today";
+import Today from "../../screens/NavBottomMain/Today";
 import SearchMenu from "../../screens/SearchMenu";
 import StyleMain from "../../styles/StyleMain";
 

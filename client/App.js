@@ -1,36 +1,39 @@
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
+import { NativeRouter, Route, Link, Switch } from "react-router-native";
 import colors from "./app/config/colors";
-// import Home from "./app/screens/Home";
-// import Today from "./app/screens/Today";
-import Overview from "./app/screens/Overview";
-import MyGarden from "./app/screens/MyGarden";
-import Community from "./app/screens/Community";
+import Home from "./app/screens/0_Home";
+import Today from "./app/screens/NavBottomMain/Today";
+import Overview from "./app/screens/NavBottomMain/Overview";
+import MyGarden from "./app/screens/NavBottomMain/MyGarden";
+import Community from "./app/screens/NavBottomMain/Community";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import { render } from "react-dom";
+import QuickView from "./app/screens/QuickView";
+import PlantPortrait from "./app/screens/PlantPortrait";
+import Diary from "./app/screens/Diary";
+import SearchMenu from "./app/screens/SearchMenu";
 // import NavMainBottom from "./app/components/MainComponents/NavMainBottom";
 // import NavMainTop from "./app/components/MainComponents/NavMainTop";
-
-import Today from "./app/screens/Today";
 
 const App = () => {
   return (
     <SafeAreaView style={styles.router}>
-      {/* <Link to="/today" underlayColor={colors.sage25} style={styles.item}>
-          <View style={styles.elements}>
-            <Image
-              source={require("./assets/icons/png/plantastic.png")}
-              style={{
-                height: 100,
-                width: 100,
-                margin: 5,
-                justifyContent: "center",
-              }}
-            />
-            <Text style={styles.textLogo}>Plantastic</Text>
-            <Text style={styles.text}>Let's get started</Text>
-          </View>
-        </Link> */}
+      <NativeRouter>
+        <View style={styles.container}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/today" component={Today} />
+            <Route exact path="/overview" component={Overview} />
+            <Route exact path="/myGarden" component={MyGarden} />
+            <Route exact path="/community" component={Community} />
+            <Route exact path="/quickView" component={QuickView} />
+            <Route exact path="/plantportrait" component={PlantPortrait} />
+            <Route exact path="/diary" component={Diary} />
+            <Route exact path="/searchMenu" component={SearchMenu} />
+          </Switch>
+        </View>
+      </NativeRouter>
       <Today />
     </SafeAreaView>
   );
@@ -45,26 +48,5 @@ const styles = StyleSheet.create({
     alignContent: "center",
     justifyContent: "center",
   },
-  item: {
-    width: "100%",
-    height: "100%",
-    alignContent: "center",
-    justifyContent: "center",
-    borderColor: colors.sage75,
-    borderStyle: "solid",
-    borderWidth: 23,
-  },
-  elements: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    borderColor: colors.sage5,
-    borderStyle: "solid",
-    borderWidth: 30,
-    alignContent: "center",
-    justifyContent: "center",
-  },
-  textLogo: { fontSize: 40, textAlign: "center" },
-  text: { fontSize: 22.5, textAlign: "center" },
 });
 export default App;

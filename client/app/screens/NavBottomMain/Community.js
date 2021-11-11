@@ -34,6 +34,7 @@ const Community = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
       <NavMainTop />
+      <Text style={StyleMain.mainText}>Penis</Text>
       <NavMainBottom />
     </SafeAreaView>
   );
