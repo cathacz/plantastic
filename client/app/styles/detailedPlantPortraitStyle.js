@@ -19,6 +19,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   monthsInnerContainer: { display: "flex", flexDirection: "row" },
   monthBox: { width: 25, height: 15, display: "flex", flexDirection: "row" },
   monthName: { borderColor: "yellow", color: "black", fontSize: 9 },
+
   // main content
   mainContent: { marginBottom: 90 },
 });

@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from "../config/colors";
+import { Dimensions } from "react-native";
 
 const StyleMain = StyleSheet.create({
   container: {
@@ -14,74 +15,89 @@ const StyleMain = StyleSheet.create({
     position: "absolute",
     textAlign: "center",
   },
+  // flexOneCenterRow: {
+  //   flex: 1,
+  //   flexDirection: "row",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
   // ------------------------------ Navigation Main Top
   navMainTop: {
-    position: "absolute",
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    padding: 6,
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
   },
-  navTopItem: {},
-  navTopElements: {
+  navTopElement: {
+    // borderColor: "green",
+    // borderWidth: 1,
     flexDirection: "row",
     alignItems: "baseline",
-    justifyContent: "center",
   },
+  // Logo
+  navTopElementImage: {
+    // borderColor: "red",
+    // borderWidth: 1,
+    height: 50,
+    width: 50,
+  },
+  // Plantastic Title
   navTopText: {
     fontSize: 30,
   },
+  // SearchMenu Button
   searchMenuWrapperRight: {
+    // borderColor: "black",
+    // borderWidth: 1,
     flexDirection: "row",
-    justifyContent: "space-evenly",
     alignItems: "center",
   },
-  // SearchMenu
   searchMenuWrapper: {
-    flexDirection: "column",
-    height: 50,
-    width: 50,
+    // borderColor: "blue",
+    // borderWidth: 1,
+    height: 49,
+    width: 49,
     justifyContent: "space-between",
-    alignContent: "space-between",
   },
-  searchMenuWrapperFirstRow: {
+  rowSpaceBetween: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  searchMenuWrapperSecondRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  searchMenuItem: {
+  searchMenuLeaf: {
+    // margin: 2,
     height: 23,
     width: 23,
     backgroundColor: colors.sage5,
     borderTopLeftRadius: 14,
     borderBottomRightRadius: 14,
-    borderBottomColor: colors.sage75,
-    borderStyle: "solid",
+    borderColor: colors.sage75,
+    borderWidth: 2,
   },
   // Add Button
   addWrapper: {
-    margin: 10,
+    flexDirection: "row",
+    marginLeft: 10,
     width: 50,
     height: 50,
     backgroundColor: colors.sage5,
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
+    borderColor: colors.sage75,
+    borderWidth: 2,
     justifyContent: "center",
     alignItems: "center",
   },
   addText: {
     fontSize: 30,
+    color: colors.sage,
   },
   // -------------------------------------- Banderole
   banderole: {
-    marginTop: 90,
-    height: 150,
+    height: 200,
     width: "100%",
     backgroundColor: colors.sage5,
-
-    position: "absolute",
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
@@ -107,10 +123,13 @@ const StyleMain = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
-  navElements: {
+  navElement: {
     alignItems: "center",
     justifyContent: "center",
+  },
+  navElementImage: {
+    height: 50,
+    width: 50,
   },
   navText: {
     marginTop: 5,

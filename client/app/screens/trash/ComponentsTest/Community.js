@@ -11,13 +11,13 @@ import {
   ScrollView,
   TextInput,
 } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../../config/colors";
-import NavMainTop from "../../components/MainComponents/NavMainTop";
-import NavMainBottom from "../../components/MainComponents/NavMainBottom";
-import StyleMain from "../../styles/StyleMain";
+// import { NativeRouter, Route, Link } from "react-router-native";
+import colors from "../../../config/colors";
+import NavMainTop from "../../../components/MainComponents/NavMainTop";
+import NavMainBottom from "../../../components/MainComponents/NavMainBottom";
+import StyleMain from "../../../styles/StyleMain";
 
-const Today = () => {
+const Community = () => {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -34,13 +34,13 @@ const Today = () => {
   return (
     <SafeAreaView style={StyleMain.container}>
       <NavMainTop />
-
+      <Text style={StyleMain.mainText}>Penis</Text>
       <NavMainBottom />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  itemOne: { backgroundColor: colors.sage25 },
+  itemThree: { backgroundColor: colors.sage25 },
 });
-export default Today;
+export default Community;
