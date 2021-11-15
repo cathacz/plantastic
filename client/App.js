@@ -4,6 +4,9 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// elements >>
+import { Button } from "react-native";
+
 // Screen components for navigator >>
 import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
@@ -57,7 +60,21 @@ function App() {
             }
           }
         >
-          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="QuickView"
+            component={QuickView}
+            options={
+              {
+                // headerLeft: () => (
+                //   <Button
+                //     onPress={() => alert("This is a button placeholder for the custom back button!")}
+                //     title="<"
+                //     color="blue"
+                //   />
+                // ),
+              }
+            }
+          />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
