@@ -13,10 +13,11 @@ import {
   TextInput,
 } from "react-native";
 
-import Today from "./1_Today";
-import Overview from "./2_Overview";
-import MyGarden from "./3_MyGarden";
+// import Today from "./1_Today";
+// import Overview from "./2_Overview";
+// import MyGarden from "./3_MyGarden";
 // import Community from "./Community";
+// import QuickView from "../2_PlantScreens/1_QuickView";
 
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
@@ -28,7 +29,6 @@ import colors from "../../config/colors";
 import Task from "../../components/Task";
 import StyleMain from "../../styles/StyleMain";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-import QuickView from "../2_PlantScreens/1_QuickView";
 
 const Community = ({ navigation }) => {
   return (

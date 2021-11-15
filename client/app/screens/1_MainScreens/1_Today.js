@@ -21,9 +21,6 @@ import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
 
-// screen components >>
-import Overview from "./2_Overview";
-
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
