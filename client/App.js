@@ -9,8 +9,13 @@ import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
+
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
+
 import QuickView from "./app/screens/2_PlantScreens/QuickView";
+import PlantPortrait from "./app/screens/2_PlantScreens/PlantPortrait";
+import Diary from "./app/screens/2_PlantScreens/Diary";
+
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 // piece components >>
@@ -48,6 +53,16 @@ function App() {
         <Stack.Screen
           name="QuickView"
           component={QuickView}
+          options={{ header: (props) => <NavMainTop {...props} /> }}
+        />
+        <Stack.Screen
+          name="PlantPortrait"
+          component={PlantPortrait}
+          options={{ header: (props) => <NavMainTop {...props} /> }}
+        />
+        <Stack.Screen
+          name="Diary"
+          component={Diary}
           options={{ header: (props) => <NavMainTop {...props} /> }}
         />
         {/* Screens accessible from MyCommunity------------------------------- */}
