@@ -14,11 +14,6 @@ import {
   TextInput,
 } from "react-native";
 
-// navigation components >>
-// import Today from "./1_Today";
-// import MyGarden from "./3_MyGarden";
-// import Community from "./4_Community";
-
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";

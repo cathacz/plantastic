@@ -13,15 +13,15 @@ import {
   TextInput,
 } from "react-native";
 
+// piece components >>
+import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
+// import Task from "../../components/Task";
+
 // for styling >>
 import colors from "../../config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import StylePlants from "../../styles/StylePlants";
 import StyleMain from "../../styles/StyleMain";
-
-// piece components >>
-import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
-// import Task from "../../components/Task";
 
 const Diary = ({ navigation }) => {
   return (
