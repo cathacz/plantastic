@@ -16,7 +16,7 @@ import {
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
-import QuickView from "../2_PlantScreens/QuickView.js";
+import QuickView from "../2_PlantScreens/1_QuickView.js";
 
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";

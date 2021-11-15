@@ -15,9 +15,9 @@ import Community from "./app/screens/1_MainScreens/4_Community";
 
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
 
-import QuickView from "./app/screens/2_PlantScreens/QuickView";
-import PlantPortrait from "./app/screens/2_PlantScreens/PlantPortrait";
-import Diary from "./app/screens/2_PlantScreens/Diary";
+import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
+import PlantPortrait from "./app/screens/2_PlantScreens/2_PlantPortrait";
+import Diary from "./app/screens/2_PlantScreens/3_Diary";
 
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 

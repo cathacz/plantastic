@@ -28,7 +28,7 @@ import colors from "../../config/colors";
 import Task from "../../components/Task";
 import StyleMain from "../../styles/StyleMain";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-import QuickView from "../2_PlantScreens/QuickView";
+import QuickView from "../2_PlantScreens/1_QuickView";
 
 const Community = ({ navigation }) => {
   return (
