@@ -15,7 +15,7 @@ function MyGardenBanderole({ navigation }) {
         })
       }
     >
-      <View style={styles}>
+      <View style={StyleMain}>
         <Image
           source={require("../../../assets/icons/png/berries.png")}
           style={{ height: 50, width: 50, alignItems: "center" }}

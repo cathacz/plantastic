@@ -13,11 +13,6 @@ import {
   TextInput,
 } from "react-native";
 
-// import MyGarden from "../1_MainScreens/3_MyGarden";
-// import QuickView from "./QuickView.js";
-// import PlantPortrait from "./PlantPortrait";
-// import Diary from "./Diary";
-
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 import Task from "../../components/Task";

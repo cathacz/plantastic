@@ -13,10 +13,6 @@ import {
   TextInput,
 } from "react-native";
 
-// import MyGarden from "../1_MainScreens/3_MyGarden";
-// import QuickView from "./QuickView.js";
-// import PlantPortrait from "./PlantPortrait";
-
 // for styling >>
 import colors from "../../config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";

@@ -13,11 +13,6 @@ import {
   TextInput,
 } from "react-native";
 
-// import MyGarden from "../1_MainScreens/3_MyGarden";
-// import QuickView from "./QuickView.js";
-// import PlantPortrait from "./PlantPortrait";
-// import Diary from "./Diary";
-
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 import Task from "../../components/Task";
@@ -35,20 +30,7 @@ const QuickView = ({ navigation }) => {
       <StatusBar style="auto" />
 
       {/* ----------------------------------------------------- Navigation Main Top */}
-      <SafeAreaView style={StylePlants.navMainTop}>
-        <View underlayColor="white" style={StylePlants.navTopItem}>
-          <View style={StylePlants.navTopElements}>
-            <Image
-              source={require("../../../assets/icons/png/back-button.png")}
-              style={{
-                height: 50,
-                width: 50,
-                margin: 5,
-              }}
-            />
-          </View>
-        </View>
-      </SafeAreaView>
+
       {/* --------------------------------------------------------------- Banderole */}
       <SafeAreaView style={StylePlants.banderole}>
         <Text style={StylePlants.mainText}>kurz {"&"} dreckig</Text>
@@ -68,3 +50,21 @@ const styles = StyleSheet.create({
   // },
 });
 export default QuickView;
+
+// unused on this screen:
+/*
+      <SafeAreaView style={StylePlants.navMainTop}>
+        <View underlayColor="white" style={StylePlants.navTopItem}>
+          <View style={StylePlants.navTopElements}>
+            <Image
+              source={require("../../../assets/icons/png/back-button.png")}
+              style={{
+                height: 50,
+                width: 50,
+                margin: 5,
+              }}
+            />
+          </View>
+        </View>
+      </SafeAreaView>
+*/
