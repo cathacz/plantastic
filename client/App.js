@@ -4,13 +4,21 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// elements >>
+import { Button } from "react-native";
+
 // Screen components for navigator >>
 import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
+
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
-import QuickView from "./app/screens/2_PlantScreens/QuickView";
+
+import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
+import PlantPortrait from "./app/screens/2_PlantScreens/2_PlantPortrait";
+import Diary from "./app/screens/2_PlantScreens/3_Diary";
+
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 // piece components >>
@@ -23,61 +31,57 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
-        {/* Main Screens ---------------------------------- */}
+        {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
-          screenOptions={
-            {
-              // headerShown: false,
-            }
-          }
+          screenOptions={{
+            header: (props) => <NavMainTop {...props} />,
+          }}
         >
-          <Stack.Screen
-            name="Today"
-            component={Today}
-            options={{
-              header: (props) => <NavMainTop {...props} />,
-            }}
-          />
-          <Stack.Screen
-            name="Overview"
-            component={Overview}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
-          <Stack.Screen
-            name="MyGarden"
-            component={MyGarden}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
-          <Stack.Screen
-            name="Community"
-            component={Community}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
+          <Stack.Screen name="Today" component={Today} options={{}} />
+          <Stack.Screen name="Overview" component={Overview} options={{}} />
+          <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
+          <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
 
-        {/* Screens accessible from top nav---------------------------------- */}
+        {/* Screens accessible from top nav----------------------------------- */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
           options={{ title: "Search Menu" }}
         />
 
-        {/* Screens accessible from Today---------------------------------- */}
+        {/* Screens accessible from Today------------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
         {/* Screens accessible from MyGarden---------------------------------- */}
-        <Stack.Screen
-          name="QuickView"
-          component={QuickView}
-          options={{ header: (props) => <NavMainTop {...props} /> }}
-        />
-        {/* Screens accessible from MyCommunity---------------------------------- */}
-        {/* Screens accessible from ---------------------------------- */}
+        <Stack.Group
+          screenOptions={
+            {
+              // headerLeft: () => (
+              //   <Button
+              //     onPress={() => alert("This is a button placeholder for the custom back button!")}
+              //     title="<"
+              //     color="blue"
+              //   />
+              // ),
+            }
+          }
+        >
+          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="PlantPortrait"
+            component={PlantPortrait}
+            options={{}}
+          />
+          <Stack.Screen name="Diary" component={Diary} options={{}} />
+        </Stack.Group>
+        {/* Screens accessible from MyCommunity------------------------------- */}
+        {/* Screens accessible from ------------------------------------------ */}
         {/* <Stack.Screen
           name="SettingsMenu"
           component={SettingsMenu}
           options={{ title: "Search Menu" }}
         /> */}
-        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ------------------------------------------ */}
       </Stack.Navigator>
     </NavigationContainer>
   );

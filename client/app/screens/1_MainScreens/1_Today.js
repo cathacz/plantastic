@@ -14,6 +14,7 @@ import {
   TextInput,
   Button,
 } from "react-native";
+// import { StatusBar } from "expo-status-bar";
 
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
@@ -21,15 +22,10 @@ import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
 
-// screen components >>
-import Overview from "./2_Overview";
-
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
-// import { Colors } from "react-native/Libraries/NewAppScreen";
-// import colors from "../../config/colors";
-
-// import { StatusBar } from "expo-status-bar";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import colors from "../../config/colors";
 
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");

@@ -13,22 +13,16 @@ import {
   TextInput,
 } from "react-native";
 
-import Today from "./1_Today";
-import Overview from "./2_Overview";
-import MyGarden from "./3_MyGarden";
-// import Community from "./Community";
-
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
+import Task from "../../components/Task";
+import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 
+// for styling >>
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
-
-import Task from "../../components/Task";
 import StyleMain from "../../styles/StyleMain";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
-import QuickView from "../2_PlantScreens/QuickView";
 
 const Community = ({ navigation }) => {
   return (
@@ -42,17 +36,13 @@ const Community = ({ navigation }) => {
       <View style={StyleMain.quick}>
         <Text style={StyleMain.mainText}>
           <View style={StyleMain.quick}>
-            <View
-              to="/quickView"
-              underlayColor={colors.sage25}
-              style={styles.quickLink}
-            >
-              <View style={styles.quicky}>
+            <View underlayColor={colors.sage25} style={StyleMain}>
+              <View style={StyleMain}>
                 <Image
                   source={require("../../../assets/icons/png/berries.png")}
                   style={{ height: 50, width: 50, alignItems: "center" }}
                 />
-                <Text style={styles.quickyText}>Beeren</Text>
+                <Text style={StyleMain}>Beeren</Text>
               </View>
             </View>
           </View>
@@ -67,15 +57,16 @@ const Community = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  // platformContainer: {
-  //   flex: 1,
-  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  // },
-});
 export default Community;
 
-// unused stuff >>
+// unused stuff >
+
+// const styles = StyleSheet.create({
+//   // platformContainer: {
+//   //   flex: 1,
+//   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+//   // },
+// });
 
 {
   /* <SafeAreaView style={StyleMain.navMainTop}>
