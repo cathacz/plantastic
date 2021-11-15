@@ -29,26 +29,6 @@ const Diary = ({ navigation }) => {
 
       <StatusBar style="auto" />
 
-      {/* ----------------------------------------------------- Navigation Main Top */}
-      <SafeAreaView style={StylePlants.navMainTop}>
-        <View
-          to="/myGarden"
-          underlayColor="white"
-          style={StylePlants.navTopItem}
-        >
-          <View style={StylePlants.navTopElements}>
-            <Image
-              source={require("../../../assets/icons/png/back-button.png")}
-              style={{
-                height: 50,
-                width: 50,
-                alignItems: "center",
-                margin: 5,
-              }}
-            />
-          </View>
-        </View>
-      </SafeAreaView>
       {/* --------------------------------------------------------------- Banderole */}
       <SafeAreaView style={StylePlants.banderole}>
         <Text style={StylePlants.mainText}>Tagebuch</Text>
@@ -68,3 +48,27 @@ const styles = StyleSheet.create({
   // },
 });
 export default Diary;
+// unused by this component >>
+
+{
+  /* ----------------------------------------------------- Navigation Main Top */
+}
+// <SafeAreaView style={StylePlants.navMainTop}>
+//   <View
+//     to="/myGarden"
+//     underlayColor="white"
+//     style={StylePlants.navTopItem}
+//   >
+//     <View style={StylePlants.navTopElements}>
+//       <Image
+//         source={require("../../../assets/icons/png/back-button.png")}
+//         style={{
+//           height: 50,
+//           width: 50,
+//           alignItems: "center",
+//           margin: 5,
+//         }}
+//       />
+//     </View>
+//   </View>
+// </SafeAreaView>
