@@ -12,6 +12,7 @@ import {
 import StyleMain from "../../styles/StyleMain";
 import StylePlants from "../../styles/StylePlants";
 import colors from "../../config/colors";
+// style for active tab: StylePlants.active
 
 function PlantBottomNav({ navigation }) {
   return (
@@ -25,7 +26,7 @@ function PlantBottomNav({ navigation }) {
           })
         }
         underlayColor={colors.sage25}
-        style={[StylePlants.navItem, StylePlants.active]}
+        style={[StylePlants.navItem]}
       >
         <View style={StylePlants.navElements}>
           <Image
