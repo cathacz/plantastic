@@ -16,11 +16,12 @@ import {
 // for styling >>
 import colors from "../../config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import StylePlants from "../../styles/StylePlants";
+import StyleMain from "../../styles/StyleMain";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 // import Task from "../../components/Task";
-import StylePlants from "../../styles/StylePlants";
 
 const Diary = ({ navigation }) => {
   return (
@@ -30,7 +31,7 @@ const Diary = ({ navigation }) => {
       <StatusBar style="auto" />
 
       {/* ----------------------------------------------------- Banderole */}
-      <SafeAreaView style={StylePlants.banderole}>
+      <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>Tagebuch</Text>
       </SafeAreaView>
       {/* ----------------------------------------------------- Main Part */}

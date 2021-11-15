@@ -16,9 +16,10 @@ import {
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 // import Task from "../../components/Task";
-import StylePlants from "../../styles/StylePlants";
 
 // for styling >>
+import StylePlants from "../../styles/StylePlants";
+import StyleMain from "../../styles/StyleMain";
 import colors from "../../config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
@@ -32,7 +33,7 @@ const QuickView = ({ navigation }) => {
       {/* ----------------------------------------------------- Navigation Main Top */}
 
       {/* --------------------------------------------------------------- Banderole */}
-      <SafeAreaView style={StylePlants.banderole}>
+      <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>kurz {"&"} dreckig</Text>
       </SafeAreaView>
       {/* ----------------------------------------------------- Main Part */}

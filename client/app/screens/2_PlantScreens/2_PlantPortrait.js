@@ -16,9 +16,10 @@ import {
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 // import Task from "../../components/Task";
-import StylePlants from "../../styles/StylePlants";
 
 // for styling >>
+import StylePlants from "../../styles/StylePlants";
+import StyleMain from "../../styles/StyleMain";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
@@ -30,7 +31,7 @@ const PlantPortrait = ({ navigation }) => {
       <StatusBar style="auto" />
 
       {/* --------------------------------------------------------------- Banderole */}
-      <SafeAreaView style={StylePlants.banderole}>
+      <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
       </SafeAreaView>
       {/* ----------------------------------------------------- Main Part */}
