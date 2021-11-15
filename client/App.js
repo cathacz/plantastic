@@ -25,34 +25,14 @@ function App() {
       <Stack.Navigator screenOptions={{}}>
         {/* Main Screens ---------------------------------- */}
         <Stack.Group
-          screenOptions={
-            {
-              // headerShown: false,
-            }
-          }
+          screenOptions={{
+            header: (props) => <NavMainTop {...props} />,
+          }}
         >
-          <Stack.Screen
-            name="Today"
-            component={Today}
-            options={{
-              header: (props) => <NavMainTop {...props} />,
-            }}
-          />
-          <Stack.Screen
-            name="Overview"
-            component={Overview}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
-          <Stack.Screen
-            name="MyGarden"
-            component={MyGarden}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
-          <Stack.Screen
-            name="Community"
-            component={Community}
-            options={{ header: (props) => <NavMainTop {...props} /> }}
-          />
+          <Stack.Screen name="Today" component={Today} options={{}} />
+          <Stack.Screen name="Overview" component={Overview} options={{}} />
+          <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
+          <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
 
         {/* Screens accessible from top nav---------------------------------- */}
