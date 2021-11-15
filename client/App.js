@@ -56,25 +56,17 @@ function App() {
         <Stack.Group
           screenOptions={
             {
-              // header: (props) => <NavMainTop {...props} />,
+              // headerLeft: () => (
+              //   <Button
+              //     onPress={() => alert("This is a button placeholder for the custom back button!")}
+              //     title="<"
+              //     color="blue"
+              //   />
+              // ),
             }
           }
         >
-          <Stack.Screen
-            name="QuickView"
-            component={QuickView}
-            options={
-              {
-                // headerLeft: () => (
-                //   <Button
-                //     onPress={() => alert("This is a button placeholder for the custom back button!")}
-                //     title="<"
-                //     color="blue"
-                //   />
-                // ),
-              }
-            }
-          />
+          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
