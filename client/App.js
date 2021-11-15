@@ -23,7 +23,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
-        {/* Main Screens ---------------------------------- */}
+        {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{
             header: (props) => <NavMainTop {...props} />,
@@ -35,14 +35,14 @@ function App() {
           <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
 
-        {/* Screens accessible from top nav---------------------------------- */}
+        {/* Screens accessible from top nav----------------------------------- */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
           options={{ title: "Search Menu" }}
         />
 
-        {/* Screens accessible from Today---------------------------------- */}
+        {/* Screens accessible from Today------------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
         {/* Screens accessible from MyGarden---------------------------------- */}
         <Stack.Screen
@@ -50,14 +50,14 @@ function App() {
           component={QuickView}
           options={{ header: (props) => <NavMainTop {...props} /> }}
         />
-        {/* Screens accessible from MyCommunity---------------------------------- */}
-        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from MyCommunity------------------------------- */}
+        {/* Screens accessible from ------------------------------------------ */}
         {/* <Stack.Screen
           name="SettingsMenu"
           component={SettingsMenu}
           options={{ title: "Search Menu" }}
         /> */}
-        {/* Screens accessible from ---------------------------------- */}
+        {/* Screens accessible from ------------------------------------------ */}
       </Stack.Navigator>
     </NavigationContainer>
   );

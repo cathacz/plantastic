@@ -1,30 +1,39 @@
 import React from "react";
-import { View, Text, Image, StatusBar } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StatusBar,
+  TouchableHighlight,
+  TouchableOpacity,
+} from "react-native";
 
 // for styling >>
 import StyleMain from "../../styles/StyleMain";
 import StylePlants from "../../styles/StylePlants";
 import colors from "../../config/colors";
 
-function PlantBottomNav() {
+function PlantBottomNav(navigation) {
   return (
     <View style={StylePlants.navMainBottom}>
-      <View
-        to="/quickView"
+      {/* -------------------- Kurz & Dreckig (Overview) Button -------------------- */}
+
+      <TouchableHighlight
         underlayColor={colors.sage25}
         style={[StylePlants.navItem, StylePlants.active]}
       >
         <View style={StylePlants.navElements}>
           <Image
             source={require("../../../assets/icons/png/fork.png")}
-            style={{ height: 50, width: 50, alignItems: "center" }}
+            style={{ height: 50, width: 50 }}
           />
           <Text style={StylePlants.navText}>Kurz {"&"} dreckig</Text>
         </View>
-      </View>
+      </TouchableHighlight>
 
-      <View
-        to="/plantPortrait"
+      {/* -------------------- Pflanzenportrait (PlantPortrait) Button -------------------- */}
+
+      <TouchableHighlight
         underlayColor={colors.sage25}
         style={StylePlants.navItem}
       >
@@ -35,10 +44,11 @@ function PlantBottomNav() {
           />
           <Text style={StylePlants.navText}>Pflanzenportrait</Text>
         </View>
-      </View>
+      </TouchableHighlight>
 
-      <View
-        to="/diary"
+      {/* -------------------- Tagebuch (Diary) Button -------------------- */}
+
+      <TouchableHighlight
         underlayColor={colors.sage25}
         style={StylePlants.navItem}
       >
@@ -49,8 +59,7 @@ function PlantBottomNav() {
           />
           <Text style={StylePlants.navText}>Tagebuch</Text>
         </View>
-      </View>
-      <StatusBar style="auto" />
+      </TouchableHighlight>
     </View>
   );
 }

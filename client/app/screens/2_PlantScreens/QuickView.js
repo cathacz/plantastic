@@ -24,12 +24,16 @@ import Diary from "./Diary";
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";
+
 import Task from "../../components/Task";
 import StylePlants from "../../styles/StylePlants";
 
 const QuickView = ({ navigation }) => {
   return (
     <SafeAreaView style={StylePlants.container}>
+      {/* -------------------- statusbar -------------------- */}
+
+      <StatusBar style="auto" />
       {/* ----------------------------------------------------- Navigation Main Top */}
       <SafeAreaView style={StylePlants.navMainTop}>
         <View underlayColor="white" style={StylePlants.navTopItem}>
@@ -53,7 +57,7 @@ const QuickView = ({ navigation }) => {
       {/* ----------------------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Navigation Main Bottom */}
-      <PlantBottomNav />
+      <PlantBottomNav navigation={navigation} />
     </SafeAreaView>
   );
 };
