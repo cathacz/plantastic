@@ -1,8 +1,14 @@
 import React from "react";
+import { View, Text, Image, StatusBar } from "react-native";
+
+// for styling >>
+import StyleMain from "../../styles/StyleMain";
+import StylePlants from "../../styles/StylePlants";
+import colors from "../../config/colors";
 
 function PlantBottomNav() {
   return (
-    <SafeAreaView style={StylePlants.navMainBottom}>
+    <View style={StylePlants.navMainBottom}>
       <View
         to="/quickView"
         underlayColor={colors.sage25}
@@ -45,7 +51,7 @@ function PlantBottomNav() {
         </View>
       </View>
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </View>
   );
 }
 
