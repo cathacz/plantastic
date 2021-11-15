@@ -15,7 +15,7 @@ import {
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
-import Task from "../../components/Task";
+// import Task from "../../components/Task";
 import StylePlants from "../../styles/StylePlants";
 
 // for styling >>

@@ -19,7 +19,7 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
-import Task from "../../components/Task";
+// import Task from "../../components/Task";
 import StylePlants from "../../styles/StylePlants";
 
 const Diary = ({ navigation }) => {
@@ -29,7 +29,7 @@ const Diary = ({ navigation }) => {
 
       <StatusBar style="auto" />
 
-      {/* --------------------------------------------------------------- Banderole */}
+      {/* ----------------------------------------------------- Banderole */}
       <SafeAreaView style={StylePlants.banderole}>
         <Text style={StylePlants.mainText}>Tagebuch</Text>
       </SafeAreaView>
@@ -51,7 +51,7 @@ export default Diary;
 // unused by this component >>
 
 {
-  /* ----------------------------------------------------- Navigation Main Top */
+  /* --------------------------------------------------- Navigation Main Top */
 }
 // <SafeAreaView style={StylePlants.navMainTop}>
 //   <View
