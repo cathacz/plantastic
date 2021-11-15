@@ -13,12 +13,17 @@ import StyleMain from "../../styles/StyleMain";
 import StylePlants from "../../styles/StylePlants";
 import colors from "../../config/colors";
 
-function PlantBottomNav(navigation) {
+function PlantBottomNav({ navigation }) {
   return (
     <View style={StylePlants.navMainBottom}>
       {/* -------------------- Kurz & Dreckig (Overview) Button -------------------- */}
 
       <TouchableHighlight
+        onPress={() =>
+          navigation.navigate("Community", {
+            propOne: "propOne props",
+          })
+        }
         underlayColor={colors.sage25}
         style={[StylePlants.navItem, StylePlants.active]}
       >
@@ -34,6 +39,11 @@ function PlantBottomNav(navigation) {
       {/* -------------------- Pflanzenportrait (PlantPortrait) Button -------------------- */}
 
       <TouchableHighlight
+        onPress={() =>
+          navigation.navigate("Community", {
+            propOne: "propOne props",
+          })
+        }
         underlayColor={colors.sage25}
         style={StylePlants.navItem}
       >
@@ -49,6 +59,11 @@ function PlantBottomNav(navigation) {
       {/* -------------------- Tagebuch (Diary) Button -------------------- */}
 
       <TouchableHighlight
+        onPress={() =>
+          navigation.navigate("Community", {
+            propOne: "propOne props",
+          })
+        }
         underlayColor={colors.sage25}
         style={StylePlants.navItem}
       >
