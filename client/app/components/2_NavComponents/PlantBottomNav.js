@@ -20,7 +20,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("Community", {
+          navigation.navigate("Overview", {
             propOne: "propOne props",
           })
         }
@@ -40,7 +40,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("Community", {
+          navigation.navigate("PlantPortrait", {
             propOne: "propOne props",
           })
         }
@@ -60,7 +60,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("Community", {
+          navigation.navigate("Diary", {
             propOne: "propOne props",
           })
         }
