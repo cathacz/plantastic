@@ -13,20 +13,19 @@ import {
   TextInput,
 } from "react-native";
 
-import colors from "../../config/colors";
-
-import MyGarden from "../1_MainScreens/3_MyGarden";
+// import MyGarden from "../1_MainScreens/3_MyGarden";
 // import QuickView from "./QuickView.js";
-import PlantPortrait from "./PlantPortrait";
-import Diary from "./Diary";
+// import PlantPortrait from "./PlantPortrait";
+// import Diary from "./Diary";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
-
-import { Colors } from "react-native/Libraries/NewAppScreen";
-
 import Task from "../../components/Task";
 import StylePlants from "../../styles/StylePlants";
+
+// for styling >>
+import colors from "../../config/colors";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const QuickView = ({ navigation }) => {
   return (
@@ -34,6 +33,7 @@ const QuickView = ({ navigation }) => {
       {/* -------------------- statusbar -------------------- */}
 
       <StatusBar style="auto" />
+
       {/* ----------------------------------------------------- Navigation Main Top */}
       <SafeAreaView style={StylePlants.navMainTop}>
         <View underlayColor="white" style={StylePlants.navTopItem}>
@@ -43,7 +43,6 @@ const QuickView = ({ navigation }) => {
               style={{
                 height: 50,
                 width: 50,
-                alignItems: "center",
                 margin: 5,
               }}
             />

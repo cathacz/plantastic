@@ -50,21 +50,21 @@ function App() {
         {/* Screens accessible from Today------------------------------------- */}
         {/* Screens accessible from Overview---------------------------------- */}
         {/* Screens accessible from MyGarden---------------------------------- */}
-        <Stack.Screen
-          name="QuickView"
-          component={QuickView}
-          options={{ header: (props) => <NavMainTop {...props} /> }}
-        />
-        <Stack.Screen
-          name="PlantPortrait"
-          component={PlantPortrait}
-          options={{ header: (props) => <NavMainTop {...props} /> }}
-        />
-        <Stack.Screen
-          name="Diary"
-          component={Diary}
-          options={{ header: (props) => <NavMainTop {...props} /> }}
-        />
+        <Stack.Group
+          screenOptions={
+            {
+              // header: (props) => <NavMainTop {...props} />,
+            }
+          }
+        >
+          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="PlantPortrait"
+            component={PlantPortrait}
+            options={{}}
+          />
+          <Stack.Screen name="Diary" component={Diary} options={{}} />
+        </Stack.Group>
         {/* Screens accessible from MyCommunity------------------------------- */}
         {/* Screens accessible from ------------------------------------------ */}
         {/* <Stack.Screen
