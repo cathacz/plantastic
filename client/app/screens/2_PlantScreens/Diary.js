@@ -55,7 +55,7 @@ const Diary = ({ navigation }) => {
       </SafeAreaView>
       {/* --------------------------------------------------------------- Banderole */}
       <SafeAreaView style={StylePlants.banderole}>
-        <Text style={StylePlants.mainText}>kurz {"&"} dreckig</Text>
+        <Text style={StylePlants.mainText}>Tagebuch</Text>
       </SafeAreaView>
       {/* ----------------------------------------------------- Main Part */}
 
