@@ -83,6 +83,8 @@ const StylePlants = StyleSheet.create({
   navText: {
     marginTop: 5,
   },
+  // -------------------------------------- Plant Navigation Bottom
+
   // -------------------------------------------------- active Tap (where am I?)
   active: { backgroundColor: colors.sage25 },
 });

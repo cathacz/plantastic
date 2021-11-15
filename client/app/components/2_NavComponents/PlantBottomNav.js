@@ -20,7 +20,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("Overview", {
+          navigation.navigate("QuickView", {
             propOne: "propOne props",
           })
         }
@@ -30,7 +30,7 @@ function PlantBottomNav({ navigation }) {
         <View style={StylePlants.navElements}>
           <Image
             source={require("../../../assets/icons/png/fork.png")}
-            style={{ height: 50, width: 50 }}
+            style={StyleMain.navElementImage}
           />
           <Text style={StylePlants.navText}>Kurz {"&"} dreckig</Text>
         </View>
@@ -50,7 +50,7 @@ function PlantBottomNav({ navigation }) {
         <View style={StylePlants.navElements}>
           <Image
             source={require("../../../assets/icons/png/pflanzenPortrait.png")}
-            style={{ height: 50, width: 50 }}
+            style={StyleMain.navElementImage}
           />
           <Text style={StylePlants.navText}>Pflanzenportrait</Text>
         </View>
@@ -70,7 +70,7 @@ function PlantBottomNav({ navigation }) {
         <View style={StylePlants.navElements}>
           <Image
             source={require("../../../assets/icons/png/tageBuch.png")}
-            style={{ height: 50, width: 50 }}
+            style={StyleMain.navElementImage}
           />
           <Text style={StylePlants.navText}>Tagebuch</Text>
         </View>
