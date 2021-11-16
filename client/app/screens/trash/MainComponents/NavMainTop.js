@@ -8,10 +8,10 @@ import {
   Image,
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../../config/colors";
-import Today from "../../screens/ComponentsTest/Today";
+import colors from "../../../config/colors";
+import Today from "../NavBottomMain/Today";
 import SearchMenu from "../../screens/SearchMenu";
-import StyleMain from "../../styles/StyleMain";
+import StyleMain from "../../../styles/StyleMain";
 
 function NavMainTop() {
   return (
@@ -32,7 +32,7 @@ function NavMainTop() {
             <Text style={StyleMain.navTopText}>Plantastic</Text>
           </View>
         </Link>
-        {/* --------------------------------------------------------------- SearchMenu */}
+        {/* --------------------------------------------------------- SearchMenu */}
         <View style={StyleMain.searchMenuWrapperRight}>
           <Link to="/searchMenu" underlayColor="white">
             <SafeAreaView style={StyleMain.searchMenuWrapper}>
@@ -47,7 +47,7 @@ function NavMainTop() {
               </View>
             </SafeAreaView>
           </Link>
-          {/* ----------------------------------------------------- Add Task */}
+          {/* --------------------------------------------------------- Add Task */}
           <TouchableOpacity>
             {/*onPress={() => handleAddTask()}*/}
             <View style={StyleMain.addWrapper}>

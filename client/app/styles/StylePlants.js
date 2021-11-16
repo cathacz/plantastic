@@ -36,21 +36,6 @@ const StylePlants = StyleSheet.create({
   },
 
   // -------------------------------------- Banderole
-  banderole: {
-    marginTop: 90,
-    height: 150,
-    width: "100%",
-    borderColor: "white",
-    borderBottomColor: colors.sage75,
-    borderTopColor: colors.sage75,
-    borderStyle: "solid",
-    borderWidth: 2,
-
-    position: "absolute",
-    textAlign: "center",
-    alignItems: "center",
-    justifyContent: "center",
-  },
 
   // -------------------------------------- Navigation Main Bottom
   navMainBottom: {
@@ -83,6 +68,8 @@ const StylePlants = StyleSheet.create({
   navText: {
     marginTop: 5,
   },
+  // -------------------------------------- Plant Navigation Bottom
+
   // -------------------------------------------------- active Tap (where am I?)
   active: { backgroundColor: colors.sage25 },
 });

@@ -1,17 +1,28 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  View,
+  Image,
+  Button,
+} from "react-native";
 import { NativeRouter, Route, Link, Switch } from "react-router-native";
-import colors from "../../config/colors";
-import Today from "../../screens/ComponentsTest/Today";
-import Overview from "../../screens/ComponentsTest/Overview";
-import MyGarden from "../../screens/ComponentsTest/MyGarden";
-import Community from "../../screens/ComponentsTest/Community";
-import StyleMain from "../../styles/StyleMain";
+import colors from "../../../config/colors";
+import Today from "../NavBottomMain/Today";
+import Overview from "../NavBottomMain/Overview";
+import MyGarden from "../NavBottomMain/MyGarden";
+import Community from "../NavBottomMain/Community";
+import StyleMain from "../../../styles/StyleMain";
 
 function NavMainBottom() {
   return (
     <NativeRouter>
       <SafeAreaView style={StyleMain.navMainBottom}>
+        {/* <Button title="Heute" onPress={() => history.push("/today")} />
+      <Button title="Übersicht" onPress={() => history.push("/overview")} />
+      <Button title="Mein Garten" onPress={() => history.push("/myGarden")} />
+      <Button title="Community" onPress={() => history.push("/community")} /> */}
         <Link
           to="/today"
           underlayColor="rgba(109, 153, 130, 0.25)"
@@ -68,7 +79,6 @@ function NavMainBottom() {
           </View>
         </Link>
       </SafeAreaView>
-
       <Route path="/today" component={Today} />
       <Route path="/overview" component={Overview} />
       <Route path="/myGarden" component={MyGarden} />

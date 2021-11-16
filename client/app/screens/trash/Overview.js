@@ -6,6 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Platform,
   StatusBar,
   Keyboard,
   KeyboardAvoidingView,
@@ -13,17 +14,25 @@ import {
   TextInput,
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
+import colors from "../../config/colors";
+// import Home from "../screens/Home";
 import Today from "../screens/Today";
-import Overview from "../screens/Overview";
+import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import SearchMenu from "./SearchMenu";
-import StyleMain from "../styles/StyleMain";
-import QuickView from "./QuickView.js";
 
-const MyGarden = () => {
+import StyleMain from "../../styles/StyleMain";
+// imports Alina
+import Calendar from "../../components/OverviewCalendar";
+// import NumberToMonth from "../components/NumberToMonth";
+// import { StatusBar } from "expo-status-bar";
+
+const Overview = () => {
   return (
-    <SafeAreaView style={StyleMain.container}>
+    <SafeAreaView
+      style={[StyleMain.container, styles.platformContainer]}
+      backgroundColor="white"
+    >
       <NativeRouter>
         {/* ----------------------------------------------------- Navigation Main Top */}
         <SafeAreaView style={StyleMain.navMainTop}>
@@ -66,24 +75,26 @@ const MyGarden = () => {
           </View>
         </SafeAreaView>
         {/* --------------------------------------------------------------- Banderole */}
-        <View style={StyleMain.banderole}>
-          <Text style={StyleMain.mainText}>
-            <View style={StyleMain.quick}>
-              <Link
-                to="/quickView"
-                underlayColor={colors.sage25}
-                style={styles.quickLink}
-              >
-                <View style={styles.quicky}>
-                  <Image
-                    source={require("../../assets/icons/png/berries.png")}
-                    style={{ height: 50, width: 50, alignItems: "center" }}
-                  />
-                  <Text style={styles.quickyText}>Beeren</Text>
-                </View>
-              </Link>
-            </View>
-          </Text>
+        <View
+          style={{
+            width: "100%",
+            marginTop: 90,
+            height: 150,
+            backgroundColor: colors.sage5,
+            position: "absolute",
+            textAlign: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              width: "100%",
+            }}
+          >
+            <Calendar />
+          </View>
         </View>
         {/* ----------------------------------------------------- Main Part */}
 
@@ -106,7 +117,7 @@ const MyGarden = () => {
           <Link
             to="/overview"
             underlayColor={colors.sage25}
-            style={StyleMain.navItem}
+            style={[StyleMain.navItem, StyleMain.active]}
           >
             <View style={StyleMain.navElements}>
               <Image
@@ -120,7 +131,7 @@ const MyGarden = () => {
           <Link
             to="/myGarden"
             underlayColor={colors.sage25}
-            style={[StyleMain.navItem, StyleMain.active]}
+            style={StyleMain.navItem}
           >
             <View style={StyleMain.navElements}>
               <Image
@@ -151,7 +162,6 @@ const MyGarden = () => {
         <Route path="/overview" component={Overview} />
         <Route path="/myGarden" component={MyGarden} />
         <Route path="/community" component={Community} />
-        <Route path="/quickView" component={QuickView} />
       </NativeRouter>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -164,4 +174,4 @@ const styles = StyleSheet.create({
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
 });
-export default MyGarden;
+export default Overview;
