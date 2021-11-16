@@ -27,7 +27,20 @@ const login = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
 };
 
+// forgot password
+
+const forgotPassword = (req, res) => {
+  const { email } = req.body;
+
+  User.findOne({ email }, (err, user) => {
+    if (err || !user) {
+      return res.status(400).json({ error: "No user wit this email" });
+    }
+  });
+};
+
 module.exports = {
   register,
   login,
+  forgotPassword,
 };

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-
+const path = require("path");
 const morgan = require("morgan");
 app.use(morgan("dev"));
 
@@ -47,6 +47,7 @@ app.use(
 );
 app.use(express.json());
 /* app.use(express.static("./public")); */
+app.use(express.static(path.join(__dirname + "/test")));
 app.use(helmet());
 app.use(cors());
 app.use(xss());
@@ -68,6 +69,9 @@ app.use("/uploads", express.static("uploads"));
 // main route
 
 app.get("/", (req, res) => {
+  /* res.sendFile("/Screenshot from 2021-09-14 10-34-16.png", {
+    root: __dirname,
+  }); */
   res.status(200).send("Welcome to Plantastic");
 });
 
