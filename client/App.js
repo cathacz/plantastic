@@ -3,6 +3,9 @@ import React from "react";
 // navigator funktionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 // elements >>
 import { Button } from "react-native";
@@ -14,18 +17,15 @@ import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
+// import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
 import PlantPortrait from "./app/screens/2_PlantScreens/2_PlantPortrait";
 import Diary from "./app/screens/2_PlantScreens/3_Diary";
 
-// import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
-
 // piece components >>
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
 import NavMainTop from "./app/components/2_NavComponents/NavMainTop";
-
-const Stack = createNativeStackNavigator();
 
 function App() {
   return (
