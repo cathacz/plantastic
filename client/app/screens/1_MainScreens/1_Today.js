@@ -28,9 +28,9 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
 // weather imports
-import useWeather from "../components/WeatherAPI/useWeather";
-import Weather from "../components/WeatherAPI/Weather";
-import Loading from "../components/WeatherAPI/Loading";
+import useWeather from "../../components/WeatherAPI/useWeather";
+import Weather from "../../components/WeatherAPI/Weather";
+import Loading from "../../components/WeatherAPI/Loading";
 
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
@@ -55,6 +55,33 @@ const Today = ({ navigation, route }) => {
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* -------------------------------------- Banderole */}
+      <View
+        style={{
+          width: "100%",
+          marginTop: 90,
+          height: 150,
+          backgroundColor: colors.sage5,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          {/* <Text style={StyleMain.addText}>
+              This is today {"\n"} {currentDate}
+            </Text> */}
+          <View>
+            {!weather ? <Loading /> : <Weather forecast={weather} />}
+            {/* <Weather forecast={weather} /> */}
+          </View>
+        </View>
+      </View>
 
       {/* -------------------------------------- Main Part */}
 
