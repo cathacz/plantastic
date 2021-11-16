@@ -50,7 +50,7 @@ const Today = ({ navigation, route }) => {
   const weather = useWeather();
 
   // from Vivi
-  console.log("from Today: " + navigation);
+  // console.log("from Today: " + navigation);
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
