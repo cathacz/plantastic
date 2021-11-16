@@ -27,6 +27,11 @@ import StyleMain from "../../styles/StyleMain";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
+// weather imports
+import useWeather from "../components/WeatherAPI/useWeather";
+import Weather from "../components/WeatherAPI/Weather";
+import Loading from "../components/WeatherAPI/Loading";
+
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
 
@@ -41,6 +46,8 @@ const Today = ({ navigation, route }) => {
       date + "/" + month + "/" + year //+ " " + hours + ":" + min + ":" + sec
     );
   }, []);
+
+  const weather = useWeather();
 
   // from Vivi
   console.log("from Today: " + navigation);
