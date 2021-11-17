@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-// require("dotenv").config({ path: __dirname + "../../../.env" });
+// require("dotenv").config({ path: __dirname + "../WeatherAPI/.env" });
 // import { API_KEY } from "react-native-dotenv";
-// import { API_KEY } from "@env";
+import { API_KEY } from "@env";
 import axios from "axios";
 import { storeWeather, getWeather } from "./storeWeather";
 import useGeoLocation from "./useGeoLocation";
@@ -18,8 +18,9 @@ export default function useWeather(lat, lon) {
   const [weather, setWeather] = useState(null);
 
   const latLon = useGeoLocation();
-  const API_KEY = "bd8f9e0cb505371a3d94a11109b08394";
+  // const API_KEY = "bd8f9e0cb505371a3d94a11109b08394";
 
+  // console.log(process.env.API_KEY);
   console.log(API_KEY);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function useWeather(lat, lon) {
     try {
       const endpoint = `/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
       const res = await callAPI.get(endpoint);
-      // console.log(endpoint);
+      console.log(endpoint);
       const data = await storeWeather(filterData(res.data));
       // console.log(data);
       setWeather(data);
