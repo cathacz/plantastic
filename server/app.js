@@ -60,6 +60,10 @@ app.use(
   })
 );
 
+// ejs
+
+app.set("view engine", "ejs");
+
 // Alow uploads
 
 app.use("/uploads", express.static("uploads"));
