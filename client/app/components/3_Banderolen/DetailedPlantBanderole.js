@@ -26,6 +26,9 @@ import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle
 import StylePlants from "../../styles/StylePlants";
 import StyleMain from "../../styles/StyleMain";
 
+// example plant
+import Tomato from "../../../assets/jsons/tomatoPortrait.json";
+
 const DetailedPLantBanderole = () => {
   return (
     <View style={[StylePlants.banderole]}>
@@ -34,13 +37,13 @@ const DetailedPLantBanderole = () => {
   <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
 </SafeAreaView>; */}
       <Text style={DetailedPlantPortraitStyles.plantTitle}>
-        Name Pflanzensorte
+        {Tomato.labels.plant_genus[0]}
       </Text>
       <Text style={DetailedPlantPortraitStyles.plantVarietyName}>
-        "Sortenname spezifisch"
+        {Tomato.labels.specific_variety_name}
       </Text>
       <Text style={DetailedPlantPortraitStyles.botanicalName}>
-        botanischer Name
+        {Tomato.labels.botanical_name}
       </Text>
 
       {/* ------------------planting time >>  */}
