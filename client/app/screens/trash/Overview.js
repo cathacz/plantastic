@@ -14,16 +14,16 @@ import {
   TextInput,
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
+import colors from "../../config/colors";
 // import Home from "../screens/Home";
 import Today from "../screens/Today";
 import MyGarden from "../screens/MyGarden";
 import Community from "../screens/Community";
 import SearchMenu from "./SearchMenu";
 
-import StyleMain from "../styles/StyleMain";
+import StyleMain from "../../styles/StyleMain";
 // imports Alina
-import Calendar from "../components/OverviewCalendar";
+import Calendar from "../../components/OverviewCalendar";
 // import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 

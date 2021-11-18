@@ -13,8 +13,8 @@ import {
 } from "react-native";
 // import { NativeRouter, Route, Link } from "react-router-native";
 import colors from "../../../config/colors";
-import NavMainTop from "../../../components/MainComponents/NavMainTop";
-import NavMainBottom from "../../../components/MainComponents/NavMainBottom";
+import NavMainTop from "../MainComponents/NavMainTop";
+import NavMainBottom from "../MainComponents/NavMainBottom";
 import StyleMain from "../../../styles/StyleMain";
 
 const Overview = () => {

@@ -17,7 +17,7 @@ import StyleMain from "../../styles/StyleMain";
 // Note: Need to add active tab color prepared in >> StyleMain.active
 
 function NavMainBottom({ navigation }) {
-  console.log("from navbottom: " + navigation);
+  // console.log("from navbottom: " + navigation);
 
   return (
     <SafeAreaView
