@@ -47,10 +47,28 @@ const Today = ({ navigation, route }) => {
     );
   }, []);
 
-  const weather = useWeather();
+  // added by Vivi start -------------------
 
-  // from Vivi
+  const [enteredTask, setEnteredTask] = useState("");
+  const [AllTasks, setAllTasks] = useState([]);
+
+  // entered text becomes a task as a state >>
+  const taskInputHandler = (enteredText) => {
+    setEnteredTask(enteredText);
+  };
+
+  // new task gets added to task list (newest in top) >>
+  const addNewTaskHandler = () => {
+    setAllTasks((tasks) => [
+      { id: Math.random().toString(), value: enteredTask },
+      ...tasks,
+    ]);
+  };
+
   // console.log("from Today: " + navigation);
+
+  // added by Vivi end -------------------
+  const weather = useWeather();
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
@@ -85,13 +103,37 @@ const Today = ({ navigation, route }) => {
 
       {/* -------------------------------------- Main Part */}
 
-      {/* -------------------------------------- Something */}
-
-      {/*--------------------------------------- Something */}
-
       <View style={{ marginTop: 70 }}>
         <Text>This is TODAY</Text>
       </View>
+
+      {/* Added by Vivi start ------------------- */}
+      <View style={styles.taskListArea}>
+        <View style={styles.inputContainer}>
+          <Text>Task: </Text>
+          <TextInput
+            placeholder="Enter new task here"
+            style={styles.input}
+            onChangeText={taskInputHandler}
+            value={enteredTask}
+          />
+          <Button title="Add Task" onPress={addNewTaskHandler} />
+        </View>
+        <FlatList
+          keyExtractor={(item, index) => item.id}
+          data={AllTasks}
+          renderItem={(itemData) => (
+            <View style={styles.listItem}>
+              <Text>{itemData.item.value}</Text>
+            </View>
+          )}
+        />
+      </View>
+      {/* Added by Vivi end ------------------- */}
+
+      {/* -------------------------------------- Something */}
+
+      {/*--------------------------------------- Something */}
 
       {/* ------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
@@ -105,6 +147,31 @@ const styles = StyleSheet.create({
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
+
+  // added by Vivi start -------------------
+  taskListArea: {
+    marginTop: 250,
+    marginBottom: 90,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  input: {
+    width: "80%",
+    borderColor: "black",
+    borderWidth: 1,
+    padding: 10,
+  },
+  listItem: {
+    padding: 10,
+    marginVertical: 8,
+    backgroundColor: "#ccc",
+    borderColor: "black",
+    borderWidth: 1,
+  },
+  // added by Vivi end -------------------
 });
 export default Today;
 

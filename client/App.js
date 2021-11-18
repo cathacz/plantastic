@@ -1,5 +1,10 @@
 import React from "react";
 
+import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
+
+import colors from "./app/config/colors";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+
 // navigator funktionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
