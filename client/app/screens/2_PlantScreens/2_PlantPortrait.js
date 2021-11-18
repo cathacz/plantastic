@@ -15,6 +15,7 @@ import {
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
+import DetailedPlantBanderole from "../../components/3_Banderolen/DetailedPlantBanderole";
 // import Task from "../../components/Task";
 
 // for styling >>
@@ -35,6 +36,8 @@ const PlantPortrait = ({ navigation }) => {
       <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
       </SafeAreaView>
+
+      <DetailedPlantBanderole />
       {/* ----------------------------------------------------- Main Part */}
       <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
         <Text style={DetailedPlantPortraitStyles}>CAN YOU SEE ME?</Text>
