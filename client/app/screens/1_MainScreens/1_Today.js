@@ -14,6 +14,7 @@ import {
   TextInput,
   Button,
 } from "react-native";
+// import { StatusBar } from "expo-status-bar";
 
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
@@ -21,15 +22,15 @@ import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
 
-// screen components >>
-import Overview from "./2_Overview";
-
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
-// import { Colors } from "react-native/Libraries/NewAppScreen";
-// import colors from "../../config/colors";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import colors from "../../config/colors";
 
-// import { StatusBar } from "expo-status-bar";
+// weather imports
+import useWeather from "../../components/WeatherAPI/useWeather";
+import Weather from "../../components/WeatherAPI/Weather";
+import Loading from "../../components/WeatherAPI/Loading";
 
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
@@ -64,13 +65,47 @@ const Today = ({ navigation, route }) => {
     ]);
   };
 
+  // console.log("from Today: " + navigation);
+
   // added by Vivi end -------------------
+  const weather = useWeather();
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* -------------------------------------- Banderole */}
+      <View
+        style={{
+          width: "100%",
+          marginTop: 90,
+          height: 150,
+          backgroundColor: colors.sage5,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          {/* <Text style={StyleMain.addText}>
+              This is today {"\n"} {currentDate}
+            </Text> */}
+          <View>
+            {!weather ? <Loading /> : <Weather forecast={weather} />}
+            {/* <Weather forecast={weather} /> */}
+          </View>
+        </View>
+      </View>
 
       {/* -------------------------------------- Main Part */}
+
+      <View style={{ marginTop: 70 }}>
+        <Text>This is TODAY</Text>
+      </View>
 
       {/* Added by Vivi start ------------------- */}
       <View style={styles.taskListArea}>
@@ -99,10 +134,6 @@ const Today = ({ navigation, route }) => {
       {/* -------------------------------------- Something */}
 
       {/*--------------------------------------- Something */}
-
-      <View style={{ marginTop: 70 }}>
-        <Text>This is TODAY</Text>
-      </View>
 
       {/* ------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
