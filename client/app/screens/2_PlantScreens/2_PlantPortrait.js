@@ -20,6 +20,7 @@ import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
 // for styling >>
 import StylePlants from "../../styles/StylePlants";
 import StyleMain from "../../styles/StyleMain";
+import detailedPlantPortraitStyles from "../../styles/detailedPlantPortraitStyle";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
