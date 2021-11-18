@@ -24,6 +24,7 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
 import StylePlants from "../../styles/StylePlants";
+import StyleMain from "../../styles/StyleMain";
 
 const DetailedPLantBanderole = () => {
   return (

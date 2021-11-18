@@ -33,9 +33,9 @@ const PlantPortrait = ({ navigation }) => {
       <StatusBar style="auto" />
 
       {/* --------------------------------------------------------------- Banderole */}
-      <SafeAreaView style={StyleMain.banderole}>
+      {/* <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
-      </SafeAreaView>
+      </SafeAreaView> */}
 
       <DetailedPlantBanderole />
       {/* ----------------------------------------------------- Main Part */}
