@@ -53,7 +53,10 @@ const DetailedPLantBanderole = () => {
       >
         <View
           name="plant_time_titles_container"
-          style={DetailedPlantPortraitStyles.banderoleArea}
+          style={[
+            DetailedPlantPortraitStyles.banderoleArea,
+            DetailedPlantPortraitStyles.plantTimeTitlesContainer,
+          ]}
         >
           <View
             name="plant_time_title"
@@ -107,6 +110,8 @@ const DetailedPLantBanderole = () => {
             </Text>
           </View>
         </View>
+
+        {/* --------- months >> */}
         <View
           name="plant_time_months_outer_container"
           style={[
@@ -151,7 +156,7 @@ const DetailedPLantBanderole = () => {
                     DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
-                  Jan
+                  Feb
                 </Text>
               </View>
               <View

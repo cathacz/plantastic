@@ -22,6 +22,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     flexDirection: "row",
     // width: 30,
   },
+  plantTimeTitlesContainer: { borderColor: "green" },
   plantTimeTitle: {
     // width: 30,
   },
@@ -37,6 +38,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     flexDirection: "column",
   },
   monthsInnerContainer: {
+    borderColor: "orange",
     display: "flex",
     // flex: 1,
     flexDirection: "row",
