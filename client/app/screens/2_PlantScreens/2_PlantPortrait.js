@@ -15,11 +15,13 @@ import {
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
+import DetailedPlantBanderole from "../../components/3_Banderolen/DetailedPlantBanderole";
 // import Task from "../../components/Task";
 
 // for styling >>
 import StylePlants from "../../styles/StylePlants";
 import StyleMain from "../../styles/StyleMain";
+import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
@@ -34,10 +36,12 @@ const PlantPortrait = ({ navigation }) => {
       <SafeAreaView style={StyleMain.banderole}>
         <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
       </SafeAreaView>
+
+      <DetailedPlantBanderole />
       {/* ----------------------------------------------------- Main Part */}
-      <ScrollView style={detailedPlantPortraitStyles.mainContent}>
-        <Text style={detailedPlantPortraitStyles}>CAN YOU SEE ME?</Text>
-        <Text style={detailedPlantPortraitStyles}>
+      <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
+        <Text style={DetailedPlantPortraitStyles}>CAN YOU SEE ME?</Text>
+        <Text style={DetailedPlantPortraitStyles}>
           The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
