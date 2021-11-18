@@ -14,7 +14,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   plantTitle: { color: "black", fontSize: 20, fontStyle: "italic" },
   plantVarietyName: { color: colors.sage, fontSize: 20, fontStyle: "italic" },
   botanicalName: { color: "black", fontSize: 20, fontStyle: "italic" },
-
+  // ---------------
   // plant time container
   plantTimeContainer: {
     // flex: 1,
@@ -24,16 +24,19 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
   plantTimeTitlesContainer: { borderColor: "green" },
   plantTimeTitle: {
+    borderColor: "orange",
     // width: 30,
   },
   // titles on left side of calendar overview (for plant time)
   plantTimeTitleText: {
+    borderColor: "skyblue",
     fontSize: 5,
     // width: "100%",
   },
 
   // month boxes and containers (for plant time)
   monthsOuterContainer: {
+    borderColor: "green",
     display: "flex",
     flexDirection: "column",
   },
@@ -55,7 +58,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
   },
-  monthName: { borderColor: "yellow", color: "black", fontSize: 5 },
+  monthName: { borderColor: "skyblue", color: "black", fontSize: 5 },
 
   // main content
   mainContent: { marginBottom: 90 },
