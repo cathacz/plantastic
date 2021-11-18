@@ -14,19 +14,15 @@ import {
   TextInput,
 } from "react-native";
 
-import colors from "../../config/colors";
-
-// navigation components >>
-import Today from "./1_Today";
-import MyGarden from "./3_MyGarden";
-import Community from "./4_Community";
-
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 
+// for styling >>
 import StyleMain from "../../styles/StyleMain";
+import colors from "../../config/colors";
+
 // imports Alina
 import Calendar from "../../components/OverviewCalendar";
 // import NumberToMonth from "../components/NumberToMonth";
@@ -39,7 +35,27 @@ const Overview = ({ navigation }) => {
       backgroundColor="white"
     >
       {/* ---------------------------------------- Banderole */}
-
+      <View
+        style={{
+          width: "100%",
+          marginTop: 90,
+          height: 150,
+          backgroundColor: colors.sage5,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          <Calendar />
+        </View>
+      </View>
       {/* ---------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Something */}

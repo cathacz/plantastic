@@ -131,6 +131,7 @@ const StyleMain = StyleSheet.create({
     height: 50,
     width: 50,
   },
+  // << also in plantBottomNav for image
   navText: {
     marginTop: 5,
   },
