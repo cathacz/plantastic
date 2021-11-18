@@ -8,12 +8,12 @@ import {
   Button,
 } from "react-native";
 import { NativeRouter, Route, Link, Switch } from "react-router-native";
-import colors from "../../config/colors";
-import Today from "../../screens/NavBottomMain/Today";
-import Overview from "../../screens/NavBottomMain/Overview";
-import MyGarden from "../../screens/NavBottomMain/MyGarden";
-import Community from "../../screens/NavBottomMain/Community";
-import StyleMain from "../../styles/StyleMain";
+import colors from "../../../config/colors";
+import Today from "../NavBottomMain/Today";
+import Overview from "../NavBottomMain/Overview";
+import MyGarden from "../NavBottomMain/MyGarden";
+import Community from "../NavBottomMain/Community";
+import StyleMain from "../../../styles/StyleMain";
 
 function NavMainBottom() {
   return (
