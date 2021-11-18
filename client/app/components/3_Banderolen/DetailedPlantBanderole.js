@@ -13,16 +13,17 @@ import {
   TextInput,
 } from "react-native";
 
-import MyGarden from "../1_MainScreens/3_MyGarden";
-import QuickView from "./QuickView.js";
-// import PlantPortrait from "./PlantPortrait";
-import Diary from "./Diary";
-import Task from "../../components/Task";
-import StylePlants from "../../styles/StylePlants";
+// import MyGarden from "../1_MainScreens/3_MyGarden";
+// import QuickView from "./QuickView.js";
+// // import PlantPortrait from "./PlantPortrait";
+// import Diary from "./Diary";
+// import Task from "../../components/Task";
 
 // for styling
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
+import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
+import StylePlants from "../../styles/StylePlants";
 
 const DetailedPLantBanderole = () => {
   return (
@@ -31,56 +32,56 @@ const DetailedPLantBanderole = () => {
       {/* <SafeAreaView style={StylePlants.banderole}>
   <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
 </SafeAreaView>; */}
-      <Text style={detailedPlantPortraitStyles.plantTitle}>
+      <Text style={DetailedPlantPortraitStyles.plantTitle}>
         Name Pflanzensorte
       </Text>
-      <Text style={detailedPlantPortraitStyles.plantVarietyName}>
+      <Text style={DetailedPlantPortraitStyles.plantVarietyName}>
         "Sortenname spezifisch"
       </Text>
-      <Text style={detailedPlantPortraitStyles.botanicalName}>
+      <Text style={DetailedPlantPortraitStyles.botanicalName}>
         botanischer Name
       </Text>
       <View
         name="plant_time_container"
-        style={detailedPlantPortraitStyles.banderoleArea}
+        style={DetailedPlantPortraitStyles.banderoleArea}
       >
         <View
           name="plant_time_titles_container"
-          style={detailedPlantPortraitStyles.banderoleArea}
+          style={DetailedPlantPortraitStyles.banderoleArea}
         >
           <View
             name="plant_time_title"
-            style={detailedPlantPortraitStyles.banderoleArea}
+            style={DetailedPlantPortraitStyles.banderoleArea}
           ></View>
           <View
             name="plant_time_title"
-            style={detailedPlantPortraitStyles.banderoleArea}
+            style={DetailedPlantPortraitStyles.banderoleArea}
           ></View>
           <View
             name="plant_time_title"
-            style={detailedPlantPortraitStyles.banderoleArea}
+            style={DetailedPlantPortraitStyles.banderoleArea}
           ></View>
         </View>
         <View
           name="plant_time_months_outer_container"
-          style={detailedPlantPortraitStyles.monthsOuterContainer}
+          style={DetailedPlantPortraitStyles.monthsOuterContainer}
         >
           <View
             name="plant_time_months_inner_container"
-            style={detailedPlantPortraitStyles.monthsInnerContainer}
+            style={DetailedPlantPortraitStyles.monthsInnerContainer}
           >
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             >
               <Text
                 name="month_name"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthName,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthName,
                 ]}
               >
                 Jan
@@ -88,15 +89,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -105,15 +106,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -122,15 +123,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -139,15 +140,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -156,15 +157,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -173,15 +174,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -190,15 +191,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -207,15 +208,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -224,15 +225,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -241,15 +242,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Jan
@@ -258,15 +259,15 @@ const DetailedPLantBanderole = () => {
               <View
                 name="plant_time_month"
                 style={[
-                  detailedPlantPortraitStyles.border,
-                  detailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.border,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
                 <Text
                   name="month_name"
                   style={[
-                    detailedPlantPortraitStyles.border,
-                    detailedPlantPortraitStyles.monthName,
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
                   ]}
                 >
                   Dez
@@ -276,179 +277,179 @@ const DetailedPLantBanderole = () => {
           </View>
           <View
             name="plant_time_months_inner_container"
-            style={detailedPlantPortraitStyles.monthsInnerContainer}
+            style={DetailedPlantPortraitStyles.monthsInnerContainer}
           >
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
           </View>
           <View
             name="plant_time_months_inner_container"
-            style={detailedPlantPortraitStyles.monthsInnerContainer}
+            style={DetailedPlantPortraitStyles.monthsInnerContainer}
           >
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
             <View
               name="plant_time_month"
               style={[
-                detailedPlantPortraitStyles.border,
-                detailedPlantPortraitStyles.monthBox,
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.monthBox,
               ]}
             ></View>
           </View>
