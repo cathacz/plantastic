@@ -3,6 +3,7 @@ import colors from "../config/colors";
 import { Dimensions } from "react-native";
 
 const StyleMain = StyleSheet.create({
+  nothing: {},
   container: {
     flex: 1,
     backgroundColor: "white",
