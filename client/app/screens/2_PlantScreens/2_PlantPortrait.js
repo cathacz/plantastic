@@ -25,6 +25,9 @@ import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
+// example plant
+import Tomato from "../../../assets/jsons/tomatoPortrait.json";
+
 const PlantPortrait = ({ navigation }) => {
   return (
     <SafeAreaView style={StylePlants.container}>
