@@ -116,7 +116,10 @@ const DetailedPLantBanderole = () => {
         >
           <View
             name="plant_time_months_inner_container"
-            style={[DetailedPlantPortraitStyles.monthsInnerContainer]}
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.monthsInnerContainer,
+            ]}
           >
             <View
               name="plant_time_month"
@@ -328,7 +331,10 @@ const DetailedPLantBanderole = () => {
 
           <View
             name="plant_time_months_inner_container"
-            style={DetailedPlantPortraitStyles.monthsInnerContainer}
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.monthsInnerContainer,
+            ]}
           >
             <View
               name="plant_time_month"
@@ -420,7 +426,10 @@ const DetailedPLantBanderole = () => {
 
           <View
             name="plant_time_months_inner_container"
-            style={DetailedPlantPortraitStyles.monthsInnerContainer}
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.monthsInnerContainer,
+            ]}
           >
             <View
               name="plant_time_month"
