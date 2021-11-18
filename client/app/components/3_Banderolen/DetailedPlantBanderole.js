@@ -42,9 +42,14 @@ const DetailedPLantBanderole = () => {
       <Text style={DetailedPlantPortraitStyles.botanicalName}>
         botanischer Name
       </Text>
+
+      {/* ------------------planting time >>  */}
       <View
         name="plant_time_container"
-        style={DetailedPlantPortraitStyles.banderoleArea}
+        style={[
+          DetailedPlantPortraitStyles.banderoleArea,
+          DetailedPlantPortraitStyles.plantTimeContainer,
+        ]}
       >
         <View
           name="plant_time_titles_container"
@@ -52,16 +57,55 @@ const DetailedPLantBanderole = () => {
         >
           <View
             name="plant_time_title"
-            style={DetailedPlantPortraitStyles.banderoleArea}
-          ></View>
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.plantTimeTitle,
+            ]}
+          >
+            <Text
+              name="plant_time_title_text"
+              style={[
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.plantTimeTitleText,
+              ]}
+            >
+              Nada
+            </Text>
+          </View>
           <View
             name="plant_time_title"
-            style={DetailedPlantPortraitStyles.banderoleArea}
-          ></View>
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.plantTimeTitle,
+            ]}
+          >
+            <Text
+              name="plant_time_title_text"
+              style={[
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.plantTimeTitleText,
+              ]}
+            >
+              Aussaat
+            </Text>
+          </View>
           <View
             name="plant_time_title"
-            style={DetailedPlantPortraitStyles.banderoleArea}
-          ></View>
+            style={[
+              DetailedPlantPortraitStyles.banderoleArea,
+              DetailedPlantPortraitStyles.plantTimeTitle,
+            ]}
+          >
+            <Text
+              name="plant_time_title_text"
+              style={[
+                DetailedPlantPortraitStyles.border,
+                DetailedPlantPortraitStyles.plantTimeTitleText,
+              ]}
+            >
+              Ernte
+            </Text>
+          </View>
         </View>
         <View
           name="plant_time_months_outer_container"
