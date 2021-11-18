@@ -35,7 +35,27 @@ const Overview = ({ navigation }) => {
       backgroundColor="white"
     >
       {/* ---------------------------------------- Banderole */}
-
+      <View
+        style={{
+          width: "100%",
+          marginTop: 90,
+          height: 150,
+          backgroundColor: colors.sage5,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          <Calendar />
+        </View>
+      </View>
       {/* ---------------------------------------- Main Part */}
 
       {/* ---------------------------------------- Something */}
