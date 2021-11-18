@@ -13,16 +13,15 @@ import {
   TextInput,
 } from "react-native";
 
-import colors from "../../config/colors";
-import StyleMain from "../../styles/StyleMain";
-
-import QuickView from "../2_PlantScreens/QuickView.js";
-
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import MyGardenBanderole from "../../components/3_Banderolen/MyGardenBanderole";
+
+// for styling >>
+import colors from "../../config/colors";
+import StyleMain from "../../styles/StyleMain";
 
 const MyGarden = ({ navigation }) => {
   return (
