@@ -180,7 +180,7 @@ const DetailedPLantBanderole = () => {
                 name="plant_time_month"
                 style={[
                   DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthBox,
+                  DetailedPlantPortraitStyles.monthNameContainer,
                 ]}
               >
                 <Text
@@ -209,15 +209,28 @@ const DetailedPLantBanderole = () => {
               <View
                 key={month}
                 name="plant_time_month"
-                style={
-                  precultStart <= i && i <= precultEnd
-                    ? DetailedPlantPortraitStyles.preculture
-                    : dirSeedStart <= i && i <= dirSeedEnd
-                    ? DetailedPlantPortraitStyles.directSeeding
-                    : DetailedPlantPortraitStyles.monthBox
-                }
+                style={{ borderWidth: 1, borderColor: "black" }}
               >
-                <Text>{i}</Text>
+                <View
+                  style={
+                    precultStart <= i && i <= precultEnd
+                      ? [
+                          DetailedPlantPortraitStyles.monthBox,
+                          DetailedPlantPortraitStyles.preculture,
+                        ]
+                      : DetailedPlantPortraitStyles.monthBox
+                  }
+                ></View>
+                <View
+                  style={
+                    dirSeedStart <= i && i <= dirSeedEnd
+                      ? [
+                          DetailedPlantPortraitStyles.monthBox,
+                          DetailedPlantPortraitStyles.directSeeding,
+                        ]
+                      : DetailedPlantPortraitStyles.monthBox
+                  }
+                ></View>
               </View>
             ))}
           </View>
@@ -231,7 +244,7 @@ const DetailedPLantBanderole = () => {
               DetailedPlantPortraitStyles.monthsInnerContainer,
             ]}
           >
-            <View
+            {/* <View
               name="plant_time_month"
               style={[
                 DetailedPlantPortraitStyles.border,
@@ -314,7 +327,7 @@ const DetailedPLantBanderole = () => {
                 DetailedPlantPortraitStyles.border,
                 DetailedPlantPortraitStyles.monthBox,
               ]}
-            ></View>
+            ></View> */}
           </View>
         </View>
       </View>

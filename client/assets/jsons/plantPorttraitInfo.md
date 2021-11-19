@@ -6,7 +6,7 @@
 
 Important! >>
 . months are stored as numbers, December = 12, January = 1
-. If month index is not given, then automatically should be number 12, 12 for us means "no data given", using 0 instead will lead to faulty rendering.
+. If month is not given, then automatically should be number 13, 13 for us means "no data given", using 0 instead will lead to faulty rendering.
 
 When typing in data rules! >>
 Defaults >>
