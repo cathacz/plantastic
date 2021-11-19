@@ -11,3 +11,6 @@ Important! >>
 When typing in data rules! >>
 Defaults >>
 "beefriendly": false
+
+Problems:
+. when seeding months have no styling then harvest time jumps up into seed row

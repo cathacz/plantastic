@@ -7,75 +7,86 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     backgroundColor: "pink",
   },
   border: {
-    borderWidth: 1,
-    borderColor: "blue",
-    margin: 1,
+    // borderWidth: 1,
+    // borderColor: "blue",
+    // margin: 1,
   },
 
   // banderole area and inside
   banderoleArea: {
-    borderWidth: 2,
-    borderColor: "pink",
-    margin: 1,
+    // borderWidth: 2,
+    // borderColor: "pink",
+    // margin: 1,
   },
   plantTitle: { color: "black", fontSize: 20, fontStyle: "italic" },
   plantVarietyName: { color: colors.sage, fontSize: 20, fontStyle: "italic" },
   botanicalName: { color: "black", fontSize: 20, fontStyle: "italic" },
+
   // ---------------
   // plant time container
   plantTimeContainer: {
-    // flex: 1,
     display: "flex",
     flexDirection: "row",
-    // width: 30,
   },
-  plantTimeTitlesContainer: { borderColor: "green" },
+  // plantTimeTitlesContainer: { borderColor: "green" },
   plantTimeTitle: {
-    borderColor: "orange",
-    // width: 30,
+    // borderColor: "orange",
+    height: 14,
   },
   // titles on left side of calendar overview (for plant time)
   plantTimeTitleText: {
-    borderColor: "skyblue",
-    fontSize: 5,
-    // width: "100%",
+    // borderColor: "skyblue",
+    fontSize: 9,
   },
 
   // month boxes and containers (for plant time)
   monthsOuterContainer: {
-    borderColor: "green",
+    // borderColor: "green",
     display: "flex",
     flexDirection: "column",
   },
   monthsInnerContainer: {
-    borderColor: "orange",
+    // borderColor: "orange",
     display: "flex",
     // flex: 1,
     flexDirection: "row",
+    height: 17,
+    width: 300,
   },
   monthNameContainer: {
-    borderColor: "skyblue",
+    // borderColor: "skyblue",
     width: 25,
     height: 14,
   },
   monthName: {
-    borderColor: "indigo",
+    // borderColor: "indigo",
     color: "black",
     fontSize: 9,
   },
   monthBox: {
-    // margin: 1,
-    // borderColor: "blue",
-
+    margin: 1,
+    borderColor: "blue",
     borderWidth: 1,
     display: "flex",
-    flexDirection: "row",
-    width: 25,
-    height: 7,
-    display: "flex",
-    flexDirection: "row",
-    alignContent: "center",
+    flex: 1,
+    // justifyContent: "center", // why not work?
     alignItems: "center",
+    // width: 25,
+  },
+  monthMarker: {
+    // margin: 1,
+    // borderColor: "blue",
+    // borderWidth: 1,
+    // flex: 1,
+    // width: 25,
+    // height: 7,
+    // display: "flex",
+    // flexDirection: "row",
+    // alignContent: "center",
+    // alignItems: "center",
+    width: "100%",
+    height: "50%",
+    backgroundColor: colors.sage25,
   },
   preculture: {
     backgroundColor: colors.tertiary,
