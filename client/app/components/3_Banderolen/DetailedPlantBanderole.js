@@ -73,7 +73,7 @@ const DetailedPLantBanderole = () => {
     Tomato.plant_data.harvest.direct_seed_harvest_start_month - 1;
   const dsHarvEnd = Tomato.plant_data.harvest.direct_seed_harvest_end_month - 1;
 
-  console.log(flowerStart);
+  // console.log(dsHarvStart);
   return (
     <View style={[StylePlants.banderole]}>
       {/* --------------------------------------------------------------- Banderole */}
