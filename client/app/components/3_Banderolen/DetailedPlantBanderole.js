@@ -93,42 +93,6 @@ const DetailedPLantBanderole = () => {
         </Text>
       </View>
       {/* ----------------------------------- planting time section >>  */}
-      {/* --------- legend for colors >> */}
-      <View
-        name="legend_container"
-        style={DetailedPlantPortraitStyles.legendContainer}
-      >
-        <View name="legend_item" style={DetailedPlantPortraitStyles.legendItem}>
-          <View
-            name="vorkultur_color"
-            style={[
-              DetailedPlantPortraitStyles.legendItemColor,
-              DetailedPlantPortraitStyles.precultureColor,
-            ]}
-          ></View>
-          <Text
-            name="vorkultur_text"
-            style={DetailedPlantPortraitStyles.legendItemText}
-          >
-            Vorkultur
-          </Text>
-        </View>
-        <View name="legend_item" style={DetailedPlantPortraitStyles.legendItem}>
-          <View
-            name="direktsaat_color"
-            style={[
-              DetailedPlantPortraitStyles.legendItemColor,
-              DetailedPlantPortraitStyles.directSeedColor,
-            ]}
-          ></View>
-          <Text
-            name="direktsaat_text"
-            style={DetailedPlantPortraitStyles.legendItemText}
-          >
-            Direktsaat
-          </Text>
-        </View>
-      </View>
 
       {/* --------- row titles >> */}
       <View
@@ -303,6 +267,42 @@ const DetailedPLantBanderole = () => {
               </View>
             ))}
           </View>
+        </View>
+      </View>
+      {/* --------- legend for colors >> */}
+      <View
+        name="legend_container"
+        style={DetailedPlantPortraitStyles.legendContainer}
+      >
+        <View name="legend_item" style={DetailedPlantPortraitStyles.legendItem}>
+          <View
+            name="vorkultur_color"
+            style={[
+              DetailedPlantPortraitStyles.legendItemColor,
+              DetailedPlantPortraitStyles.precultureColor,
+            ]}
+          ></View>
+          <Text
+            name="vorkultur_text"
+            style={DetailedPlantPortraitStyles.legendItemText}
+          >
+            Vorkultur
+          </Text>
+        </View>
+        <View name="legend_item" style={DetailedPlantPortraitStyles.legendItem}>
+          <View
+            name="direktsaat_color"
+            style={[
+              DetailedPlantPortraitStyles.legendItemColor,
+              DetailedPlantPortraitStyles.directSeedColor,
+            ]}
+          ></View>
+          <Text
+            name="direktsaat_text"
+            style={DetailedPlantPortraitStyles.legendItemText}
+          >
+            Direktsaat
+          </Text>
         </View>
       </View>
     </View>
