@@ -18,9 +18,23 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     // borderColor: "pink",
     // margin: 1,
   },
+  labelsContainer: {
+    display: "flex",
+    alignItems: "center",
+  },
   plantTitle: { color: "black", fontSize: 20, fontWeight: "bold" },
-  plantVarietyName: { color: colors.sage, fontSize: 20, fontStyle: "italic" },
-  botanicalName: { color: "black", fontSize: 20, fontStyle: "italic" },
+  plantVarietyName: {
+    color: colors.sage,
+    fontSize: 20,
+    fontStyle: "italic",
+    // padding: 2,
+  },
+  botanicalName: {
+    color: "black",
+    fontSize: 16,
+    fontStyle: "normal",
+    marginBottom: 8,
+  },
 
   // ---------------
   // plant time container

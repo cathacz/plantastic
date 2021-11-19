@@ -77,22 +77,25 @@ const DetailedPLantBanderole = () => {
   return (
     <View style={[StylePlants.banderole]}>
       {/* --------------------------------------------------------------- Banderole */}
-      <Text style={DetailedPlantPortraitStyles.plantTitle}>
-        {Tomato.labels.plant_genus[0]}
-      </Text>
-      <Text style={DetailedPlantPortraitStyles.plantVarietyName}>
-        "{Tomato.labels.specific_variety_name}"
-      </Text>
-      <Text style={DetailedPlantPortraitStyles.botanicalName}>
-        {/* {Tomato.labels.botanical_name} */}
-        {
-          Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
-            .preculture_start_month_index
-        }
-      </Text>
 
+      <View
+        name="labels_container"
+        style={DetailedPlantPortraitStyles.labelsContainer}
+      >
+        <Text style={DetailedPlantPortraitStyles.plantTitle}>
+          {Tomato.labels.plant_genus[0]}
+        </Text>
+        <Text style={DetailedPlantPortraitStyles.plantVarietyName}>
+          "{Tomato.labels.specific_variety_name}"
+        </Text>
+        <Text style={DetailedPlantPortraitStyles.botanicalName}>
+          {Tomato.labels.botanical_name}
+        </Text>
+      </View>
       {/* ------------------planting time section >>  */}
+      {/* --------- legend for colors >> */}
 
+      {/* --------- row titles >> */}
       <View
         name="plant_time_container"
         style={[
