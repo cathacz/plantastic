@@ -3,7 +3,9 @@ import colors from "../config/colors";
 
 const detailedPlantPortraitStyles = StyleSheet.create({
   // shared properties
-  nothing: {},
+  noStyle: {
+    backgroundColor: "pink",
+  },
   border: { borderWidth: 1, borderColor: "blue", margin: 1 },
 
   // banderole area and inside
