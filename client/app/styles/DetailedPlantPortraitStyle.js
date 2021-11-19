@@ -6,7 +6,11 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   noStyle: {
     backgroundColor: "pink",
   },
-  border: { borderWidth: 1, borderColor: "blue", margin: 1 },
+  border: {
+    borderWidth: 1,
+    borderColor: "blue",
+    margin: 1,
+  },
 
   // banderole area and inside
   banderoleArea: {
@@ -60,8 +64,9 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     fontSize: 9,
   },
   monthBox: {
-    margin: 1,
-    borderColor: "blue",
+    // margin: 1,
+    // borderColor: "blue",
+
     borderWidth: 1,
     display: "flex",
     flexDirection: "row",

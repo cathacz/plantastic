@@ -244,6 +244,34 @@ const DetailedPLantBanderole = () => {
               DetailedPlantPortraitStyles.monthsInnerContainer,
             ]}
           >
+            {months.map((month, i) => (
+              <View
+                key={month}
+                name="plant_time_month"
+                style={{ borderWidth: 1, borderColor: "black" }}
+              >
+                <View
+                  style={
+                    precHarvStart <= i && i <= precHarvEnd
+                      ? [
+                          DetailedPlantPortraitStyles.monthBox,
+                          DetailedPlantPortraitStyles.preculture,
+                        ]
+                      : DetailedPlantPortraitStyles.monthBox
+                  }
+                ></View>
+                <View
+                  style={
+                    dsHarvStart <= i && i <= dsHarvEnd
+                      ? [
+                          DetailedPlantPortraitStyles.monthBox,
+                          DetailedPlantPortraitStyles.directSeeding,
+                        ]
+                      : DetailedPlantPortraitStyles.monthBox
+                  }
+                ></View>
+              </View>
+            ))}
             {/* <View
               name="plant_time_month"
               style={[
