@@ -45,12 +45,24 @@ const DetailedPLantBanderole = () => {
     "Dez",
   ];
 
+  // planting months
+  const precultStart =
+    Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
+      .preculture_start_month_index;
+  const precultEnd =
+    Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
+      .preculture_end_month_index;
+  const dirSeedStart =
+    Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
+      .direct_seeding_start_month_index;
+  const dirSeedEnd =
+    Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
+      .direct_seeding_end_month_index;
+
+  // console.log(precultStart);
   return (
     <View style={[StylePlants.banderole]}>
       {/* --------------------------------------------------------------- Banderole */}
-      {/* <SafeAreaView style={StylePlants.banderole}>
-  <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
-</SafeAreaView>; */}
       <Text style={DetailedPlantPortraitStyles.plantTitle}>
         {Tomato.labels.plant_genus[0]}
       </Text>
@@ -184,18 +196,9 @@ const DetailedPLantBanderole = () => {
                 key={i}
                 name="plant_time_month"
                 style={
-                  Tomato.plant_data.planting_conditions.seeding_germination
-                    .seeding_time.preculture_start_month_index <= i &&
-                  i <=
-                    Tomato.plant_data.planting_conditions.seeding_germination
-                      .seeding_time.preculture_end_month_index
+                  precultStart <= i && i <= precultEnd
                     ? DetailedPlantPortraitStyles.preculture
-                    : Tomato.plant_data.planting_conditions.seeding_germination
-                        .seeding_time.direct_seeding_start_month_index <= i &&
-                      i <=
-                        Tomato.plant_data.planting_conditions
-                          .seeding_germination.seeding_time
-                          .direct_seeding_end_month_index
+                    : dirSeedStart <= i && i <= dirSeedEnd
                     ? DetailedPlantPortraitStyles.directSeeding
                     : DetailedPlantPortraitStyles.monthBox
                 }
