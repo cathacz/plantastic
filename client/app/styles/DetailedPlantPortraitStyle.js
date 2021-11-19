@@ -63,7 +63,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   monthNameContainer: {
     // borderColor: "skyblue",
     width: 25,
-    height: 14,
+    alignSelf: "flex-end",
   },
   monthName: {
     // borderColor: "indigo",

@@ -14,3 +14,4 @@ Defaults >>
 
 Problems:
 . when seeding months have no styling then harvest time jumps up into seed row
+. why letters cut off in italic?
