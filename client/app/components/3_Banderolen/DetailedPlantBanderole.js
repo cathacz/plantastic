@@ -45,21 +45,35 @@ const DetailedPLantBanderole = () => {
     "Dez",
   ];
 
-  // planting months
+  // planting months index calculations
   const precultStart =
     Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
-      .preculture_start_month_index;
+      .preculture_start_month - 1;
   const precultEnd =
     Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
-      .preculture_end_month_index;
+      .preculture_end_month - 1;
   const dirSeedStart =
     Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
-      .direct_seeding_start_month_index;
+      .direct_seeding_start_month - 1;
   const dirSeedEnd =
     Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
-      .direct_seeding_end_month_index;
+      .direct_seeding_end_month - 1;
 
-  // console.log(precultStart);
+  const flowerStart = Tomato.plant_data.flower.flowering_start_month - 1;
+  const flowerEnd = Tomato.plant_data.flower.flowering_end_month - 1;
+
+  const fruitStart = Tomato.plant_data.fruit.fruit_start_month - 1;
+  const fruitEnd = Tomato.plant_data.fruit.fruit_end_month - 1;
+
+  const precHarvStart =
+    Tomato.plant_data.harvest.preculture_harvest_start_month - 1;
+  const precHarvEnd =
+    Tomato.plant_data.harvest.preculture_harvest_end_month - 1;
+  const dsHarvStart =
+    Tomato.plant_data.harvest.direct_seed_harvest_start_month - 1;
+  const dsHarvEnd = Tomato.plant_data.harvest.direct_seed_harvest_end_month - 1;
+
+  console.log(flowerStart);
   return (
     <View style={[StylePlants.banderole]}>
       {/* --------------------------------------------------------------- Banderole */}
@@ -193,7 +207,7 @@ const DetailedPLantBanderole = () => {
           >
             {months.map((month, i) => (
               <View
-                key={i}
+                key={month}
                 name="plant_time_month"
                 style={
                   precultStart <= i && i <= precultEnd
@@ -206,91 +220,6 @@ const DetailedPLantBanderole = () => {
                 <Text>{i}</Text>
               </View>
             ))}
-
-            {/* <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View>
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            ></View> */}
           </View>
 
           {/* --------------- Ernte >> */}
