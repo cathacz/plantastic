@@ -18,7 +18,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     // borderColor: "pink",
     // margin: 1,
   },
-  plantTitle: { color: "black", fontSize: 20, fontStyle: "italic" },
+  plantTitle: { color: "black", fontSize: 20, fontWeight: "bold" },
   plantVarietyName: { color: colors.sage, fontSize: 20, fontStyle: "italic" },
   botanicalName: { color: "black", fontSize: 20, fontStyle: "italic" },
 

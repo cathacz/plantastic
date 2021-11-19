@@ -81,7 +81,7 @@ const DetailedPLantBanderole = () => {
         {Tomato.labels.plant_genus[0]}
       </Text>
       <Text style={DetailedPlantPortraitStyles.plantVarietyName}>
-        {Tomato.labels.specific_variety_name}
+        "{Tomato.labels.specific_variety_name}"
       </Text>
       <Text style={DetailedPlantPortraitStyles.botanicalName}>
         {/* {Tomato.labels.botanical_name} */}
