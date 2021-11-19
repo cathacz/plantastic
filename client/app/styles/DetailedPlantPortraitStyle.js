@@ -3,6 +3,7 @@ import colors from "../config/colors";
 
 const detailedPlantPortraitStyles = StyleSheet.create({
   // shared properties
+  nothing: {},
   border: { borderWidth: 1, borderColor: "blue", margin: 1 },
 
   // banderole area and inside
@@ -47,9 +48,10 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     flexDirection: "row",
   },
   monthBox: {
-    // borderColor: "white",
+    margin: 1,
+    borderColor: "blue",
+    borderWidth: 1,
     display: "flex",
-    // flex: 1,
     flexDirection: "row",
     width: 25,
     height: 15,
@@ -57,6 +59,36 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     flexDirection: "row",
     alignContent: "center",
     alignItems: "center",
+  },
+  preculture: {
+    margin: 1,
+    borderColor: "blue",
+    borderWidth: 1,
+    display: "flex",
+    flexDirection: "row",
+    width: 25,
+    height: 15,
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "center",
+    alignItems: "center",
+
+    backgroundColor: "yellow",
+  },
+  directSeeding: {
+    margin: 1,
+    borderColor: "blue",
+    borderWidth: 1,
+    display: "flex",
+    flexDirection: "row",
+    width: 25,
+    height: 15,
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "center",
+    alignItems: "center",
+
+    backgroundColor: "orange",
   },
   monthName: { borderColor: "skyblue", color: "black", fontSize: 5 },
 

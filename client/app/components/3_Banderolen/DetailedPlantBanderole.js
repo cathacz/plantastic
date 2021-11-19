@@ -30,6 +30,21 @@ import StyleMain from "../../styles/StyleMain";
 import Tomato from "../../../assets/jsons/tomatoPortrait.json";
 
 const DetailedPLantBanderole = () => {
+  let months = [
+    "Jan",
+    "Feb",
+    "Mär",
+    "Apr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Okt",
+    "Nov",
+    "Dez",
+  ];
+
   return (
     <View style={[StylePlants.banderole]}>
       {/* --------------------------------------------------------------- Banderole */}
@@ -43,7 +58,11 @@ const DetailedPLantBanderole = () => {
         {Tomato.labels.specific_variety_name}
       </Text>
       <Text style={DetailedPlantPortraitStyles.botanicalName}>
-        {Tomato.labels.botanical_name}
+        {/* {Tomato.labels.botanical_name} */}
+        {
+          Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
+            .preculture_start_month_index
+        }
       </Text>
 
       {/* ------------------planting time >>  */}
@@ -129,244 +148,26 @@ const DetailedPLantBanderole = () => {
               DetailedPlantPortraitStyles.monthsInnerContainer,
             ]}
           >
-            {/* --------- January >> */}
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
+            {months.map((month, i) => (
+              <View
+                key={i}
+                name="plant_time_month"
                 style={[
                   DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
+                  DetailedPlantPortraitStyles.monthBox,
                 ]}
               >
-                Jan
-              </Text>
-            </View>
-
-            {/* --------- February >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Feb
-              </Text>
-            </View>
-
-            {/* --------- March >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Mär
-              </Text>
-            </View>
-
-            {/* --------- April >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Apr
-              </Text>
-            </View>
-
-            {/* --------- May >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Mai
-              </Text>
-            </View>
-
-            {/* --------- June >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Jun
-              </Text>
-            </View>
-
-            {/* --------- July >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Jul
-              </Text>
-            </View>
-
-            {/* --------- August >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Aug
-              </Text>
-            </View>
-
-            {/* --------- September >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Sep
-              </Text>
-            </View>
-
-            {/* --------- October >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Okt
-              </Text>
-            </View>
-
-            {/* --------- November >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Nov
-              </Text>
-            </View>
-
-            {/* --------- December >> */}
-
-            <View
-              name="plant_time_month"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.monthBox,
-              ]}
-            >
-              <Text
-                name="month_name"
-                style={[
-                  DetailedPlantPortraitStyles.border,
-                  DetailedPlantPortraitStyles.monthName,
-                ]}
-              >
-                Dez
-              </Text>
-            </View>
+                <Text
+                  name="month_name"
+                  style={[
+                    DetailedPlantPortraitStyles.border,
+                    DetailedPlantPortraitStyles.monthName,
+                  ]}
+                >
+                  {month}
+                </Text>
+              </View>
+            ))}
           </View>
 
           {/* --------------- Aussaat >> */}
@@ -378,7 +179,32 @@ const DetailedPLantBanderole = () => {
               DetailedPlantPortraitStyles.monthsInnerContainer,
             ]}
           >
-            <View
+            {months.map((month, i) => (
+              <View
+                key={i}
+                name="plant_time_month"
+                style={
+                  Tomato.plant_data.planting_conditions.seeding_germination
+                    .seeding_time.preculture_start_month_index <= i &&
+                  i <=
+                    Tomato.plant_data.planting_conditions.seeding_germination
+                      .seeding_time.preculture_end_month_index
+                    ? DetailedPlantPortraitStyles.preculture
+                    : Tomato.plant_data.planting_conditions.seeding_germination
+                        .seeding_time.direct_seeding_start_month_index <= i &&
+                      i <=
+                        Tomato.plant_data.planting_conditions
+                          .seeding_germination.seeding_time
+                          .direct_seeding_end_month_index
+                    ? DetailedPlantPortraitStyles.directSeeding
+                    : DetailedPlantPortraitStyles.monthBox
+                }
+              >
+                <Text>{i}</Text>
+              </View>
+            ))}
+
+            {/* <View
               name="plant_time_month"
               style={[
                 DetailedPlantPortraitStyles.border,
@@ -461,7 +287,7 @@ const DetailedPLantBanderole = () => {
                 DetailedPlantPortraitStyles.border,
                 DetailedPlantPortraitStyles.monthBox,
               ]}
-            ></View>
+            ></View> */}
           </View>
 
           {/* --------------- Ernte >> */}
