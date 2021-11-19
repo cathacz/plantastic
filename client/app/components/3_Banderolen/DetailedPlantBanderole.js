@@ -91,7 +91,8 @@ const DetailedPLantBanderole = () => {
         }
       </Text>
 
-      {/* ------------------planting time >>  */}
+      {/* ------------------planting time section >>  */}
+
       <View
         name="plant_time_container"
         style={[
@@ -112,17 +113,7 @@ const DetailedPLantBanderole = () => {
               DetailedPlantPortraitStyles.banderoleArea,
               DetailedPlantPortraitStyles.plantTimeTitle,
             ]}
-          >
-            {/* <Text
-              name="plant_time_title_text"
-              style={[
-                DetailedPlantPortraitStyles.border,
-                DetailedPlantPortraitStyles.plantTimeTitleText,
-              ]}
-            >
-              Nada
-            </Text> */}
-          </View>
+          ></View>
           <View
             name="plant_time_title"
             style={[

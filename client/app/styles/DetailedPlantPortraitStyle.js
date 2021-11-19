@@ -30,13 +30,18 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
   // plantTimeTitlesContainer: { borderColor: "green" },
   plantTimeTitle: {
+    // borderWidth: 1,
     // borderColor: "orange",
-    height: 14,
+    height: 20,
+    display: "flex",
   },
   // titles on left side of calendar overview (for plant time)
   plantTimeTitleText: {
     // borderColor: "skyblue",
+    // borderWidth: 1,
+
     fontSize: 9,
+    padding: 2,
   },
 
   // month boxes and containers (for plant time)
@@ -46,12 +51,14 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     flexDirection: "column",
   },
   monthsInnerContainer: {
+    // borderWidth: 1,
     // borderColor: "orange",
     display: "flex",
     // flex: 1,
     flexDirection: "row",
-    height: 17,
+    height: 20,
     width: 300,
+    padding: 1,
   },
   monthNameContainer: {
     // borderColor: "skyblue",
@@ -65,8 +72,9 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
   monthBox: {
     margin: 1,
-    borderColor: "blue",
-    borderWidth: 1,
+    // borderColor: "blue",
+    // borderWidth: 1,
+    // padding: 1,
     display: "flex",
     flex: 1,
     // justifyContent: "center", // why not work?
