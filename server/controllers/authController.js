@@ -3,7 +3,7 @@ const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, UnauthenticatedError } = require("../errors");
-
+const sendEmail = require("../utils/sendEmail");
 const register = async (req, res) => {
   const user = await User.create({ ...req.body });
   const token = user.createJWT();
@@ -31,8 +31,7 @@ const login = async (req, res) => {
 
 // forgot password
 
-const forgotPassword = (req, res) => {
-  res.render("forgot-password");
+const forgotPassword = async (req, res) => {
   const { email } = req.body;
   console.log(req.body);
 
@@ -51,6 +50,8 @@ const forgotPassword = (req, res) => {
       res.status(400).json({ error: "No user wit this email" });
     }
   });
+
+  /*  res.render("forgot-password"); */
 };
 
 // reset password
@@ -78,11 +79,31 @@ const resetPasswordGet = async (req, res) => {
   }
 };
 
-const resetPasswordPost = (req, res) => {
+const resetPasswordPost = async (req, res) => {
   const { id, token } = req.params;
-
-  console.log("reset post");
-  res.send(user);
+  const user = await User.findById(id);
+  if (!id) {
+    throw new UnauthenticatedError("Please provide ID");
+  }
+  if (id !== user.id) {
+    throw new BadRequestError("Invalid ID");
+  }
+  const secret = process.env.JWT_SECRET + user.password;
+  console.log("secret" + secret);
+  try {
+    const payload = jwt.verify(token, secret);
+    const message = "hi";
+    /* user.password = password; */
+    await sendEmail({
+      to: user.email,
+      subject: "Password Reset Request",
+      text: message,
+    });
+    res.status(200).json({ success: true, data: "Email sent" });
+  } catch (err) {
+    console.log(err.message);
+    res.send("forgot pass error");
+  }
 };
 
 module.exports = {
