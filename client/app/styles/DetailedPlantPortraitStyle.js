@@ -40,12 +40,32 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   // ---------------
 
   // legend for colors >>
-  legendContainer: {},
-  legendItem: {},
-  legendItemColor: {},
-  precultureColor: {},
-  directSeedColor: {},
-  legendItemText: { fontSize: 10 },
+  legendContainer: {
+    borderWidth: 1,
+    borderColor: "green",
+    flexDirection: "row",
+  },
+  legendItem: {
+    // borderWidth: 1,
+    // borderColor: "yellow",
+    display: "flex",
+    flexDirection: "row",
+    // justifyContent: "center",
+    alignItems: "center",
+  },
+  legendItemColor: {
+    width: 10,
+    height: 10,
+  },
+  precultureColor: { backgroundColor: colors.tertiary },
+  directSeedColor: { backgroundColor: colors.sage75 },
+  legendItemText: {
+    // borderWidth: 1,
+    // borderColor: "pink",
+    fontSize: 10,
+    marginLeft: 3,
+    marginRight: 3,
+  },
 
   // ---------------
 

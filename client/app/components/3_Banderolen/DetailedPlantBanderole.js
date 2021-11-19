@@ -129,6 +129,7 @@ const DetailedPLantBanderole = () => {
           </Text>
         </View>
       </View>
+
       {/* --------- row titles >> */}
       <View
         name="plant_time_container"
