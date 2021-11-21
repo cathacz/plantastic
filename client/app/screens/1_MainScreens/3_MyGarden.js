@@ -18,7 +18,7 @@ import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 import MyGardenBanderole from "../../components/3_Banderolen/MyGardenBanderole";
-
+import SeedStarted from "../../components/Calendar/SeedStarted";
 // for styling >>
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
@@ -40,7 +40,17 @@ const MyGarden = ({ navigation }) => {
           alignItems: "center",
           justifyContent: "center",
         }}
-      ></View>
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          <SeedStarted />
+          {/* map through the list of user's plants */}
+        </View>
+      </View>
       {/* ---------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
 
