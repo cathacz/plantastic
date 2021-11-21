@@ -29,7 +29,7 @@ const MyGarden = ({ navigation }) => {
       {/* --------------------------------------------------------------- Banderole */}
       <MyGardenBanderole navigation={navigation} />
       {/* ----------------------------------------------------- Main Part */}
-
+      <View></View>
       {/* ---------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
 
