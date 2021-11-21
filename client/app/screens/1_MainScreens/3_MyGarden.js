@@ -29,7 +29,18 @@ const MyGarden = ({ navigation }) => {
       {/* --------------------------------------------------------------- Banderole */}
       <MyGardenBanderole navigation={navigation} />
       {/* ----------------------------------------------------- Main Part */}
-      <View></View>
+      <View
+        style={{
+          width: "100%",
+          marginTop: 200,
+          height: 125,
+          backgroundColor: colors.sage25,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      ></View>
       {/* ---------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
 
