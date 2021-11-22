@@ -38,8 +38,7 @@ const Overview = ({ navigation }) => {
       <View
         style={{
           width: "100%",
-          marginTop: 90,
-          height: 150,
+          height: 160,
           backgroundColor: colors.sage5,
           position: "absolute",
           textAlign: "center",
@@ -64,9 +63,9 @@ const Overview = ({ navigation }) => {
 
       {/* ---------------------------------------- Something */}
 
-      <View style={{ marginTop: 70 }}>
+      {/* <View style={{ marginTop: 70 }}>
         <Text>This is Overview</Text>
-      </View>
+      </View> */}
 
       {/* --------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />

@@ -15,6 +15,11 @@ const Tab = createBottomTabNavigator();
 // elements >>
 import { Button } from "react-native";
 
+// Landing Page ++ SignIn ++ LogIn >>
+import Landing from "./app/screens/0_SignLogInScreens/1_LandingPage";
+import SignIn from "./app/screens/0_SignLogInScreens/2_SignInPage";
+import LogIn from "./app/screens/0_SignLogInScreens/3_LogInPage";
+
 // Screen components for navigator >>
 import Today from "./app/screens/1_MainScreens/1_Today";
 import Overview from "./app/screens/1_MainScreens/2_Overview";
@@ -36,6 +41,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
+        {/* ----------------------------------------- LandingPage ++ SignIn ++ LogIn */}
+        <Stack.Screen name="LandingPage" component={Landing} options={{}} />
+        <Stack.Screen name="SignIn" component={SignIn} options={{}} />
+        <Stack.Screen name="LogIn" component={LogIn} options={{}} />
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{

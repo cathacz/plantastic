@@ -77,8 +77,8 @@ const Today = ({ navigation, route }) => {
       <View
         style={{
           width: "100%",
-          marginTop: 90,
-          height: 150,
+          // marginTop: 90,
+          height: 160,
           backgroundColor: colors.sage5,
           position: "absolute",
           textAlign: "center",
@@ -103,10 +103,10 @@ const Today = ({ navigation, route }) => {
       </View>
 
       {/* -------------------------------------- Main Part */}
-
+      {/* 
       <View style={{ marginTop: 70 }}>
         <Text>This is TODAY</Text>
-      </View>
+      </View> */}
 
       {/* Added by Vivi start ------------------- */}
       <View style={styles.taskListArea}>
