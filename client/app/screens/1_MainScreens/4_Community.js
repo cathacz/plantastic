@@ -33,7 +33,7 @@ const Community = ({ navigation }) => {
       </SafeAreaView>
 
       {/* ----------------------------------------------------- Main Part */}
-      <View style={StyleMain.quick}>
+      {/* <View style={StyleMain.quick}>
         <Text style={StyleMain.mainText}>
           <View style={StyleMain.quick}>
             <View underlayColor={colors.sage25} style={StyleMain}>
@@ -47,7 +47,7 @@ const Community = ({ navigation }) => {
             </View>
           </View>
         </Text>
-      </View>
+      </View> */}
       {/* ---------------------------------------- Navigation Main Bottom */}
 
       <NavMainBottom navigation={navigation} />
