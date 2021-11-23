@@ -29,20 +29,21 @@ import colors from "../../config/colors";
 import Tomato from "../../../assets/jsons/tomatoPortrait.json";
 
 const PlantPortrait = ({ navigation }) => {
+  console.log(Tomato.images.map((item) => item.image_link)); // need map
+
   return (
     <SafeAreaView style={StylePlants.container}>
       {/* -------------------- statusbar -------------------- */}
 
       <StatusBar style="auto" />
 
-      {/* --------------------------------------------------------------- Banderole */}
-      {/* <SafeAreaView style={StyleMain.banderole}>
-        <Text style={StylePlants.mainText}>Pflanzenportrait</Text>
-      </SafeAreaView> */}
+      {/* ----------------------------------------------------- Banderole */}
 
       <DetailedPlantBanderole />
+
       {/* ----------------------------------------------------- Main Part */}
       <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
+        {/* <Image style={{}} source={require("../../../assets/images/${}")} /> */}
         <Text style={DetailedPlantPortraitStyles.noStyle}>CAN YOU SEE ME?</Text>
         <Text style={DetailedPlantPortraitStyles.noStyle}>
           The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
