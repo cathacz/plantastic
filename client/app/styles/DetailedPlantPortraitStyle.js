@@ -41,10 +41,13 @@ const detailedPlantPortraitStyles = StyleSheet.create({
 
   // legend for colors >>
   legendContainer: {
-    borderWidth: 1,
-    borderColor: "green",
+    // borderWidth: 1,
+    // borderColor: "green",
     flexDirection: "row",
+    alignSelf: "flex-end",
+    marginRight: "8%",
   },
+  // << need to put it inside plant container later and put others in plant container inside another container so that legend is always on the bottom right of it
   legendItem: {
     // borderWidth: 1,
     // borderColor: "yellow",
