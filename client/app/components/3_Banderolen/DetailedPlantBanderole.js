@@ -269,7 +269,9 @@ const DetailedPLantBanderole = () => {
           </View>
         </View>
       </View>
+
       {/* --------- legend for colors >> */}
+
       <View
         name="legend_container"
         style={DetailedPlantPortraitStyles.legendContainer}
