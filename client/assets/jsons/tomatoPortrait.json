@@ -203,17 +203,19 @@
     "plant_has_poisonous_part": true,
     "grafting": true,
     "grafting_notes": ["Veredeln ist möglich aber unnötig"],
+    "plant_description_keywords": ["ertragreich", "widerstandsfähig"],
     "plant_description": [
+      "paragraph 1",
       "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen.",
-      "paragraph 2",
-      "paragraph 3"
+      "paragraph 3",
+      "paragraph 4"
     ],
     "plant_information": [
-      "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen.",
+      "paragraph 1",
       "paragraph 2",
-      "paragraph 3"
+      "paragraph 3",
+      "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen."
     ],
-    "plant_description_keywords": ["ertragreich", "widerstandsfähig"],
     "other_information": "Text...",
     "repotting": {
       "plant_needs_repotting_replanting": true,
