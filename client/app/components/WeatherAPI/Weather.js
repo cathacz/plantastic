@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import imageDictionary from "./imageDictionary";
 import { isSameDay, format } from "date-fns";
 import NumberToMonth from "../NumberToMonth";
@@ -35,9 +35,9 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
     };
   });
   return (
-    <View>
-      <Text>{name}</Text>
-      <Text>
+    <View style={styles.wrapper}>
+      <Text style={styles.location}>{name}</Text>
+      <Text style={styles.date}>
         Today is {"\n"}
         <View>
           <NumberToMonth />
@@ -55,5 +55,19 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
     </View>
   );
 };
-
+const styles = StyleSheet.create({
+  wrapper: {
+    borderColor: "pink",
+    borderWidth: 2,
+    borderStyle: "solid",
+    width: "50%",
+    justifyContent: "flex-end",
+    textAlign: "right",
+    marginLeft: "50%",
+  },
+  location: {
+    textAlign: "right",
+    fontSize: 40,
+  },
+});
 export default Weather;

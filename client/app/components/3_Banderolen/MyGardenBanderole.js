@@ -15,12 +15,12 @@ function MyGardenBanderole({ navigation }) {
         })
       }
     >
-      <View style={StyleMain}>
+      <View style={StyleMain.nothing}>
         <Image
           source={require("../../../assets/icons/png/berries.png")}
-          style={{ height: 50, width: 50, alignItems: "center" }}
+          style={StyleMain.navTopElementImage}
         />
-        <Text style={StyleMain}>Beeren</Text>
+        <Text style={StyleMain.nothing}>Beeren</Text>
       </View>
     </TouchableOpacity>
   );

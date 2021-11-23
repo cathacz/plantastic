@@ -3,9 +3,13 @@ import colors from "../config/colors";
 import { Dimensions } from "react-native";
 
 const StyleMain = StyleSheet.create({
+  // nothing: {},
   container: {
     flex: 1,
     backgroundColor: "white",
+    // justifyContent: "center",
+    // alignContent: "center",
+    // alignItems: "center",
   },
   mainText: {
     marginTop: 100,
@@ -23,11 +27,14 @@ const StyleMain = StyleSheet.create({
   // },
   // ------------------------------ Navigation Main Top
   navMainTop: {
-    borderBottomColor: "black",
-    borderBottomWidth: 1,
-    padding: 6,
+    // borderColor: "black",
+    // borderWidth: 1,
+    paddingLeft: 400,
+
     flexDirection: "row",
     justifyContent: "space-between",
+
+    alignItems: "center",
     width: "100%",
   },
   navTopElement: {
@@ -42,10 +49,12 @@ const StyleMain = StyleSheet.create({
     // borderWidth: 1,
     height: 50,
     width: 50,
+    margin: 10,
   },
   // Plantastic Title
   navTopText: {
     fontSize: 30,
+    // marginRight: 50,
   },
   // SearchMenu Button
   searchMenuWrapperRight: {
@@ -53,6 +62,7 @@ const StyleMain = StyleSheet.create({
     // borderWidth: 1,
     flexDirection: "row",
     alignItems: "center",
+    margin: 10,
   },
   searchMenuWrapper: {
     // borderColor: "blue",
@@ -95,7 +105,7 @@ const StyleMain = StyleSheet.create({
   },
   // -------------------------------------- Banderole
   banderole: {
-    height: 200,
+    height: 160,
     width: "100%",
     backgroundColor: colors.sage5,
     textAlign: "center",

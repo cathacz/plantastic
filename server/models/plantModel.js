@@ -285,4 +285,4 @@ const plantSchema = Schema({
 
 const Plant = mongoose.model("plant", plantSchema, "plant");
 
-module.exports = Plant;
+modules.exports = Plant;

@@ -1,11 +1,24 @@
 import React from "react";
 
+import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
+
+import colors from "./app/config/colors";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+
 // navigator funktionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 // elements >>
 import { Button } from "react-native";
+
+// Landing Page ++ SignIn ++ LogIn >>
+import Landing from "./app/screens/0_SignLogInScreens/1_LandingPage";
+import SignIn from "./app/screens/0_SignLogInScreens/2_SignInPage";
+import LogIn from "./app/screens/0_SignLogInScreens/3_LogInPage";
 
 // Screen components for navigator >>
 import Today from "./app/screens/1_MainScreens/1_Today";
@@ -14,23 +27,24 @@ import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
+// import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
 import PlantPortrait from "./app/screens/2_PlantScreens/2_PlantPortrait";
 import Diary from "./app/screens/2_PlantScreens/3_Diary";
 
-// import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
-
 // piece components >>
 import NavMainBottom from "./app/components/2_NavComponents/NavMainBottom";
 import NavMainTop from "./app/components/2_NavComponents/NavMainTop";
-
-const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
+        {/* ----------------------------------------- LandingPage ++ SignIn ++ LogIn */}
+        <Stack.Screen name="LandingPage" component={Landing} options={{}} />
+        <Stack.Screen name="SignIn" component={SignIn} options={{}} />
+        <Stack.Screen name="LogIn" component={LogIn} options={{}} />
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{

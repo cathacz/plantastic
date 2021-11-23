@@ -21,7 +21,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("QuickView", {
+          navigation.replace("QuickView", {
             propOne: "propOne props",
           })
         }
@@ -41,7 +41,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("PlantPortrait", {
+          navigation.replace("PlantPortrait", {
             propOne: "propOne props",
           })
         }
@@ -61,7 +61,7 @@ function PlantBottomNav({ navigation }) {
 
       <TouchableHighlight
         onPress={() =>
-          navigation.navigate("Diary", {
+          navigation.replace("Diary", {
             propOne: "propOne props",
           })
         }

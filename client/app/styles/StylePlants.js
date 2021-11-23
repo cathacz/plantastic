@@ -36,6 +36,21 @@ const StylePlants = StyleSheet.create({
   },
 
   // -------------------------------------- Banderole
+  banderole: {
+    marginTop: 90,
+    height: 200,
+    width: "100%",
+    borderColor: "white",
+    borderBottomColor: colors.sage75,
+    borderTopColor: colors.sage75,
+    borderStyle: "solid",
+    borderWidth: 2,
+
+    // position: "absolute",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 
   // -------------------------------------- Navigation Main Bottom
   navMainBottom: {

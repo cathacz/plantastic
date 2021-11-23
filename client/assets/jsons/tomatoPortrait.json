@@ -115,13 +115,15 @@
         "separate_start_month_index": 4,
         "separate_plants_space": "40x50",
         "separate_plants_space_unit": "cm",
-        "separate_notes": ["Ab Mai pikieren"]
+        "separate_notes": [
+          "Nach ca. 3 Wochen, wenn die Sämlinge die ersten Blattpaare entwickelt haben, oder ab Mai pikieren"
+        ]
       },
       "seeding_germination": {
         "seed_depth": 1,
         "seed_depth_unit": "cm",
         "seeding_notes": [
-          "Nur wenig mit Erde bedecken",
+          "Nur wenig mit Erde bedecken, da Lichtkeimer",
           "Für Vorkultur im warmen Zimmer in Gefäße in spezielle Aussaaterde säen."
         ],
         "seeding_time": {
@@ -157,7 +159,10 @@
       "ready_for_harvest": "Abhängig von der Sorte sind die Tomaten rot, wenn sie reif sind./Nach ca. 2 Jahren bilden sich die ersten Früchte."
     },
     "care": {
-      "care_keypoints": ["ausgeizen der Triebe", "umtopfen"],
+      "care_keypoints": [
+        "ausgeizen der Triebe empfohlen",
+        "in größere Töpfe umtopfen, während die Pflanze wächst"
+      ],
       "care_information": ["paragraph 1", "paragraph 2", "paragraph 3"]
     },
     "variety_specific_characteristics_list": [
