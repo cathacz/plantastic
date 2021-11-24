@@ -20,6 +20,7 @@ module.exports = {
 const createPlant = async (req, res) => {
   try {
     const plant = await Plant.create(req.body);
+    console.log(req.body);
     res.status(201).json({ plant });
   } catch (err) {
     res.status(500).json({ msg: err });
