@@ -4,13 +4,7 @@ import AppButton from "../AppButton";
 import { StatusBar } from "expo-status-bar";
 
 import React, { Fragment, useEffect, useState } from "react";
-import {
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  SafeAreaView,
-} from "react-native";
+import { SafeAreaView } from "react-native";
 import moment from "moment";
 import * as Calendar from "expo-calendar";
 import * as Localization from "expo-localization";
