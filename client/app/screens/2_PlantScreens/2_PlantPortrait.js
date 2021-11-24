@@ -27,11 +27,17 @@ import colors from "../../config/colors";
 
 // example plant
 import Tomato from "../../../assets/jsons/tomatoPortrait.json";
+// tomato image
+import tomatoImage from "../../../assets/images/roma_tomatoes.jpg";
 
 const PlantPortrait = ({ navigation }) => {
-  console.log(Tomato.images.map((item) => item.image_link)); // need map
-  // console.log(Tomato.images[0].item.image_link);
-  console.log("tomato object >>" + Tomato.images[0].image_link);
+  // console.log(Tomato.images.map((item) => item.image_link));
+  // console.log("tomato object >>" + Tomato.images[0].image_link);
+  const plantImage = `../../../assets/images/` + Tomato.images[0].image_link;
+
+  const resolveAssetSource = Image.resolveAssetSource(tomatoImage).uri;
+
+  console.log(plantImage);
 
   return (
     <SafeAreaView style={StylePlants.container}>
@@ -45,7 +51,16 @@ const PlantPortrait = ({ navigation }) => {
 
       {/* ----------------------------------------------------- Main Part */}
       <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
-        {/* <Image style={{}} source={require("../../../assets/images/${}")} /> */}
+        {/* <Image
+          style={{}}
+          source={{ uri: "data:../../../assets/images/roma_tomatoes.jpg" }}
+        /> */}
+
+        {/* <Image style={{}} source={require(plantImage)} /> */}
+        {/* <Image
+          style={{}}
+          source={require(`../../../assets/images/roma_tomatoes.jpg`)}
+        /> */}
         <Text style={DetailedPlantPortraitStyles.noStyle}>Einführung</Text>
         <Text style={DetailedPlantPortraitStyles.noStyle}>Beschreibung</Text>
         <Text style={DetailedPlantPortraitStyles.noStyle}>Allgemeines</Text>
