@@ -25,6 +25,7 @@ import colors from "../../config/colors";
 
 // imports Alina
 import Calendar from "../../components/OverviewCalendar";
+import MonthView from "../../components/Calendar/MonthView";
 // import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
