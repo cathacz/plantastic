@@ -19,7 +19,7 @@ export default function useWeather(lat, lon) {
 
   const latLon = useGeoLocation();
 
-  console.log(...latLon);
+  // console.log(...latLon);
 
   useEffect(() => {
     if (latLon) {
