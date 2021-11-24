@@ -1,58 +1,173 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
-  TouchableOpacity,
+  TouchableHighlight,
   StatusBar,
   SafeAreaView,
   View,
-  Image,
+  TextInput,
 } from "react-native";
 import colors from "../../config/colors";
 
-import Terms from "./Terms";
-import StyleMain from "../../styles/StyleMain";
-import StylePlants from "../../styles/StylePlants";
-
-const SearchMenu = () => {
+const SearchMenu = ({ navigation }) => {
+  const [text, onChangeText] = React.useState("");
   return (
-    <SafeAreaView style={StyleMain.container}>
-      {/* back button */}
-      <View style={StylePlants}>
-        <View underlayColor="white" style={StylePlants}>
-          <View style={StylePlants}>
-            <Image
-              source={require("../../../assets/icons/png/back-button.png")}
-              style={{
-                height: 50,
-                width: 50,
-                alignItems: "center",
-                margin: 5,
-              }}
+    <SafeAreaView style={styles.container}>
+      {/* ----------------------------------------------------- Search */}
+      <View style={styles.search}>
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.ButtonSearch}
+          onPress={() =>
+            navigation.navigate("SearchResults", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.buttonSearch}>
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeText}
+              value={text}
+              placeholder="Was suchst du?"
             />
-          </View>
-        </View>
-        {/* main content */}
-        <Text style={styles.text}>
-          Here will be a Searchbar and the MainMenu
-        </Text>
-        <Text>
-          <View style={StyleMain.quick}>
-            <View
-              name="Terms-link?"
-              underlayColor={colors.sage25}
-              style={styles.quickLink}
-            >
-              <View style={styles.quicky}>
-                <Image
-                  source={require("../../../assets/icons/png/flower.png")}
-                  style={{ height: 50, width: 50, alignItems: "center" }}
-                />
-                <Text style={styles.quickyText}>Beeren</Text>
-              </View>
+            <View style={styles.lupeWrapper}>
+              <View style={styles.lupeKL}></View>
+              <View style={styles.lupe}></View>
             </View>
           </View>
-        </Text>
+        </TouchableHighlight>
+      </View>
+      {/* ----------------------------------------------------- Main Stuff */}
+      <View style={styles.mainStuff}>
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.Button}
+          onPress={() =>
+            navigation.navigate("AllPlants", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Alle Pflanzen</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKL}></View>
+              <View style={styles.leaf}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.Button}
+          onPress={() =>
+            navigation.navigate("Blog", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Blog</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKL}></View>
+              <View style={styles.leaf}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.Button}
+          onPress={() =>
+            navigation.navigate("GardeningTipps", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Gartentipps</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKL}></View>
+              <View style={styles.leaf}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.Button}
+          onPress={() =>
+            navigation.navigate("Settings", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Settings</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKL}></View>
+              <View style={styles.leaf}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+      {/* ------------------------------------------------------Imprint Stuff */}
+      <View style={styles.imprintStuff}>
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("Terms", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.buttonPale}>
+            <Text style={styles.buttonTextPale}>Datenschutzerklärung</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKLPale}></View>
+              <View style={styles.leafPale}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("Conditions", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.buttonPale}>
+            <Text style={styles.buttonTextPale}>Nutzungsbedingungen</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKLPale}></View>
+              <View style={styles.leafPale}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("Imprint", {
+              propOne: "propOne props",
+            })
+          }
+        >
+          <View style={styles.buttonPale}>
+            <Text style={styles.buttonTextPale}>Impressum</Text>
+            <View style={styles.leafWrapper}>
+              <View style={styles.leafKLPale}></View>
+              <View style={styles.leafPale}></View>
+            </View>
+          </View>
+        </TouchableHighlight>
       </View>
 
       <StatusBar style="auto" />
@@ -61,16 +176,124 @@ const SearchMenu = () => {
 };
 
 const styles = StyleSheet.create({
-  // platformContainer: {
-  //   flex: 1,
-  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  // },
-  text: {
+  container: {
     alignItems: "center",
-    justifyContent: "center",
-    top: 100,
-    fontSize: 18,
-    fontWeight: "bold",
+    backgroundColor: colors.white,
+    height: "100%",
+  },
+  // ------------------------------------------------ Search Stuff
+  search: { width: "85%", margin: 20, backgroundColor: colors.sage25 },
+  input: { fontSize: 22, marginLeft: 12, width: "70%" },
+  buttonSearch: { flexDirection: "row", justifyContent: "space-between" },
+  lupeText: { color: colors.sage, fontSize: 25, margin: 7 },
+  lupeWrapper: { flexDirection: "row", justifyContent: "space-between" },
+  lupe: {
+    margin: 10,
+    marginTop: 25,
+    width: 5,
+    height: 5,
+    borderTopWidth: 2,
+    borderTopColor: colors.sage5,
+    borderStyle: "solid",
+
+    transform: [{ rotate: "45deg" }],
+  },
+  lupeKL: {
+    margin: 10,
+
+    width: 15,
+    height: 15,
+    borderColor: colors.sage5,
+    borderRadius: 15,
+    borderWidth: 2,
+    marginRight: -14,
+    borderStyle: "solid",
+
+    transform: [{ rotate: "45deg" }],
+  },
+  // ------------------------------------------- main Stuff
+  mainStuff: {
+    width: "85%",
+    borderTopColor: colors.sage25,
+    borderTopWidth: 2,
+    borderStyle: "solid",
+  },
+  Button: {
+    borderTopColor: colors.sage25,
+    borderTopWidth: 1,
+    borderStyle: "solid",
+  },
+  button: { flexDirection: "row", justifyContent: "space-between" },
+  buttonText: { color: colors.sage, fontSize: 25, margin: 7 },
+  leaf: {
+    margin: 10,
+    marginTop: 12,
+    width: 15,
+    height: 15,
+    borderTopColor: colors.sage5,
+    borderRightColor: colors.sage5,
+    borderTopWidth: 2,
+    borderRightWidth: 2,
+    borderStyle: "solid",
+
+    transform: [{ rotate: "45deg" }],
+  },
+  leafKL: {
+    margin: 10,
+    marginRight: -14,
+    marginTop: 12,
+    width: 15,
+    height: 15,
+    borderTopColor: colors.sage5,
+    borderRightColor: colors.sage5,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderStyle: "solid",
+    transform: [{ rotate: "45deg" }],
+  },
+  //  ---------------------------------------------------------------- imprint Stuff
+  imprintStuff: {
+    width: "85%",
+    borderTopColor: colors.sage25,
+    borderTopWidth: 2,
+    borderStyle: "solid",
+  },
+  paleButton: {
+    borderTopColor: colors.sage25,
+    borderTopWidth: 1,
+    borderStyle: "solid",
+  },
+  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
+  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  leafWrapper: {
+    flexDirection: "row",
+  },
+
+  leafPale: {
+    margin: 10,
+    marginTop: 12,
+    width: 15,
+    height: 15,
+    borderTopColor: colors.sage25,
+    borderRightColor: colors.sage25,
+    borderTopWidth: 2,
+    borderRightWidth: 2,
+    borderStyle: "solid",
+
+    transform: [{ rotate: "45deg" }],
+  },
+  leafKLPale: {
+    margin: 10,
+    marginRight: -14,
+    marginTop: 12,
+    width: 15,
+    height: 15,
+    borderTopColor: colors.sage25,
+    borderRightColor: colors.sage25,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderStyle: "solid",
+    transform: [{ rotate: "45deg" }],
   },
 });
 
