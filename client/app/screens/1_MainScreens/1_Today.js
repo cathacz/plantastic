@@ -73,7 +73,7 @@ const Today = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
-      {/* -------------------------------------- Banderole */}
+      {/* ------------------------------------------------------------------------------ Banderole */}
       <View
         style={{
           width: "100%",
@@ -92,9 +92,6 @@ const Today = ({ navigation, route }) => {
             width: "100%",
           }}
         >
-          {/* <Text style={StyleMain.addText}>
-              This is today {"\n"} {currentDate}
-            </Text> */}
           <View>
             {!weather ? <Loading /> : <Weather forecast={weather} />}
             {/* <Weather forecast={weather} /> */}
@@ -102,16 +99,16 @@ const Today = ({ navigation, route }) => {
         </View>
       </View>
 
-      {/* -------------------------------------- Main Part */}
+      {/* ------------------------------------------------------------------------------- Main Part */}
       {/* 
       <View style={{ marginTop: 70 }}>
         <Text>This is TODAY</Text>
       </View> */}
 
-      {/* Added by Vivi start ------------------- */}
+      {/* Added by Vivi start ----------------------Tasks Tasks Tasks------- */}
       <View style={styles.taskListArea}>
         <View style={styles.inputContainer}>
-          <Text>Task: </Text>
+          {/* <Text>Task: </Text> */}
           <TextInput
             placeholder="Enter new task here"
             style={styles.input}
@@ -125,18 +122,13 @@ const Today = ({ navigation, route }) => {
           data={AllTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
-              <Text>{itemData.item.value}</Text>
+              <Text style={styles.listItemText}>{itemData.item.value}</Text>
             </View>
           )}
         />
       </View>
-      {/* Added by Vivi end ------------------- */}
 
-      {/* -------------------------------------- Something */}
-
-      {/*--------------------------------------- Something */}
-
-      {/* ------------------------- Navigation Main Bottom */}
+      {/* ---------------------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -148,200 +140,36 @@ const styles = StyleSheet.create({
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
-
-  // added by Vivi start -------------------
+  // ----------------------------------Tasks
   taskListArea: {
     marginTop: 250,
     marginBottom: 90,
+    justifyContent: "center",
+    alignContent: "center",
   },
   inputContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
   },
   input: {
-    width: "80%",
+    justifyContent: "center",
+    width: "70%",
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
   },
   listItem: {
+    alignContent: "center",
+    justifyContent: "center",
     padding: 10,
-    marginVertical: 8,
-    backgroundColor: "#ccc",
-    borderColor: "black",
-    borderWidth: 1,
+    width: "92%",
+    // marginVertical: 8,
+    borderBottomColor: colors.sage5,
+    borderBottomWidth: 1,
+    borderStyle: "solid",
   },
-  // added by Vivi end -------------------
+  listItemText: { fontSize: 20 },
 });
 export default Today;
-
-// Unused parts for right now:
-
-// import Today from "../screens/Today";
-// import Overview from "./Overview";
-// import MyGarden from "./MyGarden";
-// import Community from "./Community";
-
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// const Stack = createNativeStackNavigator();
-
-{
-  /* ------------------- Navigation Main Top */
-}
-// <SafeAreaView style={StyleMain.navMainTop}>
-{
-  /*  <Link to="/today" underlayColor="white" style={StyleMain.navTopItem}>*/
-}
-{
-  /* <View style={StyleMain.navTopElements}>
-          <Image
-            source={require("../../../assets/icons/png/plantastic.png")}
-            style={{
-              height: 50,
-              width: 50,
-              alignItems: "center",
-              margin: 5,
-            }}
-          />
-          <Text style={StyleMain.navTopText}>Plantastic</Text>
-        </View> */
-}
-{
-  /* </Link> */
-}
-{
-  /* ------------- SearchMenu */
-}
-{
-  /* <View style={StyleMain.searchMenuWrapperRight}> */
-}
-{
-  /*  <Link to="/searchMenu" underlayColor="white">*/
-}
-{
-  /* <SafeAreaView style={StyleMain.searchMenuWrapper}>
-  
-          <View style={StyleMain.searchMenuWrapperFirstRow}>
-            <View style={StyleMain.searchMenuItem}></View>
-            <View style={StyleMain.searchMenuItem}></View>
-          </View>
-
-          <View style={StyleMain.searchMenuWrapperSecondRow}>
-            <View style={StyleMain.searchMenuItem}></View>
-            <View style={StyleMain.searchMenuItem}></View>
-          </View>
-        </SafeAreaView> */
-}
-{
-  /*  </Link> */
-}
-{
-  /* ------------- Add Task */
-}
-{
-  /* <TouchableOpacity> */
-}
-{
-  /*onPress={() => handleAddTask()}*/
-}
-{
-  /* <View style={StyleMain.addWrapper}>
-                <Text style={StyleMain.addText}>+</Text>
-              </View>
-            </TouchableOpacity>
-          </View>*/
-}
-{
-  /* </SafeAreaView> */
-}
-{
-  /* ---------------------------------------- Navigation Main Bottom */
-}
-{
-  /* <SafeAreaView style={StyleMain.navMainBottom}>
-          <Link
-            to="/today"
-            underlayColor={colors.sage25}
-            style={[StyleMain.navItem, StyleMain.active]}
-          >
-            <View style={StyleMain.navElements}>
-              <Image
-                source={require("../../assets/icons/png/shed.png")}
-                style={{ height: 50, width: 50, alignItems: "center" }}
-              />
-              <Text style={StyleMain.navText}>Heute</Text>
-            </View>
-          </Link>
-
-          <Link
-            to="/overview"
-            underlayColor={colors.sage25}
-            style={StyleMain.navItem}
-          >
-            <View style={StyleMain.navElements}>
-              <Image
-                source={require("../../assets/icons/png/calendarView.png")}
-                style={{ height: 50, width: 50 }}
-              />
-              <Text style={StyleMain.navText}>Übersicht</Text>
-            </View>
-          </Link>
-
-          <Link
-            to="/myGarden"
-            underlayColor={colors.sage25}
-            style={StyleMain.navItem}
-          >
-            <View style={StyleMain.navElements}>
-              <Image
-                source={require("../../assets/icons/png/meinGarten.png")}
-                style={{ height: 50, width: 50 }}
-              />
-              <Text style={StyleMain.navText}>Mein Garten</Text>
-            </View>
-          </Link>
-
-          <Link
-            to="/community"
-            underlayColor={colors.sage25}
-            style={StyleMain.navItem}
-          >
-            <View style={StyleMain.navElements}>
-              <Image
-                source={require("../../assets/icons/png/reihenAbstand.png")}
-                style={{ height: 50, width: 50 }}
-              />
-              <Text style={StyleMain.navText}>Community</Text>
-            </View>
-          </Link>
-        </SafeAreaView> */
-}
-
-{
-  /* <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Today"
-            component={Today}
-            options={{ title: "Welcome, username", prop: "props" }}
-          />
-          <Stack.Screen
-            name="Monthly overview"
-            component={Overview}
-            options={{ title: "Monatsübersicht" }}
-          />
-          <Stack.Screen
-            name="My Garden"
-            component={MyGarden}
-            options={{ title: "Mein Garten" }}
-          />
-          <Stack.Screen
-            name="My Community"
-            component={Community}
-            options={{ title: "Mein Gartenverein" }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer> */
-}

@@ -26,7 +26,17 @@ import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
+// SEARCH MENU parts
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
+import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
+import AllPlants from "./app/screens/3_SearchMenuScreens/AllPlants";
+import Blog from "./app/screens/3_SearchMenuScreens/Blog";
+import GardeningTipps from "./app/screens/3_SearchMenuScreens/GardeningTipps";
+import Settings from "./app/screens/3_SearchMenuScreens/Settings";
+import Terms from "./app/screens/3_SearchMenuScreens/Terms";
+import Conditions from "./app/screens/3_SearchMenuScreens/Conditions";
+import Imprint from "./app/screens/3_SearchMenuScreens/Imprint";
+
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
@@ -42,9 +52,21 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
         {/* ----------------------------------------- LandingPage ++ SignIn ++ LogIn */}
-        <Stack.Screen name="LandingPage" component={Landing} options={{}} />
-        <Stack.Screen name="SignIn" component={SignIn} options={{}} />
-        <Stack.Screen name="LogIn" component={LogIn} options={{}} />
+        <Stack.Screen
+          name="LandingPage"
+          component={Landing}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
+          options={{ title: "Registrierung" }}
+        />
+        <Stack.Screen
+          name="LogIn"
+          component={LogIn}
+          options={{ title: "Anmelden" }}
+        />
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{
@@ -61,7 +83,47 @@ function App() {
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
-          options={{ title: "Search Menu" }}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="SearchResults"
+          component={SearchResults}
+          options={{ title: "Deine Suchergebnisse" }}
+        />
+        <Stack.Screen
+          name="Terms"
+          component={Terms}
+          options={{ title: "Datenschutzerklärung" }}
+        />
+        <Stack.Screen
+          name="Conditions"
+          component={Conditions}
+          options={{ title: "Nutzungsbedingungen" }}
+        />
+        <Stack.Screen
+          name="Imprint"
+          component={Imprint}
+          options={{ title: "Impressum" }}
+        />
+        <Stack.Screen
+          name="AllPlants"
+          component={AllPlants}
+          options={{ title: "Alle Pflanzen" }}
+        />
+        <Stack.Screen
+          name="Blog"
+          component={Blog}
+          options={{ title: "Blog" }}
+        />
+        <Stack.Screen
+          name="GardeningTipps"
+          component={GardeningTipps}
+          options={{ title: "Gartentipps" }}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
+          options={{ title: "Einstellungen" }}
         />
 
         {/* Screens accessible from Today------------------------------------- */}

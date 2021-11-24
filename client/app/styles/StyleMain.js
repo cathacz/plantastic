@@ -29,7 +29,7 @@ const StyleMain = StyleSheet.create({
   navMainTop: {
     // borderColor: "black",
     // borderWidth: 1,
-    paddingLeft: 400,
+    // paddingLeft: 400,
 
     flexDirection: "row",
     justifyContent: "space-between",
