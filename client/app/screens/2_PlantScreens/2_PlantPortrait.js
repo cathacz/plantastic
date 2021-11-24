@@ -33,11 +33,13 @@ import tomatoImage from "../../../assets/images/roma_tomatoes.jpg";
 const PlantPortrait = ({ navigation }) => {
   // console.log(Tomato.images.map((item) => item.image_link));
   // console.log("tomato object >>" + Tomato.images[0].image_link);
-  const plantImage = `../../../assets/images/` + Tomato.images[0].image_link;
+  // const plantImage = `../../../assets/images/` + Tomato.images[0].image_link;
+  // const resolveAssetSource = Image.resolveAssetSource(tomatoImage).uri;
+  // console.log(plantImage);
 
-  const resolveAssetSource = Image.resolveAssetSource(tomatoImage).uri;
-
-  console.log(plantImage);
+  // plant care information >>
+  console.log(typeof Tomato.plant_data.care.care_information);
+  const plantCareText = Tomato.plant_data.care.care_information; // array of paragraphs
 
   return (
     <SafeAreaView style={StylePlants.container}>
@@ -64,7 +66,15 @@ const PlantPortrait = ({ navigation }) => {
         <Text style={DetailedPlantPortraitStyles.noStyle}>Einführung</Text>
         <Text style={DetailedPlantPortraitStyles.noStyle}>Beschreibung</Text>
         <Text style={DetailedPlantPortraitStyles.noStyle}>Allgemeines</Text>
+
         <Text style={DetailedPlantPortraitStyles.noStyle}>Pflege</Text>
+        <View style={{}}>
+          {plantCareText.map((paragraph, i) => (
+            <Text key={i} style={{}}>
+              {JSON.stringify(paragraph)}
+            </Text>
+          ))}
+        </View>
 
         <Text style={DetailedPlantPortraitStyles.noStyle}>
           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
