@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   // inputs
 
   inputField: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderStyle: "solid",
     borderColor: colors.sage,
     width: "80%",
