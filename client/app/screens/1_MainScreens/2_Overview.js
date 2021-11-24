@@ -57,7 +57,27 @@ const Overview = ({ navigation }) => {
         </View>
       </View>
       {/* ---------------------------------------- Main Part */}
-
+      <View
+        style={{
+          width: "100%",
+          marginTop: 160,
+          height: 325,
+          backgroundColor: colors.sage25,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          <MonthView />
+        </View>
+      </View>
       {/* ---------------------------------------- Something */}
 
       {/* ---------------------------------------- Something */}
