@@ -36,6 +36,20 @@ export default class Example extends React.Component {
           // Enable the option to swipe between months. Default = false
           enableSwipeMonths={true}
           //  Collection of dates that have to be marked. Default = {}
+          markedDates={{
+            "2021-11-24": {
+              selected: true,
+              marked: true,
+              selectedColor: colors.sage,
+            },
+            "2021-11-17": { marked: true, dotColor: colors.sage5 },
+            "2021-11-18": {
+              marked: true,
+              dotColor: colors.sage5,
+              activeOpacity: 0,
+            },
+            "22021-11-25": { disabled: true, disableTouchEvent: true },
+          }}
         />
       </View>
     );
