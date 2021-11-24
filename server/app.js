@@ -12,11 +12,11 @@ const cors = require("cors");
 const xss = require("xss-clean");
 const rateLimiter = require("express-rate-limit");
 
-const authenticateUser = require("./middleware/auth");
 const authRoutes = require("./routes/authRoutes");
 const taskRoute = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoutes");
 const plantRoute = require("./routes/plantRoute");
+const authenticateUser = require("./middleware/auth");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
