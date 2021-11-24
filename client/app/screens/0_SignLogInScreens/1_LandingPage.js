@@ -76,10 +76,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-
+    backgroundColor: colors.white,
     alignItems: "center",
   },
-  welcomeText: { fontSize: 30, marginBottom: 50, textAlign: "center" },
+  welcomeText: {
+    fontSize: 30,
+    marginBottom: 50,
+    textAlign: "center",
+    marginTop: -50,
+  },
   logo: { alignItems: "center", marginBottom: 30 },
   logoImage: { width: 150, height: 150 },
   logoText: { fontSize: 50, textAlign: "center" },
