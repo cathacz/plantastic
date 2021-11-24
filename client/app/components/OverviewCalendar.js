@@ -175,29 +175,42 @@ export default function overviewCalendar() {
             paddingTop: 20,
             paddingBottom: 20,
           }}
-          calendarHeaderStyle={{ color: "#000000" }}
-          dateNumberStyle={{ color: "#000000", paddingTop: 10 }}
-          dateNameStyle={{ color: "#BBBBBB" }}
+          // month ++ year:
+          calendarHeaderStyle={{ color: colors.sage, fontSize: 30 }}
+          // numbers
+          dateNumberStyle={{ color: colors.sage, fontSize: 16, paddingTop: 10 }}
+          // mo di mi do fr sa so
+          dateNameStyle={{ color: colors.sage, fontSize: 16 }}
+          // today
           highlightDateNumberStyle={{
-            color: "#fff",
-            backgroundColor: "#2E66E7",
-            marginTop: 10,
+            color: colors.white,
+            backgroundColor: colors.sage,
+            marginTop: 7.5,
             height: 35,
             width: 35,
             textAlign: "center",
             borderRadius: 17.5,
             overflow: "hidden",
-            paddingTop: 6,
+            paddingTop: 9.5,
             fontWeight: "400",
+            fontSize: 16,
             justifyContent: "center",
             alignItems: "center",
           }}
-          highlightDateNameStyle={{ color: "#2E66E7" }}
-          disabledDateNameStyle={{ color: "grey" }}
-          disabledDateNumberStyle={{ color: "grey", paddingTop: 10 }}
+          highlightDateNameStyle={{
+            color: colors.sage,
+            fontSize: 16,
+            fontWeight: "bold",
+          }}
+          disabledDateNameStyle={{ color: colors.sage, fontSize: 16 }}
+          disabledDateNumberStyle={{
+            color: colors.sage,
+            fontSize: 16,
+            paddingTop: 10,
+          }}
           datesWhitelist={datesWhitelist}
-          iconLeft={require("../../assets/icons/png/back-button.png")}
-          iconRight={require("../../assets/icons/png/back-button.png")}
+          iconLeft={require("../../assets/icons/png/leftArrow.png")}
+          iconRight={require("../../assets/icons/png/rightArrow.png")}
           iconContainer={{ flex: 0.1 }}
           // If you get this error => undefined is not an object (evaluating 'datesList[_this.state.numVisibleDays - 1].date')
           // temp: https://github.com/BugiDev/react-native-calendar-strip/issues/303#issuecomment-864510769
