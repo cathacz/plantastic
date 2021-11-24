@@ -12,6 +12,9 @@ When typing in data rules! >>
 Defaults >>
 "beefriendly": false
 
-Problems:
+Problems >>
 . when seeding months have no styling then harvest time jumps up into seed row
 . why letters cut off in italic?
+
+Other >>
+all the measurements like water, fertilizer, etc. are out of 6 or 10?

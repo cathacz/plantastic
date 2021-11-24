@@ -71,6 +71,7 @@
     "planting_conditions": {
       "location": {
         "sun": "sonnig und hell",
+        "sun_definition": "sonnig und hell",
         "location_requirements": ["geschützt vor Regen", "geschützt vor Wind"]
       },
       "soil": {
@@ -216,7 +217,7 @@
       "paragraph 3",
       "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen."
     ],
-    "other_information": "Text...",
+    "other_information": ["Text 1...", "Text 2..."],
     "repotting": {
       "plant_needs_repotting_replanting": true,
       "repot_after_time": 2,

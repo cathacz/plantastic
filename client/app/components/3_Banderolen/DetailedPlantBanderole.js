@@ -59,11 +59,11 @@ const DetailedPLantBanderole = () => {
     Tomato.plant_data.planting_conditions.seeding_germination.seeding_time
       .direct_seeding_end_month - 1;
 
-  const flowerStart = Tomato.plant_data.flower.flowering_start_month - 1;
-  const flowerEnd = Tomato.plant_data.flower.flowering_end_month - 1;
+  // const flowerStart = Tomato.plant_data.flower.flowering_start_month - 1;
+  // const flowerEnd = Tomato.plant_data.flower.flowering_end_month - 1;
 
-  const fruitStart = Tomato.plant_data.fruit.fruit_start_month - 1;
-  const fruitEnd = Tomato.plant_data.fruit.fruit_end_month - 1;
+  // const fruitStart = Tomato.plant_data.fruit.fruit_start_month - 1;
+  // const fruitEnd = Tomato.plant_data.fruit.fruit_end_month - 1;
 
   const precHarvStart =
     Tomato.plant_data.harvest.preculture_harvest_start_month - 1;

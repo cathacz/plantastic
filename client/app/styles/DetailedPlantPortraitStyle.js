@@ -141,7 +141,11 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
 
   // main content >>
-  mainContent: { marginBottom: 90 },
+  mainContent: {
+    marginBottom: 90,
+    marginHorizontal: 5,
+    paddingHorizontal: 10,
+  },
 });
 
 export default detailedPlantPortraitStyles;
