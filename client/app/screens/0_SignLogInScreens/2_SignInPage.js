@@ -26,6 +26,9 @@ import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
 const SignIn = ({ navigation }) => {
+  const [username, onChangeUsername] = React.useState("");
+  const [email, onChangeEmail] = React.useState("");
+  const [password, onChangePassword] = React.useState("");
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo}>
@@ -37,6 +40,34 @@ const SignIn = ({ navigation }) => {
       </View>
       <Text style={styles.welcomeText}>Registriere Dich!</Text>
       {/* --------------------------------------------- Form */}
+
+      {/* Username Input */}
+      <View style={styles.inputField}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeUsername}
+          value={username}
+          placeholder="Gib einen Benutzernamen ein!"
+        />
+      </View>
+      {/* email Address Input */}
+      <View style={styles.inputField}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeEmail}
+          value={email}
+          placeholder="Wir brauchen deine eMail Adresse"
+        />
+      </View>
+      {/* Passwort Input */}
+      <View style={styles.inputField}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangePassword}
+          value={password}
+          placeholder="und ein starkes Passwort"
+        />
+      </View>
 
       {/* ---------------------------------------- SignIn "Button" */}
       <View style={styles.buttonWrapper}>
@@ -62,13 +93,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-
+    backgroundColor: colors.white,
     alignItems: "center",
   },
   welcomeText: { fontSize: 30, marginBottom: 10, textAlign: "center" },
-  logo: { alignItems: "center", marginBottom: 30 },
+  logo: { alignItems: "center", marginBottom: 30, marginTop: -200 },
   logoImage: { width: 50, height: 50 },
   logoText: { fontSize: 20, textAlign: "center" },
+  // inputs
+
+  inputField: {
+    borderWidth: 2,
+    borderStyle: "solid",
+    borderColor: colors.sage,
+    width: "80%",
+    margin: 7,
+  },
+  input: { textAlign: "center", fontSize: 22, paddingTop: 5, paddingBottom: 5 },
   buttonWrapper: { alignItems: "center", flexDirection: "column" },
   button: {
     borderWidth: 2,
