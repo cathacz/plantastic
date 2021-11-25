@@ -8,6 +8,7 @@ const NumberToMonth = () => {
   useEffect(() => {
     let year = new Date().getFullYear(); //Current Year
     let d = new Date().getMonth(); // current Month ! starting index 0 !
+    let day = new Date().getDay();
 
     let monthNames = [
       "Januar",
@@ -27,7 +28,7 @@ const NumberToMonth = () => {
     const monthName = monthNames[d];
 
     setCurrentDate(
-      monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
+      day + "." + " " + monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
     );
   }, []);
 
