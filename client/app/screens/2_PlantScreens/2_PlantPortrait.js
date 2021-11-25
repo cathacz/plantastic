@@ -21,7 +21,7 @@ import DetailedPlantBanderole from "../../components/3_Banderolen/DetailedPlantB
 // for styling >>
 import StylePlants from "../../styles/StylePlants";
 import StyleMain from "../../styles/StyleMain";
-import DetailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
+import DetailedPlantPortraitStyle from "../../styles/DetailedPlantPortraitStyle";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
@@ -57,7 +57,7 @@ const PlantPortrait = ({ navigation }) => {
       <DetailedPlantBanderole />
 
       {/* ----------------------------------------------------- Middle Part */}
-      <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
+      <ScrollView style={DetailedPlantPortraitStyle.mainContent}>
         {/* -------------------- image carousel -------------------- */}
 
         {/* <Image
@@ -71,28 +71,34 @@ const PlantPortrait = ({ navigation }) => {
           source={require(`../../../assets/images/roma_tomatoes.jpg`)}
         /> */}
         {/* -------------------- overview -------------------- */}
+        <View styles={styles.test}>
+          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+            Große Übersicht
+          </Text>
 
-        <View>
-          <Text>X</Text>
-          <Text>words</Text>
+          <View styles={DetailedPlantPortraitStyle.infoItem}>
+            <Text styles={DetailedPlantPortraitStyle.infoItem}>X</Text>
+            <Text styles={DetailedPlantPortraitStyle.infoItem}>words</Text>
+          </View>
         </View>
 
         {/* -------------------- general information -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyles.topicTitles}>Allgemeines</Text>
-        <View style={{}}>
-          {plantInfo.map((paragraph, i) => (
-            <Text key={i} style={{}}>
-              {JSON.stringify(paragraph)}
-            </Text>
-          ))}
+        <View styles={{ backgroundColor: "green" }}>
+          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+            Allgemeines
+          </Text>
+          <View style={{}}>
+            {plantInfo.map((paragraph, i) => (
+              <Text key={i} style={{}}>
+                {JSON.stringify(paragraph)}
+              </Text>
+            ))}
+          </View>
         </View>
 
         {/* -------------------- description plant -------------------- */}
 
-        <Text style={DetailedPlantPortraitStyles.topicTitles}>
-          Beschreibung
-        </Text>
+        <Text style={DetailedPlantPortraitStyle.topicTitles}>Beschreibung</Text>
         <View style={{}}>
           {plantDescription.map((paragraph, i) => (
             <Text key={i} style={{}}>
@@ -112,7 +118,7 @@ const PlantPortrait = ({ navigation }) => {
 
         {/* -------------------- variety specific information -------------------- */}
 
-        <Text style={DetailedPlantPortraitStyles.topicTitles}>
+        <Text style={DetailedPlantPortraitStyle.topicTitles}>
           Über {Tomato.labels.specific_variety_name}
         </Text>
         <View style={{}}>
@@ -125,7 +131,7 @@ const PlantPortrait = ({ navigation }) => {
 
         {/* -------------------- care -------------------- */}
 
-        <Text style={DetailedPlantPortraitStyles.topicTitles}>Pflege</Text>
+        <Text style={DetailedPlantPortraitStyle.topicTitles}>Pflege</Text>
         <View style={{}}>
           {plantCareText.map((paragraph, i) => (
             <Text key={i} style={{}}>
@@ -136,7 +142,7 @@ const PlantPortrait = ({ navigation }) => {
 
         {/* -------------------- other -------------------- */}
 
-        <Text style={DetailedPlantPortraitStyles.noStyle}>
+        <Text style={DetailedPlantPortraitStyle.noStyle}>
           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
           consectetur, adipisci velit, sed quia non numquam eius modi tempora
           incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
@@ -166,10 +172,9 @@ const PlantPortrait = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  // platformContainer: {
-  //   flex: 1,
-  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  // },
+  test: {
+    backgroundColor: "orange",
+  },
 });
 export default PlantPortrait;
 

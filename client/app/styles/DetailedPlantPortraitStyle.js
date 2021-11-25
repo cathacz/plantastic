@@ -4,7 +4,7 @@ import colors from "../config/colors";
 const detailedPlantPortraitStyles = StyleSheet.create({
   // shared properties >>
   noStyle: {
-    backgroundColor: "pink",
+    backgroundColor: "yellow",
   },
   border: {
     // borderWidth: 1,
@@ -141,10 +141,31 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
 
   // main content/middle part >>
+  testStyle: {
+    backgroundColor: "red",
+  },
   mainContent: {
     marginBottom: 90,
     marginHorizontal: 5,
     paddingHorizontal: 10,
+  },
+  section: {
+    // width: "80%",
+    width: "100%",
+    height: 300,
+    borderWidth: 2,
+    borderStyle: "solid",
+    borderColor: colors.sage,
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
+    padding: 3,
+    backgroundColor: colors.sage25,
+    margin: 10,
+  },
+  infoItem: {
+    // width: "100%",
+    // display: "flex",
+    // flexDirection: "row",
   },
   topicTitles: {
     fontWeight: "bold",
