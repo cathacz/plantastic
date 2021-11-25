@@ -70,7 +70,7 @@
   "plant_data": {
     "planting_conditions": {
       "location": {
-        "sun": "sonnig und hell",
+        "sun": 6,
         "sun_definition": "sonnig und hell",
         "location_requirements": ["geschützt vor Regen", "geschützt vor Wind"]
       },
