@@ -83,7 +83,7 @@ const StyleMain = StyleSheet.create({
     borderTopLeftRadius: 14,
     borderBottomRightRadius: 14,
     borderColor: colors.sage75,
-    borderWidth: 2,
+    borderWidth: 1,
   },
   // Add Button
   addWrapper: {
@@ -95,7 +95,7 @@ const StyleMain = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
     borderColor: colors.sage75,
-    borderWidth: 2,
+    borderWidth: 1,
     justifyContent: "center",
     alignItems: "center",
   },

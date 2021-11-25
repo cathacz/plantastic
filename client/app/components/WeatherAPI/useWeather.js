@@ -19,26 +19,20 @@ export default function useWeather(lat, lon) {
 
   const latLon = useGeoLocation();
 
-  // console.log(process.env.API_KEY);
-  // console.log(API_KEY);
+  // console.log(...latLon);
 
   useEffect(() => {
     if (latLon) {
-      // console.log(latLon);
-      // console.log(...latLon);
-
       fetchAPI(...latLon);
     }
   }, [latLon]);
 
   const fetchAPI = async (lat, lon) => {
-    // console.log(lat);
-    // console.log(lon);
-
     try {
       const endpoint = `/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
       const res = await callAPI.get(endpoint);
-      // console.log(endpoint);
+      console.log(lat);
+      console.log(lon);
       const data = await storeWeather(filterData(res.data));
       // console.log(data);
       setWeather(data);
