@@ -1,11 +1,11 @@
 import React from "react";
 
+// react native elements and styling >>
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-
 import colors from "./app/config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
-// navigator funktionality >>
+// navigator functionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -26,7 +26,7 @@ import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
-// SEARCH MENU parts
+// SEARCH MENU screens >>
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
 import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
 import AllPlants from "./app/screens/3_SearchMenuScreens/AllPlants";
@@ -36,7 +36,6 @@ import Settings from "./app/screens/3_SearchMenuScreens/Settings";
 import Terms from "./app/screens/3_SearchMenuScreens/Terms";
 import Conditions from "./app/screens/3_SearchMenuScreens/Conditions";
 import Imprint from "./app/screens/3_SearchMenuScreens/Imprint";
-
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
 // plant detail screens >>
