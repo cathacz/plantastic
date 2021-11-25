@@ -66,7 +66,7 @@ const LogIn = ({ navigation }) => {
           underlayColor={colors.sage25}
           style={styles.signInButton}
           onPress={() =>
-            navigation.replace("Today", {
+            navigation.navigate("Today", {
               propOne: "propOne props",
             })
           }

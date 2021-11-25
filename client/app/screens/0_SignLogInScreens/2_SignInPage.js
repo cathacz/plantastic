@@ -25,10 +25,45 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
+// axios
+import axios from "axios";
+
+// GET
+// function Test() {
+//   axios({
+//     method: "get",
+//     url: "https://plantastic-backend-heroku.herokuapp.com/",
+//   })
+//     .then((res) => console.log(res.data))
+//     .catch((err) => console.log(err));
+// }
+// Test();
+
 const SignIn = ({ navigation }) => {
-  const [username, onChangeUsername] = React.useState("");
-  const [email, onChangeEmail] = React.useState("");
-  const [password, onChangePassword] = React.useState("");
+  const [username, onChangeUsername] = useState("");
+  const [email, onChangeEmail] = useState("");
+  const [password, onChangePassword] = useState("");
+
+  // POST
+  function SendRegisterData() {
+    // console.log(username, email, password);
+    axios({
+      method: "post",
+      url: "https://plantastic-backend-heroku.herokuapp.com/auth/register",
+      data: {
+        email: email,
+        password: password,
+        name: username,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+  }
+  // SendRegisterData();
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo}>
@@ -66,6 +101,8 @@ const SignIn = ({ navigation }) => {
           onChangeText={onChangePassword}
           value={password}
           placeholder="und ein starkes Passwort"
+          // secureTextEntry={true}
+          // onSubmitEditing={Keyboard.dismiss}
         />
       </View>
 
@@ -74,11 +111,14 @@ const SignIn = ({ navigation }) => {
         <TouchableHighlight
           underlayColor={colors.sage25}
           style={styles.signInButton}
-          onPress={() =>
-            navigation.replace("Today", {
+          onPress={() => {
+            navigation.navigate("Today", {
               propOne: "propOne props",
-            })
-          }
+            });
+            // console.log(username);
+            // console.log(password);
+            SendRegisterData();
+          }}
         >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Sign In</Text>

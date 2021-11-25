@@ -14,7 +14,10 @@ const auth = async (req, res, next) => {
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
     // attach the user to the task routes
-    req.user = { userId: payload.userId, name: payload.name };
+    req.user = {
+      userId: payload.userId,
+      name: payload.name,
+    };
   } catch (err) {
     throw new UnauthenticatedError("Authentication invalid");
   }

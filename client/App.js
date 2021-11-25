@@ -55,7 +55,7 @@ function App() {
         <Stack.Screen
           name="LandingPage"
           component={Landing}
-          options={{ title: "" }}
+          options={{ title: "Welcome to PLantastic!" }}
         />
         <Stack.Screen
           name="SignIn"
@@ -67,13 +67,20 @@ function App() {
           component={LogIn}
           options={{ title: "Anmelden" }}
         />
+
+        <Stack.Screen
+          name="Today"
+          component={Today}
+          options={{ title: "Today" }}
+        />
+
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{
             header: (props) => <NavMainTop {...props} />,
           }}
         >
-          <Stack.Screen name="Today" component={Today} options={{}} />
+          {/* <Stack.Screen name="Today" component={Today} options={{}} /> */}
           <Stack.Screen name="Overview" component={Overview} options={{}} />
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
@@ -83,7 +90,7 @@ function App() {
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
-          options={{ title: "" }}
+          options={{ title: "Menü" }}
         />
         <Stack.Screen
           name="SearchResults"
