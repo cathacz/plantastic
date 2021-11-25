@@ -70,18 +70,11 @@ const PlantPortrait = ({ navigation }) => {
           style={{}}
           source={require(`../../../assets/images/roma_tomatoes.jpg`)}
         /> */}
+        {/* -------------------- overview -------------------- */}
 
-        {/* -------------------- description -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyles.topicTitles}>
-          Beschreibung
-        </Text>
-        <View style={{}}>
-          {plantDescription.map((paragraph, i) => (
-            <Text key={i} style={{}}>
-              {JSON.stringify(paragraph)}
-            </Text>
-          ))}
+        <View>
+          <Text>X</Text>
+          <Text>words</Text>
         </View>
 
         {/* -------------------- general information -------------------- */}
@@ -94,6 +87,28 @@ const PlantPortrait = ({ navigation }) => {
             </Text>
           ))}
         </View>
+
+        {/* -------------------- description plant -------------------- */}
+
+        <Text style={DetailedPlantPortraitStyles.topicTitles}>
+          Beschreibung
+        </Text>
+        <View style={{}}>
+          {plantDescription.map((paragraph, i) => (
+            <Text key={i} style={{}}>
+              {JSON.stringify(paragraph)}
+            </Text>
+          ))}
+        </View>
+        {/* -------------------- description flower -------------------- */}
+
+        {/* -------------------- description fruit -------------------- */}
+
+        {/* -------------------- description foliage -------------------- */}
+
+        {/* -------------------- description root -------------------- */}
+
+        {/* -------------------- medicinal properties or poisonousness -------------------- */}
 
         {/* -------------------- variety specific information -------------------- */}
 
@@ -135,6 +150,14 @@ const PlantPortrait = ({ navigation }) => {
           system, and expound the actual teachings of the great explorer of the
           truth, the master-builder of human happiness.
         </Text>
+
+        {/* -------------------- further reading/related articles -------------------- */}
+
+        {/* -------------------- shopping suggestions -------------------- */}
+
+        {/* -------------------- recipes -------------------- */}
+
+        {/* -------------------- search tags -------------------- */}
       </ScrollView>
       {/* ---------------------------------------- Navigation Main Bottom */}
       <PlantBottomNav navigation={navigation} />

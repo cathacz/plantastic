@@ -227,7 +227,7 @@
       "pests": ["Schnecken", "Blattläuse", "Kartoffelkäfer"],
       "diseases": ["Sonnenbleiche"],
       "mold": ["Mehltau"],
-      "notes": ["Diese Sorte ist relativ resistent."]
+      "info": ["Diese Sorte ist relativ resistent."]
     },
     "poisonousness": {
       "degree_of_poisonousness_fruit": 0,
@@ -236,13 +236,13 @@
       "degree_of_poisonousness_stem": 0,
       "degree_of_poisonousness_roots": 0,
       "inedible_and_poisonous_parts": ["leaves", "stem"],
-      "poisonousness_notes": ["can be eaten after cooking"]
+      "poisonousness_info": ["can be eaten after cooking"]
     },
     "medicinal_purpose_information": {
       "common_medical_use": ["coughs", "flu"],
       "medicinal_plant_part": ["leaves", "flowers", "stem"],
       "medication_form": ["powdered leaves", "tea"],
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "root_tuber": {
       "edible_roots": false,
@@ -252,13 +252,13 @@
       "root_shape": "",
       "tuber_shape": "",
       "characteristics": ["root flavor?", "p2"],
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "bulb_cloves": {
       "bulb_shape": "",
       "cloves_shape": "",
       "propagation_through_cloves": true,
-      "notes": [
+      "info": [
         "The bulb stores energy of the plant and outer shell dries out with time"
       ]
     },
@@ -267,7 +267,7 @@
       "stem_shape": "",
       "color": "",
       "stem_characteristics": "",
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "foliage_leaves": {
       "edible_leaves": false,
@@ -275,7 +275,7 @@
       "leaf_size_unit": "cm",
       "leaf_color": "",
       "leaf_shape": "",
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "flower": {
       "flowering_start_month": 6,
@@ -283,7 +283,7 @@
       "beefriendly": false,
       "petal_color": ["rot", "gelb", "blau", "weiß", "gemischt"],
       "self_pollinating": true,
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "fruit": {
       "edible_fruit": true,
@@ -294,7 +294,7 @@
       "fruit_non_poisonous": true,
       "fruit_edible": true,
       "fruit_flavor": ["aromatisch"],
-      "notes": [
+      "info": [
         "Grüne Früchte nicht genießbar, erst wenn sie rot sind schmecken sie"
       ]
     }
@@ -314,13 +314,17 @@
     ],
     "related_shop_products": [
       {
-        "shop_product_title": "Titel 1",
-        "shop_product_note": "tomatoes",
+        "id": "################",
+        "shop_product_title": "Tomato Plants 20 cm",
+        "shop_product_image": "tomatoes1.png",
+        "shop_product_text": "best tomatoes for ketchup",
         "shop_product_link": "Link1"
       },
       {
-        "shop_product_title": "Titel 2",
-        "shop_product_note": "tomatoes",
+        "id": "################",
+        "shop_product_title": "Roma Tomato Seeds",
+        "shop_product_image": "tomatoes2.png",
+        "shop_product_text": "tomatoe seeds for roma tomatoes",
         "shop_product_link": "Link1"
       }
     ],
