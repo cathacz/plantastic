@@ -166,16 +166,6 @@
       ],
       "care_information": ["paragraph 1", "paragraph 2", "paragraph 3"]
     },
-    "variety_specific_characteristics_list": [
-      "especially fruitful",
-      "tomatoes have good flavor",
-      "fleshy tomatoes"
-    ],
-    "variety_specific_characteristics_notes": [
-      "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
-      "Sie ist sehr aromatisch",
-      "paragraph 3"
-    ],
     "origin": "country/area",
     "hybrid_type": "show if length over 0, F1 amerikanisch",
     "growth_time_teenager": 4,
@@ -216,6 +206,16 @@
       "paragraph 2",
       "paragraph 3",
       "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen."
+    ],
+    "variety_specific_characteristics_list": [
+      "especially fruitful",
+      "tomatoes have good flavor",
+      "fleshy tomatoes"
+    ],
+    "variety_specific_characteristics_notes": [
+      "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
+      "Sie ist sehr aromatisch",
+      "paragraph 3"
     ],
     "other_information": ["Text 1...", "Text 2..."],
     "repotting": {

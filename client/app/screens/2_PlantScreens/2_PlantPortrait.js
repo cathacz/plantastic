@@ -77,8 +77,8 @@ const PlantPortrait = ({ navigation }) => {
           </Text>
 
           <View styles={DetailedPlantPortraitStyle.infoItem}>
-            <Text styles={DetailedPlantPortraitStyle.infoItem}>X</Text>
-            <Text styles={DetailedPlantPortraitStyle.infoItem}>words</Text>
+            <Text styles={DetailedPlantPortraitStyle.infoItemIcon}>X</Text>
+            <Text styles={DetailedPlantPortraitStyle.infoItemText}>words</Text>
           </View>
         </View>
 

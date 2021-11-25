@@ -167,6 +167,16 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     // display: "flex",
     // flexDirection: "row",
   },
+  infoItemIcon: {
+    // width: "100%",
+    // display: "flex",
+    // flexDirection: "row",
+  },
+  infoItemText: {
+    // width: "100%",
+    // display: "flex",
+    // flexDirection: "row",
+  },
   topicTitles: {
     fontWeight: "bold",
     textDecorationLine: "underline",
