@@ -140,11 +140,15 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     backgroundColor: colors.sage75,
   },
 
-  // main content >>
+  // main content/middle part >>
   mainContent: {
     marginBottom: 90,
     marginHorizontal: 5,
     paddingHorizontal: 10,
+  },
+  topicTitles: {
+    fontWeight: "bold",
+    textDecorationLine: "underline",
   },
 });
 

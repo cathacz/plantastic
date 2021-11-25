@@ -56,8 +56,10 @@ const PlantPortrait = ({ navigation }) => {
 
       <DetailedPlantBanderole />
 
-      {/* ----------------------------------------------------- Main Part */}
+      {/* ----------------------------------------------------- Middle Part */}
       <ScrollView style={DetailedPlantPortraitStyles.mainContent}>
+        {/* -------------------- image carousel -------------------- */}
+
         {/* <Image
           style={{}}
           source={{ uri: "data:../../../assets/images/roma_tomatoes.jpg" }}
@@ -69,25 +71,33 @@ const PlantPortrait = ({ navigation }) => {
           source={require(`../../../assets/images/roma_tomatoes.jpg`)}
         /> */}
 
-        <Text style={DetailedPlantPortraitStyles.noStyle}>Beschreibung</Text>
+        {/* -------------------- description -------------------- */}
+
+        <Text style={DetailedPlantPortraitStyles.topicTitles}>
+          Beschreibung
+        </Text>
         <View style={{}}>
-          {plantCareText.map((paragraph, i) => (
+          {plantDescription.map((paragraph, i) => (
             <Text key={i} style={{}}>
               {JSON.stringify(paragraph)}
             </Text>
           ))}
         </View>
 
-        <Text style={DetailedPlantPortraitStyles.noStyle}>Allgemeines</Text>
+        {/* -------------------- general information -------------------- */}
+
+        <Text style={DetailedPlantPortraitStyles.topicTitles}>Allgemeines</Text>
         <View style={{}}>
-          {plantCareText.map((paragraph, i) => (
+          {plantInfo.map((paragraph, i) => (
             <Text key={i} style={{}}>
               {JSON.stringify(paragraph)}
             </Text>
           ))}
         </View>
 
-        <Text style={DetailedPlantPortraitStyles.noStyle}>
+        {/* -------------------- variety specific information -------------------- */}
+
+        <Text style={DetailedPlantPortraitStyles.topicTitles}>
           Über {Tomato.labels.specific_variety_name}
         </Text>
         <View style={{}}>
@@ -98,7 +108,9 @@ const PlantPortrait = ({ navigation }) => {
           ))}
         </View>
 
-        <Text style={DetailedPlantPortraitStyles.noStyle}>Pflege</Text>
+        {/* -------------------- care -------------------- */}
+
+        <Text style={DetailedPlantPortraitStyles.topicTitles}>Pflege</Text>
         <View style={{}}>
           {plantCareText.map((paragraph, i) => (
             <Text key={i} style={{}}>
@@ -106,6 +118,8 @@ const PlantPortrait = ({ navigation }) => {
             </Text>
           ))}
         </View>
+
+        {/* -------------------- other -------------------- */}
 
         <Text style={DetailedPlantPortraitStyles.noStyle}>
           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
