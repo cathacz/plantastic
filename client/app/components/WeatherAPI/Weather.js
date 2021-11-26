@@ -38,7 +38,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
     <View style={styles.wrapper}>
       <Text style={styles.location}>{name}</Text>
       <Text style={styles.date}>
-        Today is {"\n"}
+        Heute ist {"\n"}
         <View>
           <NumberToMonth />
         </View>
