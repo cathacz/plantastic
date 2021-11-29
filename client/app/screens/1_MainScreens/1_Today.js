@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   View,
   Image,
+  TouchableHighlight,
   TouchableOpacity,
   StatusBar,
   Keyboard,
@@ -127,7 +128,20 @@ const Today = ({ navigation, route }) => {
           )}
         />
       </View>
-
+      {/* Daily View Thingie >> NOT permanent here */}
+      <TouchableHighlight
+        underlayColor={colors.sage25}
+        style={styles.paleButton}
+        onPress={() =>
+          navigation.navigate("DailyView", {
+            propOne: "propOne props",
+          })
+        }
+      >
+        <View style={styles.buttonPale}>
+          <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
+        </View>
+      </TouchableHighlight>
       {/* ---------------------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
       <StatusBar style="auto" />
@@ -171,5 +185,15 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
   },
   listItemText: { fontSize: 20 },
+  paleButton: {
+    borderTopColor: colors.sage25,
+    borderTopWidth: 1,
+    borderStyle: "solid",
+  },
+  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
+  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  leafWrapper: {
+    flexDirection: "row",
+  },
 });
 export default Today;
