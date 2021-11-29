@@ -25,7 +25,7 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 import StyleMain from "../../styles/StyleMain";
 
-// axios
+// data processing >>
 import axios from "axios";
 
 // GET
@@ -62,7 +62,6 @@ const SignIn = ({ navigation }) => {
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   }
-  // SendRegisterData();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -115,8 +114,8 @@ const SignIn = ({ navigation }) => {
             navigation.navigate("Today", {
               propOne: "propOne props",
             });
-            // console.log(username);
-            // console.log(password);
+            console.log(username);
+            console.log(password);
             SendRegisterData();
           }}
         >
