@@ -26,6 +26,8 @@ import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
+import DailyView from "./app/screens/1_MainScreens/2_1_DailyView";
+
 // SEARCH MENU parts
 import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
 import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
@@ -78,6 +80,13 @@ function App() {
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
+
+        {/* --------------------------- Accessible from OverView >> DailyView */}
+        <Stack.Screen
+          name="DailyView"
+          component={DailyView}
+          options={{ title: "" }}
+        />
 
         {/* Screens accessible from top nav----------------------------------- */}
         <Stack.Screen
