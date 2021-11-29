@@ -141,18 +141,13 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
 
   // main content/middle part >>
-  testStyle: {
-    backgroundColor: "red",
-  },
   mainContent: {
     marginBottom: 90,
     marginHorizontal: 5,
     paddingHorizontal: 10,
   },
   section: {
-    // width: "80%",
-    width: "100%",
-    height: 300,
+    // width: "100%",
     borderWidth: 2,
     borderStyle: "solid",
     borderColor: colors.sage,
@@ -180,7 +175,6 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   topicTitles: {
     fontWeight: "bold",
     textDecorationLine: "underline",
-    backgroundColor: "orange",
   },
 });
 
