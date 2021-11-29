@@ -29,6 +29,7 @@ import colors from "../../config/colors";
 import Tomato from "../../../assets/jsons/tomatoPortrait.json";
 // tomato image
 import tomatoImage from "../../../assets/images/roma_tomatoes.jpg";
+import detailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
 
 const PlantPortrait = ({ navigation }) => {
   // console.log(Tomato.images.map((item) => item.image_link));
@@ -59,17 +60,12 @@ const PlantPortrait = ({ navigation }) => {
       {/* ----------------------------------------------------- Middle Part */}
       <ScrollView style={DetailedPlantPortraitStyle.mainContent}>
         {/* -------------------- image carousel -------------------- */}
-
-        {/* <Image
-          style={{}}
-          source={{ uri: "data:../../../assets/images/roma_tomatoes.jpg" }}
-        /> */}
-
-        {/* <Image style={{}} source={require(plantImage)} /> */}
-        {/* <Image
-          style={{}}
-          source={require(`../../../assets/images/roma_tomatoes.jpg`)}
-        /> */}
+        <View style={[DetailedPlantPortraitStyle.flexRowCenter]}>
+          <Image
+            style={DetailedPlantPortraitStyle.plantImage}
+            source={require("../../../assets/images/roma_tomatoes.jpg")}
+          />
+        </View>
         {/* -------------------- overview -------------------- */}
         <View style={DetailedPlantPortraitStyle.section}>
           <Text style={DetailedPlantPortraitStyle.topicTitles}>
@@ -77,16 +73,19 @@ const PlantPortrait = ({ navigation }) => {
           </Text>
 
           <View style={DetailedPlantPortraitStyle.infoItem}>
-            <Text style={DetailedPlantPortraitStyle.infoItemIcon}>X</Text>
+            <Text style={DetailedPlantPortraitStyle.infoItemIcon}>X: </Text>
             <Text style={DetailedPlantPortraitStyle.infoItemText}>words</Text>
           </View>
         </View>
 
         {/* -------------------- general information -------------------- */}
         <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>
-            Allgemeines
-          </Text>
+          <View style={DetailedPlantPortraitStyle.sectionCollapse}>
+            <Text style={DetailedPlantPortraitStyle.topicTitles}>
+              Allgemeines
+            </Text>
+            <Text style={DetailedPlantPortraitStyle.collapse}>+/-</Text>
+          </View>
           <View style={{}}>
             {plantInfo.map((paragraph, i) => (
               <Text key={i} style={{}}>
@@ -97,14 +96,17 @@ const PlantPortrait = ({ navigation }) => {
         </View>
 
         {/* -------------------- description plant -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyle.topicTitles}>Beschreibung</Text>
-        <View style={{}}>
-          {plantDescription.map((paragraph, i) => (
-            <Text key={i} style={{}}>
-              {JSON.stringify(paragraph)}
-            </Text>
-          ))}
+        <View style={DetailedPlantPortraitStyle.section}>
+          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+            Beschreibung
+          </Text>
+          <View style={{}}>
+            {plantDescription.map((paragraph, i) => (
+              <Text key={i} style={{}}>
+                {JSON.stringify(paragraph)}
+              </Text>
+            ))}
+          </View>
         </View>
         {/* -------------------- description flower -------------------- */}
 
@@ -117,46 +119,48 @@ const PlantPortrait = ({ navigation }) => {
         {/* -------------------- medicinal properties or poisonousness -------------------- */}
 
         {/* -------------------- variety specific information -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyle.topicTitles}>
-          Über {Tomato.labels.specific_variety_name}
-        </Text>
-        <View style={{}}>
-          {plantCareText.map((paragraph, i) => (
-            <Text key={i} style={{}}>
-              {JSON.stringify(paragraph)}
-            </Text>
-          ))}
+        <View style={DetailedPlantPortraitStyle.section}>
+          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+            Über {Tomato.labels.specific_variety_name}
+          </Text>
+          <View style={{}}>
+            {plantCareText.map((paragraph, i) => (
+              <Text key={i} style={{}}>
+                {JSON.stringify(paragraph)}
+              </Text>
+            ))}
+          </View>
         </View>
 
         {/* -------------------- care -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyle.topicTitles}>Pflege</Text>
-        <View style={{}}>
-          {plantCareText.map((paragraph, i) => (
-            <Text key={i} style={{}}>
-              {JSON.stringify(paragraph)}
-            </Text>
-          ))}
+        <View style={DetailedPlantPortraitStyle.section}>
+          <Text style={DetailedPlantPortraitStyle.topicTitles}>Pflege</Text>
+          <View style={{}}>
+            {plantCareText.map((paragraph, i) => (
+              <Text key={i} style={{}}>
+                {JSON.stringify(paragraph)}
+              </Text>
+            ))}
+          </View>
         </View>
 
         {/* -------------------- other -------------------- */}
-
-        <Text style={DetailedPlantPortraitStyle.noStyle}>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-          voluptas nulla pariatur?" 1914 translation by H. Rackham "But I must
-          explain to you how all this mistaken idea of denouncing pleasure and
-          praising pain was born and I will give you a complete account of the
-          system, and expound the actual teachings of the great explorer of the
-          truth, the master-builder of human happiness.
-        </Text>
-
+        <View style={DetailedPlantPortraitStyle.section}>
+          <Text style={DetailedPlantPortraitStyle.noStyle}>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora
+            incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
+            enim ad minima veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+            autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+            nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+            voluptas nulla pariatur?" 1914 translation by H. Rackham "But I must
+            explain to you how all this mistaken idea of denouncing pleasure and
+            praising pain was born and I will give you a complete account of the
+            system, and expound the actual teachings of the great explorer of
+            the truth, the master-builder of human happiness.
+          </Text>
+        </View>
         {/* -------------------- further reading/related articles -------------------- */}
 
         {/* -------------------- shopping suggestions -------------------- */}

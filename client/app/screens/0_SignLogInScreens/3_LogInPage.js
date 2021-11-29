@@ -48,6 +48,7 @@ const LogIn = ({ navigation }) => {
       },
     })
       .then((res) => console.log(res.data))
+      .then(console.log("It worked!"))
       .catch((err) => console.log(err));
   }
 

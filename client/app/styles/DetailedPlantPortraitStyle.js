@@ -3,9 +3,7 @@ import colors from "../config/colors";
 
 const detailedPlantPortraitStyles = StyleSheet.create({
   // shared properties >>
-  noStyle: {
-    backgroundColor: "yellow",
-  },
+  noStyle: {},
   border: {
     // borderWidth: 1,
     // borderColor: "blue",
@@ -141,10 +139,35 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   },
 
   // main content/middle part >>
+
+  flexRowCenter: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+
   mainContent: {
     marginBottom: 90,
     marginHorizontal: 5,
     paddingHorizontal: 10,
+  },
+  sectionCollapse: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: colors.sage25,
+  },
+  collapse: {
+    // alignSelf: "flex-end",
+    backgroundColor: colors.sage75,
+    padding: 4,
+    borderBottomRightRadius: 15,
+    borderTopLeftRadius: 15,
+  },
+  plantImage: {
+    width: "94%",
+    height: 300,
+    resizeMode: "contain",
   },
   section: {
     // width: "100%",
@@ -153,14 +176,14 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     borderColor: colors.sage,
     borderBottomRightRadius: 25,
     borderTopLeftRadius: 25,
-    padding: 7,
+    padding: 10,
     backgroundColor: colors.sage25,
     marginVertical: 7,
   },
   infoItem: {
     // width: "100%",
-    // display: "flex",
-    // flexDirection: "row",
+    display: "flex",
+    flexDirection: "row",
   },
   infoItemIcon: {
     // width: "100%",
