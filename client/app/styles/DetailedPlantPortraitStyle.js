@@ -158,9 +158,9 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     borderColor: colors.sage,
     borderBottomRightRadius: 25,
     borderTopLeftRadius: 25,
-    padding: 3,
+    padding: 7,
     backgroundColor: colors.sage25,
-    margin: 10,
+    marginVertical: 7,
   },
   infoItem: {
     // width: "100%",
@@ -180,6 +180,7 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   topicTitles: {
     fontWeight: "bold",
     textDecorationLine: "underline",
+    backgroundColor: "orange",
   },
 });
 

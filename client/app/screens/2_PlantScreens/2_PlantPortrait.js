@@ -71,19 +71,19 @@ const PlantPortrait = ({ navigation }) => {
           source={require(`../../../assets/images/roma_tomatoes.jpg`)}
         /> */}
         {/* -------------------- overview -------------------- */}
-        <View styles={styles.test}>
+        <View style={DetailedPlantPortraitStyle.section}>
           <Text style={DetailedPlantPortraitStyle.topicTitles}>
             Große Übersicht
           </Text>
 
-          <View styles={DetailedPlantPortraitStyle.infoItem}>
-            <Text styles={DetailedPlantPortraitStyle.infoItemIcon}>X</Text>
-            <Text styles={DetailedPlantPortraitStyle.infoItemText}>words</Text>
+          <View style={DetailedPlantPortraitStyle.infoItem}>
+            <Text style={DetailedPlantPortraitStyle.infoItemIcon}>X</Text>
+            <Text style={DetailedPlantPortraitStyle.infoItemText}>words</Text>
           </View>
         </View>
 
         {/* -------------------- general information -------------------- */}
-        <View styles={{ backgroundColor: "green" }}>
+        <View style={DetailedPlantPortraitStyle.section}>
           <Text style={DetailedPlantPortraitStyle.topicTitles}>
             Allgemeines
           </Text>
