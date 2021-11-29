@@ -14,6 +14,9 @@ import {
   TouchableHighlight,
 } from "react-native";
 
+// data processing >>
+import axios from "axios";
+
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
@@ -29,6 +32,26 @@ const LogIn = ({ navigation }) => {
   const [username, onChangeUsername] = React.useState("");
   const [email, onChangeEmail] = React.useState("");
   const [password, onChangePassword] = React.useState("");
+
+  // POST
+  function CheckUserData() {
+    // console.log(username, email, password);
+    axios({
+      method: "post",
+      url: "https://plantastic-backend-heroku.herokuapp.com/auth/login",
+      data: {
+        email: email,
+        password: password,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => console.log(res.data))
+      .then(console.log("It worked!"))
+      .catch((err) => console.log(err));
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo}>
@@ -65,11 +88,14 @@ const LogIn = ({ navigation }) => {
         <TouchableHighlight
           underlayColor={colors.sage25}
           style={styles.signInButton}
-          onPress={() =>
-            navigation.replace("Today", {
+          onPress={() => {
+            navigation.navigate("Today", {
               propOne: "propOne props",
-            })
-          }
+            });
+            console.log(email);
+            console.log(password);
+            CheckUserData();
+          }}
         >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Anmelden</Text>
