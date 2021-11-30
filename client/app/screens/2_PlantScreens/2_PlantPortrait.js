@@ -53,12 +53,12 @@ const PlantPortrait = ({ navigation }) => {
 
       <StatusBar style="auto" />
 
-      {/* ----------------------------------------------------- Banderole */}
-
-      <DetailedPlantBanderole />
-
       {/* ----------------------------------------------------- Middle Part */}
       <ScrollView style={DetailedPlantPortraitStyle.mainContent}>
+        {/* ----------------------------------------------------- Banderole */}
+
+        <DetailedPlantBanderole />
+
         {/* -------------------- image carousel -------------------- */}
         <View style={[DetailedPlantPortraitStyle.flexRowCenter]}>
           <Image
