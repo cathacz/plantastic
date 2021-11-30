@@ -9,6 +9,10 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     // borderColor: "blue",
     // margin: 1,
   },
+  flexRow: {
+    display: "flex",
+    flexDirection: "row",
+  },
 
   // banderole area and inside >>
   banderoleArea: {
@@ -185,15 +189,19 @@ const detailedPlantPortraitStyles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  infoItemTitleContainer: {},
   infoItemIcon: {
-    // width: "100%",
-    // display: "flex",
-    // flexDirection: "row",
+    height: 20,
+    width: 20,
+    backgroundColor: "blue",
+  },
+  infoItemTitle: {
+    fontWeight: "bold",
+    textDecorationLine: "underline",
   },
   infoItemText: {
-    // width: "100%",
-    // display: "flex",
-    // flexDirection: "row",
+    // fontWeight: "bold",
+    // textDecorationLine: "underline",
   },
   topicTitles: {
     fontWeight: "bold",

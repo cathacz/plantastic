@@ -108,8 +108,21 @@ const PlantPortrait = ({ navigation }) => {
           </Text>
 
           <View style={DetailedPlantPortraitStyle.infoItem}>
-            <Text style={DetailedPlantPortraitStyle.infoItemIcon}>X: </Text>
-            <Text style={DetailedPlantPortraitStyle.infoItemText}>words</Text>
+            <View
+              style={[
+                DetailedPlantPortraitStyle.flexRowCenter,
+                DetailedPlantPortraitStyle.infoItemTitleContainer,
+              ]}
+            >
+              <View style={DetailedPlantPortraitStyle.infoItemIcon}></View>
+              <Text style={DetailedPlantPortraitStyle.infoItemTitle}>
+                Standort:{" "}
+              </Text>
+            </View>
+
+            <Text style={DetailedPlantPortraitStyle.infoItemText}>
+              Sonne: {Tomato.plant_data.planting_conditions.location.sun_text}
+            </Text>
           </View>
         </View>
 
@@ -121,10 +134,11 @@ const PlantPortrait = ({ navigation }) => {
             </Text>
             <Text style={DetailedPlantPortraitStyle.collapse}>+/-</Text>
           </View>
+
           <View style={{}}>
             {plantInfo.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -138,7 +152,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantDescription.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -161,7 +175,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantCareText.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -173,7 +187,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantCareText.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
