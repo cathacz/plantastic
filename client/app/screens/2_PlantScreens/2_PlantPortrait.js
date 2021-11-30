@@ -11,7 +11,11 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   TextInput,
+  Button,
+  // Target,
+  // ScrollTo,
 } from "react-native";
+import { useScrollToTop } from "@react-navigation/native";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
@@ -32,6 +36,38 @@ import tomatoImage from "../../../assets/images/roma_tomatoes.jpg";
 import detailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
 
 const PlantPortrait = ({ navigation }) => {
+  // scroll to top when clicking on active tab of tab navigator >>
+  // const ref = React.useRef(null);
+  // useScrollToTop(ref);
+  // add ref to scroll view: <ScrollView ref={ref}>{/* content */}</ScrollView>
+  // source: https://reactnavigation.org/docs/use-scroll-to-top/
+
+  // <Button
+  // onPress={() => {
+  //   this.refs._scrollView.scrollTo(0);
+  // }}
+  //   onPress={() => {
+  //     this.refs._scrollView.scrollTo({});
+  //   }}
+  // >
+  //   <Text>Scroll to top</Text>
+  // </Button>
+  // scroll on button click >>
+  //   import { useRef } from 'react';
+  // const scrollRef = useRef();
+  // const onPressTouch = () => {
+  //   scrollRef.current?.scrollTo({
+  //     y: 0,
+  //     animated: true,
+  //   });
+  // }
+  // <ScrollView ref={scrollRef}>
+  //   ...your elements
+  // </ScrollView>
+  // <TouchableOpacity onPress={onPressTouch}></TouchableOpacity>
+  // source: https://stackoverflow.com/questions/31883211/scroll-to-top-of-scrollview/31885014
+
+  // image carousel >>
   // console.log(Tomato.images.map((item) => item.image_link));
   // console.log("tomato object >>" + Tomato.images[0].image_link);
   // const plantImage = `../../../assets/images/` + Tomato.images[0].image_link;
@@ -39,7 +75,6 @@ const PlantPortrait = ({ navigation }) => {
   // console.log(plantImage);
 
   // plant care information >>
-
   const plantCareText = Tomato.plant_data.care.care_information; // array of paragraphs
   const plantDescription = Tomato.plant_data.plant_description; // array of paragraphs
   const plantInfo = Tomato.plant_data.plant_information; // array of paragraphs
