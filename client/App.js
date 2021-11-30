@@ -158,13 +158,21 @@ function App() {
             }
           }
         >
-          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="QuickView"
+            component={QuickView}
+            options={{ title: "Kurz & Dreckig" }}
+          />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
-            options={{}}
+            options={{ title: "Pflanzenprofil" }}
           />
-          <Stack.Screen name="Diary" component={Diary} options={{}} />
+          <Stack.Screen
+            name="Diary"
+            component={Diary}
+            options={{ title: "Pflanzentagebuch" }}
+          />
         </Stack.Group>
         {/* Screens accessible from MyCommunity------------------------------- */}
         {/* Screens accessible from ------------------------------------------ */}
