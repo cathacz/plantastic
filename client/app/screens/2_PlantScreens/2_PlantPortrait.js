@@ -180,6 +180,9 @@ const PlantPortrait = ({ navigation }) => {
               Erdsorte:{" "}
               {Tomato.plant_data.planting_conditions.soil.soil_types.join(", ")}
             </Text>
+
+            {/* -------------------- Mulch */}
+
             {Tomato.plant_data.planting_conditions.soil.requires_mulching ? (
               <View>
                 <Text
