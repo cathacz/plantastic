@@ -78,7 +78,7 @@
         "soil_characteristics": ["humos", "nährstoffreich"],
         "soil_types": ["Humus"],
         "adult_plant_soil_amount": "n/a",
-        "soil_notes": [""],
+        "soil_notes": ["Staunässe vermeiden"],
         "allow_drainage": true,
         "requires_mulching": true,
         "mulch": {

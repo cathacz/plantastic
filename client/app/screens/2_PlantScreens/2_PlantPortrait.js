@@ -134,7 +134,7 @@ const PlantPortrait = ({ navigation }) => {
                   DetailedPlantPortraitStyle.infoItemTitle,
                 ]}
               >
-                Standort:{" "}
+                Standortbedingungen:{" "}
               </Text>
             </View>
 
@@ -153,7 +153,7 @@ const PlantPortrait = ({ navigation }) => {
                 DetailedPlantPortraitStyle.infoItemText,
               ]}
             >
-              Standortbedingungen:{" "}
+              Standortbedarf:{" "}
               {Tomato.plant_data.planting_conditions.location.location_requirements.join(
                 ", "
               )}
@@ -227,7 +227,7 @@ const PlantPortrait = ({ navigation }) => {
                     DetailedPlantPortraitStyle.infoItemText,
                   ]}
                 >
-                  Mulchschichtdicke:{" "}
+                  Mulchschichtdicke: ca.
                   {
                     Tomato.plant_data.planting_conditions.soil.mulch
                       .mulch_thickness
@@ -239,7 +239,7 @@ const PlantPortrait = ({ navigation }) => {
                 </Text>
               </View>
             ) : (
-              {}
+              <View></View>
             )}
           </View>
         </View>
