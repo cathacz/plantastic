@@ -35,6 +35,12 @@ const Diary = ({ navigation }) => {
         <Text style={StylePlants.mainText}>Tagebuch</Text>
       </SafeAreaView>
       {/* ----------------------------------------------------- Main Part */}
+      <View style={styles.body}>
+        <Image
+          source={require("../../../assets/icons/png/deadStar.png")}
+          style={styles.image}
+        />
+      </View>
 
       {/* ---------------------------------------- Navigation Main Bottom */}
       <PlantBottomNav navigation={navigation} />
@@ -47,6 +53,7 @@ const styles = StyleSheet.create({
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
+  image: { height: 200, width: 200, alignSelf: "center", marginTop: 80 },
 });
 export default Diary;
 // unused by this component >>

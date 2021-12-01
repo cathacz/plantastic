@@ -48,7 +48,7 @@ const Landing = ({ navigation }) => {
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Sign In</Text>
+            <Text style={styles.buttonText}>Registriere dich</Text>
           </View>
         </TouchableHighlight>
         <Text style={styles.orText}>oder</Text>
@@ -63,7 +63,7 @@ const Landing = ({ navigation }) => {
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Log In</Text>
+            <Text style={styles.buttonText}>Melde dich an</Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -102,9 +102,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     width: 300,
-    fontSize: 40,
+    fontSize: 30,
     textAlign: "center",
     color: colors.sage,
+    padding: 8,
   },
   orText: { textAlign: "center", fontSize: 25, margin: 5 },
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -11,7 +11,8 @@ import {
 import colors from "../../config/colors";
 
 const SearchMenu = ({ navigation }) => {
-  const [text, onChangeText] = React.useState("");
+  const [text, setText] = useState("");
+
   return (
     <SafeAreaView style={styles.container}>
       {/* ----------------------------------------------------- Search */}
@@ -28,9 +29,10 @@ const SearchMenu = ({ navigation }) => {
           <View style={styles.buttonSearch}>
             <TextInput
               style={styles.input}
-              onChangeText={onChangeText}
-              value={text}
               placeholder="Was suchst du?"
+              onChangeText={(text) => setText(text)}
+              defaultValue={text}
+              // clearButtonMode="always" >>> iOS clear Button
             />
             <View style={styles.lupeWrapper}>
               <View style={styles.lupeKL}></View>

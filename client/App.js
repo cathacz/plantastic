@@ -70,11 +70,11 @@ function App() {
           options={{ title: "Anmelden" }}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Today"
           component={Today}
           options={{ title: "Today" }}
-        />
+        /> */}
 
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
@@ -82,7 +82,7 @@ function App() {
             header: (props) => <NavMainTop {...props} />,
           }}
         >
-          {/* <Stack.Screen name="Today" component={Today} options={{}} /> */}
+          <Stack.Screen name="Today" component={Today} options={{}} />
           <Stack.Screen name="Overview" component={Overview} options={{}} />
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
@@ -158,13 +158,21 @@ function App() {
             }
           }
         >
-          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="QuickView"
+            component={QuickView}
+            options={{ title: "Kurz & dreckig" }}
+          />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
-            options={{}}
+            options={{ title: "Pflanzenportrait" }}
           />
-          <Stack.Screen name="Diary" component={Diary} options={{}} />
+          <Stack.Screen
+            name="Diary"
+            component={Diary}
+            options={{ title: "Mein Tagebuch" }}
+          />
         </Stack.Group>
         {/* Screens accessible from MyCommunity------------------------------- */}
         {/* Screens accessible from ------------------------------------------ */}
