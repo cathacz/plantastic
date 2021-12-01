@@ -16,7 +16,7 @@ import {
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/0_SearchMenu";
 import MyGardenBanderole from "../../components/3_Banderolen/MyGardenBanderole";
 import SeedStarted from "../../components/Calendar/SeedStarted";
 // for styling >>
@@ -66,51 +66,3 @@ const styles = StyleSheet.create({
   // },
 });
 export default MyGarden;
-
-// unused stuff >>
-
-{
-  /* <SafeAreaView style={StyleMain.navMainTop}>
-  <View to="/today" underlayColor="white" style={StyleMain.navTopItem}>
-    <View style={StyleMain.navTopElements}>
-      <Image
-        source={require("../../../assets/icons/png/plantastic.png")}
-        style={{
-          height: 50,
-          width: 50,
-          alignItems: "center",
-          margin: 5,
-        }}
-      />
-      <Text style={StyleMain.navTopText}>Plantastic</Text>
-    </View>
-  </View> */
-}
-{
-  /* ------------- SearchMenu */
-}
-// <View style={StyleMain.searchMenuWrapperRight}>
-//   <View to="/searchMenu" underlayColor="white">
-//     <SafeAreaView style={StyleMain.searchMenuWrapper}>
-//       <View style={StyleMain.searchMenuWrapperFirstRow}>
-//         <View style={StyleMain.searchMenuItem}></View>
-//         <View style={StyleMain.searchMenuItem}></View>
-//       </View>
-
-//       <View style={StyleMain.searchMenuWrapperSecondRow}>
-//         <View style={StyleMain.searchMenuItem}></View>
-//         <View style={StyleMain.searchMenuItem}></View>
-//       </View>
-//     </SafeAreaView>
-//   </View>
-{
-  /* ------------- Add Task */
-}
-//     <TouchableOpacity>
-//       {/*onPress={() => handleAddTask()}*/}
-//       <View style={StyleMain.addWrapper}>
-//         <Text style={StyleMain.addText}>+</Text>
-//       </View>
-//     </TouchableOpacity>
-//   </View>
-// </SafeAreaView>

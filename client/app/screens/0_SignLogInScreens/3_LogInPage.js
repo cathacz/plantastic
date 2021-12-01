@@ -21,7 +21,7 @@ import axios from "axios";
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import Task from "../../components/Task";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/0_SearchMenu";
 
 // for styling >>
 import { Colors } from "react-native/Libraries/NewAppScreen";
