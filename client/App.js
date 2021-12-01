@@ -29,12 +29,12 @@ import Community from "./app/screens/1_MainScreens/4_Community";
 import DailyView from "./app/screens/1_MainScreens/2_1_DailyView";
 
 // SEARCH MENU parts
-import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
-import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
-import AllPlants from "./app/screens/3_SearchMenuScreens/AllPlants";
-import Blog from "./app/screens/3_SearchMenuScreens/Blog";
-import GardeningTipps from "./app/screens/3_SearchMenuScreens/GardeningTipps";
-import Settings from "./app/screens/3_SearchMenuScreens/Settings";
+import SearchMenu from "./app/screens/3_SearchMenuScreens/0_SearchMenu";
+import SearchResults from "./app/screens/3_SearchMenuScreens/1_SearchResults";
+import AllPlants from "./app/screens/3_SearchMenuScreens/2_AllPlants";
+import Blog from "./app/screens/3_SearchMenuScreens/3_Blog";
+import GardeningTipps from "./app/screens/3_SearchMenuScreens/4_GardeningTipps";
+import Settings from "./app/screens/3_SearchMenuScreens/5_Settings";
 import Terms from "./app/screens/3_SearchMenuScreens/Terms";
 import Conditions from "./app/screens/3_SearchMenuScreens/Conditions";
 import Imprint from "./app/screens/3_SearchMenuScreens/Imprint";
@@ -70,11 +70,11 @@ function App() {
           options={{ title: "Anmelden" }}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Today"
           component={Today}
           options={{ title: "Today" }}
-        />
+        /> */}
 
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
@@ -82,7 +82,7 @@ function App() {
             header: (props) => <NavMainTop {...props} />,
           }}
         >
-          {/* <Stack.Screen name="Today" component={Today} options={{}} /> */}
+          <Stack.Screen name="Today" component={Today} options={{}} />
           <Stack.Screen name="Overview" component={Overview} options={{}} />
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
@@ -95,7 +95,7 @@ function App() {
           options={{ title: "" }}
         />
 
-        {/* Screens accessible from top nav----------------------------------- */}
+        {/* Screens accessible from top nav-----------------------------SEARCH MENU------ */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
@@ -158,13 +158,21 @@ function App() {
             }
           }
         >
-          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="QuickView"
+            component={QuickView}
+            options={{ title: "Kurz & dreckig" }}
+          />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
-            options={{}}
+            options={{ title: "Pflanzenportrait" }}
           />
-          <Stack.Screen name="Diary" component={Diary} options={{}} />
+          <Stack.Screen
+            name="Diary"
+            component={Diary}
+            options={{ title: "Mein Tagebuch" }}
+          />
         </Stack.Group>
         {/* Screens accessible from MyCommunity------------------------------- */}
         {/* Screens accessible from ------------------------------------------ */}
