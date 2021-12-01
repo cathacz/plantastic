@@ -79,7 +79,7 @@ const Today = ({ navigation, route }) => {
         style={{
           width: "100%",
           // marginTop: 90,
-          height: 160,
+          height: 185,
           backgroundColor: colors.sage5,
           position: "absolute",
           textAlign: "center",

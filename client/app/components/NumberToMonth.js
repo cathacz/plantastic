@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React, { useState, useEffect } from "react";
 import StyleMain from "../styles/StyleMain";
 import { format, formatDistance, formatRelative, subDays } from "date-fns";
@@ -6,6 +6,7 @@ import { de } from "date-fns/esm/locale";
 
 const NumberToMonth = () => {
   const [currentDate, setCurrentDate] = useState("");
+  const [currentWeekday, setCurrentWeekday] = useState("");
 
   useEffect(() => {
     const date = new Date();
@@ -79,15 +80,21 @@ const NumberToMonth = () => {
     // const monthName = monthNames[d];
 
     setCurrentDate(
-      weekday + "," + " " + day + "." + " " + monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
+      day + "." + " " + monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
     );
+    setCurrentWeekday(weekday);
   }, []);
 
   return (
     <View>
-      <Text>{currentDate}</Text>
+      <Text style={styles.date}>{currentWeekday}</Text>
+      <Text style={styles.date}>{currentDate}</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  date: { fontSize: 20, alignSelf: "flex-end", marginTop: 4 },
+});
 
 export default NumberToMonth;

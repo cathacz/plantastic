@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import imageDictionary from "./imageDictionary";
 import { isSameDay, format } from "date-fns";
 import TodaysDate from "../Calendar/TodaysDate";
+import NumberToMonth from "../NumberToMonth";
 
 const Weather = ({ forecast: { name, list, timezone } }) => {
   // const [currentDate, setCurrentDate] = useState("");
@@ -38,7 +39,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
     <View style={styles.wrapper}>
       <Text style={styles.location}>{name}</Text>
       <View style={styles.date}>
-        <TodaysDate />
+        <NumberToMonth />
       </View>
       <View style={styles.rowTempIcon}>
         <Text style={styles.temp}>
