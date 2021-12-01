@@ -87,7 +87,10 @@
           "mulch_thickness_unit": "cm",
           "mulch_every": 3,
           "mulch_every_unit": "Monate",
-          "mulch_notes": ["Mulchen kann man, muss man aber nicht."]
+          "mulch_notes": [
+            "Mulchen kann man, muss man aber nicht.",
+            "Im Winter ist es unnötig."
+          ]
         }
       },
       "water": {

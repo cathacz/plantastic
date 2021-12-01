@@ -102,31 +102,147 @@ const PlantPortrait = ({ navigation }) => {
           />
         </View>
         {/* -------------------- overview -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+        <View style={[DetailedPlantPortraitStyle.section]}>
+          <Text style={[DetailedPlantPortraitStyle.topicTitles]}>
             Große Übersicht
           </Text>
 
-          <View style={DetailedPlantPortraitStyle.infoItem}>
+          {/* -------------------- Location */}
+
+          <View
+            style={[
+              DetailedPlantPortraitStyle.border,
+              DetailedPlantPortraitStyle.infoItem,
+            ]}
+          >
             <View
               style={[
-                DetailedPlantPortraitStyle.flexRowCenter,
+                DetailedPlantPortraitStyle.flexRow,
                 DetailedPlantPortraitStyle.infoItemTitleContainer,
+                DetailedPlantPortraitStyle.border,
               ]}
             >
-              <View style={DetailedPlantPortraitStyle.infoItemIcon}></View>
-              <Text style={DetailedPlantPortraitStyle.infoItemTitle}>
+              <View
+                style={[
+                  DetailedPlantPortraitStyle.border,
+                  DetailedPlantPortraitStyle.infoItemIcon,
+                ]}
+              ></View>
+              <Text
+                style={[
+                  DetailedPlantPortraitStyle.border,
+                  DetailedPlantPortraitStyle.infoItemTitle,
+                ]}
+              >
                 Standort:{" "}
               </Text>
             </View>
 
-            <Text style={DetailedPlantPortraitStyle.infoItemText}>
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
               Sonne: {Tomato.plant_data.planting_conditions.location.sun_text}
             </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Standortbedingungen:{" "}
+              {Tomato.plant_data.planting_conditions.location.location_requirements.join(
+                ", "
+              )}
+            </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Erdtyp:{" "}
+              {Tomato.plant_data.planting_conditions.soil.soil_characteristics.join(
+                ", "
+              )}
+            </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Erdsorte:{" "}
+              {Tomato.plant_data.planting_conditions.soil.soil_types.join(", ")}
+            </Text>
+            {Tomato.plant_data.planting_conditions.soil.requires_mulching ? (
+              <View>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchen:{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_notes.join(
+                    " "
+                  )}
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Am besten alle{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_every}{" "}
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_every_unit
+                  }{" "}
+                  eine frische Mulchschicht auftragen.
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchmaterial:{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_type.join(
+                    ", "
+                  )}
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchschichtdicke:{" "}
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_thickness
+                  }{" "}
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_thickness_unit
+                  }
+                </Text>
+              </View>
+            ) : (
+              {}
+            )}
           </View>
         </View>
 
         {/* -------------------- general information -------------------- */}
+
         <View style={DetailedPlantPortraitStyle.section}>
           <View style={DetailedPlantPortraitStyle.sectionCollapse}>
             <Text style={DetailedPlantPortraitStyle.topicTitles}>
