@@ -42,7 +42,7 @@ const Landing = ({ navigation }) => {
           underlayColor={colors.sage25}
           style={styles.signInButton}
           onPress={() =>
-            navigation.replace("SignIn", {
+            navigation.navigate("SignIn", {
               propOne: "propOne props",
             })
           }
@@ -57,7 +57,7 @@ const Landing = ({ navigation }) => {
           underlayColor={colors.sage25}
           style={styles.logInButton}
           onPress={() =>
-            navigation.replace("LogIn", {
+            navigation.navigate("LogIn", {
               propOne: "propOne props",
             })
           }
