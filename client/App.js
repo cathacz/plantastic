@@ -29,12 +29,12 @@ import Community from "./app/screens/1_MainScreens/4_Community";
 import DailyView from "./app/screens/1_MainScreens/2_1_DailyView";
 
 // SEARCH MENU parts
-import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
-import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
-import AllPlants from "./app/screens/3_SearchMenuScreens/AllPlants";
-import Blog from "./app/screens/3_SearchMenuScreens/Blog";
-import GardeningTipps from "./app/screens/3_SearchMenuScreens/GardeningTipps";
-import Settings from "./app/screens/3_SearchMenuScreens/Settings";
+import SearchMenu from "./app/screens/3_SearchMenuScreens/0_SearchMenu";
+import SearchResults from "./app/screens/3_SearchMenuScreens/1_SearchResults";
+import AllPlants from "./app/screens/3_SearchMenuScreens/2_AllPlants";
+import Blog from "./app/screens/3_SearchMenuScreens/3_Blog";
+import GardeningTipps from "./app/screens/3_SearchMenuScreens/4_GardeningTipps";
+import Settings from "./app/screens/3_SearchMenuScreens/5_Settings";
 import Terms from "./app/screens/3_SearchMenuScreens/Terms";
 import Conditions from "./app/screens/3_SearchMenuScreens/Conditions";
 import Imprint from "./app/screens/3_SearchMenuScreens/Imprint";
@@ -95,7 +95,7 @@ function App() {
           options={{ title: "" }}
         />
 
-        {/* Screens accessible from top nav----------------------------------- */}
+        {/* Screens accessible from top nav-----------------------------SEARCH MENU------ */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}

@@ -16,7 +16,7 @@ import {
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/0_SearchMenu";
 import MyGardenBanderole from "../../components/3_Banderolen/MyGardenBanderole";
 import SeedStarted from "../../components/Calendar/SeedStarted";
 // for styling >>
