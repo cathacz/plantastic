@@ -5,9 +5,9 @@ const detailedPlantPortraitStyles = StyleSheet.create({
   // shared properties >>
   noStyle: {},
   border: {
-    borderWidth: 1,
-    borderColor: "blue",
-    margin: 2,
+    // borderWidth: 1,
+    // borderColor: "blue",
+    // margin: 2,
   },
   flexRow: {
     display: "flex",
