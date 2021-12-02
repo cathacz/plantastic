@@ -27,6 +27,7 @@ import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
 import DailyView from "./app/screens/1_MainScreens/2_1_DailyView";
+import WeatherDetail from "./app/screens/1_MainScreens/1_1_WeatherDetail";
 
 // SEARCH MENU parts
 import SearchMenu from "./app/screens/3_SearchMenuScreens/0_SearchMenu";
@@ -57,7 +58,7 @@ function App() {
         <Stack.Screen
           name="LandingPage"
           component={Landing}
-          options={{ title: "Welcome to PLantastic!" }}
+          options={{ title: "Schön, dass du hier bist!" }}
         />
         <Stack.Screen
           name="SignIn"
@@ -87,6 +88,12 @@ function App() {
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
+        {/* --------------------------- Accessible from Today >> WeatherDetail */}
+        <Stack.Screen
+          name="WeatherDetail"
+          component={WeatherDetail}
+          options={{ title: "Wetter" }}
+        />
 
         {/* --------------------------- Accessible from OverView >> DailyView */}
         <Stack.Screen

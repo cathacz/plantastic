@@ -87,16 +87,29 @@ const Today = ({ navigation, route }) => {
           justifyContent: "center",
         }}
       >
+        {/* <View style={styles.userWrapper}>
+          <Text style={styles.userGreeting}>Hej, Camilla!</Text>
+        </View> */}
         <View
           style={{
             flex: 1,
             width: "100%",
           }}
         >
-          <View>
-            {!weather ? <Loading /> : <Weather forecast={weather} />}
-            {/* <Weather forecast={weather} /> */}
-          </View>
+          <TouchableHighlight
+            underlayColor={colors.sage25}
+            style={styles.paleButton}
+            onPress={() =>
+              navigation.navigate("WeatherDetail", {
+                propOne: "propOne props",
+              })
+            }
+          >
+            <View>
+              {!weather ? <Loading /> : <Weather forecast={weather} />}
+              {/* <Weather forecast={weather} /> */}
+            </View>
+          </TouchableHighlight>
         </View>
       </View>
 
@@ -195,5 +208,7 @@ const styles = StyleSheet.create({
   leafWrapper: {
     flexDirection: "row",
   },
+  // userWrapper: { width: "50%" },
+  userGreeting: { fontSize: 30, width: " 50%", alignSelf: "flex-start" },
 });
 export default Today;
