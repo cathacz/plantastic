@@ -13,20 +13,20 @@ import {
   TextInput,
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
+import colors from "../../config/colors";
 import MyGarden from "../screens/MyGarden";
 import QuickView from "./QuickView.js";
 // import PlantPortrait from "./PlantPortrait";
 import Diary from "./Diary";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import Task from "../components/Task";
+import Task from "../../components/Task";
 
-import StylePlants from "../styles/StylePlants";
+import StylePlants from "../../styles/StylePlants";
 import detailedPlantPortraitStyles from "../styles/detailedPlantPortraitStyle";
 
 // import image (temporary solution)
 import tomatoPlant from "../../assets/images/roma_tomatoes.jpg";
-import StyleMain from "../styles/StyleMain";
+import StyleMain from "../../styles/StyleMain";
 
 // import json for tomato plant (temporary solution)
 

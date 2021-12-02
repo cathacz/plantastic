@@ -11,7 +11,11 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   TextInput,
+  Button,
+  // Target,
+  // ScrollTo,
 } from "react-native";
+import { useScrollToTop } from "@react-navigation/native";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
@@ -32,6 +36,38 @@ import tomatoImage from "../../../assets/images/roma_tomatoes.jpg";
 import detailedPlantPortraitStyles from "../../styles/DetailedPlantPortraitStyle";
 
 const PlantPortrait = ({ navigation }) => {
+  // scroll to top when clicking on active tab of tab navigator >>
+  // const ref = React.useRef(null);
+  // useScrollToTop(ref);
+  // add ref to scroll view: <ScrollView ref={ref}>{/* content */}</ScrollView>
+  // source: https://reactnavigation.org/docs/use-scroll-to-top/
+
+  // <Button
+  // onPress={() => {
+  //   this.refs._scrollView.scrollTo(0);
+  // }}
+  //   onPress={() => {
+  //     this.refs._scrollView.scrollTo({});
+  //   }}
+  // >
+  //   <Text>Scroll to top</Text>
+  // </Button>
+  // scroll on button click >>
+  //   import { useRef } from 'react';
+  // const scrollRef = useRef();
+  // const onPressTouch = () => {
+  //   scrollRef.current?.scrollTo({
+  //     y: 0,
+  //     animated: true,
+  //   });
+  // }
+  // <ScrollView ref={scrollRef}>
+  //   ...your elements
+  // </ScrollView>
+  // <TouchableOpacity onPress={onPressTouch}></TouchableOpacity>
+  // source: https://stackoverflow.com/questions/31883211/scroll-to-top-of-scrollview/31885014
+
+  // image carousel >>
   // console.log(Tomato.images.map((item) => item.image_link));
   // console.log("tomato object >>" + Tomato.images[0].image_link);
   // const plantImage = `../../../assets/images/` + Tomato.images[0].image_link;
@@ -39,7 +75,6 @@ const PlantPortrait = ({ navigation }) => {
   // console.log(plantImage);
 
   // plant care information >>
-
   const plantCareText = Tomato.plant_data.care.care_information; // array of paragraphs
   const plantDescription = Tomato.plant_data.plant_description; // array of paragraphs
   const plantInfo = Tomato.plant_data.plant_information; // array of paragraphs
@@ -53,12 +88,12 @@ const PlantPortrait = ({ navigation }) => {
 
       <StatusBar style="auto" />
 
-      {/* ----------------------------------------------------- Banderole */}
-
-      <DetailedPlantBanderole />
-
       {/* ----------------------------------------------------- Middle Part */}
       <ScrollView style={DetailedPlantPortraitStyle.mainContent}>
+        {/* ----------------------------------------------------- Banderole */}
+
+        <DetailedPlantBanderole />
+
         {/* -------------------- image carousel -------------------- */}
         <View style={[DetailedPlantPortraitStyle.flexRowCenter]}>
           <Image
@@ -67,18 +102,150 @@ const PlantPortrait = ({ navigation }) => {
           />
         </View>
         {/* -------------------- overview -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>
+        <View style={[DetailedPlantPortraitStyle.section]}>
+          <Text style={[DetailedPlantPortraitStyle.topicTitles]}>
             Große Übersicht
           </Text>
 
-          <View style={DetailedPlantPortraitStyle.infoItem}>
-            <Text style={DetailedPlantPortraitStyle.infoItemIcon}>X: </Text>
-            <Text style={DetailedPlantPortraitStyle.infoItemText}>words</Text>
+          {/* -------------------- Location */}
+
+          <View
+            style={[
+              DetailedPlantPortraitStyle.border,
+              DetailedPlantPortraitStyle.infoItem,
+            ]}
+          >
+            <View
+              style={[
+                DetailedPlantPortraitStyle.flexRow,
+                DetailedPlantPortraitStyle.infoItemTitleContainer,
+                DetailedPlantPortraitStyle.border,
+              ]}
+            >
+              <View
+                style={[
+                  DetailedPlantPortraitStyle.border,
+                  DetailedPlantPortraitStyle.infoItemIcon,
+                ]}
+              ></View>
+              <Text
+                style={[
+                  DetailedPlantPortraitStyle.border,
+                  DetailedPlantPortraitStyle.infoItemTitle,
+                ]}
+              >
+                Standortbedingungen:{" "}
+              </Text>
+            </View>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Sonne: {Tomato.plant_data.planting_conditions.location.sun_text}
+            </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Standortbedarf:{" "}
+              {Tomato.plant_data.planting_conditions.location.location_requirements.join(
+                ", "
+              )}
+            </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Erdtyp:{" "}
+              {Tomato.plant_data.planting_conditions.soil.soil_characteristics.join(
+                ", "
+              )}
+            </Text>
+
+            <Text
+              style={[
+                DetailedPlantPortraitStyle.border,
+                DetailedPlantPortraitStyle.infoItemText,
+              ]}
+            >
+              Erdsorte:{" "}
+              {Tomato.plant_data.planting_conditions.soil.soil_types.join(", ")}
+            </Text>
+
+            {/* -------------------- Mulch */}
+
+            {Tomato.plant_data.planting_conditions.soil.requires_mulching ? (
+              <View>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchen:{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_notes.join(
+                    " "
+                  )}
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Am besten alle{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_every}{" "}
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_every_unit
+                  }{" "}
+                  eine frische Mulchschicht auftragen.
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchmaterial:{" "}
+                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_type.join(
+                    ", "
+                  )}
+                </Text>
+                <Text
+                  style={[
+                    DetailedPlantPortraitStyle.border,
+                    DetailedPlantPortraitStyle.infoItemText,
+                  ]}
+                >
+                  Mulchschichtdicke: ca.
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_thickness
+                  }{" "}
+                  {
+                    Tomato.plant_data.planting_conditions.soil.mulch
+                      .mulch_thickness_unit
+                  }
+                </Text>
+              </View>
+            ) : (
+              <View></View>
+            )}
           </View>
         </View>
 
         {/* -------------------- general information -------------------- */}
+
         <View style={DetailedPlantPortraitStyle.section}>
           <View style={DetailedPlantPortraitStyle.sectionCollapse}>
             <Text style={DetailedPlantPortraitStyle.topicTitles}>
@@ -86,10 +253,11 @@ const PlantPortrait = ({ navigation }) => {
             </Text>
             <Text style={DetailedPlantPortraitStyle.collapse}>+/-</Text>
           </View>
+
           <View style={{}}>
             {plantInfo.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -103,7 +271,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantDescription.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -126,7 +294,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantCareText.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
@@ -138,7 +306,7 @@ const PlantPortrait = ({ navigation }) => {
           <View style={{}}>
             {plantCareText.map((paragraph, i) => (
               <Text key={i} style={{}}>
-                {JSON.stringify(paragraph)}
+                {paragraph}
               </Text>
             ))}
           </View>
