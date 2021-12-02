@@ -67,6 +67,7 @@ const LogIn = ({ navigation }) => {
       {/* email Address Input */}
       <View style={styles.inputField}>
         <TextInput
+          // type={email}
           style={styles.input}
           onChangeText={onChangeEmail}
           value={email}
@@ -76,6 +77,8 @@ const LogIn = ({ navigation }) => {
       {/* Passwort Input */}
       <View style={styles.inputField}>
         <TextInput
+          secureTextEntry={true}
+          // type={password}
           style={styles.input}
           onChangeText={onChangePassword}
           value={password}

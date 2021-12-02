@@ -57,7 +57,7 @@ function App() {
         <Stack.Screen
           name="LandingPage"
           component={Landing}
-          options={{ title: "Welcome to PLantastic!" }}
+          options={{ title: "Schön, dass du hier bist!" }}
         />
         <Stack.Screen
           name="SignIn"

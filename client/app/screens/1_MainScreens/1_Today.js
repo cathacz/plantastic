@@ -87,6 +87,9 @@ const Today = ({ navigation, route }) => {
           justifyContent: "center",
         }}
       >
+        {/* <View style={styles.userWrapper}>
+          <Text style={styles.userGreeting}>Hej, Camilla!</Text>
+        </View> */}
         <View
           style={{
             flex: 1,
@@ -195,5 +198,7 @@ const styles = StyleSheet.create({
   leafWrapper: {
     flexDirection: "row",
   },
+  // userWrapper: { width: "50%" },
+  userGreeting: { fontSize: 30, width: " 50%", alignSelf: "flex-start" },
 });
 export default Today;
