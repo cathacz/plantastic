@@ -96,10 +96,20 @@ const Today = ({ navigation, route }) => {
             width: "100%",
           }}
         >
-          <View>
-            {!weather ? <Loading /> : <Weather forecast={weather} />}
-            {/* <Weather forecast={weather} /> */}
-          </View>
+          <TouchableHighlight
+            underlayColor={colors.sage25}
+            style={styles.paleButton}
+            onPress={() =>
+              navigation.navigate("WeatherDetail", {
+                propOne: "propOne props",
+              })
+            }
+          >
+            <View>
+              {!weather ? <Loading /> : <Weather forecast={weather} />}
+              {/* <Weather forecast={weather} /> */}
+            </View>
+          </TouchableHighlight>
         </View>
       </View>
 
