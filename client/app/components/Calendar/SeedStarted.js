@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { differenceInDays } from "date-fns";
 // styling
@@ -30,9 +30,9 @@ export default function SeedStarted() {
     var weeks = parseInt(days / 7);
     days = parseInt(days - weeks * 7);
     return (
-      (months > 0 ? months + " month" + (months > 1 ? "s, " : ", ") : "") +
-      (weeks > 0 ? weeks + " week" + (weeks > 1 ? "s, " : ", ") : "") +
-      (days > 0 ? days + " day" + (days > 1 ? "s " : " ") : "")
+      (months > 0 ? months + " Monat" + (months > 1 ? "en, " : ", ") : "") +
+      (weeks > 0 ? weeks + " Woche" + (weeks > 1 ? "n, " : ", ") : "") +
+      (days > 0 ? days + " Tag" + (days > 1 ? "en " : " ") : "")
     );
   };
 
@@ -43,10 +43,27 @@ export default function SeedStarted() {
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
     >
-      <Text style={styles.whiteText}>Meine Pflanzen</Text>
-      <Text style={styles.baseText}>Tomate "Roma"</Text>
-      <Text style={styles.number}>{parseInt(germAdvanc())}%</Text>
-      <Text style={styles.baseText}>Started {restDays()} ago</Text>
+      <TouchableOpacity
+        style={styles.tomatoWrapper}
+        // onPress={() =>
+        //   navigation.navigate("QuickView", {
+        //     propOne: "propOne props",
+        //   })
+        // }
+      >
+        <View style={styles.nothing}>
+          <Image
+            source={require("../../../assets/icons/png/tomatoes.png")}
+            style={styles.icon}
+          />
+          {/* <Text style={styles.text}>Beeren</Text> */}
+        </View>
+
+        {/* <Text style={styles.whiteText}>Meine Pflanzen</Text> */}
+        <Text style={styles.baseText}>Tomate "Roma"</Text>
+        <Text style={styles.number}>{parseInt(germAdvanc())}%</Text>
+        <Text style={styles.baseText}>Gepflanzt vor {restDays()}</Text>
+      </TouchableOpacity>
     </LinearGradient>
   );
 }
@@ -69,4 +86,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "#FFFFFF",
   },
+  // ------------------------------Catha here
+  icon: { height: 50, width: 50 },
 });

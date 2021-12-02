@@ -2,7 +2,7 @@
   "labels": {
     "_id": "#################",
     "specific_variety_name": "Romatomate Ravello F1",
-    "botanical_name": "lateinischer Name von Ravello F1",
+    "botanical_name": "Solanum lycopersicum 'Roma'",
     "category": [
       "Gemüse",
       "Gemuese",
@@ -68,6 +68,21 @@
     }
   ],
   "plant_data": {
+    "kurz_dreckig": {
+      "standort": "sonnig und geschützt",
+      "wasserbedarf": "mittelprächtig bis hoch",
+      "saattiefe_cm": "0.5",
+      "abstaende": {
+        "pflanzenAbstand_cm": "50",
+        "reihenAbstand_cm": "50"
+      },
+      "keimung": {
+        "keimungTage_min": "8",
+        "keimungTage_max": "15",
+        "keimungTemp_minC": "20",
+        "keimungTemp_maxC": "25"
+      }
+    },
     "planting_conditions": {
       "location": {
         "sun": 6,
