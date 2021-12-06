@@ -7,11 +7,8 @@ import { de } from "date-fns/esm/locale";
 
 export default function MyCalendar() {
   const [currentDate, setCurrentDate] = useState(`${year}-${monthName}-${day}`);
-  // `${year}-${monthName}-${day}`
+  const [todoList, setTodoList] = useState([]);
   const [markedDate, setMarkedDate] = useState([]);
-  // const [currentDate, setCurrentDate] = useState(
-  //
-  // );
   const date = new Date();
   let year = format(date, "yyyy", {
     awareOfUnicodeTokens: true,
@@ -29,11 +26,48 @@ export default function MyCalendar() {
     awareOfUnicodeTokens: true,
     locale: de,
   });
-
-  // setCurrentDate(
-  //   day + "." + " " + monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
-  // );
-
+  LocaleConfig.locales["de"] = {
+    monthNames: [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "July",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember",
+    ],
+    monthNamesShort: [
+      "Jan.",
+      "Feb.",
+      "Mär.",
+      "Apr.",
+      "Mai",
+      "Jun.",
+      "Jul.",
+      "Aug.",
+      "Sept.",
+      "Okt.",
+      "Nov.",
+      "Dez.",
+    ],
+    dayNames: [
+      "Sonntag",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag",
+    ],
+    dayNamesShort: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."],
+    today: "Heute",
+  };
+  LocaleConfig.defaultLocale = "de";
   return (
     <View
       style={{
