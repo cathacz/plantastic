@@ -24,12 +24,15 @@ import StyleMain from "../../styles/StyleMain";
 import colors from "../../config/colors";
 
 // imports Alina
-import Calendar from "../../components/OverviewCalendar";
-import MonthView from "../../components/Calendar/MonthView";
+import Weather from "../../components/WeatherAPI/Weather";
+import useWeather from "../../components/WeatherAPI/useWeather";
+import Loading from "../../components/WeatherAPI/Loading";
 // import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
 const WeatherDetail = ({ navigation }) => {
+  const weather = useWeather();
+
   return (
     <SafeAreaView
       style={[StyleMain.container, styles.platformContainer]}
@@ -72,14 +75,16 @@ const WeatherDetail = ({ navigation }) => {
           justifyContent: "center",
         }}
       >
-        {/* <View
+        <View
           style={{
             flex: 1,
             width: "100%",
           }}
         >
-          <MonthView />
-        </View> */}
+          <View>
+            <Loading />
+          </View>
+        </View>
       </View>
       {/* ---------------------------------------- Something */}
 

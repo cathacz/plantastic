@@ -10,7 +10,6 @@ import * as Calendar from "expo-calendar";
 import * as Localization from "expo-localization";
 
 import MyCalendar from "./MyCalendar";
-
 export default function overviewCalendar() {
   return (
     <Fragment>

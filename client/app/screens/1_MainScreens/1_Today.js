@@ -7,6 +7,7 @@ import {
   View,
   Image,
   TouchableHighlight,
+  Platform,
   TouchableOpacity,
   StatusBar,
   Keyboard,
@@ -79,7 +80,7 @@ const Today = ({ navigation, route }) => {
         style={{
           width: "100%",
           // marginTop: 90,
-          height: 185,
+          height: 200,
           backgroundColor: colors.sage5,
           position: "absolute",
           textAlign: "center",
