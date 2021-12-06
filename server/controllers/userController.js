@@ -25,7 +25,7 @@ const createUser = async (req, res) => {
 const getUser = async (req, res) => {
   try {
     const { id: userID } = req.params;
-    /*  console.log(req.params); */
+
     const user = await Users.findOne({ _id: userID });
     if (!user) {
       return res.status(404).json({ msg: `No user with id: ${userID}` });
