@@ -290,6 +290,6 @@ Usage of react-native-async-storage at the [website](https://react-native-async-
 
 ```
 npm install --save moment react-moment
-expo install expo-calendar
+expo install expo-calendars
 npm install react-native-calendar-strip
 ```
