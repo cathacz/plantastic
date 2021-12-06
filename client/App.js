@@ -1,11 +1,11 @@
 import React from "react";
 
+// react native elements and styling >>
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
-
 import colors from "./app/config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
-// navigator funktionality >>
+// navigator functionality >>
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -26,19 +26,22 @@ import Overview from "./app/screens/1_MainScreens/2_Overview";
 import MyGarden from "./app/screens/1_MainScreens/3_MyGarden";
 import Community from "./app/screens/1_MainScreens/4_Community";
 
+import DailyView from "./app/screens/1_MainScreens/2_1_DailyView";
+import WeatherDetail from "./app/screens/1_MainScreens/1_1_WeatherDetail";
+
 // SEARCH MENU parts
-import SearchMenu from "./app/screens/3_SearchMenuScreens/SearchMenu";
-import SearchResults from "./app/screens/3_SearchMenuScreens/SearchResults";
-import AllPlants from "./app/screens/3_SearchMenuScreens/AllPlants";
-import Blog from "./app/screens/3_SearchMenuScreens/Blog";
-import GardeningTipps from "./app/screens/3_SearchMenuScreens/GardeningTipps";
-import Settings from "./app/screens/3_SearchMenuScreens/Settings";
+import SearchMenu from "./app/screens/3_SearchMenuScreens/0_SearchMenu";
+import SearchResults from "./app/screens/3_SearchMenuScreens/1_SearchResults";
+import AllPlants from "./app/screens/3_SearchMenuScreens/2_AllPlants";
+import Blog from "./app/screens/3_SearchMenuScreens/3_Blog";
+import GardeningTipps from "./app/screens/3_SearchMenuScreens/4_GardeningTipps";
+import Settings from "./app/screens/3_SearchMenuScreens/5_Settings";
 import Terms from "./app/screens/3_SearchMenuScreens/Terms";
 import Conditions from "./app/screens/3_SearchMenuScreens/Conditions";
 import Imprint from "./app/screens/3_SearchMenuScreens/Imprint";
-
 // import SettingsMenu from "./app/screens/4_SettingsScreens/SettingsMenu";
 
+// plant detail screens >>
 import QuickView from "./app/screens/2_PlantScreens/1_QuickView";
 import PlantPortrait from "./app/screens/2_PlantScreens/2_PlantPortrait";
 import Diary from "./app/screens/2_PlantScreens/3_Diary";
@@ -55,7 +58,7 @@ function App() {
         <Stack.Screen
           name="LandingPage"
           component={Landing}
-          options={{ title: "" }}
+          options={{ title: "Schön, dass du hier bist!" }}
         />
         <Stack.Screen
           name="SignIn"
@@ -67,6 +70,13 @@ function App() {
           component={LogIn}
           options={{ title: "Anmelden" }}
         />
+
+        {/* <Stack.Screen
+          name="Today"
+          component={Today}
+          options={{ title: "Today" }}
+        /> */}
+
         {/* Main Screens ----------------------------------------------------- */}
         <Stack.Group
           screenOptions={{
@@ -78,12 +88,25 @@ function App() {
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
         </Stack.Group>
+        {/* --------------------------- Accessible from Today >> WeatherDetail */}
+        <Stack.Screen
+          name="WeatherDetail"
+          component={WeatherDetail}
+          options={{ title: "Wetter" }}
+        />
 
-        {/* Screens accessible from top nav----------------------------------- */}
+        {/* --------------------------- Accessible from OverView >> DailyView */}
+        <Stack.Screen
+          name="DailyView"
+          component={DailyView}
+          options={{ title: "" }}
+        />
+
+        {/* Screens accessible from top nav-----------------------------SEARCH MENU------ */}
         <Stack.Screen
           name="SearchMenu"
           component={SearchMenu}
-          options={{ title: "" }}
+          options={{ title: "Menü" }}
         />
         <Stack.Screen
           name="SearchResults"
@@ -142,13 +165,21 @@ function App() {
             }
           }
         >
-          <Stack.Screen name="QuickView" component={QuickView} options={{}} />
+          <Stack.Screen
+            name="QuickView"
+            component={QuickView}
+            options={{ title: "Kurz & dreckig" }}
+          />
           <Stack.Screen
             name="PlantPortrait"
             component={PlantPortrait}
-            options={{}}
+            options={{ title: "Pflanzenportrait" }}
           />
-          <Stack.Screen name="Diary" component={Diary} options={{}} />
+          <Stack.Screen
+            name="Diary"
+            component={Diary}
+            options={{ title: "Mein Tagebuch" }}
+          />
         </Stack.Group>
         {/* Screens accessible from MyCommunity------------------------------- */}
         {/* Screens accessible from ------------------------------------------ */}

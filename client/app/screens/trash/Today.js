@@ -16,7 +16,7 @@ import {
   VirtualizedList,
 } from "react-native";
 // import { NativeRouter, Route, Link } from "react-router-native";
-import colors from "../config/colors";
+import colors from "../../config/colors";
 // import Home from "../screens/Home";
 // import Today from "../screens/Today";
 // import Overview from "../screens/Overview";
@@ -25,7 +25,7 @@ import colors from "../config/colors";
 // import SearchMenu from "./SearchMenu";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
 // import Task from "../components/Task";
-import StyleMain from "../styles/StyleMain";
+import StyleMain from "../../styles/StyleMain";
 // import { StatusBar } from "expo-status-bar";
 
 const Today = () => {

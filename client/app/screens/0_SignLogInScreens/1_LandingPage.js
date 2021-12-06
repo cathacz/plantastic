@@ -18,7 +18,7 @@ import {
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 import Task from "../../components/Task";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/0_SearchMenu";
 
 // for styling >>
 import { Colors } from "react-native/Libraries/NewAppScreen";
@@ -42,13 +42,13 @@ const Landing = ({ navigation }) => {
           underlayColor={colors.sage25}
           style={styles.signInButton}
           onPress={() =>
-            navigation.replace("SignIn", {
+            navigation.navigate("SignIn", {
               propOne: "propOne props",
             })
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Sign In</Text>
+            <Text style={styles.buttonText}>Registriere dich</Text>
           </View>
         </TouchableHighlight>
         <Text style={styles.orText}>oder</Text>
@@ -57,13 +57,13 @@ const Landing = ({ navigation }) => {
           underlayColor={colors.sage25}
           style={styles.logInButton}
           onPress={() =>
-            navigation.replace("LogIn", {
+            navigation.navigate("LogIn", {
               propOne: "propOne props",
             })
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Log In</Text>
+            <Text style={styles.buttonText}>Melde dich an</Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -102,9 +102,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     width: 300,
-    fontSize: 40,
+    fontSize: 30,
     textAlign: "center",
     color: colors.sage,
+    padding: 8,
   },
   orText: { textAlign: "center", fontSize: 25, margin: 5 },
 });

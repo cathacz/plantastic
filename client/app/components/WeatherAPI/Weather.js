@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import imageDictionary from "./imageDictionary";
 import { isSameDay, format } from "date-fns";
+import TodaysDate from "../Calendar/TodaysDate";
 import NumberToMonth from "../NumberToMonth";
 
 const Weather = ({ forecast: { name, list, timezone } }) => {
@@ -37,37 +38,54 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
   return (
     <View style={styles.wrapper}>
       <Text style={styles.location}>{name}</Text>
-      <Text style={styles.date}>
-        Today is {"\n"}
-        <View>
-          <NumberToMonth />
-        </View>
+      <View style={styles.date}>
+        <NumberToMonth />
+      </View>
+      <View style={styles.rowTempIcon}>
+        <Text style={styles.temp}>
+          {Math.round(currentWeather[0].main.temp)}°C
+        </Text>
+        <Image
+          style={styles.image}
+          source={
+            imageDictionary[currentWeather[0].weather[0].icon] ||
+            imageDictionary["02d"]
+          }
+        />
+      </View>
+
+      <Text style={styles.description}>
+        {currentWeather[0].weather[0].description}
       </Text>
-      <Image
-        source={
-          imageDictionary[currentWeather[0].weather[0].icon] ||
-          imageDictionary["02d"]
-        }
-        style={{ height: 30, width: 30 }}
-      />
-      <Text>{Math.round(currentWeather[0].main.temp)}°C</Text>
-      <Text>{currentWeather[0].weather[0].description}</Text>
     </View>
   );
 };
 const styles = StyleSheet.create({
   wrapper: {
-    borderColor: "pink",
-    borderWidth: 2,
-    borderStyle: "solid",
+    // borderColor: "pink",
+    // borderWidth: 2,
+    // borderStyle: "solid",
     width: "50%",
-    justifyContent: "flex-end",
     textAlign: "right",
     marginLeft: "50%",
   },
   location: {
     textAlign: "right",
-    fontSize: 40,
+    fontSize: 30,
+    paddingTop: 10,
+    marginRight: 13,
   },
+  date: { alignSelf: "flex-end", marginRight: 13 },
+  rowTempIcon: {
+    margin: 5,
+    marginRight: 13,
+    flexDirection: "row",
+    alignContent: "flex-end",
+    justifyContent: "flex-end",
+  },
+  temp: { fontSize: 40, alignSelf: "center" },
+  image: { width: 40, height: 40, marginLeft: 10 },
+
+  description: { alignSelf: "flex-end", marginRight: 13 },
 });
 export default Weather;

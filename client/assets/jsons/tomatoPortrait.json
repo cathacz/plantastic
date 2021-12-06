@@ -2,7 +2,7 @@
   "labels": {
     "_id": "#################",
     "specific_variety_name": "Romatomate Ravello F1",
-    "botanical_name": "lateinischer Name von Ravello F1",
+    "botanical_name": "Solanum lycopersicum 'Roma'",
     "category": [
       "Gemüse",
       "Gemuese",
@@ -68,16 +68,32 @@
     }
   ],
   "plant_data": {
+    "kurz_dreckig": {
+      "standort": "sonnig und geschützt",
+      "wasserbedarf": "mittelprächtig bis hoch",
+      "saattiefe_cm": "0.5",
+      "abstaende": {
+        "pflanzenAbstand_cm": "50",
+        "reihenAbstand_cm": "50"
+      },
+      "keimung": {
+        "keimungTage_min": "8",
+        "keimungTage_max": "15",
+        "keimungTemp_minC": "20",
+        "keimungTemp_maxC": "25"
+      }
+    },
     "planting_conditions": {
       "location": {
-        "sun": "sonnig und hell",
+        "sun": 6,
+        "sun_text": "sonnig und hell",
         "location_requirements": ["geschützt vor Regen", "geschützt vor Wind"]
       },
       "soil": {
         "soil_characteristics": ["humos", "nährstoffreich"],
         "soil_types": ["Humus"],
         "adult_plant_soil_amount": "n/a",
-        "soil_notes": [""],
+        "soil_notes": ["Staunässe vermeiden"],
         "allow_drainage": true,
         "requires_mulching": true,
         "mulch": {
@@ -86,7 +102,11 @@
           "mulch_thickness_unit": "cm",
           "mulch_every": 3,
           "mulch_every_unit": "Monate",
-          "mulch_notes": ["Mulchen kann man, muss man aber nicht."]
+          "mulch_notes": [
+            "Nachdem die Pflanzen mindestens 10 cm Höhe erreicht haben kann gemulcht werden.",
+            "Mulchen kann man, muss man aber nicht.",
+            "Im Winter ist es unnötig."
+          ]
         }
       },
       "water": {
@@ -112,7 +132,7 @@
         "plant_distance_min": 30,
         "plant_distance_min_unit": "cm",
         "separate_plants": true,
-        "separate_start_month_index": 4,
+        "separate_start_month": 5,
         "separate_plants_space": "40x50",
         "separate_plants_space_unit": "cm",
         "separate_notes": [
@@ -127,10 +147,10 @@
           "Für Vorkultur im warmen Zimmer in Gefäße in spezielle Aussaaterde säen."
         ],
         "seeding_time": {
-          "preculture_start_month_index": 1,
-          "preculture_end_month_index": 3,
-          "direct_seeding_start_month_index": 2,
-          "direct_seeding_end_month_index": 5
+          "preculture_start_month": 2,
+          "preculture_end_month": 4,
+          "direct_seeding_start_month": 3,
+          "direct_seeding_end_month": 6
         },
         "germination": {
           "germination_temperature_min_celsius": 15,
@@ -152,10 +172,10 @@
       }
     },
     "harvest": {
-      "preculture_harvest_start_month_index": 7,
-      "preculture_harvest_end_month_index": 9,
-      "direct_seed_harvest_start_month_index": 8,
-      "direct_seed_harvest_ende_month_index": 10,
+      "preculture_harvest_start_month": 8,
+      "preculture_harvest_end_month": 10,
+      "direct_seed_harvest_start_month": 9,
+      "direct_seed_harvest_end_month": 11,
       "ready_for_harvest": "Abhängig von der Sorte sind die Tomaten rot, wenn sie reif sind./Nach ca. 2 Jahren bilden sich die ersten Früchte."
     },
     "care": {
@@ -165,16 +185,6 @@
       ],
       "care_information": ["paragraph 1", "paragraph 2", "paragraph 3"]
     },
-    "variety_specific_characteristics_list": [
-      "especially fruitful",
-      "tomatoes have good flavor",
-      "fleshy tomatoes"
-    ],
-    "variety_specific_characteristics_notes": [
-      "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
-      "Sie ist sehr aromatisch",
-      "paragraph 3"
-    ],
     "origin": "country/area",
     "hybrid_type": "show if length over 0, F1 amerikanisch",
     "growth_time_teenager": 4,
@@ -203,18 +213,25 @@
     "plant_has_poisonous_part": true,
     "grafting": true,
     "grafting_notes": ["Veredeln ist möglich aber unnötig"],
-    "plant_description": [
-      "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen.",
-      "paragraph 2",
-      "paragraph 3"
-    ],
-    "plant_information": [
-      "Die Früchte von Romatomaten ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen.",
-      "paragraph 2",
-      "paragraph 3"
-    ],
     "plant_description_keywords": ["ertragreich", "widerstandsfähig"],
-    "other_information": "Text...",
+    "plant_description": [
+      "paragraph 1",
+      "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen.",
+      "paragraph 3",
+      "paragraph 4"
+    ],
+    "plant_information": ["paragraph 1", "paragraph 2", "paragraph 3"],
+    "variety_specific_characteristics_list": [
+      "especially fruitful",
+      "tomatoes have good flavor",
+      "fleshy tomatoes"
+    ],
+    "variety_specific_characteristics_notes": [
+      "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
+      "Sie ist sehr aromatisch",
+      "paragraph 3"
+    ],
+    "other_information": ["Text 1...", "Text 2..."],
     "repotting": {
       "plant_needs_repotting_replanting": true,
       "repot_after_time": 2,
@@ -224,7 +241,7 @@
       "pests": ["Schnecken", "Blattläuse", "Kartoffelkäfer"],
       "diseases": ["Sonnenbleiche"],
       "mold": ["Mehltau"],
-      "notes": ["Diese Sorte ist relativ resistent."]
+      "info": ["Diese Sorte ist relativ resistent."]
     },
     "poisonousness": {
       "degree_of_poisonousness_fruit": 0,
@@ -233,13 +250,13 @@
       "degree_of_poisonousness_stem": 0,
       "degree_of_poisonousness_roots": 0,
       "inedible_and_poisonous_parts": ["leaves", "stem"],
-      "poisonousness_notes": ["can be eaten after cooking"]
+      "poisonousness_info": ["can be eaten after cooking"]
     },
     "medicinal_purpose_information": {
       "common_medical_use": ["coughs", "flu"],
       "medicinal_plant_part": ["leaves", "flowers", "stem"],
       "medication_form": ["powdered leaves", "tea"],
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "root_tuber": {
       "edible_roots": false,
@@ -249,13 +266,13 @@
       "root_shape": "",
       "tuber_shape": "",
       "characteristics": ["root flavor?", "p2"],
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "bulb_cloves": {
       "bulb_shape": "",
       "cloves_shape": "",
       "propagation_through_cloves": true,
-      "notes": [
+      "info": [
         "The bulb stores energy of the plant and outer shell dries out with time"
       ]
     },
@@ -264,7 +281,7 @@
       "stem_shape": "",
       "color": "",
       "stem_characteristics": "",
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "foliage_leaves": {
       "edible_leaves": false,
@@ -272,27 +289,29 @@
       "leaf_size_unit": "cm",
       "leaf_color": "",
       "leaf_shape": "",
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "flower": {
-      "flowering_start_month_index": 5,
-      "flowering_end_month_index": 9,
+      "flowering_start_month": 6,
+      "flowering_end_month": 10,
       "beefriendly": false,
       "petal_color": ["rot", "gelb", "blau", "weiß", "gemischt"],
       "self_pollinating": true,
-      "notes": ["p1", "p2"]
+      "info": ["p1", "p2"]
     },
     "fruit": {
       "edible_fruit": true,
-      "fruit_start_month_index": 6,
-      "fruit_end_month_index": 9,
+      "fruit_start_month": 7,
+      "fruit_end_month": 10,
       "fruit_color": ["rot", "gelb gemischt", "grün"],
       "fruit_size": ["mittelgroß"],
       "fruit_non_poisonous": true,
       "fruit_edible": true,
       "fruit_flavor": ["aromatisch"],
-      "notes": [
-        "Grüne Früchte nicht genießbar, erst wenn sie rot sind schmecken sie"
+      "info": [
+        "Die grünen Früchte nicht genießbar, erst wenn sie rot sind schmecken sie",
+        "Die Früchte von Romatomaten sind ei- bis flaschenförmig, weshalb sie auch oft als Eier- oder Flaschentomaten bezeichnet werden. Es gibt eine Vielzahl unterschiedlicher Sorten, welche sich nicht nur in ihrem Aussehen, sondern auch in ihrem Geschmack unterscheiden. Eine Übersicht sowie Tipps für Anbau und Pflege liefert Ihnen dieser Artikel!Die Romatomate stammt ursprünglich aus Italien und ist mit der etwas kleineren San Marzano verwandt. Die italienische Tomate kann sowohl im Gewächshaus als auch im Freiland kultiviert werden. Das Anbauen auf dem Balkon oder Terrasse ist ebenfalls möglich, sofern ausreichend Platz vorhanden ist. Bei fachgerechter Ernte trägt die Pflanze eine Vielzahl, fester Früchte, welche nicht nur durch ihre besondere Form, sondern auch durch ihr pikantes Aroma bestechen.",
+        "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen."
       ]
     }
   },
@@ -311,13 +330,17 @@
     ],
     "related_shop_products": [
       {
-        "shop_product_title": "Titel 1",
-        "shop_product_note": "tomatoes",
+        "id": "################",
+        "shop_product_title": "Tomato Plants 20 cm",
+        "shop_product_image": "tomatoes1.png",
+        "shop_product_text": "best tomatoes for ketchup",
         "shop_product_link": "Link1"
       },
       {
-        "shop_product_title": "Titel 2",
-        "shop_product_note": "tomatoes",
+        "id": "################",
+        "shop_product_title": "Roma Tomato Seeds",
+        "shop_product_image": "tomatoes2.png",
+        "shop_product_text": "tomatoe seeds for roma tomatoes",
         "shop_product_link": "Link1"
       }
     ],

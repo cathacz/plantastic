@@ -17,7 +17,7 @@ import {
 // piece components >>
 import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
-import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
+import SearchMenu from "../3_SearchMenuScreens/0_SearchMenu";
 
 // for styling >>
 import StyleMain from "../../styles/StyleMain";
@@ -25,7 +25,8 @@ import colors from "../../config/colors";
 
 // imports Alina
 import Calendar from "../../components/OverviewCalendar";
-// import NumberToMonth from "../components/NumberToMonth";
+import MonthView from "../../components/Calendar/MonthView";
+import NumberToMonth from "../../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
 const Overview = ({ navigation }) => {
@@ -46,17 +47,40 @@ const Overview = ({ navigation }) => {
           justifyContent: "center",
         }}
       >
-        <View
+        <View>
+          <NumberToMonth />
+        </View>
+        {/* <View
           style={{
             flex: 1,
             width: "100%",
           }}
         >
           <Calendar />
-        </View>
+        </View> */}
       </View>
       {/* ---------------------------------------- Main Part */}
-
+      <View
+        style={{
+          width: "100%",
+          marginTop: 160,
+          height: 325,
+          backgroundColor: colors.sage25,
+          position: "absolute",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+          }}
+        >
+          <MonthView />
+        </View>
+      </View>
       {/* ---------------------------------------- Something */}
 
       {/* ---------------------------------------- Something */}
