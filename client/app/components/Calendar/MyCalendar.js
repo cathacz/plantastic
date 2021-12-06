@@ -6,8 +6,9 @@ import { format } from "date-fns";
 import { de } from "date-fns/esm/locale";
 
 export default function MyCalendar() {
-  // const [currentDate, setCurrentDate] = useState("");
-  // const [markedDate, setMarkedDate] = useState([]);
+  const [currentDate, setCurrentDate] = useState(`${year}-${monthName}-${day}`);
+  // `${year}-${monthName}-${day}`
+  const [markedDate, setMarkedDate] = useState([]);
   // const [currentDate, setCurrentDate] = useState(
   //
   // );
@@ -32,7 +33,6 @@ export default function MyCalendar() {
   // setCurrentDate(
   //   day + "." + " " + monthName + " " + year //+ " " + hours + ":" + min + ":" + sec
   // );
-  // `${year}-${monthName}-${day}`
 
   return (
     <View
