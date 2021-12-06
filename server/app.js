@@ -38,7 +38,7 @@ start();
 // to process the data
 
 // when behind a reverse proxy like Heroku
-/* app.set("trust", 1) */
+app.set("trust", 1);
 app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000, // 15 minutes
