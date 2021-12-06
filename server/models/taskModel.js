@@ -16,12 +16,12 @@ const TaskSchema = new mongoose.Schema({
   dueDate: {
     type: Date,
     required: false,
-    default: Date.now,
+    // default: Date.now,
   },
   taskCompletedDate: {
     type: Date,
     required: false,
-    default: Date.now,
+    // default: Date.now,
   },
 });
 
