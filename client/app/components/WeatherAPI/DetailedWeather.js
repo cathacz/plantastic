@@ -28,7 +28,7 @@ export default function DetailedWeather({
       <View style={styles.date}>
         <NumberToMonth />
       </View>
-      {/* <Text style={styles.location}>{name}</Text>{" "} */}
+      <Text style={styles.location}>{name}</Text>{" "}
     </View>
   );
 }
