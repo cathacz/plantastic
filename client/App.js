@@ -34,6 +34,12 @@ import SearchMenu from "./app/screens/3_SearchMenuScreens/0_SearchMenu";
 import SearchResults from "./app/screens/3_SearchMenuScreens/1_SearchResults";
 import AllPlants from "./app/screens/3_SearchMenuScreens/2_AllPlants";
 import Blog from "./app/screens/3_SearchMenuScreens/3_Blog";
+// Blogeinträge
+import Mulchen from "./app/screens/3_SearchMenuScreens/3_4_Mulchen";
+import Blaubeeren from "./app/screens/3_SearchMenuScreens/3_2_Blaubeeren";
+import Huegelbeet from "./app/screens/3_SearchMenuScreens/3_3_Huegelbeet";
+import Winterfest from "./app/screens/3_SearchMenuScreens/3_1_Winterfest";
+
 import GardeningTipps from "./app/screens/3_SearchMenuScreens/4_GardeningTipps";
 import Settings from "./app/screens/3_SearchMenuScreens/5_Settings";
 import Terms from "./app/screens/3_SearchMenuScreens/Terms";
@@ -138,6 +144,30 @@ function App() {
           component={Blog}
           options={{ title: "Blog" }}
         />
+        {/* --------------------------- Accessible from Blog >> 4 blogs*/}
+
+        <Stack.Screen
+          name="Mulchen"
+          component={Mulchen}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="Blaubeeren"
+          component={Blaubeeren}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="Winterfest"
+          component={Winterfest}
+          options={{ title: "" }}
+        />
+        <Stack.Screen
+          name="Huegelbeet"
+          component={Huegelbeet}
+          options={{ title: "" }}
+        />
+
+        {/* blog ende */}
         <Stack.Screen
           name="GardeningTipps"
           component={GardeningTipps}
