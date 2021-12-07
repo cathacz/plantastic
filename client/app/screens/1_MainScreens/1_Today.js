@@ -38,13 +38,16 @@ import useWeather from "../../components/WeatherAPI/useWeather";
 import Weather from "../../components/WeatherAPI/Weather";
 import Loading from "../../components/WeatherAPI/Loading";
 
-// user
+// user >>
 import exampleUser from "../../../assets/jsons/exampleUser.json";
 
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
+
   const [modalVisible, setModalVisible] = useState(false);
   const [taskInputVisible, setTaskInputVisible] = useState(false);
+  const [enteredTask, setEnteredTask] = useState("");
+  const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
   useEffect(() => {
     var date = new Date().getDate(); //Current Date
@@ -57,11 +60,6 @@ const Today = ({ navigation, route }) => {
       date + "/" + month + "/" + year //+ " " + hours + ":" + min + ":" + sec
     );
   }, []);
-
-  // added by Vivi start -------------------
-
-  const [enteredTask, setEnteredTask] = useState("");
-  const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
   // entered text becomes a task as a state >>
   const taskInputHandler = (enteredText) => {
@@ -81,7 +79,6 @@ const Today = ({ navigation, route }) => {
 
   // console.log("from Today: " + navigation);
 
-  // added by Vivi end -------------------
   const weather = useWeather();
 
   return (
@@ -125,8 +122,6 @@ const Today = ({ navigation, route }) => {
       <View style={{ marginTop: 70 }}>
         <Text>This is TODAY</Text>
       </View> */}
-
-      {/* Added by Vivi start ----------------------Tasks Tasks Tasks------- */}
 
       {/* <Modal
         animationType="fade"
