@@ -70,10 +70,12 @@ const Today = ({ navigation, route }) => {
 
   // new task gets added to task list (newest in top) >>
   const addNewTaskHandler = () => {
-    setAllTasks((tasks) => [
-      { id: Math.random().toString(), value: enteredTask },
-      ...tasks,
-    ]);
+    enteredTask.length > 1
+      ? setAllTasks((tasks) => [
+          { id: Math.random().toString(), value: enteredTask },
+          ...tasks,
+        ])
+      : setEnteredTask("");
     setEnteredTask("");
   };
 
