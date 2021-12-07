@@ -80,6 +80,8 @@ const Today = ({ navigation, route }) => {
   // console.log("from Today: " + navigation);
 
   const weather = useWeather();
+  // console.log("Look here -------------->");
+  // console.log(weather);
 
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
@@ -108,10 +110,10 @@ const Today = ({ navigation, route }) => {
               <Text>Heute warten {allTasks.length} Aufgaben auf dich!</Text>
             </View>
 
-            <View>
-              {!weather ? <Loading /> : <Weather forecast={weather} />}
-              {/* <Weather forecast={weather} /> */}
-            </View>
+            {/* <View name="weather">
+              {!weather ? <Loading /> : <Weather forecast={weather} />} */}
+            {/* <Weather forecast={weather} /> */}
+            {/* </View> */}
           </View>
         </TouchableHighlight>
         {/* </View> */}
@@ -316,6 +318,11 @@ const styles = StyleSheet.create({
   // //   textAlign: "center",
   // // },
   // ----------------------------------Tasks
+  inputContainer: {
+    // width: 30,
+    display: "flex",
+    flexDirection: "row",
+  },
   addButton: {
     alignItems: "center",
     justifyContent: "center",
@@ -350,8 +357,8 @@ const styles = StyleSheet.create({
   },
   input: {
     justifyContent: "center",
-    width: "70%",
-    borderColor: "black",
+    width: "80%",
+    borderColor: colors.sage,
     borderWidth: 1,
     padding: 10,
   },

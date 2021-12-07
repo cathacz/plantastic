@@ -87,8 +87,8 @@ const NumberToMonth = () => {
 
   return (
     <View style={styles.dateWrapper}>
-      <Text style={styles.date}>{currentWeekday}</Text>
-      <Text style={styles.date}>{currentDate}</Text>
+      <Text style={styles.date}>{currentWeekday || "Dienstag"}</Text>
+      <Text style={styles.date}>{currentDate || "06.Dezember, 2021"}</Text>
     </View>
   );
 };

@@ -19,11 +19,15 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
   //     date + "/" + month + "/" + year //+ " " + hours + ":" + min + ":" + sec
   //   );
   // }, []);
+
   const currentWeather = list.filter((day) => {
     const now = new Date().getTime() + Math.abs(timezone * 1000);
     const currentDate = new Date(day.dt * 1000);
     return isSameDay(now, currentDate);
   });
+
+  // console.log("Look here -------------->");
+  // console.log(currentWeather.length);
 
   const daysByHour = list.map((day) => {
     const dt = new Date(day.dt * 1000);
@@ -37,19 +41,19 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
   });
   return (
     <View style={styles.wrapper}>
-      <Text style={styles.location}>{name}</Text>
+      <Text style={styles.location}>{name || "Berlin"}</Text>
 
       <View style={styles.date}>
         <NumberToMonth />
       </View>
 
       <Text style={styles.description}>
-        Wetter: {currentWeather[0].weather[0].description}
+        Wetter: {currentWeather[0].weather[0].description || "bewölkt"}
       </Text>
 
       <View style={styles.rowTempIcon}>
         <Text style={styles.temp}>
-          {Math.round(currentWeather[0].main.temp)}°C
+          {Math.round(currentWeather[0].main.temp) || 2}°C
         </Text>
 
         <Image
