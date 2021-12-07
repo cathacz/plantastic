@@ -29,7 +29,7 @@ export default function useWeather(lat, lon) {
 
   const fetchAPI = async (lat, lon) => {
     try {
-      const endpoint = `/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
+      const endpoint = `/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}&lang={de}`;
       const res = await callAPI.get(endpoint);
       console.log(lat);
       console.log(lon);

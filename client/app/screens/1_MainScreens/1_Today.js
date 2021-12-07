@@ -7,6 +7,7 @@ import {
   View,
   Image,
   TouchableHighlight,
+  Platform,
   TouchableOpacity,
   StatusBar,
   Keyboard,
@@ -81,6 +82,7 @@ const Today = ({ navigation, route }) => {
           // marginTop: 90,
           // height: 185, //for iOS
           height: 220, //for android
+          height: 200,
           backgroundColor: colors.sage5,
           position: "absolute",
           textAlign: "center",
