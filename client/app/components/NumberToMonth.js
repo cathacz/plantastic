@@ -94,7 +94,7 @@ const NumberToMonth = () => {
 };
 
 const styles = StyleSheet.create({
-  date: { fontSize: 20, alignSelf: "center", marginTop: 4 },
+  date: { fontSize: 18, alignSelf: "center", margin: 4 },
 });
 
 export default NumberToMonth;

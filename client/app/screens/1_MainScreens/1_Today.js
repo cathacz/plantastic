@@ -112,9 +112,15 @@ const Today = ({ navigation, route }) => {
               })
             }
           >
-            <View>
-              {!weather ? <Loading /> : <Weather forecast={weather} />}
-              {/* <Weather forecast={weather} /> */}
+            <View style={styles.weatherBanderole}>
+              <View>
+                <Text>Hello, Camilla</Text>
+              </View>
+
+              <View>
+                {!weather ? <Loading /> : <Weather forecast={weather} />}
+                {/* <Weather forecast={weather} /> */}
+              </View>
             </View>
           </TouchableHighlight>
         </View>
@@ -221,6 +227,13 @@ const Today = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
+  // weather banderole
+  weatherBanderole: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: "orange",
+  },
   // platformContainer: {
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,

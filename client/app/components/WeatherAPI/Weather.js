@@ -38,13 +38,20 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
   return (
     <View style={styles.wrapper}>
       <Text style={styles.location}>{name}</Text>
+
       <View style={styles.date}>
         <NumberToMonth />
       </View>
+
+      <Text style={styles.description}>
+        Wetter: {currentWeather[0].weather[0].description}
+      </Text>
+
       <View style={styles.rowTempIcon}>
         <Text style={styles.temp}>
           {Math.round(currentWeather[0].main.temp)}°C
         </Text>
+
         <Image
           style={styles.image}
           source={
@@ -53,10 +60,6 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
           }
         />
       </View>
-
-      <Text style={styles.description}>
-        {currentWeather[0].weather[0].description}
-      </Text>
     </View>
   );
 };
@@ -65,27 +68,52 @@ const styles = StyleSheet.create({
     // borderColor: "pink",
     // borderWidth: 2,
     // borderStyle: "solid",
-    width: "50%",
+    // width: "50%",
     textAlign: "right",
-    marginLeft: "50%",
+    // marginLeft: "50%",
+    backgroundColor: "pink",
+    display: "flex",
+    marginRight: 15,
+    alignItems: "center",
+    justifyContent: "space-evenly",
   },
   location: {
     textAlign: "right",
     fontSize: 30,
-    paddingTop: 10,
-    marginRight: 13,
+    // paddingTop: 10,
+    // marginRight: 13,
+    backgroundColor: "yellow",
   },
-  date: { alignSelf: "flex-end", marginRight: 13 },
+  date: {
+    alignSelf: "flex-end",
+    // marginRight: 13,
+    backgroundColor: "beige",
+  },
   rowTempIcon: {
-    margin: 5,
-    marginRight: 13,
+    // margin: 5,
+    // marginRight: 13,
     flexDirection: "row",
     alignContent: "flex-end",
     justifyContent: "flex-end",
+    backgroundColor: "tomato",
   },
-  temp: { fontSize: 40, alignSelf: "center" },
-  image: { width: 40, height: 40, marginLeft: 10 },
+  temp: {
+    fontSize: 40,
+    alignSelf: "center",
+    backgroundColor: "white",
+  },
+  image: {
+    width: 40,
+    height: 40,
+    marginLeft: 10,
+    backgroundColor: "purple",
+    alignSelf: "center",
+  },
 
-  description: { alignSelf: "flex-end", marginRight: 13 },
+  description: {
+    alignSelf: "center",
+    // marginRight: 13,
+    backgroundColor: "grey",
+  },
 });
 export default Weather;
