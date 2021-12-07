@@ -81,9 +81,7 @@ const WeatherDetail = ({ navigation }) => {
             width: "100%",
           }}
         >
-          <View>
-            <Loading />
-          </View>
+          <View>{!weather ? <Loading /> : <Weather forecast={weather} />}</View>
         </View>
       </View>
       {/* ---------------------------------------- Something */}
