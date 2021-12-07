@@ -246,7 +246,9 @@ const Today = ({ navigation, route }) => {
                   style={styles.taskIcon}
                 />
               </View>
-              <Text style={styles.listItemText}>{itemData.item.value}</Text>
+              <Text style={styles.listItemText}>
+                {itemData.item.task || itemData.item.value}
+              </Text>
             </View>
           )}
           style={styles.flatlist}
@@ -302,10 +304,31 @@ const styles = StyleSheet.create({
   // ----------------------------------Modal
 
   // ----------------------------------Tasks
+  taskListArea: {
+    // marginTop: 250,
+    marginBottom: 90,
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  taskContainer: {
+    flexDirection: "column",
+    // justifyContent: "space-between",
+    // justifyContent: "center",
+    // alignItems: "center",
+    marginLeft: 10,
+  },
   inputContainer: {
     // width: 30,
     display: "flex",
     flexDirection: "row",
+    marginLeft: 10,
+  },
+  input: {
+    justifyContent: "center",
+    width: "80%",
+    borderColor: colors.sage,
+    borderWidth: 1,
+    padding: 10,
   },
   addButton: {
     alignItems: "center",
@@ -318,6 +341,7 @@ const styles = StyleSheet.create({
     // textAlign: "center",
     borderBottomRightRadius: 23,
     borderTopLeftRadius: 23,
+    marginLeft: 8,
   },
   addText: {
     fontSize: 16,
@@ -327,57 +351,44 @@ const styles = StyleSheet.create({
     color: "white",
     // textAlign: "center",
   },
-  taskListArea: {
-    // marginTop: 250,
-    marginBottom: 90,
-    justifyContent: "center",
-    alignContent: "center",
-  },
-  taskContainer: {
-    flexDirection: "column",
-    // justifyContent: "space-between",
-    // justifyContent: "center",
-    // alignItems: "center",
-  },
-  input: {
-    justifyContent: "center",
-    width: "80%",
-    borderColor: colors.sage,
-    borderWidth: 1,
-    padding: 10,
-  },
 
   // list of tasks
   flatlist: {
     height: 300,
   },
   listItem: {
-    // display: "flex",
+    display: "flex",
+    flexDirection: "row",
     // alignContent: "center",
-    // justifyContent: "center",
-    padding: 5,
+    justifyContent: "flex-start",
+    padding: 2,
     width: "95%",
-    margin: 10,
+    margin: 5,
     borderBottomColor: colors.sage5,
     borderBottomWidth: 1,
     borderStyle: "solid",
-    // backgroundColor: "green",
+    backgroundColor: "pink",
   },
   taskIconWrapper: {
     transform: [{ rotate: "90deg" }],
-    // backgroundColor: "pink",
-    margin: 2,
+    backgroundColor: "violet",
+    // padding: 2,
+    marginLeft: 7,
     width: 35,
     display: "flex",
-    // justifyContent: "center",
     alignItems: "center",
   },
   taskIcon: {
-    width: 40,
-    height: 60,
+    width: 30,
+    height: 50,
+    // backgroundColor: "orange",
   },
   listItemText: {
     fontSize: 20,
+    // textAlign: "center",
+    alignSelf: "center",
+    backgroundColor: "yellow",
+    marginLeft: 10,
   },
   paleButton: {
     borderTopColor: colors.sage25,

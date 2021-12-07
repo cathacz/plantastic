@@ -9,7 +9,7 @@
   "userTasks": [
     {
       "id": "#1",
-      "task": "task1",
+      "task": "Eisbergsalat ernten",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
@@ -21,7 +21,7 @@
     },
     {
       "id": "#2",
-      "task": "task2",
+      "task": "Tomatensprößlinge umpflanzen",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
@@ -33,7 +33,7 @@
     },
     {
       "id": "#3",
-      "task": "task3",
+      "task": "Sonnenblumen an Stangen binden",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
@@ -45,7 +45,7 @@
     },
     {
       "id": "#4",
-      "task": "task4",
+      "task": "Wurmfarm füttern",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
