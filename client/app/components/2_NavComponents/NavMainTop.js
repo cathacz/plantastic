@@ -56,16 +56,20 @@ function NavMainTop({ navigation }) {
             </View>
           </View>
         </TouchableOpacity>
-        {/* ------------------------------------ Add Task (plus button) */}
+        {/* ------------------------------------ Add Task/Plant (plus button) */}
         <TouchableOpacity
           style={StyleMain.addWrapper}
           onPress={() => setModalVisible(!modalVisible)}
+          // onPress={() =>
+          //   modalVisible ? setModalVisible(false) : setModalVisible(true)
+          // }
         >
           <View style={StyleMain}>
             <Text style={StyleMain.addText}>+</Text>
           </View>
         </TouchableOpacity>
 
+        {/* ------------------------------------ overlay from plus button */}
         <Modal
           animationType="fade"
           transparent={true}
@@ -75,6 +79,13 @@ function NavMainTop({ navigation }) {
           //   setModalVisible(!modalVisible);
           // }}
         >
+          {/* <View>
+            <Pressable
+              style={styles.overlay}
+              onPress={() => setModalVisible(!modalVisible)}
+            > */}
+          {/* <Text style={{}}>Press</Text> */}
+
           <View style={styles.modalBox}>
             <View style={styles.modalView}>
               <Pressable
@@ -90,8 +101,17 @@ function NavMainTop({ navigation }) {
               >
                 <Text style={styles.textStyle}>Add Task</Text>
               </Pressable>
+
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => setModalVisible(!modalVisible)}
+              >
+                <Text style={styles.textStyle}>Close</Text>
+              </Pressable>
             </View>
           </View>
+          {/* </Pressable>
+          </View> */}
         </Modal>
       </View>
     </SafeAreaView>
@@ -99,18 +119,22 @@ function NavMainTop({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  overlay: {
+    // flex: 1,
+    // height: 100,
+    // width: 100,
+    backgroundColor: "red",
+  },
   modalBox: {
-    flex: 1,
-    // height: 500,
-    // display: "flex",
+    display: "flex",
     alignItems: "flex-end",
-    marginTop: 70,
-    borderRadius: 30,
-    // backgroundColor: "red",
+    // marginTop: 70,
+    // borderRadius: 30,
+    // backgroundColor: "blue",
   },
   modalView: {
+    marginTop: 70,
     backgroundColor: "white",
-    // padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -122,18 +146,16 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    // borderRadius: 20,
     width: 150,
     margin: 27,
     borderBottomRightRadius: 25,
     borderTopLeftRadius: 25,
     padding: 10,
     elevation: 2,
-    // backgroundColor: colors.sage75,
   },
-  buttonOpen: {
-    backgroundColor: colors.sage25,
-  },
+  // buttonOpen: {
+  //   backgroundColor: colors.sage25,
+  // },
   buttonClose: {
     backgroundColor: colors.sage5,
   },
