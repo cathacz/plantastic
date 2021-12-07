@@ -19,6 +19,7 @@ import {
   Modal,
   Pressable,
   Animated,
+  SwipeView,
 } from "react-native";
 // import { StatusBar } from "expo-status-bar";
 
@@ -239,6 +240,36 @@ const Today = ({ navigation, route }) => {
           data={allTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
+              {/* <SwipeView onSwipedLeft={() => deleteItemById(item.id)} />
+              <SwipeView
+                disableSwipeToRight={false}
+                renderVisibleContent={() => (
+                  <View>
+                    <Text style={styles.listItemText}>
+                      {itemData.item.task || itemData.item.value}{" "}
+                    </Text>
+                  </View>
+                )}
+                renderRightView={() => (
+                  <View
+                    style={{
+                      flex: 1,
+                      justifyContent: "flex-end",
+                      alignItems: "center",
+                      backgroundColor: "red",
+                    }}
+                  ></View>
+                )}
+                leftOpenValue={"this.leftOpenValue"}
+                rightOpenValue={"this.rightOpenValue"}
+                onSwipedLeft={
+                  (() => alert("deleted"), this.deleteItemById(item.id))
+                }
+                swipeDuration={300}
+                swipeToOpenPercent={40}
+                disableSwipeToRight={true}
+              /> */}
+
               <View style={styles.taskIconWrapper}>
                 {/* <Text style={styles.listItemText}>icon</Text> */}
                 <Image
@@ -328,6 +359,7 @@ const styles = StyleSheet.create({
     width: "80%",
     borderColor: colors.sage,
     borderWidth: 1,
+    borderRadius: 7,
     padding: 10,
   },
   addButton: {
