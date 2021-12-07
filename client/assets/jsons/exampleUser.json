@@ -8,7 +8,7 @@
   },
   "userTasks": [
     {
-      "_id": "#1",
+      "id": "#1",
       "task": "task1",
       "completed": false,
       "dueDate": "today",
@@ -20,7 +20,7 @@
       "plantasticCreated": true
     },
     {
-      "_id": "#2",
+      "id": "#2",
       "task": "task2",
       "completed": false,
       "dueDate": "today",
@@ -32,7 +32,7 @@
       "plantasticCreated": true
     },
     {
-      "_id": "#3",
+      "id": "#3",
       "task": "task3",
       "completed": false,
       "dueDate": "today",
@@ -44,7 +44,7 @@
       "plantasticCreated": true
     },
     {
-      "_id": "#4",
+      "id": "#4",
       "task": "task4",
       "completed": false,
       "dueDate": "today",

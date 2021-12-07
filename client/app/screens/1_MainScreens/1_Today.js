@@ -74,6 +74,7 @@ const Today = ({ navigation, route }) => {
       { id: Math.random().toString(), value: enteredTask },
       ...tasks,
     ]);
+    setEnteredTask("");
   };
 
   // console.log("from Today: " + navigation);
@@ -169,6 +170,9 @@ const Today = ({ navigation, route }) => {
             style={styles.input}
             onChangeText={taskInputHandler}
             value={enteredTask}
+            clearButtonMode="unless-editing"
+            clearTextOnFocus={true}
+            autoFocus={true}
           />
           {/* <Button
             style={styles.addButton}
@@ -183,12 +187,13 @@ const Today = ({ navigation, route }) => {
           </Pressable>
         </View>
 
+        {/* List of tasks */}
         <FlatList
           keyExtractor={(item, index) => item.id}
           data={allTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
-              <View>
+              <View style={styles.taskIconWrapper}>
                 {/* <Text style={styles.listItemText}>icon</Text> */}
                 <Image
                   source={require("../../../assets/icons/png/shovel.png")}
@@ -198,6 +203,7 @@ const Today = ({ navigation, route }) => {
               <Text style={styles.listItemText}>{itemData.item.value}</Text>
             </View>
           )}
+          style={styles.flatlist}
         />
       </View>
       {/* Daily View Thingie >> NOT permanent here */}
@@ -350,17 +356,31 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+
+  // list of tasks
+  flatlist: {
+    height: 300,
+  },
   listItem: {
     // display: "flex",
     // alignContent: "center",
     // justifyContent: "center",
-    padding: 10,
-    width: "92%",
+    padding: 5,
+    width: "95%",
     margin: 10,
     borderBottomColor: colors.sage5,
     borderBottomWidth: 1,
     borderStyle: "solid",
     backgroundColor: "green",
+  },
+  taskIconWrapper: {
+    transform: [{ rotate: "90deg" }],
+    backgroundColor: "pink",
+    margin: 2,
+    width: 35,
+    display: "flex",
+    // justifyContent: "center",
+    alignItems: "center",
   },
   taskIcon: {
     width: 40,
