@@ -16,7 +16,7 @@ import colors from "../../config/colors";
 
 import StyleMain from "../../styles/StyleMain";
 
-function NavMainTop({ navigation }) {
+function NavMainTop({ navigation, route }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -105,6 +105,14 @@ function NavMainTop({ navigation }) {
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => setModalVisible(!modalVisible)}
+                // onPress={() => {
+                //   // Pass and merge params back to home screen
+                //   navigation.navigate({
+                //     name: 'Today',
+                //     params: { modalVisible: modalVisible },
+                //     merge: true,
+                //   });
+                // }}
               >
                 <Text style={styles.textStyle}>Close</Text>
               </Pressable>

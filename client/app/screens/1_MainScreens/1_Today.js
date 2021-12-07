@@ -18,6 +18,7 @@ import {
   FlatList,
   Modal,
   Pressable,
+  Animated,
 } from "react-native";
 // import { StatusBar } from "expo-status-bar";
 
@@ -188,7 +189,11 @@ const Today = ({ navigation, route }) => {
           renderItem={(itemData) => (
             <View style={styles.listItem}>
               <View>
-                <Text style={styles.listItemText}>icon</Text>
+                {/* <Text style={styles.listItemText}>icon</Text> */}
+                <Image
+                  source={require("../../../assets/icons/png/shovel.png")}
+                  style={styles.taskIcon}
+                />
               </View>
               <Text style={styles.listItemText}>{itemData.item.value}</Text>
             </View>
@@ -356,6 +361,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderStyle: "solid",
     backgroundColor: "green",
+  },
+  taskIcon: {
+    width: 40,
+    height: 60,
   },
   listItemText: { fontSize: 20 },
   paleButton: {
