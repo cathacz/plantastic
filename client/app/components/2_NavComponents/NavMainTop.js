@@ -11,8 +11,6 @@ import {
 } from "react-native";
 
 import colors from "../../config/colors";
-// import Today from "../../screens/ComponentsTest/Today";
-// import SearchMenu from "../../screens/SearchMenu";
 
 import StyleMain from "../../styles/StyleMain";
 
@@ -104,15 +102,16 @@ function NavMainTop({ navigation, route }) {
 
               <Pressable
                 style={[styles.button, styles.buttonClose]}
-                onPress={() => setModalVisible(!modalVisible)}
-                // onPress={() => {
-                //   // Pass and merge params back to home screen
-                //   navigation.navigate({
-                //     name: 'Today',
-                //     params: { modalVisible: modalVisible },
-                //     merge: true,
-                //   });
-                // }}
+                // onPress={() => setModalVisible(!modalVisible)}
+                onPress={() => {
+                  setModalVisible(!modalVisible);
+                  // Pass and merge params back to home screen
+                  navigation.navigate({
+                    name: "Today",
+                    params: { modalVisible: modalVisible },
+                    merge: true,
+                  });
+                }}
               >
                 <Text style={styles.textStyle}>Close</Text>
               </Pressable>

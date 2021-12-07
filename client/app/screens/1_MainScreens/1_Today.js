@@ -42,6 +42,9 @@ import Loading from "../../components/WeatherAPI/Loading";
 import exampleUser from "../../../assets/jsons/exampleUser.json";
 
 const Today = ({ navigation, route }) => {
+  console.log(route.params?.modalVisible);
+  console.log("<<<<<<<<<<<<<<<<<<<<<<");
+
   const [currentDate, setCurrentDate] = useState("");
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -162,30 +165,36 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
-        <View style={styles.taskContainer}>
-          <View style={styles.inputTitle}>
-            <Text> New task: </Text>
-          </View>
+        {useEffect(() => {
+          console.log("I am working here!");
+          setModalVisible(!modalVisible);
+        }, [modalVisible])}
 
-          <View style={styles.inputContainer}>
-            <TextInput
-              placeholder="Enter new task here"
-              style={styles.input}
-              onChangeText={taskInputHandler}
-              value={enteredTask}
-              clearButtonMode="unless-editing"
-              clearTextOnFocus={true}
-              autoFocus={true}
-            />
-            <Pressable
-              style={[styles.addButton, styles.buttonClose]}
-              onPress={addNewTaskHandler}
-            >
-              <Text style={styles.addText}>Add</Text>
-            </Pressable>
-          </View>
-        </View>
+        {modalVisible ? (
+          <View style={styles.taskContainer}>
+            <View style={styles.inputTitle}>
+              <Text> New task: </Text>
+            </View>
 
+            <View style={styles.inputContainer}>
+              <TextInput
+                placeholder="Enter new task here"
+                style={styles.input}
+                onChangeText={taskInputHandler}
+                value={enteredTask}
+                clearButtonMode="unless-editing"
+                clearTextOnFocus={true}
+                autoFocus={true}
+              />
+              <Pressable
+                style={[styles.addButton, styles.buttonClose]}
+                onPress={addNewTaskHandler}
+              >
+                <Text style={styles.addText}>Add</Text>
+              </Pressable>
+            </View>
+          </View>
+        ) : null}
         {/* --------------------------- Daily View Thingie >> NOT permanent here */}
         <TouchableHighlight
           underlayColor={colors.sage25}
@@ -200,7 +209,6 @@ const Today = ({ navigation, route }) => {
             <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
           </View>
         </TouchableHighlight>
-
         {/* ------------------------------------------------------------------------------- List of tasks */}
         <FlatList
           keyExtractor={(item, index) => item.id}
@@ -392,14 +400,23 @@ const styles = StyleSheet.create({
     width: 40,
     height: 60,
   },
-  listItemText: { fontSize: 20 },
+  listItemText: {
+    fontSize: 20,
+  },
   paleButton: {
     borderTopColor: colors.sage25,
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
-  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  buttonPale: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  buttonTextPale: {
+    color: colors.sage25,
+    fontSize: 25,
+    margin: 7,
+  },
   leafWrapper: {
     flexDirection: "row",
   },
