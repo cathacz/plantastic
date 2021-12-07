@@ -16,6 +16,8 @@ import {
   TextInput,
   Button,
   FlatList,
+  Modal,
+  Pressable,
 } from "react-native";
 // import { StatusBar } from "expo-status-bar";
 
@@ -37,6 +39,8 @@ import Loading from "../../components/WeatherAPI/Loading";
 
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
+  const [taskInputVisible, setTaskInputVisible] = useState(false);
 
   useEffect(() => {
     var date = new Date().getDate(); //Current Date
@@ -123,16 +127,53 @@ const Today = ({ navigation, route }) => {
       </View> */}
 
       {/* Added by Vivi start ----------------------Tasks Tasks Tasks------- */}
+
+      {/* <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        // onRequestClose={() => {
+        //   Alert.alert("Modal has been closed.");
+        //   setModalVisible(!modalVisible);
+        // }}
+      >
+        <View style={styles.modalBox}>
+          <View style={styles.modalView}>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Add Plant</Text>
+            </Pressable>
+
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Add Task</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}
+      >
+        <Text style={styles.textStyle}>Show Modal</Text>
+      </Pressable> */}
+
+      {/* tasks */}
       <View style={styles.taskListArea}>
         <View style={styles.inputContainer}>
-          {/* <Text>Task: </Text> */}
+          <Text> New task: </Text>
           <TextInput
             placeholder="Enter new task here"
             style={styles.input}
             onChangeText={taskInputHandler}
             value={enteredTask}
           />
-          <Button title="Add Task" onPress={addNewTaskHandler} />
+          {/* <Button title="Add Task" onPress={addNewTaskHandler} /> */}
         </View>
         <FlatList
           keyExtractor={(item, index) => item.id}
@@ -170,6 +211,55 @@ const styles = StyleSheet.create({
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
+  // ----------------------------------Modal
+  // modalBox: {
+  //   flex: 1,
+  //   // justifyContent: "center",
+  //   alignItems: "flex-end",
+  //   // marginTop: 22,
+  //   marginTop: 70,
+  //   borderRadius: 30,
+  // },
+  // modalView: {
+  //   // margin: 20,
+  //   backgroundColor: "pink",
+  //   // borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: "center",
+  //   // shadowColor: "#000",
+  //   // shadowOffset: {
+  //   //   width: 0,
+  //   //   height: 2,
+  //   // },
+  //   // shadowOpacity: 0.25,
+  //   // shadowRadius: 4,
+  //   // elevation: 5,
+  // },
+  // button: {
+  //   // borderRadius: 20,
+  //   width: 150,
+  //   margin: 10,
+  //   borderBottomRightRadius: 25,
+  //   borderTopLeftRadius: 25,
+  //   padding: 10,
+  //   elevation: 2,
+  //   // backgroundColor: colors.sage75,
+  // },
+  // buttonOpen: {
+  //   backgroundColor: colors.sage,
+  // },
+  // buttonClose: {
+  //   backgroundColor: colors.sage25,
+  // },
+  // textStyle: {
+  //   color: "white",
+  //   fontWeight: "bold",
+  //   textAlign: "center",
+  // },
+  // // modalText: {
+  // //   marginBottom: 15,
+  // //   textAlign: "center",
+  // // },
   // ----------------------------------Tasks
   taskListArea: {
     marginTop: 250,
