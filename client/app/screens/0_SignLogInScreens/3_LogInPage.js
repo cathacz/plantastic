@@ -96,7 +96,7 @@ const LogIn = ({ navigation }) => {
             });
             console.log(email);
             console.log(password);
-            CheckUserData();
+            // CheckUserData();
           }}
         >
           <View style={styles.button}>

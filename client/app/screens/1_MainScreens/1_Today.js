@@ -60,7 +60,7 @@ const Today = ({ navigation, route }) => {
   // added by Vivi start -------------------
 
   const [enteredTask, setEnteredTask] = useState("");
-  const [AllTasks, setAllTasks] = useState([]);
+  const [AllTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
   // entered text becomes a task as a state >>
   const taskInputHandler = (enteredText) => {
@@ -164,7 +164,7 @@ const Today = ({ navigation, route }) => {
         <Text style={styles.textStyle}>Show Modal</Text>
       </Pressable> */}
 
-      {/* tasks */}
+      {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
         <View style={styles.inputContainer}>
           <Text> New task: </Text>
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
     // textAlign: "center",
   },
   taskListArea: {
-    marginTop: 250,
+    // marginTop: 250,
     marginBottom: 90,
     justifyContent: "center",
     alignContent: "center",
