@@ -28,10 +28,12 @@ const SearchMenu = ({ navigation }) => {
         >
           <View style={styles.buttonSearch}>
             <TextInput
+              // type="text"
               style={styles.input}
               placeholder="Was suchst du?"
               onChangeText={(text) => setText(text)}
-              defaultValue={text}
+              defaultValue={""}
+
               // clearButtonMode="always" >>> iOS clear Button
             />
             <View style={styles.lupeWrapper}>
@@ -107,7 +109,7 @@ const SearchMenu = ({ navigation }) => {
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Settings</Text>
+            <Text style={styles.buttonText}>Einstellungen</Text>
             <View style={styles.leafWrapper}>
               <View style={styles.leafKL}></View>
               <View style={styles.leaf}></View>
@@ -225,7 +227,11 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  button: { flexDirection: "row", justifyContent: "space-between" },
+  button: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 6,
+  },
   buttonText: { color: colors.sage, fontSize: 25, margin: 7 },
   leaf: {
     margin: 10,
@@ -265,8 +271,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
-  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  buttonPale: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 6,
+  },
+  buttonTextPale: { color: colors.sage5, fontSize: 25, margin: 7 },
   leafWrapper: {
     flexDirection: "row",
   },
