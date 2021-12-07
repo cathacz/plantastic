@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     // height: 100,
     // width: 100,
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
   modalBox: {
     display: "flex",
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.sage5,
   },
   textStyle: {
-    color: "white",
+    color: "black",
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 17,

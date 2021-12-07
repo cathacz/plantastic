@@ -165,12 +165,12 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
-        {useEffect(() => {
+        {/* {useEffect(() => {
           console.log("I am working here!");
           setModalVisible(!modalVisible);
-        }, [modalVisible])}
+        }, [modalVisible])} */}
 
-        {modalVisible ? (
+        {/* {modalVisible ? (
           <View style={styles.taskContainer}>
             <View style={styles.inputTitle}>
               <Text> New task: </Text>
@@ -194,7 +194,31 @@ const Today = ({ navigation, route }) => {
               </Pressable>
             </View>
           </View>
-        ) : null}
+        ) : null} */}
+
+        <View style={styles.taskContainer}>
+          <View style={styles.inputTitle}>
+            <Text> New task: </Text>
+          </View>
+
+          <View style={styles.inputContainer}>
+            <TextInput
+              placeholder="Enter new task here"
+              style={styles.input}
+              onChangeText={taskInputHandler}
+              value={enteredTask}
+              clearButtonMode="unless-editing"
+              clearTextOnFocus={true}
+              autoFocus={true}
+            />
+            <Pressable
+              style={[styles.addButton, styles.buttonClose]}
+              onPress={addNewTaskHandler}
+            >
+              <Text style={styles.addText}>Add</Text>
+            </Pressable>
+          </View>
+        </View>
         {/* --------------------------- Daily View Thingie >> NOT permanent here */}
         <TouchableHighlight
           underlayColor={colors.sage25}
@@ -242,7 +266,7 @@ const styles = StyleSheet.create({
     width: "100%",
     // marginTop: 90,
     // height: 185, //for iOS
-    height: 220, //for android
+    // height: 220, //for android
     height: 200,
     backgroundColor: colors.sage5,
     // position: "absolute",
@@ -250,7 +274,7 @@ const styles = StyleSheet.create({
     // display: "flex",
     // alignItems: "center",
     // justifyContent: "center",
-    backgroundColor: "grey",
+    // backgroundColor: "grey",
   },
   // weather banderole
   weatherBanderole: {
@@ -259,14 +283,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     // alignContent: "center",
-    backgroundColor: "orange",
+    // backgroundColor: "orange",
     // height: "100%",
   },
   // user area in banderole
 
   userWrapper: {
     width: "50%",
-    backgroundColor: "lightgrey",
+    // backgroundColor: "lightgrey",
     padding: 10,
   },
 
@@ -276,55 +300,7 @@ const styles = StyleSheet.create({
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
   // ----------------------------------Modal
-  // modalBox: {
-  //   flex: 1,
-  //   // justifyContent: "center",
-  //   alignItems: "flex-end",
-  //   // marginTop: 22,
-  //   marginTop: 70,
-  //   borderRadius: 30,
-  // },
-  // modalView: {
-  //   // margin: 20,
-  //   backgroundColor: "pink",
-  //   // borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: "center",
-  //   // shadowColor: "#000",
-  //   // shadowOffset: {
-  //   //   width: 0,
-  //   //   height: 2,
-  //   // },
-  //   // shadowOpacity: 0.25,
-  //   // shadowRadius: 4,
-  //   // elevation: 5,
-  // },
-  // button: {
-  //   // borderRadius: 20,
-  //   width: 150,
-  //   margin: 10,
-  //   borderBottomRightRadius: 25,
-  //   borderTopLeftRadius: 25,
-  //   padding: 10,
-  //   elevation: 2,
-  //   // backgroundColor: colors.sage75,
-  // },
-  // buttonOpen: {
-  //   backgroundColor: colors.sage,
-  // },
-  // buttonClose: {
-  //   backgroundColor: colors.sage,
-  //   // opacity: 0.25,
-  // },
-  // textStyle: {
-  //   color: "white",
-  //   fontWeight: "bold",
-  //   textAlign: "center",
-  // },
-  // // modalText: {
-  // //   marginBottom: 15,
-  // //   textAlign: "center",
-  // // },
+
   // ----------------------------------Tasks
   inputContainer: {
     // width: 30,
@@ -385,11 +361,11 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.sage5,
     borderBottomWidth: 1,
     borderStyle: "solid",
-    backgroundColor: "green",
+    // backgroundColor: "green",
   },
   taskIconWrapper: {
     transform: [{ rotate: "90deg" }],
-    backgroundColor: "pink",
+    // backgroundColor: "pink",
     margin: 2,
     width: 35,
     display: "flex",
