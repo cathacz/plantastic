@@ -111,7 +111,9 @@ const Today = ({ navigation, route }) => {
               <Text style={styles.userGreeting}>
                 Hej, {exampleUser.userData.username}!
               </Text>
-              <Text>Heute warten {allTasks.length} Aufgaben auf dich!</Text>
+              <Text style={{ fontSize: 16 }}>
+                Heute warten {allTasks.length} Aufgaben auf dich!
+              </Text>
             </View>
 
             {/* <View name="weather">
@@ -199,12 +201,12 @@ const Today = ({ navigation, route }) => {
 
         <View style={styles.taskContainer}>
           <View style={styles.inputTitle}>
-            <Text> New task: </Text>
+            <Text> Neue Aufgabe: </Text>
           </View>
 
           <View style={styles.inputContainer}>
             <TextInput
-              placeholder="Enter new task here"
+              placeholder="neue Aufgabe"
               style={styles.input}
               onChangeText={taskInputHandler}
               value={enteredTask}
@@ -216,7 +218,7 @@ const Today = ({ navigation, route }) => {
               style={[styles.addButton, styles.buttonClose]}
               onPress={addNewTaskHandler}
             >
-              <Text style={styles.addText}>Add</Text>
+              <Text style={styles.addText}>Adden</Text>
             </Pressable>
           </View>
         </View>
@@ -231,7 +233,7 @@ const Today = ({ navigation, route }) => {
           }
         >
           <View style={styles.buttonPale}>
-            <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
+            <Text style={styles.buttonTextPale}>Siehe Andere Aufgaben</Text>
           </View>
         </TouchableHighlight>
         {/* ------------------------------------------------------------------------------- List of tasks */}
@@ -348,6 +350,7 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     marginLeft: 10,
   },
+  // input box
   inputContainer: {
     // width: 30,
     display: "flex",
@@ -359,14 +362,16 @@ const styles = StyleSheet.create({
     width: "80%",
     borderColor: colors.sage,
     borderWidth: 1,
-    borderRadius: 7,
+    borderBottomRightRadius: 10,
+    borderTopLeftRadius: 10,
     padding: 10,
   },
+  // add task button
   addButton: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 10,
-    paddingHorizontal: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 8,
     // borderRadius: 4,
     elevation: 3,
     backgroundColor: colors.sage,
@@ -376,34 +381,34 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   addText: {
-    fontSize: 16,
-    lineHeight: 21,
+    fontSize: 15,
+    // lineHeight: 21,
     fontWeight: "bold",
-    // letterSpacing: 0.25,
     color: "white",
-    // textAlign: "center",
   },
 
   // list of tasks
   flatlist: {
-    height: 300,
+    height: 350,
   },
   listItem: {
     display: "flex",
     flexDirection: "row",
-    // alignContent: "center",
     justifyContent: "flex-start",
     padding: 2,
     width: "95%",
     margin: 5,
-    borderBottomColor: colors.sage5,
-    borderBottomWidth: 1,
+    marginLeft: 10,
+    backgroundColor: colors.sage25,
+    borderColor: colors.sage5,
+    borderWidth: 1,
     borderStyle: "solid",
-    backgroundColor: "pink",
+    borderBottomRightRadius: 8,
+    borderTopLeftRadius: 8,
   },
   taskIconWrapper: {
     transform: [{ rotate: "90deg" }],
-    backgroundColor: "violet",
+    // backgroundColor: "violet",
     // padding: 2,
     marginLeft: 7,
     width: 35,
@@ -416,12 +421,14 @@ const styles = StyleSheet.create({
     // backgroundColor: "orange",
   },
   listItemText: {
-    fontSize: 20,
+    fontSize: 19,
     // textAlign: "center",
     alignSelf: "center",
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     marginLeft: 10,
   },
+
+  // anderes
   paleButton: {
     borderTopColor: colors.sage25,
     borderTopWidth: 1,
