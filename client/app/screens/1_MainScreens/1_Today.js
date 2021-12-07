@@ -173,13 +173,27 @@ const Today = ({ navigation, route }) => {
             onChangeText={taskInputHandler}
             value={enteredTask}
           />
-          {/* <Button title="Add Task" onPress={addNewTaskHandler} /> */}
+          {/* <Button
+            style={styles.addButton}
+            title="Add"
+            onPress={addNewTaskHandler}
+          /> */}
+          <Pressable
+            style={[styles.addButton, styles.buttonClose]}
+            onPress={addNewTaskHandler}
+          >
+            <Text style={styles.addText}>Add</Text>
+          </Pressable>
         </View>
+
         <FlatList
           keyExtractor={(item, index) => item.id}
           data={AllTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
+              <View>
+                <Text style={styles.listItemText}>icon</Text>
+              </View>
               <Text style={styles.listItemText}>{itemData.item.value}</Text>
             </View>
           )}
@@ -249,7 +263,8 @@ const styles = StyleSheet.create({
   //   backgroundColor: colors.sage,
   // },
   // buttonClose: {
-  //   backgroundColor: colors.sage25,
+  //   backgroundColor: colors.sage,
+  //   // opacity: 0.25,
   // },
   // textStyle: {
   //   color: "white",
@@ -261,6 +276,26 @@ const styles = StyleSheet.create({
   // //   textAlign: "center",
   // // },
   // ----------------------------------Tasks
+  addButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    // borderRadius: 4,
+    elevation: 3,
+    backgroundColor: colors.sage,
+    // textAlign: "center",
+    borderBottomRightRadius: 23,
+    borderTopLeftRadius: 23,
+  },
+  addText: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    // letterSpacing: 0.25,
+    color: "white",
+    // textAlign: "center",
+  },
   taskListArea: {
     marginTop: 250,
     marginBottom: 90,
@@ -281,14 +316,16 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   listItem: {
-    alignContent: "center",
-    justifyContent: "center",
+    // display: "flex",
+    // alignContent: "center",
+    // justifyContent: "center",
     padding: 10,
     width: "92%",
-    // marginVertical: 8,
+    margin: 10,
     borderBottomColor: colors.sage5,
     borderBottomWidth: 1,
     borderStyle: "solid",
+    backgroundColor: "green",
   },
   listItemText: { fontSize: 20 },
   paleButton: {
