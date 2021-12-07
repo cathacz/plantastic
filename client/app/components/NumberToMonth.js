@@ -86,7 +86,7 @@ const NumberToMonth = () => {
   }, []);
 
   return (
-    <View>
+    <View style={styles.dateWrapper}>
       <Text style={styles.date}>{currentWeekday}</Text>
       <Text style={styles.date}>{currentDate}</Text>
     </View>
@@ -94,7 +94,12 @@ const NumberToMonth = () => {
 };
 
 const styles = StyleSheet.create({
-  date: { fontSize: 18, alignSelf: "center", margin: 4 },
+  dateWrapper: {},
+  date: {
+    fontSize: 18,
+    alignSelf: "center",
+    marginHorizontal: 4,
+  },
 });
 
 export default NumberToMonth;

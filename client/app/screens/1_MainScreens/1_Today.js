@@ -37,6 +37,9 @@ import useWeather from "../../components/WeatherAPI/useWeather";
 import Weather from "../../components/WeatherAPI/Weather";
 import Loading from "../../components/WeatherAPI/Loading";
 
+// user
+import exampleUser from "../../../assets/jsons/exampleUser.json";
+
 const Today = ({ navigation, route }) => {
   const [currentDate, setCurrentDate] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
@@ -80,23 +83,15 @@ const Today = ({ navigation, route }) => {
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* ------------------------------------------------------------------------------ Banderole */}
-      <View
-        style={{
-          width: "100%",
-          // marginTop: 90,
-          // height: 185, //for iOS
-          height: 220, //for android
-          height: 200,
-          backgroundColor: colors.sage5,
-          position: "absolute",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {/* <View style={styles.userWrapper}>
-          <Text style={styles.userGreeting}>Hej, Camilla!</Text>
-        </View> */}
+      <View style={styles.banderoleStyle}>
+        <View style={styles.userWrapper}>
+          <Text style={styles.userGreeting}>
+            Hej, {exampleUser.userData.username}!
+          </Text>
+          <Text>
+            Heute warten {exampleUser.userTasks.length} Aufgaben auf dich!
+          </Text>
+        </View>
         <View
           style={{
             flex: 1,
@@ -227,12 +222,29 @@ const Today = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
+  // banderole whole thing
+  banderoleStyle: {
+    width: "100%",
+    // marginTop: 90,
+    // height: 185, //for iOS
+    height: 220, //for android
+    height: 200,
+    backgroundColor: colors.sage5,
+    // position: "absolute",
+    // textAlign: "center",
+    // display: "flex",
+    // alignItems: "center",
+    // justifyContent: "center",
+    backgroundColor: "grey",
+  },
   // weather banderole
   weatherBanderole: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    // alignContent: "center",
     backgroundColor: "orange",
+    // height: "100%",
   },
   // platformContainer: {
   //   flex: 1,
