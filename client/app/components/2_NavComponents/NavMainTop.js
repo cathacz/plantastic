@@ -101,6 +101,8 @@ function NavMainTop({ navigation }) {
 const styles = StyleSheet.create({
   modalBox: {
     flex: 1,
+    // height: 500,
+    // display: "flex",
     alignItems: "flex-end",
     marginTop: 70,
     borderRadius: 30,
@@ -108,21 +110,21 @@ const styles = StyleSheet.create({
   },
   modalView: {
     backgroundColor: "white",
-    padding: 35,
+    // padding: 35,
     alignItems: "center",
-    // shadowColor: "#000",
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2,
-    // },
-    // shadowOpacity: 0.25,
-    // shadowRadius: 4,
-    // elevation: 5,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
   },
   button: {
     // borderRadius: 20,
     width: 150,
-    margin: 10,
+    margin: 27,
     borderBottomRightRadius: 25,
     borderTopLeftRadius: 25,
     padding: 10,
@@ -130,15 +132,16 @@ const styles = StyleSheet.create({
     // backgroundColor: colors.sage75,
   },
   buttonOpen: {
-    backgroundColor: colors.sage75,
+    backgroundColor: colors.sage25,
   },
   buttonClose: {
-    backgroundColor: colors.sage75,
+    backgroundColor: colors.sage5,
   },
   textStyle: {
     color: "white",
     fontWeight: "bold",
     textAlign: "center",
+    fontSize: 17,
   },
   // modalText: {
   //   marginBottom: 15,
