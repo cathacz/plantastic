@@ -60,7 +60,7 @@ const Today = ({ navigation, route }) => {
   // added by Vivi start -------------------
 
   const [enteredTask, setEnteredTask] = useState("");
-  const [AllTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
+  const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
   // entered text becomes a task as a state >>
   const taskInputHandler = (enteredText) => {
@@ -84,41 +84,36 @@ const Today = ({ navigation, route }) => {
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
       {/* ------------------------------------------------------------------------------ Banderole */}
       <View style={styles.banderoleStyle}>
-        <View style={styles.userWrapper}>
-          <Text style={styles.userGreeting}>
-            Hej, {exampleUser.userData.username}!
-          </Text>
-          <Text>
-            Heute warten {exampleUser.userTasks.length} Aufgaben auf dich!
-          </Text>
-        </View>
-        <View
+        {/* <View
           style={{
             flex: 1,
             width: "100%",
           }}
+        > */}
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("WeatherDetail", {
+              propOne: "propOne props",
+            })
+          }
         >
-          <TouchableHighlight
-            underlayColor={colors.sage25}
-            style={styles.paleButton}
-            onPress={() =>
-              navigation.navigate("WeatherDetail", {
-                propOne: "propOne props",
-              })
-            }
-          >
-            <View style={styles.weatherBanderole}>
-              <View>
-                <Text>Hello, Camilla</Text>
-              </View>
-
-              <View>
-                {!weather ? <Loading /> : <Weather forecast={weather} />}
-                {/* <Weather forecast={weather} /> */}
-              </View>
+          <View style={styles.weatherBanderole}>
+            <View style={styles.userWrapper}>
+              <Text style={styles.userGreeting}>
+                Hej, {exampleUser.userData.username}!
+              </Text>
+              <Text>Heute warten {allTasks.length} Aufgaben auf dich!</Text>
             </View>
-          </TouchableHighlight>
-        </View>
+
+            <View>
+              {!weather ? <Loading /> : <Weather forecast={weather} />}
+              {/* <Weather forecast={weather} /> */}
+            </View>
+          </View>
+        </TouchableHighlight>
+        {/* </View> */}
       </View>
 
       {/* ------------------------------------------------------------------------------- Main Part */}
@@ -189,7 +184,7 @@ const Today = ({ navigation, route }) => {
 
         <FlatList
           keyExtractor={(item, index) => item.id}
-          data={AllTasks}
+          data={allTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
               <View>
@@ -239,6 +234,7 @@ const styles = StyleSheet.create({
   },
   // weather banderole
   weatherBanderole: {
+    // flex: 1,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -246,6 +242,15 @@ const styles = StyleSheet.create({
     backgroundColor: "orange",
     // height: "100%",
   },
+  // user area in banderole
+
+  userWrapper: {
+    width: "50%",
+    backgroundColor: "lightgrey",
+    padding: 10,
+  },
+
+  // dunno what this is:
   // platformContainer: {
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
@@ -364,6 +369,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   // userWrapper: { width: "50%" },
-  userGreeting: { fontSize: 30, width: " 50%", alignSelf: "flex-start" },
+  userGreeting: {
+    fontSize: 30,
+    // width: " 50%",
+    // alignSelf: "flex-start",
+  },
 });
 export default Today;
