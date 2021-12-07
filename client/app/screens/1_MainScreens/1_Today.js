@@ -165,31 +165,46 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
-        <View style={styles.inputContainer}>
-          <Text> New task: </Text>
-          <TextInput
-            placeholder="Enter new task here"
-            style={styles.input}
-            onChangeText={taskInputHandler}
-            value={enteredTask}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            autoFocus={true}
-          />
-          {/* <Button
-            style={styles.addButton}
-            title="Add"
-            onPress={addNewTaskHandler}
-          /> */}
-          <Pressable
-            style={[styles.addButton, styles.buttonClose]}
-            onPress={addNewTaskHandler}
-          >
-            <Text style={styles.addText}>Add</Text>
-          </Pressable>
+        <View style={styles.taskContainer}>
+          <View style={styles.inputTitle}>
+            <Text> New task: </Text>
+          </View>
+
+          <View style={styles.inputContainer}>
+            <TextInput
+              placeholder="Enter new task here"
+              style={styles.input}
+              onChangeText={taskInputHandler}
+              value={enteredTask}
+              clearButtonMode="unless-editing"
+              clearTextOnFocus={true}
+              autoFocus={true}
+            />
+            <Pressable
+              style={[styles.addButton, styles.buttonClose]}
+              onPress={addNewTaskHandler}
+            >
+              <Text style={styles.addText}>Add</Text>
+            </Pressable>
+          </View>
         </View>
 
-        {/* List of tasks */}
+        {/* --------------------------- Daily View Thingie >> NOT permanent here */}
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("DailyView", {
+              tasks: allTasks,
+            })
+          }
+        >
+          <View style={styles.buttonPale}>
+            <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/* ------------------------------------------------------------------------------- List of tasks */}
         <FlatList
           keyExtractor={(item, index) => item.id}
           data={allTasks}
@@ -208,21 +223,8 @@ const Today = ({ navigation, route }) => {
           style={styles.flatlist}
         />
       </View>
-      {/* Daily View Thingie >> NOT permanent here */}
-      <TouchableHighlight
-        underlayColor={colors.sage25}
-        style={styles.paleButton}
-        onPress={() =>
-          navigation.navigate("DailyView", {
-            propOne: "propOne props",
-          })
-        }
-      >
-        <View style={styles.buttonPale}>
-          <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
-        </View>
-      </TouchableHighlight>
-      {/* ---------------------------------------------------- Navigation Main Bottom */}
+
+      {/* ------------------------------------------------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -345,11 +347,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
   },
-  inputContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    justifyContent: "center",
-    alignItems: "center",
+  taskContainer: {
+    flexDirection: "column",
+    // justifyContent: "space-between",
+    // justifyContent: "center",
+    // alignItems: "center",
   },
   input: {
     justifyContent: "center",

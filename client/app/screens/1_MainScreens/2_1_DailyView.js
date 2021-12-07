@@ -29,7 +29,7 @@ import MonthView from "../../components/Calendar/MonthView";
 // import NumberToMonth from "../components/NumberToMonth";
 // import { StatusBar } from "expo-status-bar";
 
-const DailyView = ({ navigation }) => {
+const DailyView = ({ navigation, route }) => {
   return (
     <SafeAreaView
       style={[StyleMain.container, styles.platformContainer]}
@@ -46,7 +46,7 @@ const DailyView = ({ navigation }) => {
           borderTopColor: colors.sage5,
           borderStyle: "solid",
           borderWidth: 2,
-          position: "absolute",
+          // position: "absolute",
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
@@ -82,6 +82,14 @@ const DailyView = ({ navigation }) => {
         >
           <MonthView />
         </View> */}
+
+        {/* useEffect(() => {
+    if (route.params?.tasks) {
+      console.log(route.params?.tasks)
+      // Post updated, do something with `route.params.post`
+      // For example, send the post to the server
+    }
+  }, [route.params?.tasks]); */}
       </View>
       {/* ---------------------------------------- Something */}
 
