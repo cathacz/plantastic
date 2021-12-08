@@ -2,6 +2,7 @@ import colors from "../config/colors";
 import StyleMain from "../styles/StyleMain";
 import AppButton from "./AppButton";
 import { StatusBar } from "expo-status-bar";
+import { LocaleConfig } from "react-native-calendars";
 
 import React, { Fragment, useEffect, useState } from "react";
 import {
@@ -44,6 +45,49 @@ export default function overviewCalendar() {
   );
   const [selectedTask, setSelectedTask] = useState(null);
   const [isDateTimePickerVisible, setDateTimePickerVisible] = useState(false);
+
+  LocaleConfig.locales["de"] = {
+    monthNames: [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "July",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember",
+    ],
+    monthNamesShort: [
+      "Jan.",
+      "Feb.",
+      "Mär.",
+      "Apr.",
+      "Mai",
+      "Jun.",
+      "Jul.",
+      "Aug.",
+      "Sept.",
+      "Okt.",
+      "Nov.",
+      "Dez.",
+    ],
+    dayNames: [
+      "Sonntag",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag",
+    ],
+    dayNamesShort: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."],
+    today: "Heute",
+  };
+  LocaleConfig.defaultLocale = "de";
 
   const updateCurrentTask = async (currentDate) => {
     try {

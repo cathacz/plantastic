@@ -25,10 +25,12 @@ import colors from "../../config/colors";
 
 // imports Alina
 import Weather from "../../components/WeatherAPI/Weather";
+import DetailedWeather from "../../components/WeatherAPI/DetailedWeather";
 import useWeather from "../../components/WeatherAPI/useWeather";
 import Loading from "../../components/WeatherAPI/Loading";
+import imageDictionary from "../../components/WeatherAPI/imageDictionary";
+import { isSameDay, format } from "date-fns";
 // import NumberToMonth from "../components/NumberToMonth";
-// import { StatusBar } from "expo-status-bar";
 
 const WeatherDetail = ({ navigation }) => {
   const weather = useWeather();
@@ -42,7 +44,6 @@ const WeatherDetail = ({ navigation }) => {
       <View
         style={{
           width: "100%",
-          height: 160,
           backgroundColor: colors.white,
           borderColor: colors.white,
           borderBottomColor: colors.sage5,
@@ -60,10 +61,14 @@ const WeatherDetail = ({ navigation }) => {
             flex: 1,
             width: "100%",
           }}
-        ></View>
+        >
+          <View>
+            {!weather ? <Loading /> : <DetailedWeather forecast={weather} />}
+          </View>
+        </View>
       </View>
       {/* ---------------------------------------- Main Part */}
-      <View
+      {/* <View
         style={{
           width: "100%",
           marginTop: 160,
@@ -74,16 +79,7 @@ const WeatherDetail = ({ navigation }) => {
           alignItems: "center",
           justifyContent: "center",
         }}
-      >
-        <View
-          style={{
-            flex: 1,
-            width: "100%",
-          }}
-        >
-          <View>{!weather ? <Loading /> : <Weather forecast={weather} />}</View>
-        </View>
-      </View>
+      ></View> */}
       {/* ---------------------------------------- Something */}
 
       {/* ---------------------------------------- Something */}
@@ -100,9 +96,13 @@ const WeatherDetail = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  // platformContainer: {
-  //   flex: 1,
-  //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  // },
+  styledContainer: {
+    flex: 1,
+    backgroundColor: "#272343",
+    justifyContent: "center",
+    width: "100%",
+    alignItems: "center",
+  },
 });
+
 export default WeatherDetail;
