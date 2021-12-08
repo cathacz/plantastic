@@ -133,13 +133,6 @@ const Today = ({ navigation, route }) => {
             //   setModalVisible(!modalVisible);
             // }}
           >
-            {/* <View>
-            <Pressable
-              style={styles.overlay}
-              onPress={() => setModalVisible(!modalVisible)}
-            > */}
-            {/* <Text style={{}}>Press</Text> */}
-
             <View style={styles.modalBox}>
               <View style={styles.modalView}>
                 <Pressable
@@ -153,13 +146,7 @@ const Today = ({ navigation, route }) => {
                   style={[styles.button, styles.buttonClose]}
                   onPress={() => {
                     setModalVisible(!modalVisible);
-
-                    // Pass and merge params back to Today screen >>
-                    navigation.navigate({
-                      name: "Today",
-                      params: { taskInputVisible: true },
-                      merge: true,
-                    });
+                    setTaskInputVisible(true);
                   }}
                 >
                   <Text style={styles.textStyle}>Add Task</Text>
