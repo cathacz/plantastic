@@ -74,103 +74,103 @@ const Today = ({ navigation, route }) => {
       <StatusBar style="auto" />
 
       {/* ------------------------------------------------------------------------------ header (top navigation) */}
-
-      {/* -------------------------------------------------------- Logo */}
-      {/* <View style={StyleMain.navTopItem}> */}
-      <View style={StyleMain.navTopElement}>
-        <Image
-          source={require("../../../assets/icons/png/plantastic.png")}
-          style={StyleMain.navTopElementImage}
-        />
-        <Text style={StyleMain.navTopText}>Plantastic</Text>
-      </View>
-      {/* </View> */}
-      {/* ---------------------------------- SearchMenu (search button) */}
-      <View
-        name="hamburgerMenu/searchButton"
-        style={StyleMain.searchMenuWrapperRight}
-      >
-        <TouchableOpacity
-          style={StyleMain}
-          onPress={() =>
-            navigation.navigate("SearchMenu", {
-              propOne: "propOne props",
-            })
-          }
+      <SafeAreaView style={StyleMain.navMainTop}>
+        {/* -------------------------------------------------------- Logo */}
+        {/* <View style={StyleMain.navTopItem}> */}
+        <View style={StyleMain.navTopElement}>
+          <Image
+            source={require("../../../assets/icons/png/plantastic.png")}
+            style={StyleMain.navTopElementImage}
+          />
+          <Text style={StyleMain.navTopText}>Plantastic</Text>
+        </View>
+        {/* </View> */}
+        {/* ---------------------------------- SearchMenu (search button) */}
+        <View
+          name="hamburgerMenu/searchButton"
+          style={StyleMain.searchMenuWrapperRight}
         >
-          <View style={StyleMain.searchMenuWrapper}>
-            <View style={StyleMain.rowSpaceBetween}>
-              <View style={StyleMain.searchMenuLeaf}></View>
-              <View style={StyleMain.searchMenuLeaf}></View>
+          <TouchableOpacity
+            style={StyleMain}
+            onPress={() =>
+              navigation.navigate("SearchMenu", {
+                propOne: "propOne props",
+              })
+            }
+          >
+            <View style={StyleMain.searchMenuWrapper}>
+              <View style={StyleMain.rowSpaceBetween}>
+                <View style={StyleMain.searchMenuLeaf}></View>
+                <View style={StyleMain.searchMenuLeaf}></View>
+              </View>
+
+              <View style={StyleMain.rowSpaceBetween}>
+                <View style={StyleMain.searchMenuLeaf}></View>
+                <View style={StyleMain.searchMenuLeaf}></View>
+              </View>
             </View>
-
-            <View style={StyleMain.rowSpaceBetween}>
-              <View style={StyleMain.searchMenuLeaf}></View>
-              <View style={StyleMain.searchMenuLeaf}></View>
+          </TouchableOpacity>
+          {/* ------------------------------------ Add Task/Plant (plus button) */}
+          <TouchableOpacity
+            style={StyleMain.addWrapper}
+            onPress={() => setModalVisible(!modalVisible)}
+            // onPress={() =>
+            //   modalVisible ? setModalVisible(false) : setModalVisible(true)
+            // }
+          >
+            <View style={StyleMain}>
+              <Text style={StyleMain.addText}>+</Text>
             </View>
-          </View>
-        </TouchableOpacity>
-        {/* ------------------------------------ Add Task/Plant (plus button) */}
-        <TouchableOpacity
-          style={StyleMain.addWrapper}
-          onPress={() => setModalVisible(!modalVisible)}
-          // onPress={() =>
-          //   modalVisible ? setModalVisible(false) : setModalVisible(true)
-          // }
-        >
-          <View style={StyleMain}>
-            <Text style={StyleMain.addText}>+</Text>
-          </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
 
-        {/* ------------------------------------ overlay from plus button */}
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={modalVisible}
-          // onRequestClose={() => {
-          //   Alert.alert("Modal has been closed.");
-          //   setModalVisible(!modalVisible);
-          // }}
-        >
-          {/* <View>
+          {/* ------------------------------------ overlay from plus button */}
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={modalVisible}
+            // onRequestClose={() => {
+            //   Alert.alert("Modal has been closed.");
+            //   setModalVisible(!modalVisible);
+            // }}
+          >
+            {/* <View>
             <Pressable
               style={styles.overlay}
               onPress={() => setModalVisible(!modalVisible)}
             > */}
-          {/* <Text style={{}}>Press</Text> */}
+            {/* <Text style={{}}>Press</Text> */}
 
-          <View style={styles.modalBox}>
-            <View style={styles.modalView}>
-              <Pressable
-                style={[styles.button, styles.buttonClose]}
-                onPress={() => setModalVisible(!modalVisible)}
-              >
-                <Text style={styles.textStyle}>Add Plant</Text>
-              </Pressable>
+            <View style={styles.modalBox}>
+              <View style={styles.modalView}>
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => setModalVisible(!modalVisible)}
+                >
+                  <Text style={styles.textStyle}>Add Plant</Text>
+                </Pressable>
 
-              <Pressable
-                style={[styles.button, styles.buttonClose]}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
 
-                  // Pass and merge params back to Today screen >>
-                  navigation.navigate({
-                    name: "Today",
-                    params: { taskInputVisible: true },
-                    merge: true,
-                  });
-                }}
-              >
-                <Text style={styles.textStyle}>Add Task</Text>
-              </Pressable>
+                    // Pass and merge params back to Today screen >>
+                    navigation.navigate({
+                      name: "Today",
+                      params: { taskInputVisible: true },
+                      merge: true,
+                    });
+                  }}
+                >
+                  <Text style={styles.textStyle}>Add Task</Text>
+                </Pressable>
+              </View>
             </View>
-          </View>
-          {/* </Pressable>
+            {/* </Pressable>
           </View> */}
-        </Modal>
-      </View>
-
+          </Modal>
+        </View>
+      </SafeAreaView>
       {/* ------------------------------------------------------------------------------ Banderole */}
       <TodayBanderole />
       {/* ------------------------------------------------------------------------------- Main Part */}
