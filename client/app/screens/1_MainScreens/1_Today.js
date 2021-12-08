@@ -28,6 +28,7 @@ import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
+import TodayBanderole from "../../components/3_Banderolen/TodayBanderole";
 
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
@@ -75,7 +76,7 @@ const Today = ({ navigation, route }) => {
       {/* ------------------------------------------------------------------------------ header (top navigation) */}
 
       {/* ------------------------------------------------------------------------------ Banderole */}
-
+      <TodayBanderole />
       {/* ------------------------------------------------------------------------------- Main Part */}
 
       {/* ------------------------------------------------------------------------------- Tasks */}
