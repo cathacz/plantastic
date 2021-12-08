@@ -12,7 +12,15 @@ import colors from "../../config/colors";
 
 const SearchMenu = ({ navigation }) => {
   const [text, setText] = useState("");
-
+  // const [textInput, setTextInput] = useState(); //this state always holds the text
+  const submitHandler = () => {
+    //runs on submit and sets the state to nothing.
+    setText("");
+  };
+  // const changeHandler = (value) => {
+  //   //grabs textinput value and puts it in state
+  //   setTextInput(value);
+  // };
   return (
     <SafeAreaView style={styles.container}>
       {/* ----------------------------------------------------- Search */}
@@ -28,11 +36,14 @@ const SearchMenu = ({ navigation }) => {
         >
           <View style={styles.buttonSearch}>
             <TextInput
+              onSubmitEditing={submitHandler} //when click on "done" button on keyboard
+              // onChangeText={changeHandler} //when text is changed, add it to the state.
+              // value={textInput} //text inside is always the same as in our state.
               // type="text"
               style={styles.input}
               placeholder="Was suchst du?"
               onChangeText={(text) => setText(text)}
-              defaultValue={""}
+              // defaultValue={""}
 
               // clearButtonMode="always" >>> iOS clear Button
             />

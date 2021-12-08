@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import colors from "../../config/colors";
+
 import blaubeeren from "../../../assets/jsons/gardeningTipps/blaubeeren.json";
 import huegelbeet from "../../../assets/jsons/gardeningTipps/huegelbeet.json";
 import mulchen from "../../../assets/jsons/gardeningTipps/mulchen.json";
@@ -69,10 +70,20 @@ const Blog = ({ navigation }) => {
         <Text style={styles.entdeckenHeadline}>Entdecken</Text>
         {/* Hügelbeet */}
         <View style={styles.beitragWrapper}>
-          <Image
-            source={require("../../../assets/images/gardeningTipps/huegelbeet.jpg")}
-            style={styles.imageSeason}
-          />
+          <TouchableOpacity
+            style={styles.listItem}
+            onPress={() =>
+              navigation.navigate("Huegelbeet", {
+                propOne: "propOne props",
+              })
+            }
+          >
+            <Image
+              source={require("../../../assets/images/gardeningTipps/huegelbeet.jpg")}
+              style={styles.imageSeason}
+            />
+          </TouchableOpacity>
+
           <View style={styles.beitragTextWrapper}>
             <Text style={styles.beitragTitle}>{huegelTitle}</Text>
             <Text style={styles.beitragSub}>{huegelSub}</Text>
@@ -80,7 +91,7 @@ const Blog = ({ navigation }) => {
             <TouchableOpacity
               style={styles.listItem}
               onPress={() =>
-                navigation.navigate("Winterfest", {
+                navigation.navigate("Huegelbeet", {
                   propOne: "propOne props",
                 })
               }
@@ -102,7 +113,7 @@ const Blog = ({ navigation }) => {
             <TouchableOpacity
               style={styles.listItem}
               onPress={() =>
-                navigation.navigate("Winterfest", {
+                navigation.navigate("Mulchen", {
                   propOne: "propOne props",
                 })
               }
@@ -134,6 +145,7 @@ const Blog = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.visibility}></View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -159,7 +171,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     alignItems: "center",
     alignSelf: "center",
-    width: "90%",
+    width: "95%",
     marginTop: 10,
   },
   imageSeason: {
@@ -170,10 +182,15 @@ const styles = StyleSheet.create({
     aspectRatio: 1.8,
   },
   beitragTextWrapper: { margin: 5 },
-  beitragTitle: { fontSize: 28, color: colors.sage5, textAlign: "center" },
-  beitragSub: { fontSize: 20, color: colors.sage, textAlign: "center" },
-  beitragTeaser: { padding: 10 },
-  readMore: { textAlign: "center", marginBottom: 10, fontWeight: "bold" },
+  beitragTitle: { fontSize: 30, color: colors.sage5, textAlign: "center" },
+  beitragSub: { fontSize: 24, color: colors.sage, textAlign: "center" },
+  beitragTeaser: { padding: 10, fontSize: 18 },
+  readMore: {
+    textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "bold",
+    fontSize: 18,
+  },
 
   entdeckenHeadline: {
     fontSize: 30,
@@ -181,6 +198,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 20,
   },
+  visibility: { margin: 80 },
 });
 
 export default Blog;
