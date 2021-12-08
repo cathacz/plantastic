@@ -39,19 +39,19 @@ const WeatherDetail = ({ navigation }) => {
     <SafeAreaView style={StyleMain.container} backgroundColor="white">
       {/* ---------------------------------------- Banderole */}
       <View
-        style={{
-          width: "100%",
-          backgroundColor: colors.white,
-          borderColor: colors.white,
-          borderBottomColor: colors.sage5,
-          borderTopColor: colors.sage5,
-          borderStyle: "solid",
-          borderWidth: 2,
-          position: "absolute",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+      // style={{
+      //   width: "100%",
+      //   backgroundColor: colors.white,
+      //   borderColor: colors.white,
+      //   borderBottomColor: colors.sage5,
+      //   borderTopColor: colors.sage5,
+      //   borderStyle: "solid",
+      //   borderWidth: 2,
+      //   // position: "absolute",
+      //   textAlign: "center",
+      //   alignItems: "center",
+      //   justifyContent: "center",
+      // }}
       >
         <View
           style={{
@@ -60,6 +60,7 @@ const WeatherDetail = ({ navigation }) => {
           }}
         >
           <View>
+            <Text>Weather Forcast & Detailed Weather Info</Text>
             {!weather ? <Loading /> : <DetailedWeather forecast={weather} />}
           </View>
         </View>

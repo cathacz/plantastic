@@ -80,16 +80,15 @@ const weatherBanderole = ({ navigation, route }) => {
             <Text style={styles.userGreeting}>
               Hej, {exampleUser.userData.username}!
             </Text>
-            <Text style={{ fontSize: 16 }}>
+            <Text style={{ fontSize: 20, marginVertical: 10 }}>
               Heute warten {allTasks.length} Aufgaben auf dich!
             </Text>
           </View>
 
           {/* ------------------ weather forecast area */}
-          {/* <View name="weather">
-          {!weather ? <Loading /> : <Weather forecast={weather} />} */}
-          {/* <Weather forecast={weather} /> */}
-          {/* </View> */}
+          <View name="weather">
+            {!weather ? <Loading /> : <Weather forecast={weather} />}
+          </View>
         </View>
       </TouchableHighlight>
     </View>
@@ -115,12 +114,15 @@ const styles = StyleSheet.create({
 
   // user area inside banderole >>
   userWrapper: {
+    marginVertical: 10,
+    alignSelf: "center",
+    justifyContent: "center",
     width: "50%",
-    padding: 10,
+    padding: 20,
     // backgroundColor: "lightgrey",
   },
   userGreeting: {
-    fontSize: 30,
+    fontSize: 40,
     // width: " 50%",
     // alignSelf: "flex-start",
   },

@@ -97,8 +97,7 @@ const styles = StyleSheet.create({
   dateWrapper: {},
   date: {
     fontSize: 18,
-    alignSelf: "center",
-    marginHorizontal: 4,
+    alignSelf: "flex-end",
   },
 });
 

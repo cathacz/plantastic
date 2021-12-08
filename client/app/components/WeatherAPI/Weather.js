@@ -41,14 +41,14 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
   });
   return (
     <View style={styles.wrapper}>
-      <Text style={styles.location}>{name || "Berlin"}</Text>
+      <Text style={styles.location}>{name || "Leipzig"}</Text>
 
       <View style={styles.date}>
         <NumberToMonth />
       </View>
 
       <Text style={styles.description}>
-        Wetter: {currentWeather[0].weather[0].description || "bewölkt"}
+        {currentWeather[0].weather[0].description || "bewölkt"}
       </Text>
 
       <View style={styles.rowTempIcon}>
@@ -59,8 +59,8 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
         <Image
           style={styles.image}
           source={
-            imageDictionary[currentWeather[0].weather[0].icon] ||
-            imageDictionary["02d"]
+            imageDictionary[currentWeather[0].weather[0].icon]
+            // imageDictionary["02d"]
           }
         />
       </View>
@@ -69,6 +69,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
 };
 const styles = StyleSheet.create({
   wrapper: {
+    marginTop: 25,
     // borderColor: "pink",
     // borderWidth: 2,
     // borderStyle: "solid",
@@ -78,18 +79,20 @@ const styles = StyleSheet.create({
     // backgroundColor: "pink",
     display: "flex",
     marginRight: 15,
-    alignItems: "center",
+    alignItems: "flex-end",
     // justifyContent: "center",
   },
   location: {
     textAlign: "right",
-    fontSize: 30,
+    fontSize: 40,
     // paddingTop: 10,
     // marginRight: 13,
     // backgroundColor: "yellow",
   },
   date: {
+    textAlign: "right",
     alignSelf: "flex-end",
+    marginVertical: 5,
     // marginRight: 13,
     // backgroundColor: "beige",
   },
@@ -102,20 +105,21 @@ const styles = StyleSheet.create({
     // backgroundColor: "tomato",
   },
   temp: {
-    fontSize: 30,
-    alignSelf: "center",
+    fontSize: 60,
+    alignSelf: "flex-end",
     // backgroundColor: "white",
   },
   image: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     marginLeft: 10,
     // backgroundColor: "purple",
-    alignSelf: "center",
+    alignSelf: "flex-end",
   },
 
   description: {
-    alignSelf: "center",
+    alignSelf: "flex-end",
+    fontSize: 16,
     // marginRight: 13,
     // backgroundColor: "grey",
   },

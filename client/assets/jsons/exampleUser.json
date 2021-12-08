@@ -9,7 +9,7 @@
   "userTasks": [
     {
       "id": "#1",
-      "task": "Eisbergsalat ernten",
+      "task": "mit Apfelbaum reden",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
@@ -21,7 +21,7 @@
     },
     {
       "id": "#2",
-      "task": "Tomatensprößlinge umpflanzen",
+      "task": "Schnecken jagen",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
@@ -33,7 +33,7 @@
     },
     {
       "id": "#3",
-      "task": "Sonnenblumen an Stangen binden",
+      "task": "Physalis streicheln",
       "completed": false,
       "dueDate": "today",
       "dateCreated": "date it was created",
