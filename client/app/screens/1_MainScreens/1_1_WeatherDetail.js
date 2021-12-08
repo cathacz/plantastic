@@ -36,10 +36,7 @@ const WeatherDetail = ({ navigation }) => {
   const weather = useWeather();
 
   return (
-    <SafeAreaView
-      style={[StyleMain.container, styles.platformContainer]}
-      backgroundColor="white"
-    >
+    <SafeAreaView style={StyleMain.container} backgroundColor="white">
       {/* ---------------------------------------- Banderole */}
       <View
         style={{
