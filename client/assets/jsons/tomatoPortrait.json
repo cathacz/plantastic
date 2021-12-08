@@ -97,7 +97,7 @@
         "allow_drainage": true,
         "requires_mulching": true,
         "mulch": {
-          "mulch_type": ["Rindermulch", "Sonstiger Mulch"],
+          "mulch_type": ["Rindermulch", "Rasenschnitt", "Sonstiger Mulch"],
           "mulch_thickness": 10,
           "mulch_thickness_unit": "cm",
           "mulch_every": 3,
@@ -105,7 +105,7 @@
           "mulch_notes": [
             "Nachdem die Pflanzen mindestens 10 cm Höhe erreicht haben kann gemulcht werden.",
             "Mulchen kann man, muss man aber nicht.",
-            "Im Winter ist es unnötig."
+            "Im Winter ist es unnötig. \n"
           ]
         }
       },
@@ -124,7 +124,7 @@
         "fertilizer_reminder_min_days": 20,
         "fertilizer_stop_after_days": 60,
         "fertilizer_chemical_requirements": ["n/a"],
-        "fertilizer_type": "Flüssigdünger oder organische Düngemittel"
+        "fertilizer_type": ["Flüssigdünger", "Organische Düngemittel"]
       },
       "planting_distance": {
         "row_distance_min": 25,
@@ -215,10 +215,8 @@
     "grafting_notes": ["Veredeln ist möglich aber unnötig"],
     "plant_description_keywords": ["ertragreich", "widerstandsfähig"],
     "plant_description": [
-      "paragraph 1",
-      "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt. Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen.",
-      "paragraph 3",
-      "paragraph 4"
+      "Das Aussehen der Roma-Tomaten erinnert an eine Mischung aus großen Fleisch- und kleinen Kirschtomaten. Allerdings sind die Früchte nicht rund, sondern eher länglich geformt.",
+      "Romatomaten haben einen Durchmesser von etwa drei bis fünf Zentimeter und können eine Länge von bis zu zwölf Zentimetern erreichen. Neben ihrer untypischen Form zeichnen sich Roma-Tomaten zudem durch ihre Färbung aus, denn sie sind außen immer heller als innen."
     ],
     "plant_information": ["paragraph 1", "paragraph 2", "paragraph 3"],
     "variety_specific_characteristics_list": [
@@ -228,8 +226,7 @@
     ],
     "variety_specific_characteristics_notes": [
       "Bei der Ravello F1 handelt es sich um einen F1-Hybriden, welcher besonders widerstandsfähig ist. Sie ist resistent gegen eine Vielzahl an Krankheiten, wie beispielsweise Kraut- und Braunfäule, Fusarium-Welke und Verticillum-Welke. Die sehr frühe Tomatensorte zeichnet sich zudem durch einen kräftigen Wuchs aus und trägt eine Vielzahl ovaler Früchte.",
-      "Sie ist sehr aromatisch",
-      "paragraph 3"
+      "Sie ist sehr aromatisch."
     ],
     "other_information": ["Text 1...", "Text 2..."],
     "repotting": {
@@ -239,7 +236,10 @@
     },
     "possible_diseases_and_pests": {
       "pests": ["Schnecken", "Blattläuse", "Kartoffelkäfer"],
-      "diseases": ["Sonnenbleiche"],
+      "diseases": [
+        "Sonnenbleiche, Kraut- und Braunfäule",
+        "echter Mehltau, falscher Mehltau"
+      ],
       "mold": ["Mehltau"],
       "info": ["Diese Sorte ist relativ resistent."]
     },

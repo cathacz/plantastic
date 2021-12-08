@@ -5,7 +5,7 @@ import { differenceInDays } from "date-fns";
 // styling
 import colors from "../../config/colors";
 
-export default function SeedStarted() {
+export default function SeedStarted({ navigation }) {
   const ShowCurrentDate = () => {
     var date = new Date().getDate();
     var month = new Date().getMonth() + 1;
@@ -37,34 +37,30 @@ export default function SeedStarted() {
   };
 
   return (
-    <LinearGradient
-      colors={[colors.sage25, colors.white]}
-      style={styles.container}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-    >
-      <TouchableOpacity
-        style={styles.tomatoWrapper}
-        // onPress={() =>
-        //   navigation.navigate("QuickView", {
-        //     propOne: "propOne props",
-        //   })
-        // }
-      >
-        <View style={styles.nothing}>
-          <Image
-            source={require("../../../assets/icons/png/tomatoes.png")}
-            style={styles.icon}
-          />
-          {/* <Text style={styles.text}>Beeren</Text> */}
+    // <LinearGradient
+    //   colors={[colors.sage25, colors.white]}
+    //   style={styles.container}
+    //   start={{ x: 0, y: 0 }}
+    //   end={{ x: 1, y: 1 }}
+    // >
+    <View style={styles.tomatoWrapper}>
+      <View style={styles.nothing}>
+        <Image
+          source={require("../../../assets/icons/png/tomatoes.png")}
+          style={styles.icon}
+        />
+      </View>
+      <View style={styles.wrapper}>
+        <View style={styles.baseTextWrapper}>
+          <Text style={styles.baseText}>Romatomate "Ravello"</Text>
+          <Text style={styles.baseText}>Gepflanzt vor {restDays()}</Text>
         </View>
-
-        {/* <Text style={styles.whiteText}>Meine Pflanzen</Text> */}
-        <Text style={styles.baseText}>Tomate "Roma"</Text>
-        <Text style={styles.number}>{parseInt(germAdvanc())}%</Text>
-        <Text style={styles.baseText}>Gepflanzt vor {restDays()}</Text>
-      </TouchableOpacity>
-    </LinearGradient>
+        <View style={styles.percentWrapper}>
+          <Text style={styles.percentText}>{parseInt(germAdvanc())}%</Text>
+        </View>
+      </View>
+    </View>
+    // </LinearGradient>
   );
 }
 const styles = StyleSheet.create({
@@ -73,19 +69,34 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  number: {
-    fontWeight: "bold",
-    fontSize: 20,
+  tomatoWrapper: {
+    width: "100%",
+    alignSelf: "center",
+    borderStyle: "solid",
+    borderBottomWidth: 1,
+    borderBottomColor: colors.sage,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  nothing: {
+    margin: 5,
+  },
+  icon: { height: 45, width: 45 },
+
+  wrapper: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+  baseTextWrapper: {
+    justifyContent: "space-between",
   },
   baseText: {
-    fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 18,
   },
-  whiteText: {
-    fontWeight: "bold",
-    fontSize: 20,
-    color: "#FFFFFF",
+  percentWrapper: { justifyContent: "center", margin: 5 },
+  percentText: {
+    fontSize: 30,
+    color: colors.sage,
   },
-  // ------------------------------Catha here
-  icon: { height: 50, width: 50 },
 });

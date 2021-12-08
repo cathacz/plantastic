@@ -19,7 +19,7 @@
     "headline3": "Achten Sie unbedingt immer auf die richtige Reihenfolge!",
     "paragraph3": "Das Prinzip des Hügelbeets ist einfach: die verrottenden Abfälle setzen über mehrere Monate und Jahre kontinuierlich wichtige Nährstoffe frei. Hier gibt es Stickstoff im Überfluss. Daher sind mit Hinblick auf die Fruchtfolge neue Regeln zu beachten. Nutzen Sie im ersten Jahr Ihres Hügelbeets am besten Starkzehrer, damit diese den Stickstoff auf natürliche Weise abbauen können. Keine Sorge: trotz dieses Abbaus bleiben immer noch ausreichend Nährstoffe für die Mittel- und Schwachzehrer übrig.",
     "headline4": "Pflanzenbeispiele für Ihr Hügelbeet",
-    "list2title": "Starkzehrer",
+    "list2title": "Starkzehrer:",
     "list2": [
       "Gurken",
       "Kartoffeln",
@@ -28,7 +28,7 @@
       "Sellerie",
       "Zuccini"
     ],
-    "list3title": "Schwachzehrer",
+    "list3title": "Schwachzehrer:",
     "list3": [
       "Kräuter",
       "Radieschen",
