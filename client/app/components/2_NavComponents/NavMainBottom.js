@@ -31,7 +31,7 @@ function NavMainBottom({ navigation }) {
         style={[StyleMain.navItem]}
         onPress={() =>
           navigation.navigate("Today", {
-            propOne: "propOne props",
+            propOne: "props of Today from bottom nav",
           })
         }
       >

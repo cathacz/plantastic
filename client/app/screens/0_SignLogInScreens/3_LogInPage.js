@@ -34,23 +34,22 @@ const LogIn = ({ navigation }) => {
   const [password, onChangePassword] = React.useState("");
 
   // POST
-  function CheckUserData() {
-    // console.log(username, email, password);
-    axios({
-      method: "post",
-      url: "https://plantastic-backend-heroku.herokuapp.com/auth/login",
-      data: {
-        email: email,
-        password: password,
-      },
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => console.log(res.data))
-      .then(console.log("It worked!"))
-      .catch((err) => console.log(err));
-  }
+  // function CheckUserData() {
+  // console.log(username, email, password);
+  //   axios({
+  //     method: "post",
+  //     url: "https://plantastic-backend-heroku.herokuapp.com/auth/login",
+  //     data: {
+  //       email: email,
+  //       password: password,
+  //     },
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((res) => console.log(res)) //save in async storage
+  //     .catch((err) => console.log(err));
+  // }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -97,7 +96,7 @@ const LogIn = ({ navigation }) => {
             });
             console.log(email);
             console.log(password);
-            CheckUserData();
+            // CheckUserData();
           }}
         >
           <View style={styles.button}>
