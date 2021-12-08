@@ -86,10 +86,10 @@ const weatherBanderole = ({ navigation, route }) => {
           </View>
 
           {/* ------------------ weather forecast area */}
-          {/* <View name="weather">
-          {!weather ? <Loading /> : <Weather forecast={weather} />} */}
-          {/* <Weather forecast={weather} /> */}
-          {/* </View> */}
+          <View name="weather">
+            {!weather ? <Loading /> : <Weather forecast={weather} />}
+            {/* <Weather forecast={weather} /> */}
+          </View>
         </View>
       </TouchableHighlight>
     </View>
