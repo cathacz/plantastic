@@ -40,21 +40,31 @@ const Winterfest = ({ navigation }) => {
           />
         </View> */}
         {/* ----------------------------------------------------------------Season Tipp------------ */}
-        <View style={styles.seasonWrapper}></View>
-        <Text style={styles.seasonHeadline}>Top Winter Tipp</Text>
+
         <View style={styles.beitragWrapper}>
-          <Image
-            source={require("../../../assets/images/gardeningTipps/winterfest.jpg")}
-            style={styles.imageSeason}
-          />
           <View style={styles.beitragTextWrapper}>
-            <Text style={styles.beitragTitle}>{winterTitle}</Text>
-            <Text style={styles.beitragSub}>{winterSub}</Text>
-            <Text style={styles.beitragTeaser}>{winterTeaser}..</Text>
-            <Text style={styles.readMore}>weiterlesen</Text>
+            <Text style={styles.beitragTitle}>{title}</Text>
+            <Text style={styles.beitragSub}>{subtitle}</Text>
+            <Image
+              source={require("../../../assets/images/gardeningTipps/winterfest.jpg")}
+              style={styles.imageSeason}
+            />
           </View>
+          <Text style={styles.beitragPrePara}>{preParagraph}</Text>
+          <Text style={styles.beitragHead}>{headline1}</Text>
+          <Text style={styles.beitragPara}>{paragraph1}</Text>
+          <Text style={styles.beitragTipp}>{extraTipp1}</Text>
+          <Text style={styles.beitragHead}>{headline2}</Text>
+          <Text style={styles.beitragPara}>{paragraph2}</Text>
+          <Text style={styles.beitragHead}>{headline3}</Text>
+          <Text style={styles.beitragPara}>{paragraph3}</Text>
+          <Text style={styles.beitragTipp}>{extraTipp2}</Text>
+          <Text style={styles.beitragHead}>{headline4}</Text>
+          <Text style={styles.beitragPara}>{paragraph4}</Text>
+          <Text style={styles.beitragHead}>{headline5}</Text>
+          <Text style={styles.beitragPara}>{paragraph5}</Text>
         </View>
-        {/* ------------------------------------------------------------------Carousel------------- */}
+        <View style={styles.visibility}></View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -75,25 +85,43 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   beitragWrapper: {
-    borderColor: colors.sage25,
-    borderWidth: 1,
-    borderStyle: "solid",
+    // borderColor: colors.sage25,
+    // borderWidth: 1,
+    // borderStyle: "solid",
     alignItems: "center",
     alignSelf: "center",
-    width: "90%",
+    width: "95%",
   },
   imageSeason: {
     margin: 5,
     marginTop: 10,
-    width: "90%",
+    width: "95%",
     height: undefined,
     aspectRatio: 1.8,
   },
   beitragTextWrapper: { margin: 5 },
-  beitragTitle: { fontSize: 28, color: colors.sage5, textAlign: "center" },
-  beitragSub: { fontSize: 20, color: colors.sage, textAlign: "center" },
-  beitragTeaser: { padding: 10 },
+  beitragTitle: { fontSize: 35, color: colors.sage5, textAlign: "center" },
+  beitragSub: { fontSize: 25, color: colors.sage, textAlign: "center" },
+
   readMore: { textAlign: "center", marginBottom: 10, fontWeight: "bold" },
+  beitragPrePara: { fontSize: 18, marginVertical: 10 },
+  beitragHead: {
+    fontSize: 20,
+    color: colors.sage,
+    textAlign: "center",
+    margin: 5,
+    marginTop: 15,
+  },
+  beitragPara: { fontSize: 18 },
+  beitragTipp: {
+    fontSize: 16,
+    borderColor: colors.sage25,
+    borderWidth: 3,
+    borderStyle: "solid",
+    padding: 5,
+    marginVertical: 10,
+  },
+  visibility: { margin: 80 },
 });
 
 export default Winterfest;

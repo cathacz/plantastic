@@ -19,7 +19,7 @@ import { useScrollToTop } from "@react-navigation/native";
 
 // piece components >>
 import PlantBottomNav from "../../components/2_NavComponents/PlantBottomNav";
-import DetailedPlantBanderole from "../../components/3_Banderolen/DetailedPlantBanderole";
+import CathaBanderole from "../../components/3_Banderolen/KD_CathaMakeOver";
 // import Task from "../../components/Task";
 
 // for styling >>
@@ -77,10 +77,10 @@ const PlantPortrait = ({ navigation }) => {
   // plant care information >>
   const plantCareText = Tomato.plant_data.care.care_information; // array of paragraphs
   const plantDescription = Tomato.plant_data.plant_description; // array of paragraphs
+  const plantNotes = Tomato.plant_data.variety_specific_characteristics_notes;
+
   const plantInfo = Tomato.plant_data.plant_information; // array of paragraphs
   const extraInfo = Tomato.plant_data.other_information; // array of paragraphs
-
-  console.log(plantDescription);
 
   return (
     <SafeAreaView style={StylePlants.container}>
@@ -92,24 +92,24 @@ const PlantPortrait = ({ navigation }) => {
       <ScrollView style={DetailedPlantPortraitStyle.mainContent}>
         {/* ----------------------------------------------------- Banderole */}
 
-        <DetailedPlantBanderole />
+        <CathaBanderole />
 
         {/* -------------------- image carousel -------------------- */}
-        <View style={[DetailedPlantPortraitStyle.flexRowCenter]}>
+        <View style={[styles.flexRowCenter]}>
           <Image
-            style={DetailedPlantPortraitStyle.plantImage}
+            style={styles.plantImage}
             source={require("../../../assets/images/roma_tomatoes.jpg")}
           />
         </View>
         {/* -------------------- overview -------------------- */}
-        <View style={[DetailedPlantPortraitStyle.section]}>
-          <Text style={[DetailedPlantPortraitStyle.topicTitles]}>
+        {/* <View style={[DetailedPlantPortraitStyle.section]}> */}
+        {/* <Text style={[DetailedPlantPortraitStyle.topicTitles]}>
             Große Übersicht
-          </Text>
+          </Text> */}
 
-          {/* -------------------- Location */}
+        {/* -------------------- Location */}
 
-          <View
+        {/* <View
             style={[
               DetailedPlantPortraitStyle.border,
               DetailedPlantPortraitStyle.infoItem,
@@ -121,221 +121,240 @@ const PlantPortrait = ({ navigation }) => {
                 DetailedPlantPortraitStyle.infoItemTitleContainer,
                 DetailedPlantPortraitStyle.border,
               ]}
-            >
-              <View
+            > */}
+        {/* <View
                 style={[
                   DetailedPlantPortraitStyle.border,
                   DetailedPlantPortraitStyle.infoItemIcon,
                 ]}
-              ></View>
-              <Text
-                style={[
-                  DetailedPlantPortraitStyle.border,
-                  DetailedPlantPortraitStyle.infoItemTitle,
-                ]}
-              >
-                Standortbedingungen:{" "}
-              </Text>
-            </View>
+              ></View> */}
+        {/* </View> */}
+        {/* --------------------------------------------------------Headline */}
+        <View style={styles.wrapperHeadline}>
+          <Text style={[styles.headlineText]}>optimale Bedingungen </Text>
+          <Image
+            style={styles.iconHeadline}
+            source={require("../../../assets/icons/png/info.png")}
+          />
+        </View>
+        {/* ------------------------------------------------------------------- Standort */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Standortbedürfnisse </Text>
+        </View>
 
-            <Text
-              style={[
-                DetailedPlantPortraitStyle.border,
-                DetailedPlantPortraitStyle.infoItemText,
-              ]}
-            >
-              Sonne: {Tomato.plant_data.planting_conditions.location.sun_text}
-            </Text>
-
-            <Text
-              style={[
-                DetailedPlantPortraitStyle.border,
-                DetailedPlantPortraitStyle.infoItemText,
-              ]}
-            >
-              Standortbedarf:{" "}
-              {Tomato.plant_data.planting_conditions.location.location_requirements.join(
-                ", "
-              )}
-            </Text>
-
-            <Text
-              style={[
-                DetailedPlantPortraitStyle.border,
-                DetailedPlantPortraitStyle.infoItemText,
-              ]}
-            >
-              Erdtyp:{" "}
-              {Tomato.plant_data.planting_conditions.soil.soil_characteristics.join(
-                ", "
-              )}
-            </Text>
-
-            <Text
-              style={[
-                DetailedPlantPortraitStyle.border,
-                DetailedPlantPortraitStyle.infoItemText,
-              ]}
-            >
-              Erdsorte:{" "}
-              {Tomato.plant_data.planting_conditions.soil.soil_types.join(", ")}
-            </Text>
-
-            {/* -------------------- Mulch */}
-
-            {Tomato.plant_data.planting_conditions.soil.requires_mulching ? (
-              <View>
-                <Text
-                  style={[
-                    DetailedPlantPortraitStyle.border,
-                    DetailedPlantPortraitStyle.infoItemText,
-                  ]}
-                >
-                  Mulchen:{" "}
-                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_notes.join(
-                    " "
-                  )}
-                </Text>
-                <Text
-                  style={[
-                    DetailedPlantPortraitStyle.border,
-                    DetailedPlantPortraitStyle.infoItemText,
-                  ]}
-                >
-                  Am besten alle{" "}
-                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_every}{" "}
-                  {
-                    Tomato.plant_data.planting_conditions.soil.mulch
-                      .mulch_every_unit
-                  }{" "}
-                  eine frische Mulchschicht auftragen.
-                </Text>
-                <Text
-                  style={[
-                    DetailedPlantPortraitStyle.border,
-                    DetailedPlantPortraitStyle.infoItemText,
-                  ]}
-                >
-                  Mulchmaterial:{" "}
-                  {Tomato.plant_data.planting_conditions.soil.mulch.mulch_type.join(
-                    ", "
-                  )}
-                </Text>
-                <Text
-                  style={[
-                    DetailedPlantPortraitStyle.border,
-                    DetailedPlantPortraitStyle.infoItemText,
-                  ]}
-                >
-                  Mulchschichtdicke: ca.
-                  {
-                    Tomato.plant_data.planting_conditions.soil.mulch
-                      .mulch_thickness
-                  }{" "}
-                  {
-                    Tomato.plant_data.planting_conditions.soil.mulch
-                      .mulch_thickness_unit
-                  }
-                </Text>
-              </View>
-            ) : (
-              <View></View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/weather/sun.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.location.sun_text}
+          </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/map-location.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.location.location_requirements.join(
+              ", "
             )}
-          </View>
+          </Text>
+        </View>
+        {/* ----------------------------------------------------------BODEN */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Bodenbeschaffenheit </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/soil.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.soil.soil_characteristics.join(
+              ", "
+            )}
+          </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          {/* <Image
+                style={styles.icon}
+                source={require("../../../assets/icons/png/map-location.png")}
+              /> */}
+          <Text style={styles.textTipp}> am besten:</Text>
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.soil.soil_types.join(", ")}
+          </Text>
+        </View>
+        {/* ----------------------------------------------------------- Wasser */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Wasserbedarf </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/wasserBedarf.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.water.watering_notes.join(
+              ", "
+            )}
+          </Text>
+        </View>
+        {/* <View style={styles.textWrapper}>
+              <Text style={styles.textTipp}> am besten:</Text>
+              <Text style={styles.text}>
+                {" "}
+                {Tomato.plant_data.planting_conditions.fertilizer.fertilizer_type.join(
+                  ", "
+                )}
+              </Text>
+            </View> */}
+        {/* ----------------------------------------------------------- Düngen */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Düngen </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/fertilizer.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.fertilizer.fertilizer_notes.join(
+              ", "
+            )}
+          </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Text style={styles.textTipp}> am besten:</Text>
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.fertilizer.fertilizer_type.join(
+              ", \n"
+            )}
+          </Text>
+        </View>
+        {/* ----------------------------------------------------------------- Mulch */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Mulchen </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/soil.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.planting_conditions.soil.mulch.mulch_type.join(
+              ", "
+            )}
+          </Text>
+        </View>
+        <View style={styles.textWrapperColumn}>
+          {/* <Image
+                style={styles.icon}
+                source={require("../../../assets/icons/png/map-location.png")}
+              /> */}
+          <Text style={styles.textTipp}> Tipp:</Text>
+          <Text style={styles.text}>
+            {Tomato.plant_data.planting_conditions.soil.mulch.mulch_notes.join(
+              " "
+            )}
+          </Text>
         </View>
 
         {/* -------------------- general information -------------------- */}
 
-        <View style={DetailedPlantPortraitStyle.section}>
-          <View style={DetailedPlantPortraitStyle.sectionCollapse}>
-            <Text style={DetailedPlantPortraitStyle.topicTitles}>
-              Allgemeines
-            </Text>
-            <Text style={DetailedPlantPortraitStyle.collapse}>+/-</Text>
-          </View>
-
-          <View style={{}}>
-            {plantInfo.map((paragraph, i) => (
-              <Text key={i} style={{}}>
-                {paragraph}
-              </Text>
-            ))}
-          </View>
-        </View>
-
         {/* -------------------- description plant -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>
-            Beschreibung
-          </Text>
-          <View style={{}}>
+        {/* -------------------------------------------------------------------Headline */}
+        <View style={styles.wrapperHeadline}>
+          <Text style={[styles.headlineText]}>Wissenswertes </Text>
+          <Image
+            style={styles.iconHeadline}
+            source={require("../../../assets/icons/png/info.png")}
+          />
+        </View>
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Aussehen </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Text style={styles.text}>
             {plantDescription.map((paragraph, i) => (
               <Text key={i} style={{}}>
                 {paragraph}
+                {"\n"}
               </Text>
             ))}
-          </View>
-        </View>
-        {/* -------------------- description flower -------------------- */}
-
-        {/* -------------------- description fruit -------------------- */}
-
-        {/* -------------------- description foliage -------------------- */}
-
-        {/* -------------------- description root -------------------- */}
-
-        {/* -------------------- medicinal properties or poisonousness -------------------- */}
-
-        {/* -------------------- variety specific information -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>
-            Über {Tomato.labels.specific_variety_name}
-          </Text>
-          <View style={{}}>
-            {plantCareText.map((paragraph, i) => (
-              <Text key={i} style={{}}>
-                {paragraph}
-              </Text>
-            ))}
-          </View>
-        </View>
-
-        {/* -------------------- care -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.topicTitles}>Pflege</Text>
-          <View style={{}}>
-            {plantCareText.map((paragraph, i) => (
-              <Text key={i} style={{}}>
-                {paragraph}
-              </Text>
-            ))}
-          </View>
-        </View>
-
-        {/* -------------------- other -------------------- */}
-        <View style={DetailedPlantPortraitStyle.section}>
-          <Text style={DetailedPlantPortraitStyle.noStyle}>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed quia non numquam eius modi tempora
-            incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-            enim ad minima veniam, quis nostrum exercitationem ullam corporis
-            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-            autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-            nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-            voluptas nulla pariatur?" 1914 translation by H. Rackham "But I must
-            explain to you how all this mistaken idea of denouncing pleasure and
-            praising pain was born and I will give you a complete account of the
-            system, and expound the actual teachings of the great explorer of
-            the truth, the master-builder of human happiness.
           </Text>
         </View>
-        {/* -------------------- further reading/related articles -------------------- */}
 
-        {/* -------------------- shopping suggestions -------------------- */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Wuchs </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Text style={styles.text}>
+            {plantNotes.map((paragraph, i) => (
+              <Text key={i} style={{}}>
+                {paragraph}
+                {"\n"}
+              </Text>
+            ))}
+          </Text>
+        </View>
+        {/* ----------------------------------------------------------PESTS & DISEASES */}
+        {/* -------------------------------------------------------------------Headline */}
+        <View style={styles.wrapperHeadline}>
+          <Text style={[styles.headlineText]}>Schädlinge & Krankheiten </Text>
+          <Image
+            style={styles.iconHeadline}
+            source={require("../../../assets/icons/png/snail.png")}
+          />
+        </View>
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Schädlinge </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/louse.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.possible_diseases_and_pests.pests.join(", ")}
+          </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Text style={styles.textTipp}> am besten:</Text>
+          <Text style={styles.text}> Kill 'em all</Text>
+        </View>
 
-        {/* -------------------- recipes -------------------- */}
-
-        {/* -------------------- search tags -------------------- */}
+        <View style={styles.wrapperH2}>
+          <Text style={[styles.h2Text]}>Krankheiten </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Image
+            style={styles.icon}
+            source={require("../../../assets/icons/png/infectious.png")}
+          />
+          <Text style={styles.text}>
+            {" "}
+            {Tomato.plant_data.possible_diseases_and_pests.diseases.join(
+              ", \n "
+            )}
+          </Text>
+        </View>
+        <View style={styles.textWrapper}>
+          <Text style={styles.textTipp}> am besten:</Text>
+          <Text style={styles.text}> Call a doctor</Text>
+        </View>
+        <View style={styles.keepItVisible}></View>
       </ScrollView>
       {/* ---------------------------------------- Navigation Main Bottom */}
       <PlantBottomNav navigation={navigation} />
@@ -344,33 +363,44 @@ const PlantPortrait = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  test: {
-    backgroundColor: "orange",
+  // ---------------------------------------------------- IMAGE
+  flexRowCenter: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
   },
+  plantImage: { width: "94%", height: 300, resizeMode: "contain" },
+  // ----------------------------------------------------------------------HEADLINES
+  wrapperHeadline: {
+    borderTopColor: colors.sage5,
+    borderStyle: "solid",
+    borderTopWidth: 2,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 20,
+  },
+  iconHeadline: { height: 40, width: 40 },
+  headlineText: { fontSize: 30, color: colors.sage5 },
+
+  // -----------------------------------------------------------------H2
+  wrapperH2: { paddingHorizontal: 10, paddingVertical: 5 },
+  h2Text: { color: colors.sage, fontSize: 18 },
+  // --------------------------------------------------------------------------INFO TEXT
+  textWrapper: {
+    paddingVertical: 3,
+    flexDirection: "row",
+    paddingHorizontal: 10,
+  },
+  textWrapperColumn: {
+    flexDirection: "column",
+    paddingVertical: 3,
+    paddingHorizontal: 10,
+  },
+  iconText: { fontSize: 20 },
+  icon: { height: 30, width: 30 },
+  text: { fontSize: 20, width: "95%", alignSelf: "center" },
+  textTipp: { color: colors.sage5, fontSize: 20 },
+  keepItVisible: { marginBottom: 150 },
 });
 export default PlantPortrait;
-
-// unused from this component >>
-{
-  /* ----------------------------------------------------- Navigation Main Top */
-}
-{
-  /* <SafeAreaView style={StylePlants.navMainTop}>
-<View
-  to="/myGarden"
-  underlayColor="white"
-  style={StylePlants.navTopItem}
->
-  <View style={StylePlants.navTopElements}>
-    <Image
-      source={require("../../../assets/icons/png/back-button.png")}
-      style={{
-        height: 50,
-        width: 50,
-        margin: 5,
-      }}
-    />
-  </View>
-</View>
-</SafeAreaView> */
-}
