@@ -114,9 +114,6 @@ const Today = ({ navigation, route }) => {
           <TouchableOpacity
             style={StyleMain.addWrapper}
             onPress={() => setModalVisible(!modalVisible)}
-            // onPress={() =>
-            //   modalVisible ? setModalVisible(false) : setModalVisible(true)
-            // }
           >
             <View style={StyleMain}>
               <Text style={StyleMain.addText}>+</Text>
@@ -153,8 +150,6 @@ const Today = ({ navigation, route }) => {
                 </Pressable>
               </View>
             </View>
-            {/* </Pressable>
-          </View> */}
           </Modal>
         </View>
       </SafeAreaView>
