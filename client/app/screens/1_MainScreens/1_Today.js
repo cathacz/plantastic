@@ -133,20 +133,24 @@ const Today = ({ navigation, route }) => {
             <View style={styles.modalBox}>
               <View style={styles.modalView}>
                 <Pressable
-                  style={[styles.button, styles.buttonClose]}
+                  style={[styles.button, styles.buttonClose, styles.buttonTop]}
                   onPress={() => setModalVisible(!modalVisible)}
                 >
-                  <Text style={styles.textStyle}>Add Plant</Text>
+                  <Text style={styles.textStyle}>Pflanze hinzufügen</Text>
                 </Pressable>
 
                 <Pressable
-                  style={[styles.button, styles.buttonClose]}
+                  style={[
+                    styles.button,
+                    styles.buttonClose,
+                    styles.buttonBottom,
+                  ]}
                   onPress={() => {
                     setModalVisible(!modalVisible);
                     setTaskInputVisible(true);
                   }}
                 >
-                  <Text style={styles.textStyle}>Add Task</Text>
+                  <Text style={styles.textStyle}>Aufgabe hinzufügen</Text>
                 </Pressable>
               </View>
             </View>
@@ -156,7 +160,7 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------ Banderole */}
 
-      <TodayBanderole />
+      <TodayBanderole navigation={navigation} />
 
       {/* ------------------------------------------------------------------------------- Main Part */}
 
@@ -192,7 +196,7 @@ const Today = ({ navigation, route }) => {
                   setTaskInputVisible(!taskInputVisible);
                 }}
               >
-                <Text style={styles.addText}>Adden</Text>
+                <Text style={styles.addText}>+</Text>
               </Pressable>
             </View>
           </View>
@@ -209,10 +213,11 @@ const Today = ({ navigation, route }) => {
           }
         >
           <View style={styles.buttonPale}>
-            <Text style={styles.buttonTextPale}>Siehe Andere Aufgaben</Text>
+            <Text style={styles.buttonTextPale}>Alle Aufgaben</Text>
           </View>
         </TouchableHighlight>
-        {/* ------------------------------------------------------------------------------- List of tasks */}
+        {/* ------------------------------------------------------------------------- List of tasks */}
+
         <FlatList
           keyExtractor={(item, index) => item.id}
           data={allTasks}
@@ -292,10 +297,16 @@ const styles = StyleSheet.create({
     // backgroundColor: "blue",
   },
   modalView: {
+    width: "75%",
     marginTop: 70,
     backgroundColor: "white",
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
+    borderColor: colors.sage,
+    borderWidth: 3,
     alignItems: "center",
     shadowColor: "#000",
+    marginRight: 50,
     shadowOffset: {
       width: 0,
       height: 2,
@@ -305,13 +316,17 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    width: 150,
-    margin: 27,
+    width: "80%",
+    // margin: 20,
     borderBottomRightRadius: 25,
     borderTopLeftRadius: 25,
+    borderColor: colors.sage,
+    borderWidth: 1,
     padding: 10,
     elevation: 2,
   },
+  buttonTop: { marginTop: 30, marginBottom: 10 },
+  buttonBottom: { marginTop: 10, marginBottom: 30 },
   // buttonOpen: {
   //   backgroundColor: colors.sage25,
   // },
@@ -333,7 +348,7 @@ const styles = StyleSheet.create({
   // tasks whole thing >>
   taskListArea: {
     // marginTop: 250,
-    marginBottom: 90,
+    marginBottom: 200,
     justifyContent: "center",
     alignContent: "center",
   },
@@ -343,6 +358,7 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     // alignItems: "center",
     marginLeft: 10,
+    marginTop: 10,
   },
 
   // task input box >>
@@ -351,14 +367,15 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginLeft: 10,
+    marginVertical: 10,
   },
   input: {
     justifyContent: "center",
     width: "80%",
     borderColor: colors.sage,
-    borderWidth: 1,
-    borderBottomRightRadius: 10,
-    borderTopLeftRadius: 10,
+    borderWidth: 2,
+    borderBottomRightRadius: 20,
+    borderTopLeftRadius: 20,
     padding: 10,
   },
 
@@ -377,30 +394,34 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   addText: {
-    fontSize: 15,
+    width: 30,
+    fontSize: 20,
     // lineHeight: 21,
     fontWeight: "bold",
     color: "black",
+    textAlign: "center",
   },
 
   // list of tasks >>
   flatlist: {
-    height: 350, // <-- pls adjust to iPhone so that it does not go below the bottom navigation
+    // height: 350, // <-- pls adjust to iPhone so that it does not go below the bottom navigation
+    height: "100%",
+    marginVertical: 10,
   },
   listItem: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    padding: 2,
+    // padding: 2,
     width: "95%",
     margin: 5,
     marginLeft: 10,
     backgroundColor: colors.sage25,
     borderColor: colors.sage5,
-    borderWidth: 1,
+    borderWidth: 2,
     borderStyle: "solid",
-    borderBottomRightRadius: 8,
-    borderTopLeftRadius: 8,
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
   },
 
   // task icon >>
@@ -408,29 +429,29 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "90deg" }],
     // backgroundColor: "violet",
     // padding: 2,
-    marginLeft: 7,
+    marginLeft: 8,
     width: 35,
     display: "flex",
     alignItems: "center",
   },
   taskIcon: {
     width: 30,
-    height: 50,
-    // backgroundColor: "orange",
+    height: 40,
+    margin: 5,
   },
 
   // task text >>
   listItemText: {
-    fontSize: 19,
+    fontSize: 18,
     // textAlign: "center",
     alignSelf: "center",
     // backgroundColor: "yellow",
-    marginLeft: 10,
+    marginLeft: 20,
   },
 
   // ---------------------------------- other tasks Daily View thingie >>
   paleButton: {
-    borderTopColor: colors.sage25,
+    borderTopColor: colors.sage5,
     borderTopWidth: 1,
     borderStyle: "solid",
   },
@@ -439,12 +460,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   buttonTextPale: {
-    color: colors.sage25,
+    color: colors.sage75,
     fontSize: 20,
     margin: 7,
   },
   leafWrapper: {
     flexDirection: "row",
   },
+  visibility: { margin: 100 },
 });
 export default Today;
