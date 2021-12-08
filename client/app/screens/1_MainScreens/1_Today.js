@@ -43,12 +43,12 @@ import Loading from "../../components/WeatherAPI/Loading";
 import exampleUser from "../../../assets/jsons/exampleUser.json";
 
 const Today = ({ navigation, route }) => {
-  console.log(route.params?.modalVisible);
+  console.log(route.params?.taskInputVisible);
   console.log("<<<<<<<<<<<<<<<<<<<<<<");
 
   const [currentDate, setCurrentDate] = useState("");
 
-  const [modalVisible, setModalVisible] = useState(false);
+  // const [modalVisible, setModalVisible] = useState(false);
   const [taskInputVisible, setTaskInputVisible] = useState(false);
   const [enteredTask, setEnteredTask] = useState("");
   const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
@@ -170,58 +170,39 @@ const Today = ({ navigation, route }) => {
       <View style={styles.taskListArea}>
         {/* {useEffect(() => {
           console.log("I am working here!");
-          setModalVisible(!modalVisible);
-        }, [modalVisible])} */}
+          console.log(route.params?.taskInputVisible);
+          setTaskInputVisible(!taskInputVisible);
+        }, [route.params?.taskInputVisible])} */}
 
-        {/* {modalVisible ? (
+        {route.params?.taskInputVisible || taskInputVisible ? (
           <View style={styles.taskContainer}>
             <View style={styles.inputTitle}>
-              <Text> New task: </Text>
+              <Text> Neue Aufgabe: </Text>
             </View>
 
             <View style={styles.inputContainer}>
               <TextInput
-                placeholder="Enter new task here"
+                placeholder="Schreibe eine neue Aufgabe"
                 style={styles.input}
                 onChangeText={taskInputHandler}
                 value={enteredTask}
-                clearButtonMode="unless-editing"
-                clearTextOnFocus={true}
+                // clearButtonMode="unless-editing"
+                // clearTextOnFocus={true}
                 autoFocus={true}
               />
               <Pressable
                 style={[styles.addButton, styles.buttonClose]}
-                onPress={addNewTaskHandler}
+                onPress={() => {
+                  addNewTaskHandler();
+                  setTaskInputVisible(false);
+                }}
               >
-                <Text style={styles.addText}>Add</Text>
+                <Text style={styles.addText}>Adden</Text>
               </Pressable>
             </View>
           </View>
-        ) : null} */}
+        ) : null}
 
-        <View style={styles.taskContainer}>
-          <View style={styles.inputTitle}>
-            <Text> Neue Aufgabe: </Text>
-          </View>
-
-          <View style={styles.inputContainer}>
-            <TextInput
-              placeholder="neue Aufgabe"
-              style={styles.input}
-              onChangeText={taskInputHandler}
-              value={enteredTask}
-              clearButtonMode="unless-editing"
-              clearTextOnFocus={true}
-              autoFocus={true}
-            />
-            <Pressable
-              style={[styles.addButton, styles.buttonClose]}
-              onPress={addNewTaskHandler}
-            >
-              <Text style={styles.addText}>Adden</Text>
-            </Pressable>
-          </View>
-        </View>
         {/* --------------------------- Daily View Thingie >> NOT permanent here */}
         <TouchableHighlight
           underlayColor={colors.sage25}

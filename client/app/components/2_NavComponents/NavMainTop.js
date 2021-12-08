@@ -95,25 +95,18 @@ function NavMainTop({ navigation, route }) {
 
               <Pressable
                 style={[styles.button, styles.buttonClose]}
-                onPress={() => setModalVisible(!modalVisible)}
-              >
-                <Text style={styles.textStyle}>Add Task</Text>
-              </Pressable>
-
-              <Pressable
-                style={[styles.button, styles.buttonClose]}
-                // onPress={() => setModalVisible(!modalVisible)}
                 onPress={() => {
                   setModalVisible(!modalVisible);
-                  // Pass and merge params back to home screen
+
+                  // Pass and merge params back to Today screen >>
                   navigation.navigate({
                     name: "Today",
-                    params: { modalVisible: modalVisible },
+                    params: { taskInputVisible: true },
                     merge: true,
                   });
                 }}
               >
-                <Text style={styles.textStyle}>Close</Text>
+                <Text style={styles.textStyle}>Add Task</Text>
               </Pressable>
             </View>
           </View>
