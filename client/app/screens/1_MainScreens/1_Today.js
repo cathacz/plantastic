@@ -156,7 +156,7 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------ Banderole */}
 
-      <TodayBanderole />
+      <TodayBanderole navigation={navigation} />
 
       {/* ------------------------------------------------------------------------------- Main Part */}
 
