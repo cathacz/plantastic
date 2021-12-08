@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   input: { textAlign: "center", fontSize: 22, paddingTop: 5, paddingBottom: 5 },
   buttonWrapper: { alignItems: "center", flexDirection: "column" },
   button: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderStyle: "solid",
     borderColor: colors.sage,
     width: "80%",

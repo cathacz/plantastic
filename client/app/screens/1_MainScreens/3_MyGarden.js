@@ -29,28 +29,28 @@ const MyGarden = ({ navigation }) => {
       {/* --------------------------------------------------------------- Banderole */}
       <MyGardenBanderole navigation={navigation} />
       {/* ----------------------------------------------------- Main Part */}
-      <View
-        style={{
-          width: "100%",
-          marginTop: 200,
-          height: 125,
-          backgroundColor: colors.sage25,
-          position: "absolute",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <View
-          style={{
-            flex: 1,
-            width: "100%",
-          }}
-        >
-          <SeedStarted />
-          {/* map through the list of user's plants */}
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.wrapperHeadline}>
+            <Text style={[styles.headlineText]}>Meine Pflanzen </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.listItem}
+            onPress={() =>
+              navigation.navigate("QuickView", {
+                propOne: "propOne props",
+              })
+            }
+          >
+            <Text>
+              <SeedStarted />
+            </Text>
+          </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
+
+      {/* map through the list of user's plants */}
+
       {/* ---------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
 
@@ -64,5 +64,21 @@ const styles = StyleSheet.create({
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
+  container: { justifyContent: "center" },
+  wrapperHeadline: {
+    width: "95%",
+    marginVertical: 5,
+    justifyContent: "center",
+    alignSelf: "center",
+    borderStyle: "solid",
+    borderBottomWidth: 3,
+    borderBottomColor: colors.sage25,
+  },
+  headlineText: {
+    margin: 20,
+    fontSize: 30,
+    color: colors.sage5,
+  },
+  listItem: {},
 });
 export default MyGarden;
