@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import imageDictionary from "./imageDictionary";
 import { isSameDay, format } from "date-fns";
 import TodaysDate from "../Calendar/TodaysDate";
 import NumberToMonth from "../NumberToMonth";
 import Card from "../../components/WeatherAPI/Card";
+import colors from "../../config/colors";
 
 const DetailedWeather = ({ forecast: { name, list, timezone } }) => {
   // const [currentDate, setCurrentDate] = useState("");
@@ -39,27 +40,45 @@ const DetailedWeather = ({ forecast: { name, list, timezone } }) => {
   return (
     currentWeather.length > 0 && (
       <View style={styles.wrapper}>
-        <Text style={styles.location}>{name}</Text>
-        <View style={styles.date}>
-          <NumberToMonth />
-        </View>
-        <View style={styles.rowTempIcon}>
-          <Text style={styles.temp}>
-            {Math.round(currentWeather[0].main.temp)}°C
-          </Text>
-          <Image
-            style={styles.image}
-            source={
-              imageDictionary[currentWeather[0].weather[0].icon] ||
-              imageDictionary["02d"]
-            }
-          />
-        </View>
+        <View>
+          <Text style={styles.location}>{name}</Text>
+          <View style={(styles.date, styles.currentDay)}>
+            <NumberToMonth />
+          </View>
+          <View style={styles.rowTempIcon}>
+            <Text style={styles.temp}>
+              {Math.round(currentWeather[0].main.temp)}°C
+            </Text>
+            <Image
+              style={styles.image}
+              source={
+                imageDictionary[currentWeather[0].weather[0].icon] ||
+                imageDictionary["02d"]
+              }
+            />
+          </View>
 
-        <Text style={styles.description}>
-          {currentWeather[0].weather[0].description}
-        </Text>
-        {/* <Card key={index} /> */}
+          <Text style={styles.description}>
+            {currentWeather[0].weather[0].description}
+          </Text>
+        </View>
+        <View>
+          <ScrollView
+            style={styles.currentWeek}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          >
+            {daysByHour.map((day, index) => (
+              <Card
+                key={index}
+                icon={day.icon}
+                name={day.name.substring(0, 3)}
+                temp={day.temp}
+                hour={day.hour}
+              />
+            ))}
+          </ScrollView>
+        </View>
       </View>
     )
   );
@@ -67,9 +86,7 @@ const DetailedWeather = ({ forecast: { name, list, timezone } }) => {
 const styles = StyleSheet.create({
   styledContainer: {
     backgroundColor: "#272343",
-    justifyContent: "center",
     width: "100%",
-    alignItems: "center",
   },
   wrapper: {
     // borderColor: "pink",
@@ -78,11 +95,29 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     textAlign: "center",
-    // marginLeft: "0%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  currentDay: {
+    position: "relative",
+    flex: 1,
+    marginTop: 30,
+    justifyContent: "center",
+    width: "100%",
+  },
+  currentWeek: {
+    bottom: 0,
+    left: 0,
+    width: "100%",
+    height: 150,
+    position: "absolute",
+    backgroundColor: colors.sage5,
   },
   location: {
     textAlign: "center",
     fontSize: 30,
+    fontWeight: "400",
+    alignItems: "center",
     paddingTop: 10,
     marginRight: 13,
   },
