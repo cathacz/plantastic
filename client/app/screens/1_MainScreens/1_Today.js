@@ -43,13 +43,15 @@ import Loading from "../../components/WeatherAPI/Loading";
 import exampleUser from "../../../assets/jsons/exampleUser.json";
 
 const Today = ({ navigation, route }) => {
-  console.log(route.params?.taskInputVisible);
+  // console.log(route.params?.taskInputVisible);
+  let taskInputVis = route.params?.taskInputVisible;
+  console.log(taskInputVis);
   console.log("<<<<<<<<<<<<<<<<<<<<<<");
 
   const [currentDate, setCurrentDate] = useState("");
 
   // const [modalVisible, setModalVisible] = useState(false);
-  const [taskInputVisible, setTaskInputVisible] = useState(false);
+  const [taskInputVisible, setTaskInputVisible] = useState(taskInputVis);
   const [enteredTask, setEnteredTask] = useState("");
   const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
@@ -116,10 +118,10 @@ const Today = ({ navigation, route }) => {
               </Text>
             </View>
 
-            {/* <View name="weather">
-              {!weather ? <Loading /> : <Weather forecast={weather} />} */}
-            {/* <Weather forecast={weather} /> */}
-            {/* </View> */}
+            <View name="weather">
+              {!weather ? <Loading /> : <Weather forecast={weather} />}
+              {/* <Weather forecast={weather} /> */}
+            </View>
           </View>
         </TouchableHighlight>
         {/* </View> */}
@@ -168,13 +170,14 @@ const Today = ({ navigation, route }) => {
 
       {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
-        {/* {useEffect(() => {
-          console.log("I am working here!");
-          console.log(route.params?.taskInputVisible);
+        {useEffect(() => {
+          // console.log("I am working here!");
+          // console.log(route.params?.taskInputVisible);
           setTaskInputVisible(!taskInputVisible);
-        }, [route.params?.taskInputVisible])} */}
+          console.log("taskinput is: " + taskInputVisible);
+        }, [taskInputVis])}
 
-        {route.params?.taskInputVisible || taskInputVisible ? (
+        {taskInputVisible ? (
           <View style={styles.taskContainer}>
             <View style={styles.inputTitle}>
               <Text> Neue Aufgabe: </Text>
@@ -188,13 +191,13 @@ const Today = ({ navigation, route }) => {
                 value={enteredTask}
                 // clearButtonMode="unless-editing"
                 // clearTextOnFocus={true}
-                autoFocus={true}
+                // autoFocus={true}
               />
               <Pressable
                 style={[styles.addButton, styles.buttonClose]}
                 onPress={() => {
                   addNewTaskHandler();
-                  setTaskInputVisible(false);
+                  setTaskInputVisible(!taskInputVisible);
                 }}
               >
                 <Text style={styles.addText}>Adden</Text>
