@@ -44,6 +44,8 @@ const SignIn = ({ navigation }) => {
   const [email, onChangeEmail] = useState("");
   const [password, onChangePassword] = useState("");
 
+  const [showError, setShowError] = useState(false);
+
   // POST
   function SendRegisterData() {
     // console.log(username, email, password);
@@ -60,11 +62,20 @@ const SignIn = ({ navigation }) => {
       },
     })
       .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setShowError(true);
+      });
   }
 
   return (
     <SafeAreaView style={styles.container}>
+      {showError && (
+        <View>
+          <Text>Ooops, something went wrong!</Text>
+        </View>
+      )}
+
       <View style={styles.logo}>
         <Image
           source={require("../../../assets/icons/png/plantastic.png")}

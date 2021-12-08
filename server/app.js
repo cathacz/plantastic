@@ -21,7 +21,6 @@ const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
 // DB
-
 const connectDB = require("./db/dbConnect");
 
 const start = async () => {

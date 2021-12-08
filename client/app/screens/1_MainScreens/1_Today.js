@@ -16,6 +16,10 @@ import {
   TextInput,
   Button,
   FlatList,
+  Modal,
+  Pressable,
+  Animated,
+  SwipeView,
 } from "react-native";
 // import { StatusBar } from "expo-status-bar";
 
@@ -24,36 +28,26 @@ import NavMainTop from "../../components/2_NavComponents/NavMainTop";
 import NavMainBottom from "../../components/2_NavComponents/NavMainBottom";
 // import SearchMenu from "../3_SearchMenuScreens/SearchMenu";
 // import Task from "../../components/Task";
+import TodayBanderole from "../../components/3_Banderolen/TodayBanderole";
 
 // For styling >>
 import StyleMain from "../../styles/StyleMain";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import colors from "../../config/colors";
 
-// weather imports
-import useWeather from "../../components/WeatherAPI/useWeather";
-import Weather from "../../components/WeatherAPI/Weather";
-import Loading from "../../components/WeatherAPI/Loading";
+// user >>
+import exampleUser from "../../../assets/jsons/exampleUser.json";
 
 const Today = ({ navigation, route }) => {
-  const [currentDate, setCurrentDate] = useState("");
+  // console.log(route.params?.taskInputVisible);
+  // let taskInputVis = route.params?.taskInputVisible;
+  // console.log(taskInputVis);
+  // console.log("<<<<<<<<<<<<<<<<<<<<<<");
 
-  useEffect(() => {
-    var date = new Date().getDate(); //Current Date
-    var month = new Date().getMonth() + 1; //Current Month
-    var year = new Date().getFullYear(); //Current Year
-    // var hours = new Date().getHours(); //Current Hours
-    // var min = new Date().getMinutes(); //Current Minutes
-    // var sec = new Date().getSeconds(); //Current Seconds
-    setCurrentDate(
-      date + "/" + month + "/" + year //+ " " + hours + ":" + min + ":" + sec
-    );
-  }, []);
-
-  // added by Vivi start -------------------
-
+  const [modalVisible, setModalVisible] = useState(false);
+  const [taskInputVisible, setTaskInputVisible] = useState(false);
   const [enteredTask, setEnteredTask] = useState("");
-  const [AllTasks, setAllTasks] = useState([]);
+  const [allTasks, setAllTasks] = useState(exampleUser.userTasks); // start with userTasks already saved
 
   // entered text becomes a task as a state >>
   const taskInputHandler = (enteredText) => {
@@ -62,154 +56,395 @@ const Today = ({ navigation, route }) => {
 
   // new task gets added to task list (newest in top) >>
   const addNewTaskHandler = () => {
-    setAllTasks((tasks) => [
-      { id: Math.random().toString(), value: enteredTask },
-      ...tasks,
-    ]);
+    enteredTask.length > 1
+      ? setAllTasks((tasks) => [
+          { id: Math.random().toString(), value: enteredTask },
+          ...tasks,
+        ])
+      : setEnteredTask("");
+    setEnteredTask("");
   };
 
   // console.log("from Today: " + navigation);
 
-  // added by Vivi end -------------------
-  const weather = useWeather();
-
   return (
     <SafeAreaView style={[StyleMain.container, styles.platformContainer]}>
-      {/* ------------------------------------------------------------------------------ Banderole */}
-      <View
-        style={{
-          width: "100%",
-          // marginTop: 90,
-          height: 200,
-          backgroundColor: colors.sage5,
-          position: "absolute",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {/* <View style={styles.userWrapper}>
-          <Text style={styles.userGreeting}>Hej, Camilla!</Text>
-        </View> */}
+      {/* ------------------------------------------------------------------------------ status bar */}
+
+      <StatusBar style="auto" />
+
+      {/* ------------------------------------------------------------------------------ header (top navigation) */}
+      <SafeAreaView style={StyleMain.navMainTop}>
+        {/* -------------------------------------------------------- Logo */}
+        {/* <View style={StyleMain.navTopItem}> */}
+        <View style={StyleMain.navTopElement}>
+          <Image
+            source={require("../../../assets/icons/png/plantastic.png")}
+            style={StyleMain.navTopElementImage}
+          />
+          <Text style={StyleMain.navTopText}>Plantastic</Text>
+        </View>
+        {/* </View> */}
+        {/* ---------------------------------- SearchMenu (search button) */}
         <View
-          style={{
-            flex: 1,
-            width: "100%",
-          }}
+          name="hamburgerMenu/searchButton"
+          style={StyleMain.searchMenuWrapperRight}
         >
-          <TouchableHighlight
-            underlayColor={colors.sage25}
-            style={styles.paleButton}
+          <TouchableOpacity
+            style={StyleMain}
             onPress={() =>
-              navigation.navigate("WeatherDetail", {
+              navigation.navigate("SearchMenu", {
                 propOne: "propOne props",
               })
             }
           >
-            <View>
-              {!weather ? <Loading /> : <Weather forecast={weather} />}
-              {/* <Weather forecast={weather} /> */}
+            <View style={StyleMain.searchMenuWrapper}>
+              <View style={StyleMain.rowSpaceBetween}>
+                <View style={StyleMain.searchMenuLeaf}></View>
+                <View style={StyleMain.searchMenuLeaf}></View>
+              </View>
+
+              <View style={StyleMain.rowSpaceBetween}>
+                <View style={StyleMain.searchMenuLeaf}></View>
+                <View style={StyleMain.searchMenuLeaf}></View>
+              </View>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
+          {/* ------------------------------------ Add Task/Plant (plus button) */}
+          <TouchableOpacity
+            style={StyleMain.addWrapper}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <View style={StyleMain}>
+              <Text style={StyleMain.addText}>+</Text>
+            </View>
+          </TouchableOpacity>
+
+          {/* ------------------------------------ overlay from plus button */}
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={modalVisible}
+            // onRequestClose={() => {
+            //   Alert.alert("Modal has been closed.");
+            //   setModalVisible(!modalVisible);
+            // }}
+          >
+            <View style={styles.modalBox}>
+              <View style={styles.modalView}>
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => setModalVisible(!modalVisible)}
+                >
+                  <Text style={styles.textStyle}>Add Plant</Text>
+                </Pressable>
+
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                    setTaskInputVisible(true);
+                  }}
+                >
+                  <Text style={styles.textStyle}>Add Task</Text>
+                </Pressable>
+              </View>
+            </View>
+          </Modal>
         </View>
-      </View>
+      </SafeAreaView>
+
+      {/* ------------------------------------------------------------------------------ Banderole */}
+
+      <TodayBanderole />
 
       {/* ------------------------------------------------------------------------------- Main Part */}
-      {/* 
-      <View style={{ marginTop: 70 }}>
-        <Text>This is TODAY</Text>
-      </View> */}
 
-      {/* Added by Vivi start ----------------------Tasks Tasks Tasks------- */}
+      {/* ------------------------------------------------------------------------------- Tasks */}
       <View style={styles.taskListArea}>
-        <View style={styles.inputContainer}>
-          {/* <Text>Task: </Text> */}
-          <TextInput
-            placeholder="Enter new task here"
-            style={styles.input}
-            onChangeText={taskInputHandler}
-            value={enteredTask}
-          />
-          <Button title="Add Task" onPress={addNewTaskHandler} />
-        </View>
+        {/* {useEffect(() => {
+          // console.log("I am working here!");
+          // console.log(route.params?.taskInputVisible);
+          setTaskInputVisible(!taskInputVisible);
+          console.log("taskinput is: " + taskInputVisible);
+        }, [taskInputVis])} */}
+
+        {taskInputVisible ? (
+          <View style={styles.taskContainer}>
+            <View style={styles.inputTitle}>
+              <Text> Neue Aufgabe: </Text>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <TextInput
+                placeholder="Schreibe eine neue Aufgabe"
+                style={styles.input}
+                onChangeText={taskInputHandler}
+                value={enteredTask}
+                // clearButtonMode="unless-editing"
+                // clearTextOnFocus={true}
+                // autoFocus={true}
+              />
+              <Pressable
+                style={[styles.addButton, styles.buttonClose]}
+                onPress={() => {
+                  addNewTaskHandler();
+                  setTaskInputVisible(!taskInputVisible);
+                }}
+              >
+                <Text style={styles.addText}>Adden</Text>
+              </Pressable>
+            </View>
+          </View>
+        ) : null}
+
+        {/* --------------------------- Daily View Thingie >> NOT permanent here */}
+        <TouchableHighlight
+          underlayColor={colors.sage25}
+          style={styles.paleButton}
+          onPress={() =>
+            navigation.navigate("DailyView", {
+              tasks: allTasks,
+            })
+          }
+        >
+          <View style={styles.buttonPale}>
+            <Text style={styles.buttonTextPale}>Siehe Andere Aufgaben</Text>
+          </View>
+        </TouchableHighlight>
+        {/* ------------------------------------------------------------------------------- List of tasks */}
         <FlatList
           keyExtractor={(item, index) => item.id}
-          data={AllTasks}
+          data={allTasks}
           renderItem={(itemData) => (
             <View style={styles.listItem}>
-              <Text style={styles.listItemText}>{itemData.item.value}</Text>
+              {/* -------------- swipe function for later */}
+              {/* <SwipeView onSwipedLeft={() => deleteItemById(item.id)} />
+              <SwipeView
+                disableSwipeToRight={false}
+                renderVisibleContent={() => (
+                  <View>
+                    <Text style={styles.listItemText}>
+                      {itemData.item.task || itemData.item.value}{" "}
+                    </Text>
+                  </View>
+                )}
+                renderRightView={() => (
+                  <View
+                    style={{
+                      flex: 1,
+                      justifyContent: "flex-end",
+                      alignItems: "center",
+                      backgroundColor: "red",
+                    }}
+                  ></View>
+                )}
+                leftOpenValue={"this.leftOpenValue"}
+                rightOpenValue={"this.rightOpenValue"}
+                onSwipedLeft={
+                  (() => alert("deleted"), this.deleteItemById(item.id))
+                }
+                swipeDuration={300}
+                swipeToOpenPercent={40}
+                disableSwipeToRight={true}
+              /> */}
+
+              <View style={styles.taskIconWrapper}>
+                {/* <Text style={styles.listItemText}>icon</Text> */}
+                <Image
+                  source={require("../../../assets/icons/png/shovel.png")}
+                  style={styles.taskIcon}
+                />
+              </View>
+              <Text style={styles.listItemText}>
+                {itemData.item.task || itemData.item.value}
+              </Text>
             </View>
           )}
+          style={styles.flatlist}
         />
       </View>
-      {/* Daily View Thingie >> NOT permanent here */}
-      <TouchableHighlight
-        underlayColor={colors.sage25}
-        style={styles.paleButton}
-        onPress={() =>
-          navigation.navigate("DailyView", {
-            propOne: "propOne props",
-          })
-        }
-      >
-        <View style={styles.buttonPale}>
-          <Text style={styles.buttonTextPale}>Deine Aufgaben im Detail</Text>
-        </View>
-      </TouchableHighlight>
-      {/* ---------------------------------------------------- Navigation Main Bottom */}
+
+      {/* ------------------------------------------------------------------------------- Navigation Main Bottom */}
       <NavMainBottom navigation={navigation} />
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  // dunno what this is >>
   // platformContainer: {
   //   flex: 1,
   //   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   // },
+  // ----------------------------------Modal (triggered by plus button in top right corner)
+  overlay: {
+    // flex: 1,
+    // height: 100,
+    // width: 100,
+    // backgroundColor: "red",
+  },
+  modalBox: {
+    display: "flex",
+    alignItems: "flex-end",
+    // marginTop: 70,
+    // borderRadius: 30,
+    // backgroundColor: "blue",
+  },
+  modalView: {
+    marginTop: 70,
+    backgroundColor: "white",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    width: 150,
+    margin: 27,
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
+    padding: 10,
+    elevation: 2,
+  },
+  // buttonOpen: {
+  //   backgroundColor: colors.sage25,
+  // },
+  buttonClose: {
+    backgroundColor: colors.sage5,
+  },
+  textStyle: {
+    color: "black",
+    fontWeight: "bold",
+    textAlign: "center",
+    fontSize: 17,
+  },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: "center",
+  // },
+
   // ----------------------------------Tasks
+  // tasks whole thing >>
   taskListArea: {
-    marginTop: 250,
+    // marginTop: 250,
     marginBottom: 90,
     justifyContent: "center",
     alignContent: "center",
   },
+  taskContainer: {
+    flexDirection: "column",
+    // justifyContent: "space-between",
+    // justifyContent: "center",
+    // alignItems: "center",
+    marginLeft: 10,
+  },
+
+  // task input box >>
   inputContainer: {
+    // width: 30,
+    display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
-    justifyContent: "center",
-    alignItems: "center",
+    marginLeft: 10,
   },
   input: {
     justifyContent: "center",
-    width: "70%",
-    borderColor: "black",
+    width: "80%",
+    borderColor: colors.sage,
     borderWidth: 1,
+    borderBottomRightRadius: 10,
+    borderTopLeftRadius: 10,
     padding: 10,
+  },
+
+  // add task button >>
+  addButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 8,
+    paddingHorizontal: 8,
+    // borderRadius: 4,
+    elevation: 3,
+    backgroundColor: colors.sage,
+    // textAlign: "center",
+    borderBottomRightRadius: 23,
+    borderTopLeftRadius: 23,
+    marginLeft: 8,
+  },
+  addText: {
+    fontSize: 15,
+    // lineHeight: 21,
+    fontWeight: "bold",
+    color: "black",
+  },
+
+  // list of tasks >>
+  flatlist: {
+    height: 350, // <-- pls adjust to iPhone so that it does not go below the bottom navigation
   },
   listItem: {
-    alignContent: "center",
-    justifyContent: "center",
-    padding: 10,
-    width: "92%",
-    // marginVertical: 8,
-    borderBottomColor: colors.sage5,
-    borderBottomWidth: 1,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    padding: 2,
+    width: "95%",
+    margin: 5,
+    marginLeft: 10,
+    backgroundColor: colors.sage25,
+    borderColor: colors.sage5,
+    borderWidth: 1,
     borderStyle: "solid",
+    borderBottomRightRadius: 8,
+    borderTopLeftRadius: 8,
   },
-  listItemText: { fontSize: 20 },
+
+  // task icon >>
+  taskIconWrapper: {
+    transform: [{ rotate: "90deg" }],
+    // backgroundColor: "violet",
+    // padding: 2,
+    marginLeft: 7,
+    width: 35,
+    display: "flex",
+    alignItems: "center",
+  },
+  taskIcon: {
+    width: 30,
+    height: 50,
+    // backgroundColor: "orange",
+  },
+
+  // task text >>
+  listItemText: {
+    fontSize: 19,
+    // textAlign: "center",
+    alignSelf: "center",
+    // backgroundColor: "yellow",
+    marginLeft: 10,
+  },
+
+  // ---------------------------------- other tasks Daily View thingie >>
   paleButton: {
     borderTopColor: colors.sage25,
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
-  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  buttonPale: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  buttonTextPale: {
+    color: colors.sage25,
+    fontSize: 20,
+    margin: 7,
+  },
   leafWrapper: {
     flexDirection: "row",
   },
-  // userWrapper: { width: "50%" },
-  userGreeting: { fontSize: 30, width: " 50%", alignSelf: "flex-start" },
 });
 export default Today;

@@ -14,11 +14,21 @@ const TaskSchema = new mongoose.Schema(
       required: [true, "Please provide user"],
     },
     completed: { type: Boolean, default: false },
-    // taskAddedDate: {
-    //   type: Date,
-    //   required: true,
-    //   default: Date.now,
-    // },
+    taskAddedDate: {
+      type: Date,
+      required: true,
+      default: Date.now,
+    },
+    dueDate: {
+      type: Date,
+      required: false,
+      // default: Date.now,
+    },
+    taskCompletedDate: {
+      type: Date,
+      required: false,
+      // default: Date.now,
+    },
   },
   { timestamps: true }
 );

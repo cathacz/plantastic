@@ -12,7 +12,15 @@ import colors from "../../config/colors";
 
 const SearchMenu = ({ navigation }) => {
   const [text, setText] = useState("");
-
+  // const [textInput, setTextInput] = useState(); //this state always holds the text
+  const submitHandler = () => {
+    //runs on submit and sets the state to nothing.
+    setText("");
+  };
+  // const changeHandler = (value) => {
+  //   //grabs textinput value and puts it in state
+  //   setTextInput(value);
+  // };
   return (
     <SafeAreaView style={styles.container}>
       {/* ----------------------------------------------------- Search */}
@@ -28,10 +36,15 @@ const SearchMenu = ({ navigation }) => {
         >
           <View style={styles.buttonSearch}>
             <TextInput
+              onSubmitEditing={submitHandler} //when click on "done" button on keyboard
+              // onChangeText={changeHandler} //when text is changed, add it to the state.
+              // value={textInput} //text inside is always the same as in our state.
+              // type="text"
               style={styles.input}
               placeholder="Was suchst du?"
               onChangeText={(text) => setText(text)}
-              defaultValue={text}
+              // defaultValue={""}
+
               // clearButtonMode="always" >>> iOS clear Button
             />
             <View style={styles.lupeWrapper}>
@@ -107,7 +120,7 @@ const SearchMenu = ({ navigation }) => {
           }
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Settings</Text>
+            <Text style={styles.buttonText}>Einstellungen</Text>
             <View style={styles.leafWrapper}>
               <View style={styles.leafKL}></View>
               <View style={styles.leaf}></View>
@@ -225,7 +238,11 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  button: { flexDirection: "row", justifyContent: "space-between" },
+  button: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 6,
+  },
   buttonText: { color: colors.sage, fontSize: 25, margin: 7 },
   leaf: {
     margin: 10,
@@ -265,8 +282,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderStyle: "solid",
   },
-  buttonPale: { flexDirection: "row", justifyContent: "space-between" },
-  buttonTextPale: { color: colors.sage25, fontSize: 25, margin: 7 },
+  buttonPale: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 6,
+  },
+  buttonTextPale: { color: colors.sage5, fontSize: 25, margin: 7 },
   leafWrapper: {
     flexDirection: "row",
   },

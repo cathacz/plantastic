@@ -89,7 +89,12 @@ function App() {
             header: (props) => <NavMainTop {...props} />,
           }}
         >
-          <Stack.Screen name="Today" component={Today} options={{}} />
+          <Stack.Screen
+            name="Today"
+            component={Today}
+            options={{ header: () => null }}
+          />
+          {/* << has individual header */}
           <Stack.Screen name="Overview" component={Overview} options={{}} />
           <Stack.Screen name="MyGarden" component={MyGarden} options={{}} />
           <Stack.Screen name="Community" component={Community} options={{}} />
