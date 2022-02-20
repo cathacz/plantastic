@@ -293,3 +293,14 @@ npm install --save moment react-moment
 expo install expo-calendars
 npm install react-native-calendar-strip
 ```
+## Run existing expo project on macOS
+
+Use Yarn instead of npm. To install yarn:
+```
+sudo apt-get update && sudo apt-get install yarn 
+```
+
+React Native Clean Project - Cleans your React Native project by purging caches and modules, and reinstalling them again. To install React Native Clean Project:
+```
+yarn add -D react-native-clean-project
+```
